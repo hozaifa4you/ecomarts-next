@@ -1,0 +1,86 @@
+/*-----------------------------------------------------------------
+Theme Name: EcomArts
+Author: namespace-it
+Author URI: https://themeforest.net/user/namespace-it
+Version: 1.0.0 
+Description: EcomArts - Multipurpose Ecommerce HTML Template
+
+
+/* 04.Buttons */
+@use "_buttons" as *;
+/* 05.Gutter */
+@use "_gutter" as *;
+/* 06.Container */
+@use "_container" as *;
+/* 07.Animation */
+@use "_animation" as *;
+/* 08.Helping */
+@use "_helping" as *;
+/* 09.MeanMenu */
+@use "_meanmenu" as *;
+/* 10.Preloader */
+@use "_preloader" as *;
+//>> Basic End <<//
+@use "mixins" as *;
+@use "variables" as *;
+@use "typography" as *;
+
+//>> Template Section Style Start <<//
+
+/* 11.Title */
+@use "_title" as *;
+/* 12.Common */
+@use "_common" as *;
+/* 13.Header */
+@use "_header" as *;
+/* 15.Footer */
+@use "_footer" as *;
+/* 35.Input */
+@use "_input" as *;
+/* 35.Modal */
+@use "_modal" as *;
+/* 37.Featured Item */
+@use "_featured-item" as *;
+@use "_top-deals-item" as *;
+@use "_video" as *;
+@use "_blog" as *;
+@use "_testimonial" as *;
+@use "_brand" as *;
+@use "_best-seller-product" as *;
+@use "_cta" as *;
+@use "_popular-product" as *;
+@use "_feature" as *;
+@use "_featured-product" as *;
+@use "_offer" as *;
+@use "_trendy";
+@use "_product-box" as *;
+@use "_intro" as *;
+@use "_timer" as *;
+@use "_popular-categories" as *;
+@use "_beauty-care" as *;
+@use "_brand-marquee" as *;
+@use "_top-rated" as *;
+@use "_product-gallery" as *;
+@use "_gallery" as *;
+@use "_faq" as *;
+@use "_cart" as *;
+@use "_wishlist" as *;
+@use "_checkout" as *;
+@use "./order-tracking" as *;
+@use "./breadcumb" as *;
+@use "./dashboard" as *;
+@use "./shop-details" as *;
+@use "./look-book" as *;
+@use "./main-sidebar" as *;
+@use "./shop-items" as *;
+@use "./blog-classic" as *;
+@use "./blog-details" as *;
+@use "./login" as *;
+@use "./register" as *;
+@use "./contact" as *;
+@use "./about" as *;
+@use "./team" as *;
+@use "./promo" as *;
+@use "./package-shop" as *;
+
+//>> Template Section Style End <<//
