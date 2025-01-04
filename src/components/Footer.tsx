@@ -1,0 +1,325 @@
+import Image from "next/image";
+import Link from "next/link";
+
+const Footer = () => {
+   return (
+      <footer className="footer-section bg-title">
+         <div className="container">
+            <div className="contact-info-area">
+               <div
+                  className="contact-info-items wow fadeInUp"
+                  data-wow-delay=".2s"
+               >
+                  <div className="icon">
+                     <i className="icon-footer-telephone"></i>
+                  </div>
+                  <div className="content">
+                     <p>Call Us 7/24</p>
+                     <h3>
+                        <Link href="tel:+2085550112">+208-555-0112</Link>
+                     </h3>
+                  </div>
+               </div>
+               <div
+                  className="contact-info-items wow fadeInUp"
+                  data-wow-delay=".4s"
+               >
+                  <div className="icon">
+                     <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="30"
+                        height="30"
+                        viewBox="0 0 30 30"
+                        fill="none"
+                     >
+                        <path
+                           d="M12.6503 10.8272C12.8028 10.914 12.9765 10.9569 13.1519 10.9509C13.3316 10.9344 13.5058 10.8798 13.6628 10.7906L24.9222 4.22062C24.6775 3.79416 24.3249 3.43955 23.8999 3.19239C23.4749 2.94523 22.9923 2.81422 22.5006 2.8125H3.75063C3.25879 2.81406 2.77603 2.94499 2.35081 3.19216C1.92559 3.43932 1.57289 3.79402 1.32812 4.22062L12.6503 10.8272Z"
+                           fill="white"
+                        />
+                        <path
+                           d="M25.3125 6.16016V12.6758C24.4104 12.3511 23.4587 12.1861 22.5 12.1883C20.2633 12.1918 18.1192 13.0818 16.5376 14.6634C14.956 16.245 14.066 18.3891 14.0625 20.6258C14.0623 20.9391 14.0811 21.2522 14.1188 21.5633H3.75C3.00476 21.5611 2.29069 21.264 1.76372 20.7371C1.23676 20.2101 0.939726 19.496 0.9375 18.7508V6.16016L11.7094 12.4508C12.1434 12.6882 12.6303 12.8126 13.125 12.8126C13.6197 12.8126 14.1066 12.6882 14.5406 12.4508L25.3125 6.16016Z"
+                           fill="white"
+                        />
+                        <path
+                           d="M22.5 14.0625C20.7595 14.0625 19.0903 14.7539 17.8596 15.9846C16.6289 17.2153 15.9375 18.8845 15.9375 20.625C15.9375 22.3655 16.6289 24.0347 17.8596 25.2654C19.0903 26.4961 20.7595 27.1875 22.5 27.1875C22.7486 27.1875 22.9871 27.0887 23.1629 26.9129C23.3387 26.7371 23.4375 26.4986 23.4375 26.25C23.4375 26.0014 23.3387 25.7629 23.1629 25.5871C22.9871 25.4113 22.7486 25.3125 22.5 25.3125C21.5729 25.3125 20.6666 25.0376 19.8958 24.5225C19.1249 24.0074 18.5241 23.2754 18.1693 22.4188C17.8145 21.5623 17.7217 20.6198 17.9026 19.7105C18.0834 18.8012 18.5299 17.966 19.1854 17.3104C19.841 16.6549 20.6762 16.2084 21.5855 16.0276C22.4948 15.8467 23.4373 15.9395 24.2938 16.2943C25.1504 16.6491 25.8824 17.2499 26.3975 18.0208C26.9126 18.7916 27.1875 19.6979 27.1875 20.625V21.5625C27.1875 21.8111 27.0887 22.0496 26.9129 22.2254C26.7371 22.4012 26.4986 22.5 26.25 22.5C26.0014 22.5 25.7629 22.4012 25.5871 22.2254C25.4113 22.0496 25.3125 21.8111 25.3125 21.5625V20.625C25.3125 20.0687 25.1476 19.525 24.8385 19.0625C24.5295 18.5999 24.0902 18.2395 23.5763 18.0266C23.0624 17.8137 22.4969 17.758 21.9513 17.8665C21.4057 17.9751 20.9046 18.2429 20.5113 18.6363C20.1179 19.0296 19.8501 19.5307 19.7415 20.0763C19.633 20.6219 19.6887 21.1874 19.9016 21.7013C20.1145 22.2152 20.4749 22.6545 20.9375 22.9635C21.4 23.2726 21.9437 23.4375 22.5 23.4375C22.9843 23.4344 23.4594 23.3048 23.8781 23.0616C24.2022 23.578 24.6856 23.9748 25.2552 24.1921C25.8248 24.4094 26.4496 24.4353 27.0353 24.266C27.621 24.0967 28.1356 23.7412 28.5013 23.2535C28.867 22.7657 29.064 22.1721 29.0625 21.5625V20.625C29.0605 18.8851 28.3685 17.2171 27.1382 15.9868C25.9079 14.7565 24.2399 14.0645 22.5 14.0625ZM22.5 21.5625C22.3146 21.5625 22.1333 21.5075 21.9792 21.4045C21.825 21.3015 21.7048 21.1551 21.6339 20.9838C21.5629 20.8125 21.5443 20.624 21.5805 20.4421C21.6167 20.2602 21.706 20.0932 21.8371 19.9621C21.9682 19.831 22.1352 19.7417 22.3171 19.7055C22.499 19.6693 22.6875 19.6879 22.8588 19.7589C23.0301 19.8298 23.1765 19.95 23.2795 20.1042C23.3825 20.2583 23.4375 20.4396 23.4375 20.625C23.4375 20.8736 23.3387 21.1121 23.1629 21.2879C22.9871 21.4637 22.7486 21.5625 22.5 21.5625Z"
+                           fill="white"
+                        />
+                     </svg>
+                  </div>
+                  <div className="content">
+                     <p>Make a Quote</p>
+                     <h3>
+                        <Link href="mailto:example@gmail.com">
+                           example@gmail.com
+                        </Link>
+                     </h3>
+                  </div>
+               </div>
+               <div
+                  className="contact-info-items wow fadeInUp"
+                  data-wow-delay=".6s"
+               >
+                  <div className="icon">
+                     <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="30"
+                        height="30"
+                        viewBox="0 0 30 30"
+                        fill="none"
+                     >
+                        <g clipPath="url(#clip0_86_965)">
+                           <path
+                              fillRule="evenodd"
+                              clipRule="evenodd"
+                              d="M6.93797 7.96189C7.08809 8.28164 7.40701 8.48642 7.7608 8.48642H12.1805V10.0477C12.1805 10.5499 12.5879 10.9568 13.0917 10.9568C13.5929 10.9568 14.0003 10.5499 14.0003 10.0477V8.48642H14.4185C14.9223 8.48642 15.327 8.07955 15.327 7.57705C15.327 7.07507 14.9223 6.6682 14.4185 6.6682H14.0003V1.21236C14.0003 0.829918 13.7618 0.488434 13.4026 0.358473C13.0435 0.227692 12.6388 0.33568 12.3949 0.628883L7.06395 6.99351C6.83607 7.26392 6.78785 7.64191 6.93797 7.96189ZM30 14.9433C30 18.9486 28.4404 22.7177 25.608 25.55C22.7754 28.3826 19.0059 29.9433 15 29.9433C10.9941 29.9433 7.22461 28.3826 4.39201 25.55C1.55965 22.7177 0 18.9486 0 14.9433C0 14.1906 0.610313 13.5793 1.36312 13.5793C2.11734 13.5793 2.72625 14.1894 2.72625 14.9433C2.72625 21.7097 8.23389 27.2159 14.9999 27.2159C21.7661 27.2159 27.2737 21.7097 27.2737 14.9433C27.2737 8.80599 22.6918 3.56859 16.6029 2.77459C15.858 2.67744 15.3322 1.99113 15.4283 1.24658C15.5246 0.501325 16.2116 -0.0271326 16.9564 0.0701331C20.5467 0.538942 23.839 2.29711 26.2381 5.00836C28.6656 7.75166 30 11.2803 30 14.9433ZM12.1804 3.71402V6.66814H9.70928L12.1804 3.71402ZM16.7824 23.0252C16.5117 23.4479 16.6349 24.0104 17.0584 24.2808C17.2038 24.3746 17.3732 24.4245 17.5462 24.4245C17.8464 24.4245 18.1385 24.2769 18.3127 24.0059L23.9733 15.1706C24.1529 14.8902 24.1636 14.5351 24.0054 14.2437C23.9268 14.1007 23.8112 13.9813 23.6707 13.8982C23.5302 13.815 23.37 13.7711 23.2068 13.7709H18.0393C17.5354 13.7709 17.1308 14.1778 17.1308 14.6801C17.1308 15.1823 17.5355 15.5892 18.0393 15.5892H21.545L16.7824 23.0252ZM21.5423 6.31974C21.8961 6.67488 21.8961 7.25056 21.5423 7.60576L8.14137 21.0067C7.96184 21.1842 7.73133 21.2729 7.49813 21.2729C7.26498 21.2729 7.03178 21.1842 6.85488 21.0067C6.50109 20.6516 6.50109 20.0761 6.85488 19.7211L20.2559 6.31974C20.6096 5.96461 21.1859 5.96461 21.5423 6.31974ZM5.59518 4.41521C5.82568 3.57257 5.68096 2.93736 5.16363 2.52779C4.58203 2.06918 3.61986 1.98855 2.9659 2.34363C2.47008 2.61351 2.25029 3.07986 2.31463 3.72931C2.36021 4.22941 1.9957 4.67384 1.49449 4.72154C0.995977 4.76871 0.551074 4.40338 0.502793 3.90381C0.371484 2.52082 0.950391 1.37021 2.09754 0.747067C3.38139 0.0469886 5.14494 0.196578 6.29203 1.1022C7.38557 1.96816 7.77152 3.35039 7.3507 4.89416C7.06658 5.93625 6.091 6.69609 4.96529 7.57623C4.35422 8.05171 3.69756 8.56359 3.14812 9.13851H6.91383C7.41504 9.13851 7.82244 9.54533 7.82244 10.0477C7.82244 10.5499 7.41504 10.9568 6.91383 10.9568H1.38188C1.22792 10.9565 1.07657 10.9171 0.941967 10.8424C0.807368 10.7676 0.693928 10.66 0.61226 10.5295C0.530593 10.399 0.483367 10.2499 0.475003 10.0962C0.466638 9.94244 0.497408 9.7891 0.564434 9.6505C1.30418 8.12572 2.655 7.07214 3.84498 6.1432C4.64367 5.51918 5.47189 4.87429 5.59518 4.41521Z"
+                              fill="white"
+                           />
+                        </g>
+                        <defs>
+                           <clipPath id="clip0_86_965">
+                              <rect width="30" height="30" fill="white" />
+                           </clipPath>
+                        </defs>
+                     </svg>
+                  </div>
+                  <div className="content">
+                     <p>Opening Hour</p>
+                     <h3>Sunday - Fri: 9 aM - 6 pM</h3>
+                  </div>
+               </div>
+               <div
+                  className="contact-info-items wow fadeInUp"
+                  data-wow-delay=".8s"
+               >
+                  <div className="icon">
+                     <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="32"
+                        height="32"
+                        viewBox="0 0 32 32"
+                        fill="none"
+                     >
+                        <path
+                           fillRule="evenodd"
+                           clipRule="evenodd"
+                           d="M16 1.66797C11.036 1.66797 7 5.73997 7 10.7626C7 12.464 7.74933 14.5746 8.84 16.68C11.2413 21.316 15.2413 25.9853 15.2413 25.9853C15.3352 26.0946 15.4516 26.1824 15.5826 26.2425C15.7135 26.3027 15.8559 26.3338 16 26.3338C16.1441 26.3338 16.2865 26.3027 16.4174 26.2425C16.5484 26.1824 16.6648 26.0946 16.7587 25.9853C16.7587 25.9853 20.7587 21.316 23.16 16.68C24.2507 14.5746 25 12.464 25 10.7626C25 5.73997 20.964 1.66797 16 1.66797ZM16 7.0013C15.0447 7.02707 14.1371 7.42468 13.4705 8.1095C12.8039 8.79433 12.4309 9.71228 12.4309 10.668C12.4309 11.6237 12.8039 12.5416 13.4705 13.2264C14.1371 13.9113 15.0447 14.3089 16 14.3346C16.9553 14.3089 17.8629 13.9113 18.5295 13.2264C19.1961 12.5416 19.5691 11.6237 19.5691 10.668C19.5691 9.71228 19.1961 8.79433 18.5295 8.1095C17.8629 7.42468 16.9553 7.02707 16 7.0013Z"
+                           fill="white"
+                        />
+                        <path
+                           fillRule="evenodd"
+                           clipRule="evenodd"
+                           d="M22.3774 23.1693C23.4614 23.4946 24.3547 23.8973 24.972 24.3693C25.372 24.6733 25.6654 24.9706 25.6654 25.3333C25.6654 25.5466 25.544 25.74 25.3734 25.9333C25.0907 26.252 24.6707 26.5386 24.1507 26.8053C22.3134 27.7453 19.3427 28.3333 15.9987 28.3333C12.6547 28.3333 9.68403 27.7453 7.8467 26.8053C7.3267 26.5386 6.9067 26.252 6.62403 25.9333C6.45336 25.74 6.33203 25.5466 6.33203 25.3333C6.33203 24.9706 6.62536 24.6733 7.02536 24.3693C7.6427 23.8973 8.53603 23.4946 9.62003 23.1693C9.87411 23.0929 10.0874 22.9187 10.2131 22.6851C10.3387 22.4514 10.3664 22.1774 10.29 21.9233C10.2136 21.6692 10.0395 21.4559 9.80579 21.3302C9.57212 21.2046 9.29811 21.1769 9.04403 21.2533C7.39336 21.7506 6.1107 22.432 5.34003 23.1853C4.6627 23.8453 4.33203 24.584 4.33203 25.3333C4.33203 26.2693 4.86136 27.2026 5.93736 27.9813C7.82536 29.3466 11.6174 30.3333 15.9987 30.3333C20.38 30.3333 24.172 29.3466 26.06 27.9813C27.136 27.2026 27.6654 26.2693 27.6654 25.3333C27.6654 24.584 27.3347 23.8453 26.6574 23.1853C25.8867 22.432 24.604 21.7506 22.9534 21.2533C22.8276 21.2155 22.6955 21.2028 22.5648 21.216C22.4341 21.2292 22.3073 21.268 22.1916 21.3302C22.0759 21.3925 21.9736 21.4769 21.8905 21.5786C21.8074 21.6804 21.7452 21.7975 21.7074 21.9233C21.6695 22.0491 21.6569 22.1811 21.6701 22.3118C21.6833 22.4425 21.7221 22.5694 21.7843 22.6851C21.8465 22.8008 21.9309 22.9031 22.0327 22.9862C22.1344 23.0692 22.2516 23.1315 22.3774 23.1693Z"
+                           fill="white"
+                        />
+                     </svg>
+                  </div>
+                  <div className="content">
+                     <p>Location</p>
+                     <h3>4517 Washington ave.</h3>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div className="footer-widgets-wrapper">
+            <div className="container">
+               <div className="row">
+                  <div
+                     className="col-xl-3 col-lg-4 col-md-6 wow fadeInUp"
+                     data-wow-delay=".2s"
+                  >
+                     <div className="single-footer-widget">
+                        <div className="widget-head">
+                           <Link href="/">
+                              <Image
+                                 width={175}
+                                 height={30}
+                                 src="/images/logo/white-logo.svg"
+                                 alt="logo-img"
+                              />
+                           </Link>
+                        </div>
+                        <div className="footer-content">
+                           <p>
+                              Phasellus ultricies aliquam volutpat ullamcorper
+                              laoreet neque, a lacinia curabitur lacinia mollis
+                           </p>
+                           <div className="social-icon d-flex align-items-center">
+                              <Link href="#">
+                                 <i className="fab fa-facebook-f"></i>
+                              </Link>
+                              <Link href="#">
+                                 <i className="fab fa-twitter"></i>
+                              </Link>
+                              <Link href="#">
+                                 <i className="fab fa-youtube"></i>
+                              </Link>
+                              <Link href="#">
+                                 <i className="fab fa-linkedin-in"></i>
+                              </Link>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div
+                     className="col-xl-3 col-lg-4 col-md-6 ps-lg-5 wow fadeInUp"
+                     data-wow-delay=".4s"
+                  >
+                     <div className="single-footer-widget">
+                        <div className="widget-head">
+                           <h3 className="style1">Costumers Support</h3>
+                        </div>
+                        <ul className="list-area">
+                           <li>
+                              <Link
+                                 className="style1"
+                                 href="/shop-left-sidebar"
+                              >
+                                 <i className="fa-solid fa-chevrons-right"></i>
+                                 Store List
+                              </Link>
+                           </li>
+                           <li>
+                              <Link className="style1" href="/contact">
+                                 <i className="fa-solid fa-chevrons-right"></i>
+                                 Opening Hours
+                              </Link>
+                           </li>
+                           <li>
+                              <Link className="style1" href="/contact">
+                                 <i className="fa-solid fa-chevrons-right"></i>
+                                 Contact Us
+                              </Link>
+                           </li>
+                           <li>
+                              <Link className="style1" href="/contact">
+                                 <i className="fa-solid fa-chevrons-right"></i>
+                                 Return Policy
+                              </Link>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+                  <div
+                     className="col-xl-3 col-lg-4 col-md-6 ps-lg-5 wow fadeInUp"
+                     data-wow-delay=".6s"
+                  >
+                     <div className="single-footer-widget">
+                        <div className="widget-head">
+                           <h3 className="style1">Quick Links</h3>
+                        </div>
+                        <ul className="list-area">
+                           <li>
+                              <a className="style1" href="about.html">
+                                 <i className="fa-solid fa-chevrons-right"></i>
+                                 About Us
+                              </a>
+                           </li>
+                           <li>
+                              <a className="style1" href="testimonial.html">
+                                 <i className="fa-solid fa-chevrons-right"></i>
+                                 Testimonial
+                              </a>
+                           </li>
+                           <li>
+                              <a className="style1" href="faq.html">
+                                 <i className="fa-solid fa-chevrons-right"></i>
+                                 Faq
+                              </a>
+                           </li>
+                           <li>
+                              <a className="style1" href="blog.html">
+                                 <i className="fa-solid fa-chevrons-right"></i>
+                                 Blog
+                              </a>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+                  <div
+                     className="col-xl-3 col-lg-4 col-md-6 wow fadeInUp"
+                     data-wow-delay=".8s"
+                  >
+                     <div className="single-footer-widget">
+                        <div className="widget-head">
+                           <h3 className="style1">Newsletter</h3>
+                        </div>
+                        <div className="footer-content">
+                           <p>
+                              Sign up to searing weekly newsletter to get the
+                              latest updates.
+                           </p>
+                           <div className="footer-input">
+                              <input
+                                 type="email"
+                                 id="email2"
+                                 placeholder="Enter Email Address"
+                              />
+                              <button className="newsletter-btn" type="submit">
+                                 <i className="fa-regular fa-paper-plane"></i>
+                              </button>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div className="footer-bottom">
+            <div className="container">
+               <div className="footer-wrapper d-flex align-items-center justify-content-between">
+                  <p className="wow fadeInLeft" data-wow-delay=".3s">
+                     © All Copyright 2024 by <Link href="/">EcomArts</Link>
+                  </p>
+                  <ul
+                     className="credit-card-logo wow fadeInRight"
+                     data-wow-delay=".5s"
+                  >
+                     <li>
+                        <Link href="#">
+                           <Image
+                              width={44}
+                              height={14}
+                              src="/images/logo/visa-logo.png"
+                              alt="EcomArts"
+                           />
+                        </Link>
+                     </li>
+                     <li>
+                        <Link href="#">
+                           <Image
+                              width={38}
+                              height={23}
+                              src="/images/logo/mastercard-logo.png"
+                              alt="EcomArts"
+                           />
+                        </Link>
+                     </li>
+                     <li>
+                        <Link href="#">
+                           <Image
+                              height={16}
+                              width={38}
+                              src="/images/logo/payoneer-logo.png"
+                              alt="EcomArts"
+                           />
+                        </Link>
+                     </li>
+                     <li>
+                        <Link href="#">
+                           <Image
+                              width={44}
+                              height={18}
+                              src="/images/logo/affirm-logo.png"
+                              alt="img"
+                           />
+                        </Link>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </footer>
+   );
+};
+
+export { Footer };
