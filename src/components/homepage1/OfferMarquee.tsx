@@ -1,4 +1,7 @@
 import React from "react";
+import Image from "next/image";
+
+import { marqueeData } from "@/utils/data/homepage-1";
 
 const OfferMarquee = () => {
    return (
@@ -7,69 +10,35 @@ const OfferMarquee = () => {
             <div className="mycustom-marque">
                <div className="scrolling-wrap">
                   <div className="comm">
-                     <div>
-                        <img src="/images/icon/starIcon1_1.svg" alt="img" />
-                     </div>
-                     <div className="cmn-textslide">Limited time offer</div>
-                     <div>
-                        <img src="/images/icon/starIcon1_1.svg" alt="img" />
-                     </div>
-                     <div className="cmn-textslide">Gadget 30% Off</div>
-                     <div>
-                        <img src="/images/icon/starIcon1_1.svg" alt="img" />
-                     </div>
-                     <div className="cmn-textslide">
-                        10% of products for winter
-                     </div>
-                     <div>
-                        <img src="/images/icon/starIcon1_1.svg" alt="img" />
-                     </div>
-                     <div className="cmn-textslide">$5 Off Accessories</div>
-                     <div>
-                        <img src="/images/icon/starIcon1_1.svg" alt="img" />
-                     </div>
-                     <div className="cmn-textslide">50% off clearance sale</div>
-                     <div>
-                        <img src="/images/icon/starIcon1_1.svg" alt="img" />
-                     </div>
-                     <div className="cmn-textslide">
-                        Flash sales of up to 90%
-                     </div>
+                     {marqueeData.map((item) => (
+                        <MarqueItem key={item} title={item} />
+                     ))}
                   </div>
                   <div className="comm">
-                     <div>
-                        <img src="/images/icon/starIcon1_1.svg" alt="img" />
-                     </div>
-                     <div className="cmn-textslide">Limited time offer</div>
-                     <div>
-                        <img src="/images/icon/starIcon1_1.svg" alt="img" />
-                     </div>
-                     <div className="cmn-textslide">Gadget 30% Off</div>
-                     <div>
-                        <img src="/images/icon/starIcon1_1.svg" alt="img" />
-                     </div>
-                     <div className="cmn-textslide">
-                        10% of products for winter
-                     </div>
-                     <div>
-                        <img src="/images/icon/starIcon1_1.svg" alt="img" />
-                     </div>
-                     <div className="cmn-textslide">$5 Off Accessories</div>
-                     <div>
-                        <img src="/images/icon/starIcon1_1.svg" alt="img" />
-                     </div>
-                     <div className="cmn-textslide">50% off clearance sale</div>
-                     <div>
-                        <img src="/images/icon/starIcon1_1.svg" alt="img" />
-                     </div>
-                     <div className="cmn-textslide">
-                        Flash sales of up to 90%
-                     </div>
+                     {marqueeData.map((item) => (
+                        <MarqueItem key={item} title={item} />
+                     ))}
                   </div>
                </div>
             </div>
          </div>
       </div>
+   );
+};
+
+const MarqueItem = ({ title }: { title: string }) => {
+   return (
+      <>
+         <div>
+            <Image
+               width={16}
+               height={16}
+               src="/images/icon/starIcon1_1.svg"
+               alt="img"
+            />
+         </div>
+         <div className="cmn-textslide">{title}</div>
+      </>
    );
 };
 
