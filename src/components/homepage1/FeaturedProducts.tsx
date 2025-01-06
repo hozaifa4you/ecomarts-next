@@ -1,6 +1,26 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
+import Image from "next/image";
+
+import {
+   featuredProductData,
+   FeaturedProductType,
+} from "@/utils/data/homepage-1";
 
 const FeaturedProducts = () => {
+   const [filter, setFilter] = useState<
+      "all" | "oven" | "computer" | "watch" | "camera" | "drone"
+   >("all");
+
+   function shuffleArray(array: FeaturedProductType[]) {
+      for (let i = array.length - 1; i > 0; i--) {
+         const randomIndex = Math.floor(Math.random() * (i + 1));
+
+         [array[i], array[randomIndex]] = [array[randomIndex], array[i]];
+      }
+      return array;
+   }
+
    return (
       <section className="featured-product-section section-padding fix">
          <div className="container">
@@ -20,10 +40,11 @@ const FeaturedProducts = () => {
                      >
                         <li className="nav-item" role="presentation">
                            <button
-                              className="nav-link active"
+                              className={`nav-link ${
+                                 filter === "all" ? "active" : ""
+                              }`}
+                              onClick={() => setFilter("all")}
                               id="pills-one-tab"
-                              data-bs-toggle="pill"
-                              data-bs-target="#pills-one"
                               type="button"
                               role="tab"
                               aria-controls="pills-one"
@@ -34,10 +55,11 @@ const FeaturedProducts = () => {
                         </li>
                         <li className="nav-item" role="presentation">
                            <button
-                              className="nav-link"
+                              className={`nav-link ${
+                                 filter === "oven" ? "active" : ""
+                              }`}
+                              onClick={() => setFilter("oven")}
                               id="pills-two-tab"
-                              data-bs-toggle="pill"
-                              data-bs-target="#pills-two"
                               type="button"
                               role="tab"
                               aria-controls="pills-two"
@@ -48,10 +70,11 @@ const FeaturedProducts = () => {
                         </li>
                         <li className="nav-item" role="presentation">
                            <button
-                              className="nav-link"
+                              className={`nav-link ${
+                                 filter === "computer" ? "active" : ""
+                              }`}
+                              onClick={() => setFilter("computer")}
                               id="pills-three-tab"
-                              data-bs-toggle="pill"
-                              data-bs-target="#pills-three"
                               type="button"
                               role="tab"
                               aria-controls="pills-three"
@@ -62,10 +85,11 @@ const FeaturedProducts = () => {
                         </li>
                         <li className="nav-item" role="presentation">
                            <button
-                              className="nav-link"
+                              className={`nav-link ${
+                                 filter === "watch" ? "active" : ""
+                              }`}
+                              onClick={() => setFilter("watch")}
                               id="pills-four-tab"
-                              data-bs-toggle="pill"
-                              data-bs-target="#pills-four"
                               type="button"
                               role="tab"
                               aria-controls="pills-four"
@@ -76,10 +100,11 @@ const FeaturedProducts = () => {
                         </li>
                         <li className="nav-item" role="presentation">
                            <button
-                              className="nav-link"
+                              className={`nav-link ${
+                                 filter === "camera" ? "active" : ""
+                              }`}
+                              onClick={() => setFilter("camera")}
                               id="pills-five-tab"
-                              data-bs-toggle="pill"
-                              data-bs-target="#pills-five"
                               type="button"
                               role="tab"
                               aria-controls="pills-five"
@@ -90,10 +115,11 @@ const FeaturedProducts = () => {
                         </li>
                         <li className="nav-item" role="presentation">
                            <button
-                              className="nav-link"
+                              className={`nav-link ${
+                                 filter === "drone" ? "active" : ""
+                              }`}
+                              onClick={() => setFilter("drone")}
                               id="pills-six-tab"
-                              data-bs-toggle="pill"
-                              data-bs-target="#pills-six"
                               type="button"
                               role="tab"
                               aria-controls="pills-six"
@@ -120,2117 +146,198 @@ const FeaturedProducts = () => {
                </div>
 
                <div className="tab-content" id="pills-tabContent2">
-                  <div
-                     className="tab-pane fade show active"
-                     id="pills-one"
-                     role="tabpanel"
-                     aria-labelledby="pills-one-tab"
-                  >
-                     <div className="feature-tab-content">
-                        <div className="row g-4">
-                           <div className="col-xl-3 col-md-6">
-                              <div className="featured-product-item-one">
-                                 <div className="featured-product-item-one__thumb">
-                                    <img
-                                       src="/images/best-seller/bestSellerProductThumb1_1.png"
-                                       alt="thumb"
-                                    />
-                                    <div className="badge">10% OFF</div>
-                                    <div className="icon">
-                                       <button
-                                          data-bs-toggle="modal"
-                                          data-bs-target="#exampleModal2"
-                                       >
-                                          <i className="fa-regular fa-eye"></i>
-                                       </button>
-                                       <a href="wishlist.html">
-                                          <i className="fa-regular fa-heart"></i>
-                                       </a>
-                                       <a href="cart.html">
-                                          <i className="fa-light fa-bag-shopping"></i>
-                                       </a>
+                  {filter === "all" && (
+                     <div
+                        className="fade show"
+                        id="pills-one"
+                        role="tabpanel"
+                        aria-labelledby="pills-one-tab"
+                     >
+                        <div className="feature-tab-content">
+                           <div className="row g-4">
+                              {shuffleArray(featuredProductData).map(
+                                 (product) => (
+                                    <div
+                                       key={product.id}
+                                       className="col-xl-3 col-md-6"
+                                    >
+                                       <FeatureCard {...product} />
                                     </div>
-                                 </div>
-                                 <div className="featured-product-item-one__content">
-                                    <div className="featured-product-item-one__content--details-wrapper">
-                                       <div className="price">
-                                          <h6>
-                                             <a href="shop-details-one.html">
-                                                Core i9 laptop
-                                             </a>
-                                          </h6>
-                                          <div className="star-wrapper">
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <span>0 Review</span>
-                                          </div>
-                                          <span className="price">
-                                             USD 20.00
-                                             <small>$ 50.00</small>
-                                          </span>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                           <div className="col-xl-3 col-md-6">
-                              <div className="featured-product-item-one">
-                                 <div className="featured-product-item-one__thumb">
-                                    <img
-                                       src="/images/best-seller/bestSellerProductThumb1_2.png"
-                                       alt="thumb"
-                                    />
-
-                                    <div className="badge">10% OFF</div>
-                                    <div className="icon">
-                                       <button
-                                          data-bs-toggle="modal"
-                                          data-bs-target="#exampleModal2"
-                                       >
-                                          <i className="fa-regular fa-eye"></i>
-                                       </button>
-                                       <a href="wishlist.html">
-                                          <i className="fa-regular fa-heart"></i>
-                                       </a>
-                                       <a href="cart.html">
-                                          <i className="fa-light fa-bag-shopping"></i>
-                                       </a>
-                                    </div>
-                                 </div>
-                                 <div className="featured-product-item-one__content">
-                                    <div className="featured-product-item-one__content--details-wrapper">
-                                       <div className="price">
-                                          <h6>
-                                             <a href="shop-details-one.html">
-                                                Apple i16x
-                                             </a>
-                                          </h6>
-                                          <div className="star-wrapper">
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <span>0 Review</span>
-                                          </div>
-                                          <span className="price">
-                                             USD 20.00
-                                             <small>$ 50.00</small>
-                                          </span>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                           <div className="col-xl-3 col-md-6">
-                              <div className="featured-product-item-one">
-                                 <div className="featured-product-item-one__thumb">
-                                    <img
-                                       src="/images/best-seller/bestSellerProductThumb1_3.png"
-                                       alt="thumb"
-                                    />
-
-                                    <div className="badge">10% OFF</div>
-                                    <div className="icon">
-                                       <button
-                                          data-bs-toggle="modal"
-                                          data-bs-target="#exampleModal2"
-                                       >
-                                          <i className="fa-regular fa-eye"></i>
-                                       </button>
-                                       <a href="wishlist.html">
-                                          <i className="fa-regular fa-heart"></i>
-                                       </a>
-                                       <a href="cart.html">
-                                          <i className="fa-light fa-bag-shopping"></i>
-                                       </a>
-                                    </div>
-                                 </div>
-                                 <div className="featured-product-item-one__content">
-                                    <div className="featured-product-item-one__content--details-wrapper">
-                                       <div className="price">
-                                          <h6>
-                                             <a href="shop-details-one.html">
-                                                Bluetooth Headphones
-                                             </a>
-                                          </h6>
-                                          <div className="star-wrapper">
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <span>0 Review</span>
-                                          </div>
-                                          <span className="price">
-                                             USD 20.00
-                                             <small>$ 50.00</small>
-                                          </span>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                           <div className="col-xl-3 col-md-6">
-                              <div className="featured-product-item-one">
-                                 <div className="featured-product-item-one__thumb">
-                                    <img
-                                       src="/images/best-seller/bestSellerProductThumb1_4.png"
-                                       alt="thumb"
-                                    />
-
-                                    <div className="badge">10% OFF</div>
-                                    <div className="icon">
-                                       <button
-                                          data-bs-toggle="modal"
-                                          data-bs-target="#exampleModal2"
-                                       >
-                                          <i className="fa-regular fa-eye"></i>
-                                       </button>
-                                       <a href="wishlist.html">
-                                          <i className="fa-regular fa-heart"></i>
-                                       </a>
-                                       <a href="cart.html">
-                                          <i className="fa-light fa-bag-shopping"></i>
-                                       </a>
-                                    </div>
-                                 </div>
-                                 <div className="featured-product-item-one__content">
-                                    <div className="featured-product-item-one__content--details-wrapper">
-                                       <div className="price">
-                                          <h6>
-                                             <a href="shop-details-one.html">
-                                                new smart watch
-                                             </a>
-                                          </h6>
-                                          <div className="star-wrapper">
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <span>0 Review</span>
-                                          </div>
-                                          <span className="price">
-                                             USD 20.00
-                                             <small>$ 50.00</small>
-                                          </span>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                           <div className="col-xl-3 col-md-6">
-                              <div className="featured-product-item-one">
-                                 <div className="featured-product-item-one__thumb">
-                                    <img
-                                       src="/images/best-seller/bestSellerProductThumb1_5.png"
-                                       alt="thumb"
-                                    />
-
-                                    <div className="badge">10% OFF</div>
-                                    <div className="icon">
-                                       <button
-                                          data-bs-toggle="modal"
-                                          data-bs-target="#exampleModal2"
-                                       >
-                                          <i className="fa-regular fa-eye"></i>
-                                       </button>
-                                       <a href="wishlist.html">
-                                          <i className="fa-regular fa-heart"></i>
-                                       </a>
-                                       <a href="cart.html">
-                                          <i className="fa-light fa-bag-shopping"></i>
-                                       </a>
-                                    </div>
-                                 </div>
-                                 <div className="featured-product-item-one__content">
-                                    <div className="featured-product-item-one__content--details-wrapper">
-                                       <div className="price">
-                                          <h6>
-                                             <a href="shop-details-one.html">
-                                                Core i9 laptop
-                                             </a>
-                                          </h6>
-                                          <div className="star-wrapper">
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <span>0 Review</span>
-                                          </div>
-                                          <span className="price">
-                                             USD 20.00
-                                             <small>$ 50.00</small>
-                                          </span>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                           <div className="col-xl-3 col-md-6">
-                              <div className="featured-product-item-one">
-                                 <div className="featured-product-item-one__thumb">
-                                    <img
-                                       src="/images/best-seller/bestSellerProductThumb1_6.png"
-                                       alt="thumb"
-                                    />
-
-                                    <div className="badge">10% OFF</div>
-                                    <div className="icon">
-                                       <button
-                                          data-bs-toggle="modal"
-                                          data-bs-target="#exampleModal2"
-                                       >
-                                          <i className="fa-regular fa-eye"></i>
-                                       </button>
-                                       <a href="wishlist.html">
-                                          <i className="fa-regular fa-heart"></i>
-                                       </a>
-                                       <a href="cart.html">
-                                          <i className="fa-light fa-bag-shopping"></i>
-                                       </a>
-                                    </div>
-                                 </div>
-                                 <div className="featured-product-item-one__content">
-                                    <div className="featured-product-item-one__content--details-wrapper">
-                                       <div className="price">
-                                          <h6>
-                                             <a href="shop-details-one.html">
-                                                Apple i16x
-                                             </a>
-                                          </h6>
-                                          <div className="star-wrapper">
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <span>0 Review</span>
-                                          </div>
-                                          <span className="price">
-                                             USD 20.00
-                                             <small>$ 50.00</small>
-                                          </span>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                           <div className="col-xl-3 col-md-6">
-                              <div className="featured-product-item-one">
-                                 <div className="featured-product-item-one__thumb">
-                                    <img
-                                       src="/images/best-seller/bestSellerProductThumb1_7.png"
-                                       alt="thumb"
-                                    />
-
-                                    <div className="badge">10% OFF</div>
-                                    <div className="icon">
-                                       <button
-                                          data-bs-toggle="modal"
-                                          data-bs-target="#exampleModal2"
-                                       >
-                                          <i className="fa-regular fa-eye"></i>
-                                       </button>
-                                       <a href="wishlist.html">
-                                          <i className="fa-regular fa-heart"></i>
-                                       </a>
-                                       <a href="cart.html">
-                                          <i className="fa-light fa-bag-shopping"></i>
-                                       </a>
-                                    </div>
-                                 </div>
-                                 <div className="featured-product-item-one__content">
-                                    <div className="featured-product-item-one__content--details-wrapper">
-                                       <div className="price">
-                                          <h6>
-                                             <a href="shop-details-one.html">
-                                                Bluetooth Headphones
-                                             </a>
-                                          </h6>
-                                          <div className="star-wrapper">
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <span>0 Review</span>
-                                          </div>
-                                          <span className="price">
-                                             USD 20.00
-                                             <small>$ 50.00</small>
-                                          </span>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                           <div className="col-xl-3 col-md-6">
-                              <div className="featured-product-item-one">
-                                 <div className="featured-product-item-one__thumb">
-                                    <img
-                                       src="/images/best-seller/bestSellerProductThumb1_8.png"
-                                       alt="thumb"
-                                    />
-
-                                    <div className="badge">10% OFF</div>
-                                    <div className="icon">
-                                       <button
-                                          data-bs-toggle="modal"
-                                          data-bs-target="#exampleModal2"
-                                       >
-                                          <i className="fa-regular fa-eye"></i>
-                                       </button>
-                                       <a href="wishlist.html">
-                                          <i className="fa-regular fa-heart"></i>
-                                       </a>
-                                       <a href="cart.html">
-                                          <i className="fa-light fa-bag-shopping"></i>
-                                       </a>
-                                    </div>
-                                 </div>
-                                 <div className="featured-product-item-one__content">
-                                    <div className="featured-product-item-one__content--details-wrapper">
-                                       <div className="price">
-                                          <h6>
-                                             <a href="shop-details-one.html">
-                                                New smart watch
-                                             </a>
-                                          </h6>
-                                          <div className="star-wrapper">
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <span>0 Review</span>
-                                          </div>
-                                          <span className="price">
-                                             USD 20.00
-                                             <small>$ 50.00</small>
-                                          </span>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
+                                 )
+                              )}
                            </div>
                         </div>
                      </div>
-                  </div>
-                  <div
-                     className="tab-pane fade"
-                     id="pills-two"
-                     role="tabpanel"
-                     aria-labelledby="pills-two-tab"
-                  >
-                     <div className="feature-tab-content">
-                        <div className="row g-4">
-                           <div className="col-xl-3 col-md-6">
-                              <div className="featured-product-item-one">
-                                 <div className="featured-product-item-one__thumb">
-                                    <img
-                                       src="/images/best-seller/bestSellerProductThumb1_1.png"
-                                       alt="thumb"
-                                    />
-                                    <div className="badge">10% OFF</div>
-                                    <div className="icon">
-                                       <button
-                                          data-bs-toggle="modal"
-                                          data-bs-target="#exampleModal2"
-                                       >
-                                          <i className="fa-regular fa-eye"></i>
-                                       </button>
-                                       <a href="wishlist.html">
-                                          <i className="fa-regular fa-heart"></i>
-                                       </a>
-                                       <a href="cart.html">
-                                          <i className="fa-light fa-bag-shopping"></i>
-                                       </a>
+                  )}
+                  {filter === "camera" && (
+                     <div
+                        className="fade show"
+                        id="pills-one"
+                        role="tabpanel"
+                        aria-labelledby="pills-one-tab"
+                     >
+                        <div className="feature-tab-content">
+                           <div className="row g-4">
+                              {shuffleArray(featuredProductData).map(
+                                 (product) => (
+                                    <div
+                                       key={product.id}
+                                       className="col-xl-3 col-md-6"
+                                    >
+                                       <FeatureCard {...product} />
                                     </div>
-                                 </div>
-                                 <div className="featured-product-item-one__content">
-                                    <div className="featured-product-item-one__content--details-wrapper">
-                                       <div className="price">
-                                          <h6>
-                                             <a href="shop-details-one.html">
-                                                Core i9 laptop
-                                             </a>
-                                          </h6>
-                                          <div className="star-wrapper">
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <span>0 Review</span>
-                                          </div>
-                                          <span className="price">
-                                             USD 20.00
-                                          </span>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                           <div className="col-xl-3 col-md-6">
-                              <div className="featured-product-item-one">
-                                 <div className="featured-product-item-one__thumb">
-                                    <img
-                                       src="/images/best-seller/bestSellerProductThumb1_2.png"
-                                       alt="thumb"
-                                    />
-
-                                    <div className="badge">10% OFF</div>
-                                    <div className="icon">
-                                       <button
-                                          data-bs-toggle="modal"
-                                          data-bs-target="#exampleModal2"
-                                       >
-                                          <i className="fa-regular fa-eye"></i>
-                                       </button>
-                                       <a href="wishlist.html">
-                                          <i className="fa-regular fa-heart"></i>
-                                       </a>
-                                       <a href="cart.html">
-                                          <i className="fa-light fa-bag-shopping"></i>
-                                       </a>
-                                    </div>
-                                 </div>
-                                 <div className="featured-product-item-one__content">
-                                    <div className="featured-product-item-one__content--details-wrapper">
-                                       <div className="price">
-                                          <h6>
-                                             <a href="shop-details-one.html">
-                                                Apple i16x
-                                             </a>
-                                          </h6>
-                                          <div className="star-wrapper">
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <span>0 Review</span>
-                                          </div>
-                                          <span className="price">
-                                             USD 20.00
-                                             <small>$ 50.00</small>
-                                          </span>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                           <div className="col-xl-3 col-md-6">
-                              <div className="featured-product-item-one">
-                                 <div className="featured-product-item-one__thumb">
-                                    <img
-                                       src="/images/best-seller/bestSellerProductThumb1_3.png"
-                                       alt="thumb"
-                                    />
-
-                                    <div className="badge">10% OFF</div>
-                                    <div className="icon">
-                                       <button
-                                          data-bs-toggle="modal"
-                                          data-bs-target="#exampleModal2"
-                                       >
-                                          <i className="fa-regular fa-eye"></i>
-                                       </button>
-                                       <a href="wishlist.html">
-                                          <i className="fa-regular fa-heart"></i>
-                                       </a>
-                                       <a href="cart.html">
-                                          <i className="fa-light fa-bag-shopping"></i>
-                                       </a>
-                                    </div>
-                                 </div>
-                                 <div className="featured-product-item-one__content">
-                                    <div className="featured-product-item-one__content--details-wrapper">
-                                       <div className="price">
-                                          <h6>
-                                             <a href="shop-details-one.html">
-                                                Bluetooth Headphones
-                                             </a>
-                                          </h6>
-                                          <div className="star-wrapper">
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <span>0 Review</span>
-                                          </div>
-                                          <span className="price">
-                                             USD 20.00
-                                             <small>$ 50.00</small>
-                                          </span>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                           <div className="col-xl-3 col-md-6">
-                              <div className="featured-product-item-one">
-                                 <div className="featured-product-item-one__thumb">
-                                    <img
-                                       src="/images/best-seller/bestSellerProductThumb1_4.png"
-                                       alt="thumb"
-                                    />
-
-                                    <div className="badge">10% OFF</div>
-                                    <div className="icon">
-                                       <button
-                                          data-bs-toggle="modal"
-                                          data-bs-target="#exampleModal2"
-                                       >
-                                          <i className="fa-regular fa-eye"></i>
-                                       </button>
-                                       <a href="wishlist.html">
-                                          <i className="fa-regular fa-heart"></i>
-                                       </a>
-                                       <a href="cart.html">
-                                          <i className="fa-light fa-bag-shopping"></i>
-                                       </a>
-                                    </div>
-                                 </div>
-                                 <div className="featured-product-item-one__content">
-                                    <div className="featured-product-item-one__content--details-wrapper">
-                                       <div className="price">
-                                          <h6>
-                                             <a href="shop-details-one.html">
-                                                new smart watch
-                                             </a>
-                                          </h6>
-                                          <div className="star-wrapper">
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <span>0 Review</span>
-                                          </div>
-                                          <span className="price">
-                                             USD 20.00
-                                             <small>$ 50.00</small>
-                                          </span>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                           <div className="col-xl-3 col-md-6">
-                              <div className="featured-product-item-one">
-                                 <div className="featured-product-item-one__thumb">
-                                    <img
-                                       src="/images/best-seller/bestSellerProductThumb1_5.png"
-                                       alt="thumb"
-                                    />
-
-                                    <div className="badge">10% OFF</div>
-                                    <div className="icon">
-                                       <button
-                                          data-bs-toggle="modal"
-                                          data-bs-target="#exampleModal2"
-                                       >
-                                          <i className="fa-regular fa-eye"></i>
-                                       </button>
-                                       <a href="wishlist.html">
-                                          <i className="fa-regular fa-heart"></i>
-                                       </a>
-                                       <a href="cart.html">
-                                          <i className="fa-light fa-bag-shopping"></i>
-                                       </a>
-                                    </div>
-                                 </div>
-                                 <div className="featured-product-item-one__content">
-                                    <div className="featured-product-item-one__content--details-wrapper">
-                                       <div className="price">
-                                          <h6>
-                                             <a href="settings.html">
-                                                Core i9 laptop
-                                             </a>
-                                          </h6>
-                                          <div className="star-wrapper">
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <span>0 Review</span>
-                                          </div>
-                                          <span className="price">
-                                             USD 20.00
-                                             <small>$ 50.00</small>
-                                          </span>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                           <div className="col-xl-3 col-md-6">
-                              <div className="featured-product-item-one">
-                                 <div className="featured-product-item-one__thumb">
-                                    <img
-                                       src="/images/best-seller/bestSellerProductThumb1_6.png"
-                                       alt="thumb"
-                                    />
-
-                                    <div className="badge">10% OFF</div>
-                                    <div className="icon">
-                                       <button
-                                          data-bs-toggle="modal"
-                                          data-bs-target="#exampleModal2"
-                                       >
-                                          <i className="fa-regular fa-eye"></i>
-                                       </button>
-                                       <a href="wishlist.html">
-                                          <i className="fa-regular fa-heart"></i>
-                                       </a>
-                                       <a href="cart.html">
-                                          <i className="fa-light fa-bag-shopping"></i>
-                                       </a>
-                                    </div>
-                                 </div>
-                                 <div className="featured-product-item-one__content">
-                                    <div className="featured-product-item-one__content--details-wrapper">
-                                       <div className="price">
-                                          <h6>
-                                             <a href="shop-details-one.html">
-                                                Apple i16x
-                                             </a>
-                                          </h6>
-                                          <div className="star-wrapper">
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <span>0 Review</span>
-                                          </div>
-                                          <span className="price">
-                                             USD 20.00
-                                             <small>$ 50.00</small>
-                                          </span>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
+                                 )
+                              )}
                            </div>
                         </div>
                      </div>
-                  </div>
-                  <div
-                     className="tab-pane fade"
-                     id="pills-three"
-                     role="tabpanel"
-                     aria-labelledby="pills-three-tab"
-                  >
-                     <div className="feature-tab-content">
-                        <div className="row g-4">
-                           <div className="col-xl-3 col-md-6">
-                              <div className="featured-product-item-one">
-                                 <div className="featured-product-item-one__thumb">
-                                    <img
-                                       src="/images/best-seller/bestSellerProductThumb1_1.png"
-                                       alt="thumb"
-                                    />
-                                    <div className="badge">10% OFF</div>
-                                    <div className="icon">
-                                       <button
-                                          data-bs-toggle="modal"
-                                          data-bs-target="#exampleModal2"
-                                       >
-                                          <i className="fa-regular fa-eye"></i>
-                                       </button>
-                                       <a href="wishlist.html">
-                                          <i className="fa-regular fa-heart"></i>
-                                       </a>
-                                       <a href="cart.html">
-                                          <i className="fa-light fa-bag-shopping"></i>
-                                       </a>
+                  )}
+                  {filter === "computer" && (
+                     <div
+                        className="fade show"
+                        id="pills-one"
+                        role="tabpanel"
+                        aria-labelledby="pills-one-tab"
+                     >
+                        <div className="feature-tab-content">
+                           <div className="row g-4">
+                              {shuffleArray(featuredProductData).map(
+                                 (product) => (
+                                    <div
+                                       key={product.id}
+                                       className="col-xl-3 col-md-6"
+                                    >
+                                       <FeatureCard {...product} />
                                     </div>
-                                 </div>
-                                 <div className="featured-product-item-one__content">
-                                    <div className="featured-product-item-one__content--details-wrapper">
-                                       <div className="price">
-                                          <h6>
-                                             <a href="shop-details-one.html">
-                                                Core i9 laptop
-                                             </a>
-                                          </h6>
-                                          <div className="star-wrapper">
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <span>0 Review</span>
-                                          </div>
-                                          <span className="price">
-                                             USD 20.00
-                                          </span>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                           <div className="col-xl-3 col-md-6">
-                              <div className="featured-product-item-one">
-                                 <div className="featured-product-item-one__thumb">
-                                    <img
-                                       src="/images/best-seller/bestSellerProductThumb1_2.png"
-                                       alt="thumb"
-                                    />
-
-                                    <div className="badge">10% OFF</div>
-                                    <div className="icon">
-                                       <button
-                                          data-bs-toggle="modal"
-                                          data-bs-target="#exampleModal2"
-                                       >
-                                          <i className="fa-regular fa-eye"></i>
-                                       </button>
-                                       <a href="wishlist.html">
-                                          <i className="fa-regular fa-heart"></i>
-                                       </a>
-                                       <a href="cart.html">
-                                          <i className="fa-light fa-bag-shopping"></i>
-                                       </a>
-                                    </div>
-                                 </div>
-                                 <div className="featured-product-item-one__content">
-                                    <div className="featured-product-item-one__content--details-wrapper">
-                                       <div className="price">
-                                          <h6>
-                                             <a href="shop-details-one.html">
-                                                Apple i16x
-                                             </a>
-                                          </h6>
-                                          <div className="star-wrapper">
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <span>0 Review</span>
-                                          </div>
-                                          <span className="price">
-                                             USD 20.00
-                                             <small>$ 50.00</small>
-                                          </span>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                           <div className="col-xl-3 col-md-6">
-                              <div className="featured-product-item-one">
-                                 <div className="featured-product-item-one__thumb">
-                                    <img
-                                       src="/images/best-seller/bestSellerProductThumb1_3.png"
-                                       alt="thumb"
-                                    />
-
-                                    <div className="badge">10% OFF</div>
-                                    <div className="icon">
-                                       <button
-                                          data-bs-toggle="modal"
-                                          data-bs-target="#exampleModal2"
-                                       >
-                                          <i className="fa-regular fa-eye"></i>
-                                       </button>
-                                       <a href="wishlist.html">
-                                          <i className="fa-regular fa-heart"></i>
-                                       </a>
-                                       <a href="cart.html">
-                                          <i className="fa-light fa-bag-shopping"></i>
-                                       </a>
-                                    </div>
-                                 </div>
-                                 <div className="featured-product-item-one__content">
-                                    <div className="featured-product-item-one__content--details-wrapper">
-                                       <div className="price">
-                                          <h6>
-                                             <a href="shop-details-one.html">
-                                                Bluetooth Headphones
-                                             </a>
-                                          </h6>
-                                          <div className="star-wrapper">
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <span>0 Review</span>
-                                          </div>
-                                          <span className="price">
-                                             USD 20.00
-                                             <small>$ 50.00</small>
-                                          </span>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                           <div className="col-xl-3 col-md-6">
-                              <div className="featured-product-item-one">
-                                 <div className="featured-product-item-one__thumb">
-                                    <img
-                                       src="/images/best-seller/bestSellerProductThumb1_4.png"
-                                       alt="thumb"
-                                    />
-
-                                    <div className="badge">10% OFF</div>
-                                    <div className="icon">
-                                       <button
-                                          data-bs-toggle="modal"
-                                          data-bs-target="#exampleModal2"
-                                       >
-                                          <i className="fa-regular fa-eye"></i>
-                                       </button>
-                                       <a href="wishlist.html">
-                                          <i className="fa-regular fa-heart"></i>
-                                       </a>
-                                       <a href="cart.html">
-                                          <i className="fa-light fa-bag-shopping"></i>
-                                       </a>
-                                    </div>
-                                 </div>
-                                 <div className="featured-product-item-one__content">
-                                    <div className="featured-product-item-one__content--details-wrapper">
-                                       <div className="price">
-                                          <h6>
-                                             <a href="shop-details-one.html">
-                                                new smart watch
-                                             </a>
-                                          </h6>
-                                          <div className="star-wrapper">
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <span>0 Review</span>
-                                          </div>
-                                          <span className="price">
-                                             USD 20.00
-                                             <small>$ 50.00</small>
-                                          </span>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                           <div className="col-xl-3 col-md-6">
-                              <div className="featured-product-item-one">
-                                 <div className="featured-product-item-one__thumb">
-                                    <img
-                                       src="/images/best-seller/bestSellerProductThumb1_5.png"
-                                       alt="thumb"
-                                    />
-
-                                    <div className="badge">10% OFF</div>
-                                    <div className="icon">
-                                       <button
-                                          data-bs-toggle="modal"
-                                          data-bs-target="#exampleModal2"
-                                       >
-                                          <i className="fa-regular fa-eye"></i>
-                                       </button>
-                                       <a href="wishlist.html">
-                                          <i className="fa-regular fa-heart"></i>
-                                       </a>
-                                       <a href="cart.html">
-                                          <i className="fa-light fa-bag-shopping"></i>
-                                       </a>
-                                    </div>
-                                 </div>
-                                 <div className="featured-product-item-one__content">
-                                    <div className="featured-product-item-one__content--details-wrapper">
-                                       <div className="price">
-                                          <h6>
-                                             <a href="shop-details-one.html">
-                                                Core i9 laptop
-                                             </a>
-                                          </h6>
-                                          <div className="star-wrapper">
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <span>0 Review</span>
-                                          </div>
-                                          <span className="price">
-                                             USD 20.00
-                                             <small>$ 50.00</small>
-                                          </span>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                           <div className="col-xl-3 col-md-6">
-                              <div className="featured-product-item-one">
-                                 <div className="featured-product-item-one__thumb">
-                                    <img
-                                       src="/images/best-seller/bestSellerProductThumb1_6.png"
-                                       alt="thumb"
-                                    />
-
-                                    <div className="badge">10% OFF</div>
-                                    <div className="icon">
-                                       <button
-                                          data-bs-toggle="modal"
-                                          data-bs-target="#exampleModal2"
-                                       >
-                                          <i className="fa-regular fa-eye"></i>
-                                       </button>
-                                       <a href="wishlist.html">
-                                          <i className="fa-regular fa-heart"></i>
-                                       </a>
-                                       <a href="cart.html">
-                                          <i className="fa-light fa-bag-shopping"></i>
-                                       </a>
-                                    </div>
-                                 </div>
-                                 <div className="featured-product-item-one__content">
-                                    <div className="featured-product-item-one__content--details-wrapper">
-                                       <div className="price">
-                                          <h6>
-                                             <a href="shop-details-one.html">
-                                                Apple i16x
-                                             </a>
-                                          </h6>
-                                          <div className="star-wrapper">
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <span>0 Review</span>
-                                          </div>
-                                          <span className="price">
-                                             USD 20.00
-                                             <small>$ 50.00</small>
-                                          </span>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                           <div className="col-xl-3 col-md-6">
-                              <div className="featured-product-item-one">
-                                 <div className="featured-product-item-one__thumb">
-                                    <img
-                                       src="/images/best-seller/bestSellerProductThumb1_7.png"
-                                       alt="thumb"
-                                    />
-
-                                    <div className="badge">10% OFF</div>
-                                    <div className="icon">
-                                       <button
-                                          data-bs-toggle="modal"
-                                          data-bs-target="#exampleModal2"
-                                       >
-                                          <i className="fa-regular fa-eye"></i>
-                                       </button>
-                                       <a href="wishlist.html">
-                                          <i className="fa-regular fa-heart"></i>
-                                       </a>
-                                       <a href="cart.html">
-                                          <i className="fa-light fa-bag-shopping"></i>
-                                       </a>
-                                    </div>
-                                 </div>
-                                 <div className="featured-product-item-one__content">
-                                    <div className="featured-product-item-one__content--details-wrapper">
-                                       <div className="price">
-                                          <h6>
-                                             <a href="shop-details-one.html">
-                                                Bluetooth Headphones
-                                             </a>
-                                          </h6>
-                                          <div className="star-wrapper">
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <span>0 Review</span>
-                                          </div>
-                                          <span className="price">
-                                             USD 20.00
-                                          </span>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                           <div className="col-xl-3 col-md-6">
-                              <div className="featured-product-item-one">
-                                 <div className="featured-product-item-one__thumb">
-                                    <img
-                                       src="/images/best-seller/bestSellerProductThumb1_8.png"
-                                       alt="thumb"
-                                    />
-
-                                    <div className="badge">10% OFF</div>
-                                    <div className="icon">
-                                       <button
-                                          data-bs-toggle="modal"
-                                          data-bs-target="#exampleModal2"
-                                       >
-                                          <i className="fa-regular fa-eye"></i>
-                                       </button>
-                                       <a href="wishlist.html">
-                                          <i className="fa-regular fa-heart"></i>
-                                       </a>
-                                       <a href="cart.html">
-                                          <i className="fa-light fa-bag-shopping"></i>
-                                       </a>
-                                    </div>
-                                 </div>
-                                 <div className="featured-product-item-one__content">
-                                    <div className="featured-product-item-one__content--details-wrapper">
-                                       <div className="price">
-                                          <h6>
-                                             <a href="shop-details-one.html">
-                                                New smart watch
-                                             </a>
-                                          </h6>
-                                          <div className="star-wrapper">
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <span>0 Review</span>
-                                          </div>
-                                          <span className="price">
-                                             USD 20.00
-                                             <small>$ 50.00</small>
-                                          </span>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
+                                 )
+                              )}
                            </div>
                         </div>
                      </div>
-                  </div>
-                  <div
-                     className="tab-pane fade"
-                     id="pills-four"
-                     role="tabpanel"
-                     aria-labelledby="pills-four-tab"
-                  >
-                     <div className="feature-tab-content">
-                        <div className="row g-4">
-                           <div className="col-xl-3 col-md-6">
-                              <div className="featured-product-item-one">
-                                 <div className="featured-product-item-one__thumb">
-                                    <img
-                                       src="/images/best-seller/bestSellerProductThumb1_2.png"
-                                       alt="thumb"
-                                    />
-
-                                    <div className="badge">10% OFF</div>
-                                    <div className="icon">
-                                       <button
-                                          data-bs-toggle="modal"
-                                          data-bs-target="#exampleModal2"
-                                       >
-                                          <i className="fa-regular fa-eye"></i>
-                                       </button>
-                                       <a href="wishlist.html">
-                                          <i className="fa-regular fa-heart"></i>
-                                       </a>
-                                       <a href="cart.html">
-                                          <i className="fa-light fa-bag-shopping"></i>
-                                       </a>
+                  )}
+                  {filter === "drone" && (
+                     <div
+                        className="fade show"
+                        id="pills-one"
+                        role="tabpanel"
+                        aria-labelledby="pills-one-tab"
+                     >
+                        <div className="feature-tab-content">
+                           <div className="row g-4">
+                              {shuffleArray(featuredProductData).map(
+                                 (product) => (
+                                    <div
+                                       key={product.id}
+                                       className="col-xl-3 col-md-6"
+                                    >
+                                       <FeatureCard {...product} />
                                     </div>
-                                 </div>
-                                 <div className="featured-product-item-one__content">
-                                    <div className="featured-product-item-one__content--details-wrapper">
-                                       <div className="price">
-                                          <h6>
-                                             <a href="shop-details-one.html">
-                                                Apple i16x
-                                             </a>
-                                          </h6>
-                                          <div className="star-wrapper">
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <span>0 Review</span>
-                                          </div>
-                                          <span className="price">
-                                             USD 20.00
-                                             <small>$ 50.00</small>
-                                          </span>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                           <div className="col-xl-3 col-md-6">
-                              <div className="featured-product-item-one">
-                                 <div className="featured-product-item-one__thumb">
-                                    <img
-                                       src="/images/best-seller/bestSellerProductThumb1_3.png"
-                                       alt="thumb"
-                                    />
-
-                                    <div className="badge">10% OFF</div>
-                                    <div className="icon">
-                                       <button
-                                          data-bs-toggle="modal"
-                                          data-bs-target="#exampleModal2"
-                                       >
-                                          <i className="fa-regular fa-eye"></i>
-                                       </button>
-                                       <a href="wishlist.html">
-                                          <i className="fa-regular fa-heart"></i>
-                                       </a>
-                                       <a href="cart.html">
-                                          <i className="fa-light fa-bag-shopping"></i>
-                                       </a>
-                                    </div>
-                                 </div>
-                                 <div className="featured-product-item-one__content">
-                                    <div className="featured-product-item-one__content--details-wrapper">
-                                       <div className="price">
-                                          <h6>
-                                             <a href="shop-details-one.html">
-                                                Bluetooth Headphones
-                                             </a>
-                                          </h6>
-                                          <div className="star-wrapper">
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <span>0 Review</span>
-                                          </div>
-                                          <span className="price">
-                                             USD 20.00
-                                             <small>$ 50.00</small>
-                                          </span>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                           <div className="col-xl-3 col-md-6">
-                              <div className="featured-product-item-one">
-                                 <div className="featured-product-item-one__thumb">
-                                    <img
-                                       src="/images/best-seller/bestSellerProductThumb1_4.png"
-                                       alt="thumb"
-                                    />
-
-                                    <div className="badge">10% OFF</div>
-                                    <div className="icon">
-                                       <button
-                                          data-bs-toggle="modal"
-                                          data-bs-target="#exampleModal2"
-                                       >
-                                          <i className="fa-regular fa-eye"></i>
-                                       </button>
-                                       <a href="wishlist.html">
-                                          <i className="fa-regular fa-heart"></i>
-                                       </a>
-                                       <a href="cart.html">
-                                          <i className="fa-light fa-bag-shopping"></i>
-                                       </a>
-                                    </div>
-                                 </div>
-                                 <div className="featured-product-item-one__content">
-                                    <div className="featured-product-item-one__content--details-wrapper">
-                                       <div className="price">
-                                          <h6>
-                                             <a href="shop-details-one.html">
-                                                new smart watch
-                                             </a>
-                                          </h6>
-                                          <div className="star-wrapper">
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <span>0 Review</span>
-                                          </div>
-                                          <span className="price">
-                                             USD 20.00
-                                             <small>$ 50.00</small>
-                                          </span>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                           <div className="col-xl-3 col-md-6">
-                              <div className="featured-product-item-one">
-                                 <div className="featured-product-item-one__thumb">
-                                    <img
-                                       src="/images/best-seller/bestSellerProductThumb1_5.png"
-                                       alt="thumb"
-                                    />
-
-                                    <div className="badge">10% OFF</div>
-                                    <div className="icon">
-                                       <button
-                                          data-bs-toggle="modal"
-                                          data-bs-target="#exampleModal2"
-                                       >
-                                          <i className="fa-regular fa-eye"></i>
-                                       </button>
-                                       <a href="wishlist.html">
-                                          <i className="fa-regular fa-heart"></i>
-                                       </a>
-                                       <a href="cart.html">
-                                          <i className="fa-light fa-bag-shopping"></i>
-                                       </a>
-                                    </div>
-                                 </div>
-                                 <div className="featured-product-item-one__content">
-                                    <div className="featured-product-item-one__content--details-wrapper">
-                                       <div className="price">
-                                          <h6>
-                                             <a href="shop-details-one.html">
-                                                Core i9 laptop
-                                             </a>
-                                          </h6>
-                                          <div className="star-wrapper">
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <span>0 Review</span>
-                                          </div>
-                                          <span className="price">
-                                             USD 20.00
-                                             <small>$ 50.00</small>
-                                          </span>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                           <div className="col-xl-3 col-md-6">
-                              <div className="featured-product-item-one">
-                                 <div className="featured-product-item-one__thumb">
-                                    <img
-                                       src="/images/best-seller/bestSellerProductThumb1_6.png"
-                                       alt="thumb"
-                                    />
-
-                                    <div className="badge">10% OFF</div>
-                                    <div className="icon">
-                                       <button
-                                          data-bs-toggle="modal"
-                                          data-bs-target="#exampleModal2"
-                                       >
-                                          <i className="fa-regular fa-eye"></i>
-                                       </button>
-                                       <a href="wishlist.html">
-                                          <i className="fa-regular fa-heart"></i>
-                                       </a>
-                                       <a href="cart.html">
-                                          <i className="fa-light fa-bag-shopping"></i>
-                                       </a>
-                                    </div>
-                                 </div>
-                                 <div className="featured-product-item-one__content">
-                                    <div className="featured-product-item-one__content--details-wrapper">
-                                       <div className="price">
-                                          <h6>
-                                             <a href="shop-details-one.html">
-                                                Apple i16x
-                                             </a>
-                                          </h6>
-                                          <div className="star-wrapper">
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <span>0 Review</span>
-                                          </div>
-                                          <span className="price">
-                                             USD 20.00
-                                             <small>$ 50.00</small>
-                                          </span>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                           <div className="col-xl-3 col-md-6">
-                              <div className="featured-product-item-one">
-                                 <div className="featured-product-item-one__thumb">
-                                    <img
-                                       src="/images/best-seller/bestSellerProductThumb1_7.png"
-                                       alt="thumb"
-                                    />
-
-                                    <div className="badge">10% OFF</div>
-                                    <div className="icon">
-                                       <button
-                                          data-bs-toggle="modal"
-                                          data-bs-target="#exampleModal2"
-                                       >
-                                          <i className="fa-regular fa-eye"></i>
-                                       </button>
-                                       <a href="wishlist.html">
-                                          <i className="fa-regular fa-heart"></i>
-                                       </a>
-                                       <a href="cart.html">
-                                          <i className="fa-light fa-bag-shopping"></i>
-                                       </a>
-                                    </div>
-                                 </div>
-                                 <div className="featured-product-item-one__content">
-                                    <div className="featured-product-item-one__content--details-wrapper">
-                                       <div className="price">
-                                          <h6>
-                                             <a href="shop-details-one.html">
-                                                Bluetooth Headphones
-                                             </a>
-                                          </h6>
-                                          <div className="star-wrapper">
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <span>0 Review</span>
-                                          </div>
-                                          <span className="price">
-                                             USD 20.00
-                                          </span>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                           <div className="col-xl-3 col-md-6">
-                              <div className="featured-product-item-one">
-                                 <div className="featured-product-item-one__thumb">
-                                    <img
-                                       src="/images/best-seller/bestSellerProductThumb1_8.png"
-                                       alt="thumb"
-                                    />
-
-                                    <div className="badge">10% OFF</div>
-                                    <div className="icon">
-                                       <button
-                                          data-bs-toggle="modal"
-                                          data-bs-target="#exampleModal2"
-                                       >
-                                          <i className="fa-regular fa-eye"></i>
-                                       </button>
-                                       <a href="wishlist.html">
-                                          <i className="fa-regular fa-heart"></i>
-                                       </a>
-                                       <a href="cart.html">
-                                          <i className="fa-light fa-bag-shopping"></i>
-                                       </a>
-                                    </div>
-                                 </div>
-                                 <div className="featured-product-item-one__content">
-                                    <div className="featured-product-item-one__content--details-wrapper">
-                                       <div className="price">
-                                          <h6>
-                                             <a href="shop-details-one.html">
-                                                New smart watch
-                                             </a>
-                                          </h6>
-                                          <div className="star-wrapper">
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <span>0 Review</span>
-                                          </div>
-                                          <span className="price">
-                                             USD 20.00
-                                             <small>$ 50.00</small>
-                                          </span>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
+                                 )
+                              )}
                            </div>
                         </div>
                      </div>
-                  </div>
-                  <div
-                     className="tab-pane fade"
-                     id="pills-five"
-                     role="tabpanel"
-                     aria-labelledby="pills-five-tab"
-                  >
-                     <div className="feature-tab-content">
-                        <div className="row g-4">
-                           <div className="col-xl-3 col-md-6">
-                              <div className="featured-product-item-one">
-                                 <div className="featured-product-item-one__thumb">
-                                    <img
-                                       src="/images/best-seller/bestSellerProductThumb1_1.png"
-                                       alt="thumb"
-                                    />
-                                    <div className="badge">10% OFF</div>
-                                    <div className="icon">
-                                       <button
-                                          data-bs-toggle="modal"
-                                          data-bs-target="#exampleModal2"
-                                       >
-                                          <i className="fa-regular fa-eye"></i>
-                                       </button>
-                                       <a href="wishlist.html">
-                                          <i className="fa-regular fa-heart"></i>
-                                       </a>
-                                       <a href="cart.html">
-                                          <i className="fa-light fa-bag-shopping"></i>
-                                       </a>
+                  )}
+                  {filter === "oven" && (
+                     <div
+                        className="fade show"
+                        id="pills-one"
+                        role="tabpanel"
+                        aria-labelledby="pills-one-tab"
+                     >
+                        <div className="feature-tab-content">
+                           <div className="row g-4">
+                              {shuffleArray(featuredProductData).map(
+                                 (product) => (
+                                    <div
+                                       key={product.id}
+                                       className="col-xl-3 col-md-6"
+                                    >
+                                       <FeatureCard {...product} />
                                     </div>
-                                 </div>
-                                 <div className="featured-product-item-one__content">
-                                    <div className="featured-product-item-one__content--details-wrapper">
-                                       <div className="price">
-                                          <h6>
-                                             <a href="shop-details-one.html">
-                                                Core i9 laptop
-                                             </a>
-                                          </h6>
-                                          <div className="star-wrapper">
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <span>0 Review</span>
-                                          </div>
-                                          <span className="price">
-                                             USD 20.00
-                                          </span>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                           <div className="col-xl-3 col-md-6">
-                              <div className="featured-product-item-one">
-                                 <div className="featured-product-item-one__thumb">
-                                    <img
-                                       src="/images/best-seller/bestSellerProductThumb1_2.png"
-                                       alt="thumb"
-                                    />
-
-                                    <div className="badge">10% OFF</div>
-                                    <div className="icon">
-                                       <button
-                                          data-bs-toggle="modal"
-                                          data-bs-target="#exampleModal2"
-                                       >
-                                          <i className="fa-regular fa-eye"></i>
-                                       </button>
-                                       <a href="wishlist.html">
-                                          <i className="fa-regular fa-heart"></i>
-                                       </a>
-                                       <a href="cart.html">
-                                          <i className="fa-light fa-bag-shopping"></i>
-                                       </a>
-                                    </div>
-                                 </div>
-                                 <div className="featured-product-item-one__content">
-                                    <div className="featured-product-item-one__content--details-wrapper">
-                                       <div className="price">
-                                          <h6>
-                                             <a href="shop-details-one.html">
-                                                Apple i16x
-                                             </a>
-                                          </h6>
-                                          <div className="star-wrapper">
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <span>0 Review</span>
-                                          </div>
-                                          <span className="price">
-                                             USD 20.00
-                                             <small>$ 50.00</small>
-                                          </span>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                           <div className="col-xl-3 col-md-6">
-                              <div className="featured-product-item-one">
-                                 <div className="featured-product-item-one__thumb">
-                                    <img
-                                       src="/images/best-seller/bestSellerProductThumb1_3.png"
-                                       alt="thumb"
-                                    />
-
-                                    <div className="badge">10% OFF</div>
-                                    <div className="icon">
-                                       <button
-                                          data-bs-toggle="modal"
-                                          data-bs-target="#exampleModal2"
-                                       >
-                                          <i className="fa-regular fa-eye"></i>
-                                       </button>
-                                       <a href="wishlist.html">
-                                          <i className="fa-regular fa-heart"></i>
-                                       </a>
-                                       <a href="cart.html">
-                                          <i className="fa-light fa-bag-shopping"></i>
-                                       </a>
-                                    </div>
-                                 </div>
-                                 <div className="featured-product-item-one__content">
-                                    <div className="featured-product-item-one__content--details-wrapper">
-                                       <div className="price">
-                                          <h6>
-                                             <a href="shop-details-one.html">
-                                                Bluetooth Headphones
-                                             </a>
-                                          </h6>
-                                          <div className="star-wrapper">
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <span>0 Review</span>
-                                          </div>
-                                          <span className="price">
-                                             USD 20.00
-                                             <small>$ 50.00</small>
-                                          </span>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                           <div className="col-xl-3 col-md-6">
-                              <div className="featured-product-item-one">
-                                 <div className="featured-product-item-one__thumb">
-                                    <img
-                                       src="/images/best-seller/bestSellerProductThumb1_4.png"
-                                       alt="thumb"
-                                    />
-
-                                    <div className="badge">10% OFF</div>
-                                    <div className="icon">
-                                       <button
-                                          data-bs-toggle="modal"
-                                          data-bs-target="#exampleModal2"
-                                       >
-                                          <i className="fa-regular fa-eye"></i>
-                                       </button>
-                                       <a href="wishlist.html">
-                                          <i className="fa-regular fa-heart"></i>
-                                       </a>
-                                       <a href="cart.html">
-                                          <i className="fa-light fa-bag-shopping"></i>
-                                       </a>
-                                    </div>
-                                 </div>
-                                 <div className="featured-product-item-one__content">
-                                    <div className="featured-product-item-one__content--details-wrapper">
-                                       <div className="price">
-                                          <h6>
-                                             <a href="shop-details-one.html">
-                                                new smart watch
-                                             </a>
-                                          </h6>
-                                          <div className="star-wrapper">
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <span>0 Review</span>
-                                          </div>
-                                          <span className="price">
-                                             USD 20.00
-                                             <small>$ 50.00</small>
-                                          </span>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                           <div className="col-xl-3 col-md-6">
-                              <div className="featured-product-item-one">
-                                 <div className="featured-product-item-one__thumb">
-                                    <img
-                                       src="/images/best-seller/bestSellerProductThumb1_5.png"
-                                       alt="thumb"
-                                    />
-
-                                    <div className="badge">10% OFF</div>
-                                    <div className="icon">
-                                       <button
-                                          data-bs-toggle="modal"
-                                          data-bs-target="#exampleModal2"
-                                       >
-                                          <i className="fa-regular fa-eye"></i>
-                                       </button>
-                                       <a href="wishlist.html">
-                                          <i className="fa-regular fa-heart"></i>
-                                       </a>
-                                       <a href="cart.html">
-                                          <i className="fa-light fa-bag-shopping"></i>
-                                       </a>
-                                    </div>
-                                 </div>
-                                 <div className="featured-product-item-one__content">
-                                    <div className="featured-product-item-one__content--details-wrapper">
-                                       <div className="price">
-                                          <h6>
-                                             <a href="shop-details-one.html">
-                                                Core i9 laptop
-                                             </a>
-                                          </h6>
-                                          <div className="star-wrapper">
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <span>0 Review</span>
-                                          </div>
-                                          <span className="price">
-                                             USD 20.00
-                                             <small>$ 50.00</small>
-                                          </span>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                           <div className="col-xl-3 col-md-6">
-                              <div className="featured-product-item-one">
-                                 <div className="featured-product-item-one__thumb">
-                                    <img
-                                       src="/images/best-seller/bestSellerProductThumb1_6.png"
-                                       alt="thumb"
-                                    />
-
-                                    <div className="badge">10% OFF</div>
-                                    <div className="icon">
-                                       <button
-                                          data-bs-toggle="modal"
-                                          data-bs-target="#exampleModal2"
-                                       >
-                                          <i className="fa-regular fa-eye"></i>
-                                       </button>
-                                       <a href="wishlist.html">
-                                          <i className="fa-regular fa-heart"></i>
-                                       </a>
-                                       <a href="cart.html">
-                                          <i className="fa-light fa-bag-shopping"></i>
-                                       </a>
-                                    </div>
-                                 </div>
-                                 <div className="featured-product-item-one__content">
-                                    <div className="featured-product-item-one__content--details-wrapper">
-                                       <div className="price">
-                                          <h6>
-                                             <a href="shop-details-one.html">
-                                                Apple i16x
-                                             </a>
-                                          </h6>
-                                          <div className="star-wrapper">
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <span>0 Review</span>
-                                          </div>
-                                          <span className="price">
-                                             USD 20.00
-                                             <small>$ 50.00</small>
-                                          </span>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                           <div className="col-xl-3 col-md-6">
-                              <div className="featured-product-item-one">
-                                 <div className="featured-product-item-one__thumb">
-                                    <img
-                                       src="/images/best-seller/bestSellerProductThumb1_7.png"
-                                       alt="thumb"
-                                    />
-
-                                    <div className="badge">10% OFF</div>
-                                    <div className="icon">
-                                       <button
-                                          data-bs-toggle="modal"
-                                          data-bs-target="#exampleModal2"
-                                       >
-                                          <i className="fa-regular fa-eye"></i>
-                                       </button>
-                                       <a href="wishlist.html">
-                                          <i className="fa-regular fa-heart"></i>
-                                       </a>
-                                       <a href="cart.html">
-                                          <i className="fa-light fa-bag-shopping"></i>
-                                       </a>
-                                    </div>
-                                 </div>
-                                 <div className="featured-product-item-one__content">
-                                    <div className="featured-product-item-one__content--details-wrapper">
-                                       <div className="price">
-                                          <h6>
-                                             <a href="shop-details-one.html">
-                                                Bluetooth Headphones
-                                             </a>
-                                          </h6>
-                                          <div className="star-wrapper">
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <span>0 Review</span>
-                                          </div>
-                                          <span className="price">
-                                             USD 20.00
-                                          </span>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                           <div className="col-xl-3 col-md-6">
-                              <div className="featured-product-item-one">
-                                 <div className="featured-product-item-one__thumb">
-                                    <img
-                                       src="/images/best-seller/bestSellerProductThumb1_8.png"
-                                       alt="thumb"
-                                    />
-
-                                    <div className="badge">10% OFF</div>
-                                    <div className="icon">
-                                       <button
-                                          data-bs-toggle="modal"
-                                          data-bs-target="#exampleModal2"
-                                       >
-                                          <i className="fa-regular fa-eye"></i>
-                                       </button>
-                                       <a href="wishlist.html">
-                                          <i className="fa-regular fa-heart"></i>
-                                       </a>
-                                       <a href="cart.html">
-                                          <i className="fa-light fa-bag-shopping"></i>
-                                       </a>
-                                    </div>
-                                 </div>
-                                 <div className="featured-product-item-one__content">
-                                    <div className="featured-product-item-one__content--details-wrapper">
-                                       <div className="price">
-                                          <h6>
-                                             <a href="shop-details-one.html">
-                                                New smart watch
-                                             </a>
-                                          </h6>
-                                          <div className="star-wrapper">
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <span>0 Review</span>
-                                          </div>
-                                          <span className="price">
-                                             USD 20.00
-                                             <small>$ 50.00</small>
-                                          </span>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
+                                 )
+                              )}
                            </div>
                         </div>
                      </div>
-                  </div>
-                  <div
-                     className="tab-pane fade"
-                     id="pills-six"
-                     role="tabpanel"
-                     aria-labelledby="pills-six-tab"
-                  >
-                     <div className="feature-tab-content">
-                        <div className="row g-4">
-                           <div className="col-xl-3 col-md-6">
-                              <div className="featured-product-item-one">
-                                 <div className="featured-product-item-one__thumb">
-                                    <img
-                                       src="/images/best-seller/bestSellerProductThumb1_1.png"
-                                       alt="thumb"
-                                    />
-                                    <div className="badge">10% OFF</div>
-                                    <div className="icon">
-                                       <button
-                                          data-bs-toggle="modal"
-                                          data-bs-target="#exampleModal2"
-                                       >
-                                          <i className="fa-regular fa-eye"></i>
-                                       </button>
-                                       <a href="wishlist.html">
-                                          <i className="fa-regular fa-heart"></i>
-                                       </a>
-                                       <a href="cart.html">
-                                          <i className="fa-light fa-bag-shopping"></i>
-                                       </a>
+                  )}
+                  {filter === "watch" && (
+                     <div
+                        className="fade show"
+                        id="pills-one"
+                        role="tabpanel"
+                        aria-labelledby="pills-one-tab"
+                     >
+                        <div className="feature-tab-content">
+                           <div className="row g-4">
+                              {shuffleArray(featuredProductData).map(
+                                 (product) => (
+                                    <div
+                                       key={product.id}
+                                       className="col-xl-3 col-md-6"
+                                    >
+                                       <FeatureCard {...product} />
                                     </div>
-                                 </div>
-                                 <div className="featured-product-item-one__content">
-                                    <div className="featured-product-item-one__content--details-wrapper">
-                                       <div className="price">
-                                          <h6>Core i9 laptop</h6>
-                                          <div className="star-wrapper">
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <span>0 Review</span>
-                                          </div>
-                                          <span className="price">
-                                             USD 20.00
-                                          </span>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                           <div className="col-xl-3 col-md-6">
-                              <div className="featured-product-item-one">
-                                 <div className="featured-product-item-one__thumb">
-                                    <img
-                                       src="/images/best-seller/bestSellerProductThumb1_2.png"
-                                       alt="thumb"
-                                    />
-
-                                    <div className="badge">10% OFF</div>
-                                    <div className="icon">
-                                       <button
-                                          data-bs-toggle="modal"
-                                          data-bs-target="#exampleModal2"
-                                       >
-                                          <i className="fa-regular fa-eye"></i>
-                                       </button>
-                                       <a href="wishlist.html">
-                                          <i className="fa-regular fa-heart"></i>
-                                       </a>
-                                       <a href="cart.html">
-                                          <i className="fa-light fa-bag-shopping"></i>
-                                       </a>
-                                    </div>
-                                 </div>
-                                 <div className="featured-product-item-one__content">
-                                    <div className="featured-product-item-one__content--details-wrapper">
-                                       <div className="price">
-                                          <h6>
-                                             <a href="shop-details-one.html">
-                                                Apple i16x
-                                             </a>
-                                          </h6>
-                                          <div className="star-wrapper">
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <span>0 Review</span>
-                                          </div>
-                                          <span className="price">
-                                             USD 20.00
-                                             <small>$ 50.00</small>
-                                          </span>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                           <div className="col-xl-3 col-md-6">
-                              <div className="featured-product-item-one">
-                                 <div className="featured-product-item-one__thumb">
-                                    <img
-                                       src="/images/best-seller/bestSellerProductThumb1_6.png"
-                                       alt="thumb"
-                                    />
-
-                                    <div className="badge">10% OFF</div>
-                                    <div className="icon">
-                                       <button
-                                          data-bs-toggle="modal"
-                                          data-bs-target="#exampleModal2"
-                                       >
-                                          <i className="fa-regular fa-eye"></i>
-                                       </button>
-                                       <a href="wishlist.html">
-                                          <i className="fa-regular fa-heart"></i>
-                                       </a>
-                                       <a href="cart.html">
-                                          <i className="fa-light fa-bag-shopping"></i>
-                                       </a>
-                                    </div>
-                                 </div>
-                                 <div className="featured-product-item-one__content">
-                                    <div className="featured-product-item-one__content--details-wrapper">
-                                       <div className="price">
-                                          <h6>
-                                             <a href="shop-details-one.html">
-                                                Apple i16x
-                                             </a>
-                                          </h6>
-                                          <div className="star-wrapper">
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <span>0 Review</span>
-                                          </div>
-                                          <span className="price">
-                                             USD 20.00
-                                             <small>$ 50.00</small>
-                                          </span>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                           <div className="col-xl-3 col-md-6">
-                              <div className="featured-product-item-one">
-                                 <div className="featured-product-item-one__thumb">
-                                    <img
-                                       src="/images/best-seller/bestSellerProductThumb1_7.png"
-                                       alt="thumb"
-                                    />
-
-                                    <div className="badge">10% OFF</div>
-                                    <div className="icon">
-                                       <button
-                                          data-bs-toggle="modal"
-                                          data-bs-target="#exampleModal2"
-                                       >
-                                          <i className="fa-regular fa-eye"></i>
-                                       </button>
-                                       <a href="wishlist.html">
-                                          <i className="fa-regular fa-heart"></i>
-                                       </a>
-                                       <a href="cart.html">
-                                          <i className="fa-light fa-bag-shopping"></i>
-                                       </a>
-                                    </div>
-                                 </div>
-                                 <div className="featured-product-item-one__content">
-                                    <div className="featured-product-item-one__content--details-wrapper">
-                                       <div className="price">
-                                          <h6>
-                                             <a href="shop-details-one.html">
-                                                Bluetooth Headphones
-                                             </a>
-                                          </h6>
-                                          <div className="star-wrapper">
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <span>0 Review</span>
-                                          </div>
-                                          <span className="price">
-                                             USD 20.00
-                                          </span>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                           <div className="col-xl-3 col-md-6">
-                              <div className="featured-product-item-one">
-                                 <div className="featured-product-item-one__thumb">
-                                    <img
-                                       src="/images/best-seller/bestSellerProductThumb1_8.png"
-                                       alt="thumb"
-                                    />
-
-                                    <div className="badge">10% OFF</div>
-                                    <div className="icon">
-                                       <button
-                                          data-bs-toggle="modal"
-                                          data-bs-target="#exampleModal2"
-                                       >
-                                          <i className="fa-regular fa-eye"></i>
-                                       </button>
-                                       <a href="wishlist.html">
-                                          <i className="fa-regular fa-heart"></i>
-                                       </a>
-                                       <a href="cart.html">
-                                          <i className="fa-light fa-bag-shopping"></i>
-                                       </a>
-                                    </div>
-                                 </div>
-                                 <div className="featured-product-item-one__content">
-                                    <div className="featured-product-item-one__content--details-wrapper">
-                                       <div className="price">
-                                          <h6>
-                                             <a href="shop-details-one.html">
-                                                New smart watch
-                                             </a>
-                                          </h6>
-                                          <div className="star-wrapper">
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <i className="fa-solid fa-star"></i>
-                                             <span>0 Review</span>
-                                          </div>
-                                          <span className="price">
-                                             USD 20.00
-                                             <small>$ 50.00</small>
-                                          </span>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
+                                 )
+                              )}
                            </div>
                         </div>
                      </div>
-                  </div>
+                  )}
                </div>
             </div>
          </div>
       </section>
+   );
+};
+
+const FeatureCard = ({
+   discount,
+   img,
+   name,
+   offerPrice,
+   price,
+   reviews,
+}: FeaturedProductType) => {
+   return (
+      <div className="featured-product-item-one">
+         <div className="featured-product-item-one__thumb">
+            <Image width={150} height={185} src={img} alt={name} />
+            <div className="badge">{discount}</div>
+            <div className="icon">
+               <button data-bs-toggle="modal" data-bs-target="#exampleModal2">
+                  <i className="fa-regular fa-eye"></i>
+               </button>
+               <a href="wishlist.html">
+                  <i className="fa-regular fa-heart"></i>
+               </a>
+               <a href="cart.html">
+                  <i className="fa-light fa-bag-shopping"></i>
+               </a>
+            </div>
+         </div>
+         <div className="featured-product-item-one__content">
+            <div className="featured-product-item-one__content--details-wrapper">
+               <div className="price">
+                  <h6>
+                     <a href="shop-details-one.html">{name}</a>
+                  </h6>
+                  <div className="star-wrapper">
+                     <i className="fa-solid fa-star"></i>
+                     <i className="fa-solid fa-star"></i>
+                     <i className="fa-solid fa-star"></i>
+                     <i className="fa-solid fa-star"></i>
+                     <i className="fa-solid fa-star"></i>
+                     <span>{reviews}</span>
+                  </div>
+                  <span className="price">
+                     USD {offerPrice}
+                     <small>$ {price}</small>
+                  </span>
+               </div>
+            </div>
+         </div>
+      </div>
    );
 };
 

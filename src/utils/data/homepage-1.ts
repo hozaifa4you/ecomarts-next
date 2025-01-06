@@ -87,6 +87,82 @@ const bestSellerData = [
    },
 ];
 
+const featuredProductData = [
+   {
+      id: 1,
+      img: "/images/best-seller/bestSellerProductThumb1_1.png",
+      discount: "10% OFF",
+      name: "Core i9 laptop",
+      reviews: "0 Review",
+      price: 531,
+      offerPrice: 478,
+   },
+   {
+      id: 2,
+      img: "/images/best-seller/bestSellerProductThumb1_2.png",
+      discount: "10% OFF",
+      name: "Apple i16x",
+      reviews: "43 Review",
+      price: 321,
+      offerPrice: 289,
+   },
+   {
+      id: 3,
+      img: "/images/best-seller/bestSellerProductThumb1_3.png",
+      discount: "10% OFF",
+      name: "Bluetooth Headphones",
+      reviews: "43 Review",
+      price: 43,
+      offerPrice: 39,
+   },
+   {
+      id: 4,
+      img: "/images/best-seller/bestSellerProductThumb1_4.png",
+      discount: "10% OFF",
+      name: "New Smart Watch",
+      reviews: "0.54K Review",
+      price: 120,
+      offerPrice: 108,
+   },
+   {
+      id: 5,
+      img: "/images/best-seller/bestSellerProductThumb1_5.png",
+      discount: "10% OFF",
+      name: "iPhone 16max pro",
+      reviews: "99.4K Review",
+      price: 1500,
+      offerPrice: 1350,
+   },
+   {
+      id: 6,
+      img: "/images/best-seller/bestSellerProductThumb1_6.png",
+      discount: "10% OFF",
+      name: "iMax Headset",
+      reviews: "10.11K Review",
+      price: 429,
+      offerPrice: 386,
+   },
+   {
+      id: 7,
+      img: "/images/best-seller/bestSellerProductThumb1_7.png",
+      discount: "10% OFF",
+      name: "Zezziz Lens",
+      reviews: "109K Review",
+      price: 12290,
+      offerPrice: 11061,
+   },
+   {
+      id: 8,
+      img: "/images/best-seller/bestSellerProductThumb1_8.png",
+      discount: "10% OFF",
+      name: "New Smart Watch",
+      reviews: "0.54K Review",
+      price: 120,
+      offerPrice: 108,
+   },
+];
+
 export type CategoryType = (typeof categoryData)[0];
 export type BestSellerType = (typeof bestSellerData)[0];
-export { categoryData, marqueeData, bestSellerData };
+export type FeaturedProductType = (typeof featuredProductData)[0];
+export { categoryData, marqueeData, bestSellerData, featuredProductData };
