@@ -1,4 +1,4 @@
-import React from "react";
+import Image from "next/image";
 
 const Promotion = () => {
    return (
@@ -9,7 +9,12 @@ const Promotion = () => {
                   <div className="col-lg-5">
                      <div className="promo-card promo-card_1">
                         <div className="thumb">
-                           <img src="/images/offer/promo1.png" alt="Thumb" />
+                           <Image
+                              width={350}
+                              height={330}
+                              src="/images/offer/promo1.png"
+                              alt="Thumb"
+                           />
                         </div>
                         <div className="promo-content">
                            <div className="promo-info">
@@ -30,7 +35,12 @@ const Promotion = () => {
                   <div className="col-lg-7">
                      <div className="promo-card promo-card_2">
                         <div className="thumb">
-                           <img src="/images/offer/promo2.png" alt="Thumb" />
+                           <Image
+                              width={510}
+                              height={400}
+                              src="/images/offer/promo2.png"
+                              alt="Thumb"
+                           />
                         </div>
                         <div className="promo-content">
                            <div className="promo-info">
