@@ -244,12 +244,48 @@ const testimonialData = [
    },
 ];
 
+const blogData = [
+   {
+      id: 1,
+      by: "Admin",
+      img: "/images/blog/blogThumb2_1.jpg",
+      category: "Business",
+      date: "Oct 05, 2024",
+      title: "How to Get the Most Out of Your Gizmolab Shopify",
+   },
+   {
+      id: 2,
+      by: "Author",
+      img: "/images/blog/blogThumb2_2.jpg",
+      category: "Sells",
+      date: "Jan 15, 2024",
+      title: "How to Get the Most Out of Your Gizmolab Shopify",
+   },
+   {
+      id: 3,
+      by: "Seller",
+      img: "/images/blog/blogThumb2_3.jpg",
+      category: "Sells",
+      date: "Jan 15, 2024",
+      title: "How to Get the Most Out of Your Gizmolab Shopify",
+   },
+   {
+      id: 4,
+      by: "Seller",
+      img: "/images/blog/blogThumb2_4.jpg",
+      category: "Sells",
+      date: "Jan 15, 2025",
+      title: "How to Get the Most Out of Your Gizmolab Shopify",
+   },
+];
+
 export type CategoryType = (typeof categoryData)[0];
 export type BestSellerType = (typeof bestSellerData)[0];
 export type FeaturedProductType = (typeof featuredProductData)[0];
 export type PopularProductType = (typeof popularProductsData)[0];
 export type PopularProductType2 = (typeof popularProductsData2)[0];
 export type TestimonialType = (typeof testimonialData)[0];
+export type BlogType = (typeof blogData)[0];
 export {
    categoryData,
    marqueeData,
@@ -258,4 +294,5 @@ export {
    popularProductsData,
    popularProductsData2,
    testimonialData,
+   blogData,
 };
