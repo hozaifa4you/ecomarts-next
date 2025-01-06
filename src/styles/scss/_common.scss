@@ -892,6 +892,12 @@ input.main-search-input::placeholder {
          }
       }
    }
+
+   .price-range-select {
+      height: 40px !important;
+      padding: 5px 10px;
+      border-radius: 32px;
+   }
 }
 
 .nav-pills {

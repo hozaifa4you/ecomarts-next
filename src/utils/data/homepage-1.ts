@@ -20,5 +20,73 @@ const categoryData = [
    { id: 8, category: "Laptop", count: "22 items", svg: Icons.Laptop },
 ];
 
+const bestSellerData = [
+   {
+      id: 1,
+      name: "Android phone",
+      reviews: "(7)",
+      mainPrice: 25,
+      offerPrice: 85,
+      img: "/images/top-deals-item/topDealsItemThumb1_1.png",
+   },
+   {
+      id: 2,
+      name: "VLC Speaker",
+      reviews: "(10)",
+      mainPrice: 5,
+      offerPrice: 8,
+      img: "/images/top-deals-item/topDealsItemThumb1_2.png",
+   },
+   {
+      id: 3,
+      name: "iPhone 16max pro",
+      reviews: "(1.5K)",
+      mainPrice: 200,
+      offerPrice: 185,
+      img: "/images/top-deals-item/topDealsItemThumb1_3.png",
+   },
+   {
+      id: 4,
+      name: "Wireless Mouse",
+      reviews: "(5.9K)",
+      mainPrice: 12,
+      offerPrice: 18,
+      img: "/images/top-deals-item/topDealsItemThumb1_4.png",
+   },
+   {
+      id: 5,
+      name: "Macbook M2",
+      reviews: "(1.56K)",
+      mainPrice: 1200,
+      offerPrice: 1185,
+      img: "/images/top-deals-item/topDealsItemThumb1_6.png",
+   },
+   {
+      id: 6,
+      name: "Smart Drone Plus",
+      reviews: "(2.9K)",
+      mainPrice: 800,
+      offerPrice: 785,
+      img: "/images/top-deals-item/topDealsItemThumb1_5.png",
+   },
+   {
+      id: 7,
+      name: "Charging Lights",
+      reviews: "(11.3K)",
+      mainPrice: 10,
+      offerPrice: 7,
+      img: "/images/top-deals-item/topDealsItemThumb1_7.png",
+   },
+   {
+      id: 8,
+      name: "Smart CC Camera",
+      reviews: "(8.6K)",
+      mainPrice: 30,
+      offerPrice: 27,
+      img: "/images/top-deals-item/topDealsItemThumb1_8.png",
+   },
+];
+
 export type CategoryType = (typeof categoryData)[0];
-export { categoryData, marqueeData };
+export type BestSellerType = (typeof bestSellerData)[0];
+export { categoryData, marqueeData, bestSellerData };
