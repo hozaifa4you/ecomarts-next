@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Albert_Sans, Jost } from "next/font/google";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "swiper/css";
 
 import "@/styles/css/all.min.css";
 import "@/styles/scss/main.scss";
