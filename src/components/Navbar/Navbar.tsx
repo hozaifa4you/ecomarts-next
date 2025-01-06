@@ -1,18 +1,20 @@
-import React from "react";
-import { SearchModal } from "./SearchModal";
-import { ModalV2 } from "./ModalV2";
+import Image from "next/image";
+import Link from "next/link";
+
+import { SearchModal } from "@/components/Navbar/SearchModal";
+import { ModalV2 } from "@/components/Navbar/ModalV2";
+import { ResponsiveSidebar } from "./ResponsiveSidebar";
 
 const Navbar = () => {
    return (
       <>
-         <SearchModal />
          <ModalV2 />
          <header className="header-section-1">
             <div id="header-sticky" className="header-1">
                <div className="header-top-one">
                   <div className="phone-icon">
                      <i className="icon-telephone"></i>
-                     <a href="tel:32534534534">+61 000 321 555 004</a>
+                     <Link href="tel:32534534534">+61 000 321 555 004</Link>
                   </div>
                   <div className="offer">
                      <div className="subtitle style1">
@@ -37,10 +39,10 @@ const Navbar = () => {
                      </div>
 
                      <div className="user">
-                        <a href="dashboard.html">
+                        <Link href="/dashboard">
                            <i className="fa-solid fa-user"></i>
                            My account
-                        </a>
+                        </Link>
                      </div>
                   </div>
                </div>
@@ -50,17 +52,21 @@ const Navbar = () => {
                      <div className="header-main">
                         <div className="header-left">
                            <div className="logo">
-                              <a href="index.html" className="header-logo">
-                                 <img
+                              <Link href="/" className="header-logo">
+                                 <Image
+                                    width={175}
+                                    height={30}
                                     src="/images/logo/logo.svg"
                                     alt="logo-img"
+                                    quality={100}
                                  />
-                              </a>
+                              </Link>
                            </div>
+                           {/* category items */}
                            <div className="header-cataegory-item">
                               <ul className="header-cataegory">
                                  <li>
-                                    <a href="#">
+                                    <Link href="#">
                                        <span className="left-icon">
                                           <i className="icon-app"></i>
                                        </span>
@@ -68,98 +74,100 @@ const Navbar = () => {
                                        <span className="right-icon">
                                           <i className="fa-regular fa-chevron-down"></i>
                                        </span>
-                                    </a>
+                                    </Link>
                                  </li>
                               </ul>
                               <ul className="sub-cataegory">
                                  <li className="sub-has-dropdown">
-                                    <a href="#">
+                                    <Link href="#">
                                        All Laptop
                                        <i className="fas fa-angle-right"></i>
-                                    </a>
+                                    </Link>
                                     <ul className="sub-cataegory">
                                        <li>
-                                          <a href="shop-without-sidebar.html">
+                                          <Link href="/shop-without-sidebar">
                                              Lenovo
-                                          </a>
+                                          </Link>
                                        </li>
                                        <li>
-                                          <a href="shop-without-sidebar.html">
+                                          <Link href="/shop-without-sidebar">
                                              MSI
-                                          </a>
+                                          </Link>
                                        </li>
                                        <li>
-                                          <a href="shop-without-sidebar.html">
+                                          <Link href="/shop-without-sidebar">
                                              Asus
-                                          </a>
+                                          </Link>
                                        </li>
                                        <li>
-                                          <a href="shop-without-sidebar.html">
+                                          <Link href="/shop-without-sidebar">
                                              HP
-                                          </a>
+                                          </Link>
                                        </li>
                                        <li>
-                                          <a href="shop-without-sidebar.html">
+                                          <Link href="/shop-without-sidebar">
                                              MacBook
-                                          </a>
+                                          </Link>
                                        </li>
                                        <li>
-                                          <a href="shop-without-sidebar.html">
+                                          <Link href="/shop-without-sidebar">
                                              Smart
-                                          </a>
+                                          </Link>
                                        </li>
                                        <li>
-                                          <a href="shop-without-sidebar.html">
+                                          <Link href="/shop-without-sidebar">
                                              Walton
-                                          </a>
+                                          </Link>
                                        </li>
                                     </ul>
                                  </li>
                                  <li>
-                                    <a href="shop-without-sidebar.html">
+                                    <Link href="/shop-without-sidebar">
                                        Gadget
-                                    </a>
+                                    </Link>
                                  </li>
                                  <li>
-                                    <a href="shop-without-sidebar.html">
+                                    <Link href="/shop-without-sidebar">
                                        Phone
-                                    </a>
+                                    </Link>
                                  </li>
                                  <li>
-                                    <a href="shop-without-sidebar.html">
+                                    <Link href="/shop-without-sidebar">
                                        Digital Watch
-                                    </a>
+                                    </Link>
                                  </li>
                               </ul>
                            </div>
                         </div>
                         <div className="header-right d-flex justify-content-end align-items-center">
-                           <div className="mean__menu-wrapper">
+                           <div className="mean__menu-wrapper d-none d-xl-block">
                               <div className="main-menu">
                                  <nav id="mobile-menu">
                                     <ul>
                                        <li className="has-dropdown active menu-thumb">
-                                          <a href="#">
+                                          <Link href="#">
                                              Home
                                              <i className="fa-regular fa-plus"></i>
-                                          </a>
+                                          </Link>
                                           <ul className="submenu has-homemenu">
                                              <li>
                                                 <div className="homemenu-items">
                                                    <div className="row">
                                                       <div className="col-lg-3 homemenu">
                                                          <div className="homemenu-thumb">
-                                                            <img
+                                                            <Image
+                                                               width={217}
+                                                               height={271}
                                                                src="/images/header/home-1.png"
                                                                alt="img"
                                                             />
                                                             <div className="demo-button">
-                                                               <a
+                                                               <Link
                                                                   className="theme-btn"
-                                                                  href="index.html"
+                                                                  href="/"
                                                                >
                                                                   Electronics
-                                                               </a>
+                                                               </Link>
                                                             </div>
                                                          </div>
                                                          <div className="homemenu-content text-center">
@@ -170,17 +178,19 @@ const Navbar = () => {
                                                       </div>
                                                       <div className="col-lg-3 homemenu">
                                                          <div className="homemenu-thumb mb-15">
-                                                            <img
+                                                            <Image
+                                                               width={217}
+                                                               height={271}
                                                                src="/images/header/home-2.png"
                                                                alt="img"
                                                             />
                                                             <div className="demo-button">
-                                                               <a
+                                                               <Link
                                                                   className="theme-btn"
-                                                                  href="index2.html"
+                                                                  href="/homepage-2"
                                                                >
                                                                   Fashion
-                                                               </a>
+                                                               </Link>
                                                             </div>
                                                          </div>
                                                          <div className="homemenu-content text-center">
@@ -191,17 +201,19 @@ const Navbar = () => {
                                                       </div>
                                                       <div className="col-lg-3 homemenu">
                                                          <div className="homemenu-thumb mb-15">
-                                                            <img
+                                                            <Image
+                                                               width={217}
+                                                               height={271}
                                                                src="/images/header/home-3.png"
                                                                alt="img"
                                                             />
                                                             <div className="demo-button">
-                                                               <a
+                                                               <Link
                                                                   className="theme-btn"
-                                                                  href="index3.html"
+                                                                  href="/homepage-3"
                                                                >
                                                                   Grocery Store
-                                                               </a>
+                                                               </Link>
                                                             </div>
                                                          </div>
                                                          <div className="homemenu-content text-center">
@@ -212,17 +224,19 @@ const Navbar = () => {
                                                       </div>
                                                       <div className="col-lg-3 homemenu">
                                                          <div className="homemenu-thumb mb-15">
-                                                            <img
+                                                            <Image
+                                                               width={217}
+                                                               height={271}
                                                                src="/images/header/home-4.png"
                                                                alt="img"
                                                             />
                                                             <div className="demo-button">
-                                                               <a
+                                                               <Link
                                                                   className="theme-btn"
-                                                                  href="index4.html"
+                                                                  href="/homepage-4"
                                                                >
                                                                   Cosmetic
-                                                               </a>
+                                                               </Link>
                                                             </div>
                                                          </div>
                                                          <div className="homemenu-content text-center">
@@ -233,17 +247,19 @@ const Navbar = () => {
                                                       </div>
                                                       <div className="col-lg-3 homemenu">
                                                          <div className="homemenu-thumb mb-15">
-                                                            <img
+                                                            <Image
+                                                               width={217}
+                                                               height={271}
                                                                src="/images/header/home-5.png"
                                                                alt="img"
                                                             />
                                                             <div className="demo-button">
-                                                               <a
+                                                               <Link
                                                                   className="theme-btn"
-                                                                  href="index-5.html"
+                                                                  href="/homepage-5"
                                                                >
                                                                   Jewelry
-                                                               </a>
+                                                               </Link>
                                                             </div>
                                                          </div>
                                                          <div className="homemenu-content text-center">
@@ -254,17 +270,19 @@ const Navbar = () => {
                                                       </div>
                                                       <div className="col-lg-3 homemenu">
                                                          <div className="homemenu-thumb mb-15">
-                                                            <img
+                                                            <Image
+                                                               width={217}
+                                                               height={271}
                                                                src="/images/header/home-6.png"
                                                                alt="img"
                                                             />
                                                             <div className="demo-button">
-                                                               <a
+                                                               <Link
                                                                   className="theme-btn"
-                                                                  href="index-6.html"
+                                                                  href="/homepage-6"
                                                                >
                                                                   Furniture Shop
-                                                               </a>
+                                                               </Link>
                                                             </div>
                                                          </div>
                                                          <div className="homemenu-content text-center">
@@ -275,17 +293,19 @@ const Navbar = () => {
                                                       </div>
                                                       <div className="col-lg-3 homemenu">
                                                          <div className="homemenu-thumb mb-15">
-                                                            <img
+                                                            <Image
+                                                               width={217}
+                                                               height={271}
                                                                src="/images/header/home-7.png"
                                                                alt="img"
                                                             />
                                                             <div className="demo-button">
-                                                               <a
+                                                               <Link
                                                                   className="theme-btn"
-                                                                  href="index-7.html"
+                                                                  href="/homepage-7"
                                                                >
                                                                   Pet Care
-                                                               </a>
+                                                               </Link>
                                                             </div>
                                                          </div>
                                                          <div className="homemenu-content text-center">
@@ -300,222 +320,224 @@ const Navbar = () => {
                                           </ul>
                                        </li>
                                        <li className="has-dropdown active d-xl-none">
-                                          <a
-                                             href="index.html"
+                                          <Link
+                                             href="/"
                                              className="border-none"
                                           >
                                              Home
                                              <i className="fa-regular fa-plus"></i>
-                                          </a>
+                                          </Link>
                                           <ul className="submenu">
                                              <li>
-                                                <a href="index.html">Home 01</a>
+                                                <Link href="/">Home 01</Link>
                                              </li>
                                              <li>
-                                                <a href="index2.html">
+                                                <Link href="/homepage-2">
                                                    Home 02
-                                                </a>
+                                                </Link>
                                              </li>
                                              <li>
-                                                <a href="index3.html">
+                                                <Link href="/homepage-3">
                                                    Home 03
-                                                </a>
+                                                </Link>
                                              </li>
                                              <li>
-                                                <a href="index4.html">
+                                                <Link href="/homepage-4">
                                                    Home 04
-                                                </a>
+                                                </Link>
                                              </li>
                                              <li>
-                                                <a href="index-5.html">
+                                                <Link href="/homepage-5">
                                                    Home 05
-                                                </a>
+                                                </Link>
                                              </li>
                                              <li>
-                                                <a href="index-6.html">
+                                                <Link href="/homepage-6">
                                                    Home 06
-                                                </a>
+                                                </Link>
                                              </li>
                                              <li>
-                                                <a href="index-7.html">
+                                                <Link href="/homepage-7">
                                                    Home 07
-                                                </a>
+                                                </Link>
                                              </li>
                                           </ul>
                                        </li>
                                        <li className="has-dropdown">
-                                          <a href="#">
+                                          <Link href="#">
                                              Shop
                                              <i className="fa-regular fa-plus"></i>
-                                          </a>
+                                          </Link>
                                           <ul className="submenu">
                                              <li>
-                                                <a href="shop-left-sidebar.html">
+                                                <Link href="/shop-left-sidebar">
                                                    Shop Left Sidebar
-                                                </a>
+                                                </Link>
                                              </li>
                                              <li>
-                                                <a href="shop-right-sidebar.html">
+                                                <Link href="/shop-right-sidebar">
                                                    Shop Right Sidbar
-                                                </a>
+                                                </Link>
                                              </li>
                                              <li>
-                                                <a href="shop-without-sidebar.html">
+                                                <Link href="/shop-without-sidebar">
                                                    Shop Without Sidebar
-                                                </a>
+                                                </Link>
                                              </li>
                                              <li>
-                                                <a href="shop-details-one.html">
+                                                <Link href="/shop-details-one">
                                                    Shop Details One
-                                                </a>
+                                                </Link>
                                              </li>
                                              <li>
-                                                <a href="shop-details-two.html">
+                                                <Link href="/shop-details-two">
                                                    Shop Details Two
-                                                </a>
+                                                </Link>
                                              </li>
                                              <li>
-                                                <a href="cart.html">Cart</a>
+                                                <Link href="/cart">Cart</Link>
                                              </li>
                                              <li>
-                                                <a href="wishlist.html">
+                                                <Link href="/wishlist">
                                                    Wishlist
-                                                </a>
+                                                </Link>
                                              </li>
                                              <li>
-                                                <a href="checkout.html">
+                                                <Link href="/checkout">
                                                    checkout
-                                                </a>
+                                                </Link>
                                              </li>
                                           </ul>
                                        </li>
                                        <li className="has-dropdown">
-                                          <a href="#">
+                                          <Link href="#">
                                              Pages
                                              <i className="fa-regular fa-plus"></i>
-                                          </a>
+                                          </Link>
                                           <ul className="submenu">
                                              <li>
-                                                <a href="about.html">
+                                                <Link href="/about">
                                                    About Us
-                                                </a>
+                                                </Link>
                                              </li>
                                              <li>
-                                                <a href="testimonial.html">
+                                                <Link href="/testimonial">
                                                    Testimonial
-                                                </a>
+                                                </Link>
                                              </li>
                                              <li>
-                                                <a href="faq.html">Faq</a>
+                                                <Link href="/faq">Faq</Link>
                                              </li>
                                              <li>
-                                                <a href="look-book.html">
+                                                <Link href="/look-book">
                                                    Look Book
-                                                </a>
+                                                </Link>
                                              </li>
                                              <li>
-                                                <a href="login.html">Login</a>
+                                                <Link href="/login">Login</Link>
                                              </li>
                                              <li>
-                                                <a href="register.html">
+                                                <Link href="/register">
                                                    Register
-                                                </a>
+                                                </Link>
                                              </li>
                                              <li>
-                                                <a href="dashboard.html">
+                                                <Link href="/dashboard">
                                                    Dashboard
-                                                </a>
+                                                </Link>
                                              </li>
                                           </ul>
                                        </li>
 
                                        <li className="has-dropdown">
-                                          <a href="#">
+                                          <Link href="#">
                                              Order
                                              <i className="fa-regular fa-plus"></i>
-                                          </a>
+                                          </Link>
                                           <ul className="submenu">
                                              <li>
-                                                <a href="order-tracking.html">
+                                                <Link href="/order-tracking">
                                                    Order Tracking
-                                                </a>
+                                                </Link>
                                              </li>
                                              <li>
-                                                <a href="order-history.html">
+                                                <Link href="/order-history">
                                                    Order History
-                                                </a>
+                                                </Link>
                                              </li>
                                              <li>
-                                                <a href="order-details-one.html">
+                                                <Link href="/order-details-one">
                                                    Order Details One
-                                                </a>
+                                                </Link>
                                              </li>
                                              <li>
-                                                <a href="settings.html">
+                                                <Link href="/settings">
                                                    Settings
-                                                </a>
+                                                </Link>
                                              </li>
                                           </ul>
                                        </li>
                                        <li className="has-dropdown">
-                                          <a href="blog.html">
+                                          <Link href="#">
                                              Blog
                                              <i className="fa-regular fa-plus"></i>
-                                          </a>
+                                          </Link>
                                           <ul className="submenu">
                                              <li>
-                                                <a href="blog.html">Blog</a>
+                                                <Link href="/blogs">Blog</Link>
                                              </li>
                                              <li>
-                                                <a href="blog-classic.html">
+                                                <Link href="/blogs-classic">
                                                    Blog Classic
-                                                </a>
+                                                </Link>
                                              </li>
                                              <li>
-                                                <a href="blog-left-sidebar.html">
+                                                <Link href="/blog-left-sidebar">
                                                    Blog Left Sidebar
-                                                </a>
+                                                </Link>
                                              </li>
                                              <li>
-                                                <a href="blog-details.html">
+                                                <Link href="/blog-details">
                                                    Blog Details
-                                                </a>
+                                                </Link>
                                              </li>
                                           </ul>
                                        </li>
 
                                        <li>
-                                          <a href="contact.html">Contact</a>
+                                          <Link href="/contact">Contact</Link>
                                        </li>
                                     </ul>
                                  </nav>
                               </div>
                            </div>
-                           <a href="#" className="search-trigger search-icon">
-                              <i className="fal fa-search"></i>
-                           </a>
+                           <SearchModal />
                            <div className="menu-cart">
                               <div className="cart-box">
                                  <ul>
                                     <li>
-                                       <img
+                                       <Image
+                                          width={90}
+                                          height={90}
                                           src="/images/cart/01.jpg"
                                           alt="image"
                                        />
                                        <div className="cart-product">
-                                          <a href="#">Android phone</a>
+                                          <Link href="#">Android phone</Link>
                                           <span>118$</span>
                                        </div>
                                     </li>
                                  </ul>
                                  <ul>
                                     <li className="border-none">
-                                       <img
+                                       <Image
+                                          width={90}
+                                          height={90}
                                           src="/images/cart/02.jpg"
                                           alt="image"
                                        />
                                        <div className="cart-product">
-                                          <a href="#">Macbook Book</a>
+                                          <Link href="#">Macbook Book</Link>
                                           <span>268$</span>
                                        </div>
                                     </li>
@@ -525,27 +547,27 @@ const Navbar = () => {
                                     <span>Total : $386.00</span>
                                  </div>
                                  <div className="cart-button d-flex justify-content-between mb-4">
-                                    <a href="cart.html" className="theme-btn">
+                                    <Link href="/cart" className="theme-btn">
                                        View Cart
-                                    </a>
-                                    <a
-                                       href="checkout.html"
+                                    </Link>
+                                    <Link
+                                       href="/checkout"
                                        className="theme-btn bg-red-2"
                                     >
                                        Checkout
-                                    </a>
+                                    </Link>
                                  </div>
                               </div>
-                              <a href="cart.html" className="cart-icon">
+                              <Link href="/cart" className="cart-icon">
                                  <i className="fa-regular fa-bag-shopping"></i>
-                              </a>
+                              </Link>
                            </div>
-                           <a className="wishlist" href="wishlist.html">
+                           <Link className="wishlist" href="/wishlist">
                               <i className="fa-regular fa-heart"></i>
-                           </a>
+                           </Link>
                            <div className="header__hamburger d-block d-xl-none my-auto">
                               <div className="sidebar__toggle">
-                                 <i className="fas fa-bars"></i>
+                                 <ResponsiveSidebar />
                               </div>
                            </div>
                         </div>
