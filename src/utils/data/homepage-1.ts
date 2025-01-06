@@ -205,11 +205,51 @@ const popularProductsData2 = [
    },
 ];
 
+const testimonialData = [
+   {
+      id: 1,
+      comment: `One of the most powerful takeaways from this book is the emphasis on adopting a mindset of abundance and possibility. The idea that we can choose to see opportunities rather than limitations is a game-changer.`,
+      author: {
+         name: "Ronald Richards",
+         designation: "Marketing Coordinator",
+         avatar: "/images/testimonial/testimonialProfileThumb1_1.jpg",
+      },
+   },
+   {
+      id: 2,
+      comment: `The idea that we can choose to see opportunities rather than limitations is a game-changer. The book encourages readers to step out of their comfort zones and embrace a more positive outlook on life.`,
+      author: {
+         name: "Dianne Russell",
+         designation: "Project Manager",
+         avatar: "/images/testimonial/testimonialProfileThumb1_2.jpg",
+      },
+   },
+   {
+      id: 3,
+      comment: `&apos;The Art of Possibility&apos; by Rosamund Stone Zander and Benjamin Zander is a transformative read that challenges conventional thinking and opens up new possibilities. As a reader, I found myself profoundly.`,
+      author: {
+         name: "Ronald Richards",
+         designation: "Marketing Coordinator",
+         avatar: "/images/testimonial/testimonialProfileThumb1_3.jpg",
+      },
+   },
+   {
+      id: 4,
+      comment: `From the very first chapter, the authors engage readers with inspiring stories and practical insights. Benjamin Zander&apos;s experiences as a conductor bring a unique perspective to leadership.`,
+      author: {
+         name: "Ronald Richards",
+         designation: "Marketing Coordinator",
+         avatar: "/images/testimonial/testimonialProfileThumb1_2.jpg",
+      },
+   },
+];
+
 export type CategoryType = (typeof categoryData)[0];
 export type BestSellerType = (typeof bestSellerData)[0];
 export type FeaturedProductType = (typeof featuredProductData)[0];
 export type PopularProductType = (typeof popularProductsData)[0];
 export type PopularProductType2 = (typeof popularProductsData2)[0];
+export type TestimonialType = (typeof testimonialData)[0];
 export {
    categoryData,
    marqueeData,
@@ -217,4 +257,5 @@ export {
    featuredProductData,
    popularProductsData,
    popularProductsData2,
+   testimonialData,
 };
