@@ -1,5 +1,8 @@
+"use client";
 import Image from "next/image";
 import React from "react";
+import { Autoplay, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 const Intro = () => {
    return (
@@ -151,53 +154,56 @@ const Intro = () => {
                      <div className="col-xl-6">
                         <div className="thumb-slider">
                            <div className="introThumbShape">
-                              <Image
-                                 width={1140}
-                                 height={1140}
+                              {/* eslint-disable-next-line @next/next/no-img-element */}
+                              <img
                                  src="/images/intro/introThumbShape1_4.png"
                                  alt="shape"
                               />
                            </div>
                            <div className="intro-thumb">
-                              <div
-                                 className="swiper gt-slider"
+                              <Swiper
+                                 pagination={{ clickable: true }}
+                                 centeredSlides={true}
+                                 className="mySwiper"
                                  id="introSliderOne"
-                                 data-slider-options='{"loop": true, "autoplay": true, "effect": "fade", "breakpoints": {"0": {"slidesPerView": 1}}}'
+                                 loop
+                                 autoplay={{
+                                    delay: 2500,
+                                    disableOnInteraction: false,
+                                 }}
+                                 modules={[Pagination, Autoplay]}
                               >
-                                 <div className="swiper-wrapper">
-                                    <div className="swiper-slide">
-                                       <div className="thumb">
-                                          <Image
-                                             width={470}
-                                             height={575}
-                                             src="/images/intro/introThumb1_1.png"
-                                             alt="thumb"
-                                          />
-                                       </div>
+                                 <SwiperSlide>
+                                    <div className="thumb">
+                                       <Image
+                                          width={470}
+                                          height={575}
+                                          src="/images/intro/introThumb1_1.png"
+                                          alt="thumb"
+                                       />
                                     </div>
-                                    <div className="swiper-slide">
-                                       <div className="thumb">
-                                          <Image
-                                             width={470}
-                                             height={575}
-                                             src="/images/intro/introThumb1_2.png"
-                                             alt="thumb"
-                                          />
-                                       </div>
+                                 </SwiperSlide>
+                                 <SwiperSlide>
+                                    <div className="thumb">
+                                       <Image
+                                          width={470}
+                                          height={575}
+                                          src="/images/intro/introThumb1_2.png"
+                                          alt="thumb"
+                                       />
                                     </div>
-                                    <div className="swiper-slide">
-                                       <div className="thumb">
-                                          <Image
-                                             width={470}
-                                             height={575}
-                                             src="/images/intro/introThumb1_3.png"
-                                             alt="thumb"
-                                          />
-                                       </div>
+                                 </SwiperSlide>
+                                 <SwiperSlide>
+                                    <div className="thumb">
+                                       <Image
+                                          width={470}
+                                          height={575}
+                                          src="/images/intro/introThumb1_3.png"
+                                          alt="thumb"
+                                       />
                                     </div>
-                                 </div>
-                                 <div className="slider-pagination"></div>
-                              </div>
+                                 </SwiperSlide>
+                              </Swiper>
                            </div>
                         </div>
                      </div>

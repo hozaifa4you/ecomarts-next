@@ -963,7 +963,7 @@
 }
 
 #introSliderOne {
-   .slider-pagination {
+   .swiper-pagination {
       margin-left: 220px;
       margin-top: 50px;
 
@@ -975,6 +975,7 @@
 }
 
 .swiper-pagination-bullet {
+   display: inline-block;
    width: 7px;
    height: 7px;
    background-color: #0a111e !important;
