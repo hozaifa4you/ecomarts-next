@@ -162,7 +162,59 @@ const featuredProductData = [
    },
 ];
 
+const popularProductsData = [
+   {
+      id: 1,
+      percent: "-30%",
+      title: "Basic gift idea",
+      tag: "New Arrival",
+      name: "Top smart watch's",
+      img: "/images/popular-products/popularProductsThumb1_1.png",
+   },
+   {
+      id: 2,
+      percent: "-30%",
+      title: "Basic gift idea",
+      tag: "New Arrival",
+      name: "smart Laptop series 7",
+      img: "/images/popular-products/popularProductsThumb1_2.png",
+   },
+];
+
+const popularProductsData2 = [
+   {
+      id: 1,
+      img: "/images/popular-products/popularProductsThumb1_3.png",
+      name: "I Phone 16 pro Max",
+      price: 1250,
+      discountPrice: 1100,
+   },
+   {
+      id: 2,
+      img: "/images/popular-products/popularProductsThumb1_4.png",
+      name: "Bluetooth Headphones",
+      price: 55,
+      discountPrice: 51,
+   },
+   {
+      id: 3,
+      img: "/images/popular-products/popularProductsThumb1_5.png",
+      name: "Bluetooth Aribuds 2.5",
+      price: 109,
+      discountPrice: 99.99,
+   },
+];
+
 export type CategoryType = (typeof categoryData)[0];
 export type BestSellerType = (typeof bestSellerData)[0];
 export type FeaturedProductType = (typeof featuredProductData)[0];
-export { categoryData, marqueeData, bestSellerData, featuredProductData };
+export type PopularProductType = (typeof popularProductsData)[0];
+export type PopularProductType2 = (typeof popularProductsData2)[0];
+export {
+   categoryData,
+   marqueeData,
+   bestSellerData,
+   featuredProductData,
+   popularProductsData,
+   popularProductsData2,
+};
