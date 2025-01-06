@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const Intro = () => {
@@ -8,19 +9,25 @@ const Intro = () => {
                <div className="intro-wrapper style1">
                   <div className="thumb-shape-wrapper">
                      <div className="thumbShape thumbShape1">
-                        <img
+                        <Image
+                           width={40}
+                           height={60}
                            src="/images/intro/introThumbShape1_1.png"
                            alt="shape"
                         />
                      </div>
                      <div className="thumbShape thumbShape2">
-                        <img
+                        <Image
+                           width={40}
+                           height={60}
                            src="/images/intro/introThumbShape1_2.png"
                            alt="shape"
                         />
                      </div>
                      <div className="thumbShape thumbShape3">
-                        <img
+                        <Image
+                           width={40}
+                           height={60}
                            src="/images/intro/introThumbShape1_3.png"
                            alt="shape"
                         />
@@ -120,7 +127,9 @@ const Intro = () => {
                                     href="https://www.youtube.com/watch?v=f2Gzr8sAGB8"
                                     className="play-btn popup-video"
                                  >
-                                    <img
+                                    <Image
+                                       width={60}
+                                       height={60}
                                        className="playerImg"
                                        src="/images/icon/playerIcon1_1.svg"
                                        alt="icon"
@@ -142,7 +151,9 @@ const Intro = () => {
                      <div className="col-xl-6">
                         <div className="thumb-slider">
                            <div className="introThumbShape">
-                              <img
+                              <Image
+                                 width={1140}
+                                 height={1140}
                                  src="/images/intro/introThumbShape1_4.png"
                                  alt="shape"
                               />
@@ -156,7 +167,9 @@ const Intro = () => {
                                  <div className="swiper-wrapper">
                                     <div className="swiper-slide">
                                        <div className="thumb">
-                                          <img
+                                          <Image
+                                             width={470}
+                                             height={575}
                                              src="/images/intro/introThumb1_1.png"
                                              alt="thumb"
                                           />
@@ -164,7 +177,9 @@ const Intro = () => {
                                     </div>
                                     <div className="swiper-slide">
                                        <div className="thumb">
-                                          <img
+                                          <Image
+                                             width={470}
+                                             height={575}
                                              src="/images/intro/introThumb1_2.png"
                                              alt="thumb"
                                           />
@@ -172,7 +187,9 @@ const Intro = () => {
                                     </div>
                                     <div className="swiper-slide">
                                        <div className="thumb">
-                                          <img
+                                          <Image
+                                             width={470}
+                                             height={575}
                                              src="/images/intro/introThumb1_3.png"
                                              alt="thumb"
                                           />
