@@ -1,7 +1,31 @@
-import React from "react";
+import { BestSellerSection } from "@/components/Homepage2/BestSellerSection";
+import { BrandSection } from "@/components/Homepage2/BrandSection";
+import { FeaturedProductSection } from "@/components/Homepage2/FeaturedProductSection";
+import { FeaturedProductSection2 } from "@/components/Homepage2/FeaturedProductSection2";
+import { FeaturedProductSection3 } from "@/components/Homepage2/FeaturedProductSection3";
+import { FeaturedProductSection4 } from "@/components/Homepage2/FeaturedProductSection4";
+import { GallerySection } from "@/components/Homepage2/GallerySection";
+import { IntroSection } from "@/components/Homepage2/IntroSection";
+import { OfferSection } from "@/components/Homepage2/OfferSection";
+import { OfferSection2 } from "@/components/Homepage2/OfferSection2";
+import { PackageShopSection } from "@/components/Homepage2/PackageShopSection";
 
 const Homepage2 = () => {
-   return <div>page</div>;
+   return (
+      <>
+         <IntroSection />
+         <OfferSection />
+         <BestSellerSection />
+         <FeaturedProductSection />
+         <OfferSection2 />
+         <PackageShopSection />
+         <FeaturedProductSection2 />
+         <FeaturedProductSection3 />
+         <BrandSection />
+         <GallerySection />
+         <FeaturedProductSection4 />
+      </>
+   );
 };
 
 export default Homepage2;
