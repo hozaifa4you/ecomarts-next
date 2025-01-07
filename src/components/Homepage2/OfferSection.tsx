@@ -1,4 +1,7 @@
-import React from "react";
+import Image from "next/image";
+import Link from "next/link";
+
+import { offerData, type OfferDataType } from "@/utils/data/homepage-2";
 
 const OfferSection = () => {
    return (
@@ -7,63 +10,16 @@ const OfferSection = () => {
             <div className="offer-card-items-fashon-two">
                <div className="row g-4">
                   <div className="col-xl-6 col-lg-6 col-md-6">
-                     <div className="offer-card-items-fashon-two1-info1">
-                        <div className="offer-card-items-fashon-two1-info1__thumb">
-                           <img
-                              src="/images/offer/offerCardThumb2_1.png"
-                              alt="thumb"
-                           />
-                        </div>
-                        <div className="offer-card-items-fashon-two1-info1__content">
-                           <p className="offer-card-items-fashon-two1-info1__content--subtitle">
-                              Sale Up to 50% Off
-                           </p>
-                           <h6 className="offer-card-items-fashon-two1-info1__content--title">
-                              The Latest men’s
-                              <br />
-                              <span>trends this season</span>
-                           </h6>
-                           <div className="offer-card-items-fashon-two1-info1__content--btn-wrapper">
-                              <a
-                                 className="theme-btn style12"
-                                 href="shop-details-one.html"
-                              >
-                                 Shop Now
-                              </a>
-                           </div>
-                        </div>
-                     </div>
-                     <div className="offer-card-items-fashon-two1-info1 mt-4 style2">
-                        <div className="offer-card-items-fashon-two1-info1__thumb">
-                           <img
-                              src="/images/offer/offerCardThumb2_2.png"
-                              alt="thumb"
-                           />
-                        </div>
-                        <div className="offer-card-items-fashon-two1-info1__content">
-                           <p className="offer-card-items-fashon-two1-info1__content--subtitle">
-                              Sale Up to 50% Off
-                           </p>
-                           <h6 className="offer-card-items-fashon-two1-info1__content--title">
-                              Big Patterns are
-                              <br />
-                              <span>Back In Fashion</span>
-                           </h6>
-                           <div className="offer-card-items-fashon-two1-info1__content--btn-wrapper">
-                              <a
-                                 className="theme-btn style6"
-                                 href="shop-details-one.html"
-                              >
-                                 Shop Now
-                              </a>
-                           </div>
-                        </div>
-                     </div>
+                     {offerData.map((offer) => (
+                        <OfferCard key={offer.id} {...offer} />
+                     ))}
                   </div>
                   <div className="col-xl-6 col-lg-6 col-md-6">
                      <div className="offer-card-items-fashon-two2">
                         <div className="offer-card-items-fashon-two2__thumb">
-                           <img
+                           <Image
+                              width={600}
+                              height={640}
                               src="/images/offer/offerCardThumb2_3.jpg"
                               alt="thumb"
                            />
@@ -94,6 +50,40 @@ const OfferSection = () => {
             </div>
          </div>
       </section>
+   );
+};
+
+const OfferCard = ({ img, offer, subtitle, title, id }: OfferDataType) => {
+   return (
+      <div
+         className={`offer-card-items-fashon-two1-info1 ${
+            id === 2 ? "mt-4" : ""
+         }`}
+      >
+         <div className="offer-card-items-fashon-two1-info1__thumb">
+            <Image
+               width={id === 1 ? 195 : 255}
+               height={id === 1 ? 290 : 280}
+               src={img}
+               alt="thumb"
+            />
+         </div>
+         <div className="offer-card-items-fashon-two1-info1__content">
+            <p className="offer-card-items-fashon-two1-info1__content--subtitle">
+               {offer}
+            </p>
+            <h6 className="offer-card-items-fashon-two1-info1__content--title">
+               {title}
+               <br />
+               <span>{subtitle}</span>
+            </h6>
+            <div className="offer-card-items-fashon-two1-info1__content--btn-wrapper">
+               <Link className="theme-btn style12" href="/shop-details-one">
+                  Shop Now
+               </Link>
+            </div>
+         </div>
+      </div>
    );
 };
 
