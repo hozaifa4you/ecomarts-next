@@ -1,7 +1,7 @@
-import { blogData, BlogType } from "@/utils/data/homepage-1";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+
+import { blogData, BlogType } from "@/utils/data/homepage-1";
 
 const Blogs = () => {
    return (

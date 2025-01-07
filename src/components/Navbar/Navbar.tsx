@@ -2,13 +2,13 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { SearchModal } from "@/components/Navbar/SearchModal";
-import { ModalV2 } from "@/components/Navbar/ModalV2";
 import { ResponsiveSidebar } from "./ResponsiveSidebar";
+import { NewsletterModal } from "../NewsletterModal";
 
 const Navbar = () => {
    return (
       <>
-         <ModalV2 />
+         <NewsletterModal />
          <header className="header-section-1">
             <div id="header-sticky" className="header-1">
                <div className="header-top-one">
