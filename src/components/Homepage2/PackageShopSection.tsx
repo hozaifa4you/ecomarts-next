@@ -1,4 +1,10 @@
-import React from "react";
+"use client";
+import Image from "next/image";
+import Link from "next/link";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Navigation } from "swiper/modules";
+
+import { packageShopData, PackageShopDataType } from "@/utils/data/homepage-2";
 
 const PackageShopSection = () => {
    return (
@@ -25,340 +31,50 @@ const PackageShopSection = () => {
 
             <div className="row gy-30 gx-30">
                <div className="col-xxl-3 col-md-6">
-                  <div className="package-shop-one mb-30">
-                     <div className="package-shop-one__thumb">
-                        <img
-                           src="/images/package-shop/package-shop1_1.png"
-                           alt="thumb"
-                        />
-                     </div>
-                     <div className="package-shop-one__content">
-                        <h4 className="package-shop-one__content-title">
-                           <a href="shop-details-one.html">
-                              Handle fashionable
-                           </a>
-                        </h4>
-                        <div className="package-shop-one__star-wrap">
-                           <div className="star">
-                              <i className="fa-solid fa-star"></i>
-                              <i className="fa-solid fa-star"></i>
-                              <i className="fa-solid fa-star"></i>
-                              <i className="fa-solid fa-star"></i>
-                              <i className="fa-solid fa-star"></i>
-                           </div>
-                           <span>0 Review</span>
-                        </div>
-                        <h4 className="package-shop-one__content-price">
-                           <span className="offer-price">$25.00</span>
-                           <span className="original-price">$85.00</span>
-                        </h4>
-                        <div className="package-shop-one__icons">
-                           <a href="wishlist.html">
-                              <i className="fa-light fa-heart"></i>
-                           </a>
-                           <a href="cart.html">
-                              <i className="fa-light fa-bag-shopping"></i>
-                           </a>
-                        </div>
-                     </div>
-                  </div>
-                  <div className="package-shop-one mb-30">
-                     <div className="package-shop-one__thumb">
-                        <img
-                           src="/images/package-shop/package-shop1_2.png"
-                           alt="thumb"
-                        />
-                     </div>
-                     <div className="package-shop-one__content">
-                        <h4 className="package-shop-one__content-title">
-                           <a href="shop-details-one.html">Wrapped present</a>
-                        </h4>
-                        <div className="package-shop-one__star-wrap">
-                           <div className="star">
-                              <i className="fa-solid fa-star"></i>
-                              <i className="fa-solid fa-star"></i>
-                              <i className="fa-solid fa-star"></i>
-                              <i className="fa-solid fa-star"></i>
-                              <i className="fa-solid fa-star"></i>
-                           </div>
-                           <span>0 Review</span>
-                        </div>
-                        <h4 className="package-shop-one__content-price">
-                           <span className="offer-price">$25.00</span>
-                           <span className="original-price">$85.00</span>
-                        </h4>
-                        <div className="package-shop-one__icons">
-                           <a href="wishlist.html">
-                              <i className="fa-light fa-heart"></i>
-                           </a>
-                           <a href="cart.html">
-                              <i className="fa-light fa-bag-shopping"></i>
-                           </a>
-                        </div>
-                     </div>
-                  </div>
-                  <div className="package-shop-one mb-30">
-                     <div className="package-shop-one__thumb">
-                        <img
-                           src="/images/package-shop/package-shop1_3.png"
-                           alt="thumb"
-                        />
-                     </div>
-                     <div className="package-shop-one__content">
-                        <h4 className="package-shop-one__content-title">
-                           <a href="shop-details-one.html">Hand Ring</a>
-                        </h4>
-                        <div className="package-shop-one__star-wrap">
-                           <div className="star">
-                              <i className="fa-solid fa-star"></i>
-                              <i className="fa-solid fa-star"></i>
-                              <i className="fa-solid fa-star"></i>
-                              <i className="fa-solid fa-star"></i>
-                              <i className="fa-solid fa-star"></i>
-                           </div>
-                           <span>0 Review</span>
-                        </div>
-                        <h4 className="package-shop-one__content-price">
-                           <span className="offer-price">$25.00</span>
-                           <span className="original-price">$85.00</span>
-                        </h4>
-                        <div className="package-shop-one__icons">
-                           <a href="wishlist.html">
-                              <i className="fa-light fa-heart"></i>
-                           </a>
-                           <a href="cart.html">
-                              <i className="fa-light fa-bag-shopping"></i>
-                           </a>
-                        </div>
-                     </div>
-                  </div>
-                  <div className="package-shop-one">
-                     <div className="package-shop-one__thumb">
-                        <img
-                           src="/images/package-shop/package-shop1_4.png"
-                           alt="thumb"
-                        />
-                     </div>
-                     <div className="package-shop-one__content">
-                        <h4 className="package-shop-one__content-title">
-                           <a href="shop-details-one.html">Diamond crown</a>
-                        </h4>
-                        <div className="package-shop-one__star-wrap">
-                           <div className="star">
-                              <i className="fa-solid fa-star"></i>
-                              <i className="fa-solid fa-star"></i>
-                              <i className="fa-solid fa-star"></i>
-                              <i className="fa-solid fa-star"></i>
-                              <i className="fa-solid fa-star"></i>
-                           </div>
-                           <span>0 Review</span>
-                        </div>
-                        <h4 className="package-shop-one__content-price">
-                           <span className="offer-price">$25.00</span>
-                           <span className="original-price">$85.00</span>
-                        </h4>
-                        <div className="package-shop-one__icons">
-                           <a href="wishlist.html">
-                              <i className="fa-light fa-heart"></i>
-                           </a>
-                           <a href="cart.html">
-                              <i className="fa-light fa-bag-shopping"></i>
-                           </a>
-                        </div>
-                     </div>
-                  </div>
+                  {packageShopData.slice(0, 4).map((item) => (
+                     <PackageCard key={item.id} {...item} />
+                  ))}
                </div>
                <div className="col-xxl-3 col-md-6">
-                  <div className="package-shop-one mb-30">
-                     <div className="package-shop-one__thumb">
-                        <img
-                           src="/images/package-shop/package-shop1_5.png"
-                           alt="thumb"
-                        />
-                     </div>
-                     <div className="package-shop-one__content">
-                        <h4 className="package-shop-one__content-title">
-                           <a href="shop-details-one.html">Sunglasses on the</a>
-                        </h4>
-                        <div className="package-shop-one__star-wrap">
-                           <div className="star">
-                              <i className="fa-solid fa-star"></i>
-                              <i className="fa-solid fa-star"></i>
-                              <i className="fa-solid fa-star"></i>
-                              <i className="fa-solid fa-star"></i>
-                              <i className="fa-solid fa-star"></i>
-                           </div>
-                           <span>0 Review</span>
-                        </div>
-                        <h4 className="package-shop-one__content-price">
-                           <span className="offer-price">$25.00</span>
-                           <span className="original-price">$85.00</span>
-                        </h4>
-                        <div className="package-shop-one__icons">
-                           <a href="wishlist.html">
-                              <i className="fa-light fa-heart"></i>
-                           </a>
-                           <a href="cart.html">
-                              <i className="fa-light fa-bag-shopping"></i>
-                           </a>
-                        </div>
-                     </div>
-                  </div>
-                  <div className="package-shop-one mb-30">
-                     <div className="package-shop-one__thumb">
-                        <img
-                           src="/images/package-shop/package-shop1_6.png"
-                           alt="thumb"
-                        />
-                     </div>
-                     <div className="package-shop-one__content">
-                        <h4 className="package-shop-one__content-title">
-                           <a href="shop-details-one.html">Gold watch with</a>
-                        </h4>
-                        <div className="package-shop-one__star-wrap">
-                           <div className="star">
-                              <i className="fa-solid fa-star"></i>
-                              <i className="fa-solid fa-star"></i>
-                              <i className="fa-solid fa-star"></i>
-                              <i className="fa-solid fa-star"></i>
-                              <i className="fa-solid fa-star"></i>
-                           </div>
-                           <span>0 Review</span>
-                        </div>
-                        <h4 className="package-shop-one__content-price">
-                           <span className="offer-price">$25.00</span>
-                           <span className="original-price">$85.00</span>
-                        </h4>
-                        <div className="package-shop-one__icons">
-                           <a href="wishlist.html">
-                              <i className="fa-light fa-heart"></i>
-                           </a>
-                           <a href="cart.html">
-                              <i className="fa-light fa-bag-shopping"></i>
-                           </a>
-                        </div>
-                     </div>
-                  </div>
-                  <div className="package-shop-one mb-30">
-                     <div className="package-shop-one__thumb">
-                        <img
-                           src="/images/package-shop/package-shop1_7.png"
-                           alt="thumb"
-                        />
-                     </div>
-                     <div className="package-shop-one__content">
-                        <h4 className="package-shop-one__content-title">
-                           <a href="shop-details-one.html">
-                              Stylish fedora hat
-                           </a>
-                        </h4>
-                        <div className="package-shop-one__star-wrap">
-                           <div className="star">
-                              <i className="fa-solid fa-star"></i>
-                              <i className="fa-solid fa-star"></i>
-                              <i className="fa-solid fa-star"></i>
-                              <i className="fa-solid fa-star"></i>
-                              <i className="fa-solid fa-star"></i>
-                           </div>
-                           <span>0 Review</span>
-                        </div>
-                        <h4 className="package-shop-one__content-price">
-                           <span className="offer-price">$25.00</span>
-                           <span className="original-price">$85.00</span>
-                        </h4>
-                        <div className="package-shop-one__icons">
-                           <a href="wishlist.html">
-                              <i className="fa-light fa-heart"></i>
-                           </a>
-                           <a href="cart.html">
-                              <i className="fa-light fa-bag-shopping"></i>
-                           </a>
-                        </div>
-                     </div>
-                  </div>
-                  <div className="package-shop-one">
-                     <div className="package-shop-one__thumb">
-                        <img
-                           src="/images/package-shop/package-shop1_8.png"
-                           alt="thumb"
-                        />
-                     </div>
-                     <div className="package-shop-one__content">
-                        <h4 className="package-shop-one__content-title">
-                           <a href="shop-details-one.html">
-                              Handle fashionable
-                           </a>
-                        </h4>
-                        <div className="package-shop-one__star-wrap">
-                           <div className="star">
-                              <i className="fa-solid fa-star"></i>
-                              <i className="fa-solid fa-star"></i>
-                              <i className="fa-solid fa-star"></i>
-                              <i className="fa-solid fa-star"></i>
-                              <i className="fa-solid fa-star"></i>
-                           </div>
-                           <span>0 Review</span>
-                        </div>
-                        <h4 className="package-shop-one__content-price">
-                           <span className="offer-price">$25.00</span>
-                           <span className="original-price">$85.00</span>
-                        </h4>
-                        <div className="package-shop-one__icons">
-                           <a href="wishlist.html">
-                              <i className="fa-light fa-heart"></i>
-                           </a>
-                           <a href="cart.html">
-                              <i className="fa-light fa-bag-shopping"></i>
-                           </a>
-                        </div>
-                     </div>
-                  </div>
+                  {packageShopData.slice(4, 8).map((item) => (
+                     <PackageCard key={item.id} {...item} />
+                  ))}
                </div>
                <div className="col-xxl-6 col-md-12">
                   <div className="package-shop-preview">
-                     <div
-                        className="swiper gt-slider packageShopSliderOne"
-                        id="packageShopSliderOne"
-                        data-slider-options='{"loop": true,"autoplay": true,"breakpoints":{"0":{"slidesPerView":1},}}'
+                     <Swiper
+                        loop
+                        navigation={{
+                           prevEl: "#packageSliderPrev",
+                           nextEl: "#packageSliderNext",
+                        }}
+                        autoplay={{ delay: 2500, pauseOnMouseEnter: true }}
+                        modules={[Navigation, Autoplay]}
                      >
-                        <div className="swiper-wrapper">
-                           <div className="swiper-slide packges-thumb">
-                              <img
-                                 src="/images/package-shop/package-shop-preview.png"
-                                 alt="thumb"
-                              />
-                              <div className="content">
-                                 <h4>
-                                    Fashionable Bags For <br />
-                                    Women
-                                 </h4>
-                                 <p>$179.00</p>
-                              </div>
-                           </div>
-                           <div className="swiper-slide packges-thumb">
-                              <img
-                                 src="/images/package-shop/package-shop-preview.png"
-                                 alt="thumb"
-                              />
-                              <div className="content">
-                                 <h4>
-                                    Fashionable Bags For <br />
-                                    Women
-                                 </h4>
-                                 <p>$179.00</p>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
+                        <SwiperSlide>
+                           <PackageCardSlider
+                              name="Fashionable Bags For <br /> Women"
+                              img="/images/package-shop/package-shop-preview.png"
+                              price={125.21}
+                           />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                           <PackageCardSlider
+                              name="Fashionable Bags For <br /> Women"
+                              img="/images/package-shop/package-shop-preview.png"
+                              price={125.21}
+                           />
+                        </SwiperSlide>
+                     </Swiper>
                      <div className="arrow-btn">
                         <button
-                           data-slider-prev="#packageShopSliderOne"
+                           id="packageSliderPrev"
                            className="slider-arrow slider-prev"
                         >
                            <i className="fa-sharp fa-light fa-chevron-left"></i>
                         </button>
                         <button
-                           data-slider-next="#packageShopSliderOne"
+                           id="packageSliderNext"
                            className="slider-arrow slider-next"
                         >
                            <i className="fa-sharp fa-light fa-chevron-right"></i>
@@ -372,4 +88,80 @@ const PackageShopSection = () => {
    );
 };
 
+const PackageCard = ({
+   img,
+   name,
+   offerPrice,
+   price,
+   reviews,
+}: PackageShopDataType) => {
+   return (
+      <div className="package-shop-one mb-30">
+         <div className="package-shop-one__thumb">
+            <Image width={125} height={125} src={img} alt="thumb" />
+         </div>
+         <div className="package-shop-one__content">
+            <h4 className="package-shop-one__content-title">
+               <Link href="/shop-details-one">{name}</Link>
+            </h4>
+            <div className="package-shop-one__star-wrap">
+               <div className="star">
+                  <i className="fa-solid fa-star"></i>
+                  <i className="fa-solid fa-star"></i>
+                  <i className="fa-solid fa-star"></i>
+                  <i className="fa-solid fa-star"></i>
+                  <i className="fa-solid fa-star"></i>
+               </div>
+               <span>{reviews}</span>
+            </div>
+            <h4 className="package-shop-one__content-price">
+               <span className="offer-price">${offerPrice}</span>
+               <span className="original-price">${price}</span>
+            </h4>
+            <div className="package-shop-one__icons">
+               <Link href="/wishlist">
+                  <i className="fa-light fa-heart"></i>
+               </Link>
+               <Link href="/cart">
+                  <i className="fa-light fa-bag-shopping"></i>
+               </Link>
+            </div>
+         </div>
+      </div>
+   );
+};
+
+const PackageCardSlider = ({
+   img,
+   name,
+   price,
+}: {
+   img: string;
+   price: number;
+   name: string;
+}) => {
+   return (
+      <div className="swiper-slide packges-thumb">
+         <Image width={540} height={605} src={img} alt="thumb" />
+         <div className="content">
+            <h4 dangerouslySetInnerHTML={{ __html: name }}></h4>
+            <p>${price}</p>
+         </div>
+      </div>
+   );
+};
+
 export { PackageShopSection };
+
+{
+   /* <div className="swiper-slide packges-thumb">
+   <img src="/images/package-shop/package-shop-preview.png" alt="thumb" />
+   <div className="content">
+      <h4>
+         Fashionable Bags For <br />
+         Women
+      </h4>
+      <p>$179.00</p>
+   </div>
+</div>; */
+}

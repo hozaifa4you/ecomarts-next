@@ -90,6 +90,74 @@ const bestSellerData = [
    },
 ];
 
+const packageShopData = [
+   {
+      id: 1,
+      img: "/images/package-shop/package-shop1_1.png",
+      name: "Handle fashionable",
+      reviews: "(0)",
+      price: 25.0,
+      offerPrice: 14.99,
+   },
+   {
+      id: 2,
+      img: "/images/package-shop/package-shop1_2.png",
+      name: "Wrapped present",
+      reviews: "(33)",
+      price: 100.0,
+      offerPrice: 85.99,
+   },
+   {
+      id: 3,
+      img: "/images/package-shop/package-shop1_3.png",
+      name: "Hand Ring",
+      reviews: "(99)",
+      price: 100.0,
+      offerPrice: 85.99,
+   },
+   {
+      id: 4,
+      img: "/images/package-shop/package-shop1_4.png",
+      name: "Diamond crown",
+      reviews: "(1.43k)",
+      price: 73.0,
+      offerPrice: 23.99,
+   },
+   {
+      id: 5,
+      img: "/images/package-shop/package-shop1_5.png",
+      name: "Sunglasses on the",
+      reviews: "(43k)",
+      price: 10.0,
+      offerPrice: 8.99,
+   },
+   {
+      id: 6,
+      img: "/images/package-shop/package-shop1_6.png",
+      name: "Gold watch with",
+      reviews: "(1.2k)",
+      price: 999.0,
+      offerPrice: 899.99,
+   },
+   {
+      id: 7,
+      img: "/images/package-shop/package-shop1_7.png",
+      name: "Stylish fedora hat",
+      reviews: "(32.76k)",
+      price: 5.75,
+      offerPrice: 5.0,
+   },
+   {
+      id: 8,
+      img: "/images/package-shop/package-shop1_8.png",
+      name: "Handle fashionable",
+      reviews: "(30)",
+      price: 100.0,
+      offerPrice: 99.0,
+   },
+];
+
 export type OfferDataType = (typeof offerData)[0];
 export type BestSellerDataType = (typeof bestSellerData)[0];
-export { offerData, bestSellerData };
+export type PackageShopDataType = (typeof packageShopData)[0];
+export { offerData, bestSellerData, packageShopData };
