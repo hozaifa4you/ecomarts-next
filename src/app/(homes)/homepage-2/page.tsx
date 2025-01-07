@@ -7,7 +7,7 @@ import { FeaturedProductSection4 } from "@/components/Homepage2/FeaturedProductS
 import { GallerySection } from "@/components/Homepage2/GallerySection";
 import { IntroSection } from "@/components/Homepage2/IntroSection";
 import { OfferSection } from "@/components/Homepage2/OfferSection";
-import { OfferSection2 } from "@/components/Homepage2/OfferSection2";
+import { CountDownOffer } from "@/components/Homepage2/CountDownOffer";
 import { PackageShopSection } from "@/components/Homepage2/PackageShopSection";
 
 const Homepage2 = () => {
@@ -17,7 +17,7 @@ const Homepage2 = () => {
          <OfferSection />
          <BestSellerSection />
          <FeaturedCards />
-         <OfferSection2 />
+         <CountDownOffer />
          <PackageShopSection />
          <FeaturedProductSection2 />
          <FeaturedProductSection3 />

@@ -1,6 +1,8 @@
+import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
-const OfferSection2 = () => {
+const CountDownOffer = () => {
    return (
       <section className="offer-section fix bg-color7">
          <div className="offer-container-wrapper style2">
@@ -9,7 +11,9 @@ const OfferSection2 = () => {
                   <div className="row d-flex align-items-center gx-60 gy-5 gy-lg-0">
                      <div className="col-xl-7">
                         <div className="thumb">
-                           <img
+                           <Image
+                              width={850}
+                              height={560}
                               src="/images/offer/offerThumb2_1.png"
                               alt="thumb"
                            />
@@ -53,16 +57,14 @@ const OfferSection2 = () => {
                            </div>
 
                            <div className="btn-wrapper">
-                              <a className="theme-btn style6" href="cart.html">
+                              <Link className="theme-btn style6" href="/cart">
                                  Shop Now
-                              </a>
+                              </Link>
                            </div>
 
                            <h6 className="bottom-text">
-                              Limited time offer. The deal will expires on
-                              <span className="date">
-                                 December 11, 2024
-                              </span>{" "}
+                              Limited time offer. The deal will expires on{" "}
+                              <span className="date">December 11, 2024</span>{" "}
                               HURRY UP!
                            </h6>
                         </div>
@@ -75,4 +77,4 @@ const OfferSection2 = () => {
    );
 };
 
-export { OfferSection2 };
+export { CountDownOffer };
