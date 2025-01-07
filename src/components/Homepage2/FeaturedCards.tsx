@@ -1,6 +1,7 @@
 import React from "react";
+import Image from "next/image";
 
-const FeaturedProductSection = () => {
+const FeaturedCards = () => {
    return (
       <section className="featured-item-section section-padding2 fix">
          <div className="container">
@@ -28,7 +29,9 @@ const FeaturedProductSection = () => {
                            </div>
                         </div>
                         <div className="featured_item_two__thumb">
-                           <img
+                           <Image
+                              width={185}
+                              height={185}
                               src="/images/featured-item/featuredItemThumb2_1.png"
                               alt="thumb"
                            />
@@ -58,7 +61,9 @@ const FeaturedProductSection = () => {
                            </div>
                         </div>
                         <div className="featured_item_two__thumb">
-                           <img
+                           <Image
+                              width={185}
+                              height={185}
                               src="/images/featured-item/featuredItemThumb2_2.png"
                               alt="thumb"
                            />
@@ -88,7 +93,9 @@ const FeaturedProductSection = () => {
                            </div>
                         </div>
                         <div className="featured_item_two__thumb">
-                           <img
+                           <Image
+                              width={185}
+                              height={185}
                               src="/images/featured-item/featuredItemThumb2_3.png"
                               alt="thumb"
                            />
@@ -103,4 +110,4 @@ const FeaturedProductSection = () => {
    );
 };
 
-export { FeaturedProductSection };
+export { FeaturedCards };
