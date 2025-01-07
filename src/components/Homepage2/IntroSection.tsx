@@ -1,4 +1,5 @@
-import React from "react";
+import Image from "next/image";
+import Link from "next/link";
 
 const IntroSection = () => {
    return (
@@ -16,31 +17,41 @@ const IntroSection = () => {
                         </h1>
                         <div className="intro-thumbs">
                            <div className="thumb1">
-                              <img
+                              <Image
                                  src="/images/intro/introThumb2_1.jpg"
                                  alt="thumb"
+                                 width={235}
+                                 height={300}
                               />
                            </div>
                            <div className="thumb2">
-                              <img
+                              <Image
+                                 width={235}
+                                 height={300}
                                  src="/images/intro/introThumb2_2.jpg"
                                  alt="thumb"
                               />
                            </div>
                            <div className="thumb3">
-                              <img
+                              <Image
+                                 width={340}
+                                 height={455}
                                  src="/images/intro/introThumb2_3.jpg"
                                  alt="thumb"
                               />
                            </div>
                            <div className="thumb4">
-                              <img
+                              <Image
+                                 width={235}
+                                 height={300}
                                  src="/images/intro/introThumb2_4.jpg"
                                  alt="thumb"
                               />
                            </div>
                            <div className="thumb5">
-                              <img
+                              <Image
+                                 width={235}
+                                 height={300}
                                  src="/images/intro/introThumb2_5.jpg"
                                  alt="thumb"
                               />
@@ -52,20 +63,20 @@ const IntroSection = () => {
                               <div className="title">
                                  Trendy & clussi for new season
                               </div>
-                              <a href="shop-left-sidebar.html">
+                              <Link href="/shop-left-sidebar">
                                  view products
                                  <i className="fa-solid fa-chevrons-right"></i>
-                              </a>
+                              </Link>
                            </div>
                            <div className="winter-collections">
                               <div className="subtitle">Winter collection</div>
                               <div className="title">
                                  Trendy & clussi for new season
                               </div>
-                              <a href="shop-left-sidebar.html">
+                              <Link href="/shop-left-sidebar">
                                  view products
                                  <i className="fa-solid fa-chevrons-right"></i>
-                              </a>
+                              </Link>
                            </div>
                         </div>
                      </div>
