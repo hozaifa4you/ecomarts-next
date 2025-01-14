@@ -297,11 +297,39 @@ const GalleryData = [
    "/images/insta-gallery/gallery-Thumb2_8.jpg",
 ];
 
+const shopFeatureData = [
+   {
+      id: 1,
+      image: { img: "/images/icon/featureIcon4_1.svg", width: 50, height: 50 },
+      title: "High Quality",
+      feature: "Crafted from top materials",
+   },
+   {
+      id: 2,
+      image: { img: "/images/icon/featureIcon4_2.svg", width: 38, height: 50 },
+      title: "Warranty Protection",
+      feature: "Over 2 years",
+   },
+   {
+      id: 3,
+      image: { img: "/images/icon/featureIcon4_3.svg", width: 46, height: 50 },
+      title: "Free Shipping",
+      feature: "Order over 150 $",
+   },
+   {
+      id: 4,
+      image: { img: "/images/icon/featureIcon4_4.svg", width: 50, height: 50 },
+      title: "24 / 7 Support",
+      feature: "Dedicated support",
+   },
+];
+
 export type OfferDataType = (typeof offerData)[0];
 export type BestSellerDataType = (typeof bestSellerData)[0];
 export type PackageShopDataType = (typeof packageShopData)[0];
 export type FeaturedProductDataType = (typeof featuredProductData)[0];
 export type NewItemDataType = (typeof newItemData)[0];
+export type ShopFeatureDataType = (typeof shopFeatureData)[0];
 export {
    offerData,
    bestSellerData,
@@ -309,4 +337,5 @@ export {
    featuredProductData,
    newItemData,
    GalleryData,
+   shopFeatureData,
 };

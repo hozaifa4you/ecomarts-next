@@ -3,7 +3,7 @@ import { BrandSection } from "@/components/Homepage2/BrandSection";
 import { FeaturedCards } from "@/components/Homepage2/FeaturedCards";
 import { FeaturedProductSection } from "@/components/Homepage2/FeaturedProductSection";
 import { NewItemsSection } from "@/components/Homepage2/NewItemsSection";
-import { FeaturedProductSection4 } from "@/components/Homepage2/FeaturedProductSection4";
+import { ShopFeatureSection } from "@/components/Homepage2/ShopFeatureSection";
 import { GallerySection } from "@/components/Homepage2/GallerySection";
 import { IntroSection } from "@/components/Homepage2/IntroSection";
 import { OfferSection } from "@/components/Homepage2/OfferSection";
@@ -23,7 +23,7 @@ const Homepage2 = () => {
          <NewItemsSection />
          <BrandSection />
          <GallerySection />
-         <FeaturedProductSection4 />
+         <ShopFeatureSection />
       </>
    );
 };
