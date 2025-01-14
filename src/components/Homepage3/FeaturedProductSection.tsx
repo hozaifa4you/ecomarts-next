@@ -1,0 +1,73 @@
+import React from "react";
+
+const FeaturedProductSection = () => {
+   return (
+      <section className="featured-product-banner-section section-padding3 pb-0 fix">
+         <div className="container">
+            <div className="row">
+               <div className="col-xl-4 col-md-6">
+                  <div className="featured-item-three">
+                     <div
+                        className="featured-product-banner-three"
+                        data-bg-src="/images/featured-item/featured-product-banner3_1.jpg"
+                     >
+                        <div className="feature-product-banner-three-content">
+                           <h2>100% Fresh Cow Milk</h2>
+                           <div className="prices">
+                              Starting at <span>$14.99</span>
+                           </div>
+                           <div className="btn-wrapper">
+                              <a className="theme-btn style14" href="cart.html">
+                                 Shop Now
+                                 <i className="fa-solid fa-arrow-right"></i>
+                              </a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div className="col-xl-4 col-md-6">
+                  <div className="featured-item-three">
+                     <div
+                        className="featured-product-banner-three"
+                        data-bg-src="/images/featured-item/featured-product-banner3_2.jpg"
+                     >
+                        <div className="feature-product-banner-three-content right-content">
+                           <h6>Drink Sale</h6>
+                           <h3>Water & Soft Drink</h3>
+                           <div className="btn-wrapper">
+                              <a className="theme-btn style14" href="cart.html">
+                                 Shop Now
+                                 <i className="fa-solid fa-arrow-right"></i>
+                              </a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div className="col-xl-4 col-md-6 mx-md-auto mx-lg-start">
+                  <div className="featured-item-three">
+                     <div
+                        className="featured-product-banner-three"
+                        data-bg-src="/images/featured-item/featured-product-banner3_3.jpg"
+                     >
+                        <div className="feature-product-banner-three-content">
+                           <h6>100% Organic</h6>
+                           <h3>Quick Breakfast</h3>
+                           <div className="btn-wrapper">
+                              <a className="theme-btn style14" href="cart.html">
+                                 Shop Now
+                                 <i className="fa-solid fa-arrow-right"></i>
+                              </a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+   );
+};
+
+export default FeaturedProductSection;
