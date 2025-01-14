@@ -6,7 +6,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 import { newItemData, NewItemDataType } from "@/utils/data/homepage-2";
 
-const NewItems = () => {
+const NewItemsSection = () => {
    return (
       <section className="feature-shop-section fix section-padding2">
          <div className="feature-shop-wrapper">
@@ -105,4 +105,4 @@ const NewItemCard = ({
    );
 };
 
-export { NewItems };
+export { NewItemsSection };
