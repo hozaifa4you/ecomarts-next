@@ -91,6 +91,58 @@ const categoryCardsData = [
    },
 ];
 
+const trendyProductData = [
+   {
+      id: 1,
+      img: "/images/trendy/trendyCardThumb3_1.png",
+      name: "Cheddar Fries",
+      price: "USD 13.00",
+   },
+   {
+      id: 2,
+      img: "/images/trendy/trendyCardThumb3_2.png",
+      name: "A Organic Avocado",
+      price: "USD 20.00",
+   },
+   {
+      id: 3,
+      img: "/images/trendy/trendyCardThumb3_3.png",
+      name: "Broccoli Organic",
+      price: "USD 4.55",
+   },
+   {
+      id: 4,
+      img: "/images/trendy/trendyCardThumb3_4.png",
+      name: "Broccoli Farms",
+      price: "USD 1.99",
+   },
+   {
+      id: 5,
+      img: "/images/trendy/trendyCardThumb3_5.png",
+      name: "Fresh Orange",
+      price: "USD 9.99",
+   },
+   {
+      id: 6,
+      img: "/images/trendy/trendyCardThumb3_6.png",
+      name: "Apricot Fruit",
+      price: "USD 18.75",
+   },
+   {
+      id: 7,
+      img: "/images/trendy/trendyCardThumb3_7.png",
+      name: "Pink Sugar",
+      price: "USD 11.50",
+   },
+   {
+      id: 8,
+      img: "/images/trendy/trendyCardThumb3_8.png",
+      name: "Read apple",
+      price: "USD 96.90",
+   },
+];
+
 export type IntroDataType = (typeof introData)[0];
 export type CategoryCardsDataType = (typeof categoryCardsData)[0];
-export { introData, categoryCardsData };
+export type TrendyProductDataType = (typeof trendyProductData)[0];
+export { introData, categoryCardsData, trendyProductData };
