@@ -1,4 +1,4 @@
-import React from "react";
+import Link from "next/link";
 
 const OfferSection = () => {
    return (
@@ -8,30 +8,42 @@ const OfferSection = () => {
                <div className="col-xl-5">
                   <div
                      className="offer-card-items-one"
-                     data-bg-src="/images/offer/offerCardBg3_1.jpg"
+                     style={{
+                        backgroundImage:
+                           "url(/images/offer/offerCardBg3_1.jpg)",
+                        backgroundPosition: "center",
+                        backgroundRepeat: "no-repeat",
+                        backgroundSize: "cover",
+                     }}
                   >
                      <h6>GET 30% OFF</h6>
                      <h4>Fresh Vegetables</h4>
                      <div className="btn-wrapper">
-                        <a className="theme-btn style4" href="cart.html">
+                        <Link className="theme-btn style4" href="/cart">
                            Buy Now<i className="fa-light fa-chevron-right"></i>
-                        </a>
+                        </Link>
                      </div>
                   </div>
                </div>
                <div className="col-xl-7">
                   <div
                      className="offer-card-items-two"
-                     data-bg-src="/images/offer/offerCardBg3_2.jpg"
+                     style={{
+                        backgroundImage:
+                           "url(/images/offer/offerCardBg3_2.jpg)",
+                        backgroundPosition: "center",
+                        backgroundRepeat: "no-repeat",
+                        backgroundSize: "cover",
+                     }}
                   >
                      <h6>Limited Offer</h6>
                      <h4 className="text-white">
                         Don&apos;t miss 25% off on all fruits
                      </h4>
                      <div className="btn-wrapper">
-                        <a className="theme-btn style13" href="cart.html">
+                        <Link className="theme-btn style13" href="/cart">
                            Buy Now<i className="fa-light fa-chevron-right"></i>
-                        </a>
+                        </Link>
                      </div>
                   </div>
                </div>
