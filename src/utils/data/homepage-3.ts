@@ -142,7 +142,65 @@ const trendyProductData = [
    },
 ];
 
+const bestSellerData = [
+   {
+      id: 1,
+      img: "/images/best-seller/bestSellerProductThumb3_1.png",
+      name: "Fresh Strawberry",
+      price: "USD 12.00",
+   },
+   {
+      id: 2,
+      img: "/images/best-seller/bestSellerProductThumb3_2.png",
+      name: "Organic Avocado",
+      price: "USD 9.00",
+   },
+   {
+      id: 3,
+      img: "/images/best-seller/bestSellerProductThumb3_3.png",
+      name: "Fresh Orange",
+      price: "USD 11.00",
+   },
+   {
+      id: 4,
+      img: "/images/best-seller/bestSellerProductThumb3_4.png",
+      name: "Organic onion",
+      price: "USD 65.00",
+   },
+   {
+      id: 5,
+      img: "/images/best-seller/bestSellerProductThumb3_5.png",
+      name: "Cheddar Fries",
+      price: "USD 99.99",
+   },
+   {
+      id: 6,
+      img: "/images/best-seller/bestSellerProductThumb3_6.png",
+      name: "Read apple",
+      price: "USD 9.99",
+   },
+   {
+      id: 7,
+      img: "/images/best-seller/bestSellerProductThumb3_7.png",
+      name: "Read Tomato",
+      price: "USD 5.55",
+   },
+   {
+      id: 8,
+      img: "/images/best-seller/bestSellerProductThumb3_8.png",
+      name: "Broccoli Organic",
+      price: "USD 7.77",
+   },
+   {
+      id: 9,
+      img: "/images/best-seller/bestSellerProductThumb3_9.png",
+      name: "Apricot fruit",
+      price: "USD 88.77",
+   },
+];
+
 export type IntroDataType = (typeof introData)[0];
 export type CategoryCardsDataType = (typeof categoryCardsData)[0];
 export type TrendyProductDataType = (typeof trendyProductData)[0];
-export { introData, categoryCardsData, trendyProductData };
+export type BestSellerDataType = (typeof bestSellerData)[0];
+export { introData, categoryCardsData, trendyProductData, bestSellerData };
