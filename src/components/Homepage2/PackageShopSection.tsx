@@ -19,12 +19,12 @@ const PackageShopSection = () => {
                      </div>
                   </div>
                   <div className="col-md-6 d-flex align-items-center justify-content-end">
-                     <a
+                     <Link
                         className="theme-btn style7"
-                        href="shop-left-sidebar.html"
+                        href="/shop-left-sidebar"
                      >
                         View all <i className="fa-solid fa-chevron-right"></i>
-                     </a>
+                     </Link>
                   </div>
                </div>
             </div>

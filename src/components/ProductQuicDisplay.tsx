@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import React, { useState } from "react";
 import { Modal } from "react-bootstrap";
 
@@ -138,42 +139,54 @@ const ProductQuicDisplay = () => {
                                        </div>
 
                                        <div className="product-details-footer">
-                                          <a
+                                          <Link
                                              className="theme-btn"
-                                             href="cart.html"
+                                             href="/cart"
                                           >
                                              Add to Cart
                                              <i className="fa-regular fa-cart-shopping bg-transparent text-white"></i>
-                                          </a>
-                                          <a
+                                          </Link>
+                                          <Link
                                              className="theme-btn style7 border-0"
-                                             href="wishlist.html"
+                                             href="/wishlist"
                                           >
                                              ADD TO WISHLIST
                                              <i className="fa-sharp fa-solid fa-heart"></i>
-                                          </a>
+                                          </Link>
 
                                           <div className="share">
                                              <ul className="social-media">
                                                 <li>
-                                                   <a href="https://www.facebook.com">
+                                                   <Link
+                                                      target="_blank"
+                                                      href="https://www.facebook.com"
+                                                   >
                                                       <i className="fa-brands fa-facebook-f"></i>
-                                                   </a>
+                                                   </Link>
                                                 </li>
                                                 <li>
-                                                   <a href="https://www.youtube.com">
+                                                   <Link
+                                                      target="_blank"
+                                                      href="https://www.youtube.com"
+                                                   >
                                                       <i className="fa-brands fa-youtube"></i>
-                                                   </a>
+                                                   </Link>
                                                 </li>
                                                 <li>
-                                                   <a href="https://www.x.com">
+                                                   <Link
+                                                      target="_blank"
+                                                      href="https://www.x.com"
+                                                   >
                                                       <i className="fa-brands fa-twitter"></i>
-                                                   </a>
+                                                   </Link>
                                                 </li>
                                                 <li>
-                                                   <a href="https://www.instagram.com">
+                                                   <Link
+                                                      target="_blank"
+                                                      href="https://www.instagram.com"
+                                                   >
                                                       <i className="fa-brands fa-instagram"></i>
-                                                   </a>
+                                                   </Link>
                                                 </li>
                                              </ul>
                                           </div>

@@ -1,5 +1,6 @@
 import { bestSellerData, BestSellerDataType } from "@/utils/data/homepage-3";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const BestSellerSection = () => {
@@ -30,7 +31,7 @@ const BestSellerCard = ({ img, name, price }: BestSellerDataType) => {
          </div>
          <div className="best-seller-items-three__content">
             <h6>
-               <a href="shop-details-one.html">{name}</a>
+               <Link href="/shop-details-one">{name}</Link>
             </h6>
             <p>{price}</p>
             <div className="best-seller-items-three__content--star-wrap">

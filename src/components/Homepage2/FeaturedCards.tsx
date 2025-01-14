@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const FeaturedCards = () => {
    return (
@@ -20,12 +21,12 @@ const FeaturedCards = () => {
                               Accessories Up To 20% Off
                            </p>
                            <div className="btn-wrapper">
-                              <a
+                              <Link
                                  className="theme-btn style11"
-                                 href="shop-details-one.html"
+                                 href="/shop-details-one"
                               >
                                  Shop Now
-                              </a>
+                              </Link>
                            </div>
                         </div>
                         <div className="featured_item_two__thumb">
@@ -52,12 +53,12 @@ const FeaturedCards = () => {
                               Accessories Up To 20% Off
                            </p>
                            <div className="btn-wrapper">
-                              <a
+                              <Link
                                  className="theme-btn style11"
-                                 href="shop-details-one.html"
+                                 href="/shop-details-one"
                               >
                                  Shop Now
-                              </a>
+                              </Link>
                            </div>
                         </div>
                         <div className="featured_item_two__thumb">
@@ -84,12 +85,12 @@ const FeaturedCards = () => {
                               Accessories Up To 20% Off
                            </p>
                            <div className="btn-wrapper">
-                              <a
+                              <Link
                                  className="theme-btn style11"
-                                 href="shop-details-one.html"
+                                 href="/shop-details-one"
                               >
                                  Shop Now
-                              </a>
+                              </Link>
                            </div>
                         </div>
                         <div className="featured_item_two__thumb">

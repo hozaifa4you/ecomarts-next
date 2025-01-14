@@ -7,6 +7,7 @@ import {
    PopularProductType,
    PopularProductType2,
 } from "@/utils/data/homepage-1";
+import Link from "next/link";
 
 const PopularProducts = () => {
    return (
@@ -21,12 +22,12 @@ const PopularProducts = () => {
                </div>
                <div className="col-xl-6 d-flex justify-content-xl-end">
                   <div className="btn-wrapper">
-                     <a
+                     <Link
                         className="theme-btn style7"
-                        href="shop-left-sidebar.html"
+                        href="/shop-left-sidebar"
                      >
                         View all
-                     </a>
+                     </Link>
                   </div>
                </div>
             </div>
@@ -64,10 +65,10 @@ const PopularProductCard = ({
             <h6 className="subtitle style1">{title}</h6>
             <p>{tag}</p>
             <h3>
-               <a href="shop-details-one.html">{name}</a>
+               <Link href="/shop-details-one">{name}</Link>
             </h3>
             <div className="btn-wrapper product-btn-wrapper">
-               <a className="theme-btn style6" href="cart.html">
+               <Link className="theme-btn style6" href="/cart">
                   <svg
                      xmlns="http://www.w3.org/2000/svg"
                      width="16"
@@ -92,7 +93,7 @@ const PopularProductCard = ({
                      </defs>
                   </svg>
                   Add To Cart
-               </a>
+               </Link>
                <div className="timer-box-2 mb-0">
                   <i className="fa-sharp fa-solid fa-alarm-clock"></i>
                   <span className="text">
@@ -120,7 +121,7 @@ const PopularProductCard2 = ({
          </div>
          <div className="popular-product-card-item-two__content">
             <h6>
-               <a href="shop-details-one.html">{name}</a>
+               <Link href="/shop-details-one">{name}</Link>
             </h6>
             <div className="star">
                <i className="fa-solid fa-star"></i>
@@ -163,12 +164,12 @@ const PopularProductCard2 = ({
                <button data-bs-toggle="modal" data-bs-target="#exampleModal2">
                   <i className="fa-regular fa-eye"></i>
                </button>
-               <a href="wishlist.html">
+               <Link href="/wishlist">
                   <i className="fa-regular fa-heart"></i>
-               </a>
-               <a href="cart.html">
+               </Link>
+               <Link href="/cart">
                   <i className="fa-light fa-bag-shopping"></i>
-               </a>
+               </Link>
             </div>
          </div>
       </div>

@@ -6,6 +6,7 @@ import {
    featuredProductData,
    FeaturedProductType,
 } from "@/utils/data/homepage-1";
+import Link from "next/link";
 
 const FeaturedProducts = () => {
    const [filter, setFilter] = useState<
@@ -308,19 +309,19 @@ const FeatureCard = ({
                <button data-bs-toggle="modal" data-bs-target="#exampleModal2">
                   <i className="fa-regular fa-eye"></i>
                </button>
-               <a href="wishlist.html">
+               <Link href="/wishlist">
                   <i className="fa-regular fa-heart"></i>
-               </a>
-               <a href="cart.html">
+               </Link>
+               <Link href="/cart">
                   <i className="fa-light fa-bag-shopping"></i>
-               </a>
+               </Link>
             </div>
          </div>
          <div className="featured-product-item-one__content">
             <div className="featured-product-item-one__content--details-wrapper">
                <div className="price">
                   <h6>
-                     <a href="shop-details-one.html">{name}</a>
+                     <Link href="/shop-details-one">{name}</Link>
                   </h6>
                   <div className="star-wrapper">
                      <i className="fa-solid fa-star"></i>

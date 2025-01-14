@@ -209,28 +209,28 @@ const Footer = () => {
                         </div>
                         <ul className="list-area">
                            <li>
-                              <a className="style1" href="about.html">
+                              <Link className="style1" href="/about">
                                  <i className="fa-solid fa-chevrons-right"></i>
                                  About Us
-                              </a>
+                              </Link>
                            </li>
                            <li>
-                              <a className="style1" href="testimonial.html">
+                              <Link className="style1" href="/testimonials">
                                  <i className="fa-solid fa-chevrons-right"></i>
                                  Testimonial
-                              </a>
+                              </Link>
                            </li>
                            <li>
-                              <a className="style1" href="faq.html">
+                              <Link className="style1" href="/faq">
                                  <i className="fa-solid fa-chevrons-right"></i>
                                  Faq
-                              </a>
+                              </Link>
                            </li>
                            <li>
-                              <a className="style1" href="blog.html">
+                              <Link className="style1" href="/blog">
                                  <i className="fa-solid fa-chevrons-right"></i>
                                  Blog
-                              </a>
+                              </Link>
                            </li>
                         </ul>
                      </div>

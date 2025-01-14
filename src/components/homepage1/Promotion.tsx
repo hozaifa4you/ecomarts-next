@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const Promotion = () => {
    return (
@@ -22,12 +23,12 @@ const Promotion = () => {
                               <h3 className="promo-title">New Power Double</h3>
                            </div>
                            <div className="promo-btn-wrapper">
-                              <a
+                              <Link
                                  className="theme-btn style5"
-                                 href="shop-left-sidebar.html"
+                                 href="/shop-left-sidebar"
                               >
                                  View All
-                              </a>
+                              </Link>
                            </div>
                         </div>
                      </div>
@@ -50,12 +51,12 @@ const Promotion = () => {
                               </h3>
                            </div>
                            <div className="promo-btn-wrapper">
-                              <a
+                              <Link
                                  className="theme-btn style5"
-                                 href="shop-left-sidebar.html"
+                                 href="/shop-left-sidebar"
                               >
                                  View All
-                              </a>
+                              </Link>
                            </div>
                         </div>
                      </div>

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const CTA = () => {
@@ -20,12 +21,12 @@ const CTA = () => {
                            accumsan lacus vel facilisis volutpat.
                         </p>
                         <div className="promo-btn-wrapper">
-                           <a
+                           <Link
                               className="theme-btn style5"
-                              href="shop-left-sidebar.html"
+                              href="/shop-left-sidebar"
                            >
                               View All
-                           </a>
+                           </Link>
                         </div>
                      </div>
                      <div className="shape-1">

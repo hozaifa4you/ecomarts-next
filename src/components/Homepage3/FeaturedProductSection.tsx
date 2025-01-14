@@ -4,6 +4,7 @@ import {
    featuredProductData,
    FeaturedProductDataType,
 } from "@/utils/data/homepage-3";
+import Link from "next/link";
 
 const FeaturedProductSection = () => {
    return (
@@ -38,17 +39,17 @@ export const FeaturedProductCard = ({
                <button data-bs-toggle="modal" data-bs-target="#exampleModal2">
                   <i className="fa-regular fa-eye"></i>
                </button>
-               <a href="wishlist.html">
+               <Link href="/wishlist">
                   <i className="fa-regular fa-heart"></i>
-               </a>
-               <a href="cart.html">
+               </Link>
+               <Link href="/cart">
                   <i className="fa-light fa-bag-shopping"></i>
-               </a>
+               </Link>
             </div>
          </div>
          <div className="featured-product-items-three__content">
             <h6>
-               <a href="shop-details-one.html">{name}</a>
+               <Link href="/shop-details-one">{name}</Link>
             </h6>
             <div className="featured-product-items-three__content--star-wrap">
                <i className="fa-regular fa-star"></i>

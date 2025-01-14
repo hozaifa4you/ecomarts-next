@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const FeaturesSection = () => {
@@ -22,10 +23,10 @@ const FeaturesSection = () => {
                               Starting at <span>$14.99</span>
                            </div>
                            <div className="btn-wrapper">
-                              <a className="theme-btn style14" href="cart.html">
+                              <Link className="theme-btn style14" href="/cart">
                                  Shop Now
                                  <i className="fa-solid fa-arrow-right"></i>
-                              </a>
+                              </Link>
                            </div>
                         </div>
                      </div>
@@ -46,10 +47,10 @@ const FeaturesSection = () => {
                            <h6>Drink Sale</h6>
                            <h3>Water & Soft Drink</h3>
                            <div className="btn-wrapper">
-                              <a className="theme-btn style14" href="cart.html">
+                              <Link className="theme-btn style14" href="/cart">
                                  Shop Now
                                  <i className="fa-solid fa-arrow-right"></i>
-                              </a>
+                              </Link>
                            </div>
                         </div>
                      </div>
@@ -70,10 +71,10 @@ const FeaturesSection = () => {
                            <h6>100% Organic</h6>
                            <h3>Quick Breakfast</h3>
                            <div className="btn-wrapper">
-                              <a className="theme-btn style14" href="cart.html">
+                              <Link className="theme-btn style14" href="/cart">
                                  Shop Now
                                  <i className="fa-solid fa-arrow-right"></i>
-                              </a>
+                              </Link>
                            </div>
                         </div>
                      </div>

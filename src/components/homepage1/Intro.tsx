@@ -3,6 +3,7 @@ import React from "react";
 import Image from "next/image";
 import { Autoplay, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import Link from "next/link";
 
 const Intro = () => {
    return (
@@ -126,9 +127,10 @@ const Intro = () => {
                                  </div>
                               </div>
                               <div className="video-wrap ripple-effect rounded-0">
-                                 <a
+                                 <Link
                                     href="https://www.youtube.com/watch?v=f2Gzr8sAGB8"
                                     className="play-btn popup-video"
+                                    target="_blank"
                                  >
                                     <Image
                                        width={60}
@@ -137,17 +139,17 @@ const Intro = () => {
                                        src="/images/icon/playerIcon1_1.svg"
                                        alt="icon"
                                     />
-                                 </a>
+                                 </Link>
                               </div>
                            </div>
 
                            <div className="btn-wrapper">
-                              <a className="theme-btn style6" href="cart.html">
+                              <Link className="theme-btn style6" href="/cart">
                                  Add To Cart
-                              </a>
-                              <a className="theme-btn style7" href="cart.html">
+                              </Link>
+                              <Link className="theme-btn style7" href="/cart">
                                  view now
-                              </a>
+                              </Link>
                            </div>
                         </div>
                      </div>

@@ -36,12 +36,12 @@ const OfferSection = () => {
                               laoreet est,
                            </p>
                            <div className="offer-card-items-fashon-two2__content--btn-wrapper">
-                              <a
+                              <Link
                                  className="theme-btn style6"
-                                 href="shop-details-one.html"
+                                 href="/shop-details-one"
                               >
                                  Shop Now
-                              </a>
+                              </Link>
                            </div>
                         </div>
                      </div>
