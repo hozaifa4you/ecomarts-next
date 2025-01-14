@@ -1,4 +1,5 @@
-import React from "react";
+import Image from "next/image";
+import Link from "next/link";
 
 const CTASection = () => {
    return (
@@ -15,18 +16,33 @@ const CTASection = () => {
                         </p>
 
                         <div className="btn-wrapper">
-                           <a href="#">
-                              <img src="/images/cta/appleStore.png" alt="img" />
-                           </a>
-                           <a href="#">
-                              <img src="/images/cta/playStore.png" alt="img" />
-                           </a>
+                           <Link href="#">
+                              <Image
+                                 width={133}
+                                 height={40}
+                                 src="/images/cta/appleStore.png"
+                                 alt="img"
+                              />
+                           </Link>
+                           <Link href="#">
+                              <Image
+                                 width={133}
+                                 height={40}
+                                 src="/images/cta/playStore.png"
+                                 alt="img"
+                              />
+                           </Link>
                         </div>
                      </div>
                   </div>
                   <div className="col-xl-6 order-1 order-xl-2 mt-xl-0 mt-5 d-flex justify-content-xl-end">
                      <div className="cta-thumb">
-                        <img src="/images/cta/ctaThumb3_1.png" alt="thumb" />
+                        <Image
+                           width={309}
+                           height={360}
+                           src="/images/cta/ctaThumb3_1.png"
+                           alt="thumb"
+                        />
                      </div>
                   </div>
                </div>
