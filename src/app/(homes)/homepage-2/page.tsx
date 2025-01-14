@@ -1,7 +1,7 @@
 import { BestSellerSection } from "@/components/Homepage2/BestSellerSection";
 import { BrandSection } from "@/components/Homepage2/BrandSection";
 import { FeaturedCards } from "@/components/Homepage2/FeaturedCards";
-import { FeaturedProductSection2 } from "@/components/Homepage2/FeaturedProductSection2";
+import { FeaturedProductSection } from "@/components/Homepage2/FeaturedProductSection";
 import { FeaturedProductSection3 } from "@/components/Homepage2/FeaturedProductSection3";
 import { FeaturedProductSection4 } from "@/components/Homepage2/FeaturedProductSection4";
 import { GallerySection } from "@/components/Homepage2/GallerySection";
@@ -19,7 +19,7 @@ const Homepage2 = () => {
          <FeaturedCards />
          <CountDownOffer />
          <PackageShopSection />
-         <FeaturedProductSection2 />
+         <FeaturedProductSection />
          <FeaturedProductSection3 />
          <BrandSection />
          <GallerySection />
