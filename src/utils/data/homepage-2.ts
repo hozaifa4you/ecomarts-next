@@ -209,8 +209,84 @@ const featuredProductData = [
    },
 ];
 
+const newItemData = [
+   {
+      id: 1,
+      name: "High-Neck puff jacket",
+      img: "/images/boy-1.png",
+      category: "FASHION BAG",
+      price: 79.55,
+      offerPrice: 54.99,
+   },
+
+   {
+      id: 2,
+      name: "Relax Fit Leggings",
+      img: "/images/boy-2.png",
+      category: "FASHION LEGGINGS",
+      price: 54.0,
+      offerPrice: 30.99,
+   },
+   {
+      id: 3,
+      name: "Overshirt With Pocket",
+      img: "/images/boy-1.png",
+      category: "RELAX SHIRT",
+      price: 22.0,
+      offerPrice: 13.0,
+   },
+   {
+      id: 4,
+      name: "Rose Printed Hoodie",
+      img: "/images/boy-2.png",
+      category: "WINTER HOODIE",
+      price: 99.99,
+      offerPrice: 88.88,
+   },
+   {
+      id: 5,
+      name: "High-Neck puff jacket",
+      img: "/images/boy-1.png",
+      category: "FASHION BAG",
+      price: 79.55,
+      offerPrice: 54.99,
+   },
+
+   {
+      id: 6,
+      name: "Relax Fit Leggings",
+      img: "/images/boy-2.png",
+      category: "FASHION LEGGINGS",
+      price: 54.0,
+      offerPrice: 30.99,
+   },
+   {
+      id: 7,
+      name: "Overshirt With Pocket",
+      img: "/images/boy-1.png",
+      category: "RELAX SHIRT",
+      price: 22.0,
+      offerPrice: 13.0,
+   },
+   {
+      id: 8,
+      name: "Rose Printed Hoodie",
+      img: "/images/boy-2.png",
+      category: "WINTER HOODIE",
+      price: 99.99,
+      offerPrice: 88.88,
+   },
+];
+
 export type OfferDataType = (typeof offerData)[0];
 export type BestSellerDataType = (typeof bestSellerData)[0];
 export type PackageShopDataType = (typeof packageShopData)[0];
 export type FeaturedProductDataType = (typeof featuredProductData)[0];
-export { offerData, bestSellerData, packageShopData, featuredProductData };
+export type NewItemDataType = (typeof newItemData)[0];
+export {
+   offerData,
+   bestSellerData,
+   packageShopData,
+   featuredProductData,
+   newItemData,
+};

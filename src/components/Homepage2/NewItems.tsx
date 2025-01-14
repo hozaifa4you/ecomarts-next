@@ -1,5 +1,10 @@
+"use client";
 import Image from "next/image";
-import React from "react";
+import Link from "next/link";
+import { Autoplay } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import { newItemData, NewItemDataType } from "@/utils/data/homepage-2";
 
 const NewItems = () => {
    return (
@@ -22,141 +27,81 @@ const NewItems = () => {
                         <div className="subtitle style1">New Products</div>
                         <h3 className="title text-white">Meet New Arrivals</h3>
                      </div>
-                     <div className="swiper new-product-slider">
-                        <div className="swiper-wrapper">
-                           <div className="swiper-slide">
-                              <div className="best-seller-product-items-two">
-                                 <div className="icon-box2">
-                                    <button
-                                       data-bs-toggle="modal"
-                                       data-bs-target="#exampleModal2"
-                                    >
-                                       <i className="fa-regular fa-eye"></i>
-                                    </button>
-                                    <a href="wishlist.html">
-                                       <i className="fa-regular fa-heart"></i>
-                                    </a>
-                                    <a href="cart.html">
-                                       <i className="fa-light fa-bag-shopping"></i>
-                                    </a>
-                                 </div>
-                                 <div className="best-seller-product-items-two__thumb">
-                                    <img src="/images/boy-1.png" alt="thumb" />
-                                 </div>
-                                 <div className="best-seller-product-items-two__content">
-                                    <div className="best-seller-product-items-two__details">
-                                       <p className="best-seller-product-items-two__details--subtitle">
-                                          FASHION BAG
-                                       </p>
-                                       <h6 className="best-seller-product-items-two__details--title">
-                                          <a href="shop-details-one.html">
-                                             High-Neck puff jacket
-                                          </a>
-                                       </h6>
-                                       <div className="best-seller-product-items-two__details--price">
-                                          <span className="offer-price">
-                                             $79.00
-                                          </span>
-                                          <span className="original-price">
-                                             $99.00
-                                          </span>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                           <div className="swiper-slide">
-                              <div className="best-seller-product-items-two">
-                                 <div className="icon-box2">
-                                    <button
-                                       data-bs-toggle="modal"
-                                       data-bs-target="#exampleModal2"
-                                    >
-                                       <i className="fa-regular fa-eye"></i>
-                                    </button>
-                                    <a href="wishlist.html">
-                                       <i className="fa-regular fa-heart"></i>
-                                    </a>
-                                    <a href="cart.html">
-                                       <i className="fa-light fa-bag-shopping"></i>
-                                    </a>
-                                 </div>
-                                 <div className="best-seller-product-items-two__thumb">
-                                    <img src="/images/boy-2.png" alt="thumb" />
-                                 </div>
-                                 <div className="best-seller-product-items-two__content">
-                                    <div className="best-seller-product-items-two__details">
-                                       <p className="best-seller-product-items-two__details--subtitle">
-                                          FASHION BAG
-                                       </p>
-                                       <h6 className="best-seller-product-items-two__details--title">
-                                          <a href="shop-details-one.html">
-                                             High-Neck puff jacket
-                                          </a>
-                                       </h6>
-                                       <div className="best-seller-product-items-two__details--price">
-                                          <span className="offer-price">
-                                             $79.00
-                                          </span>
-                                          <span className="original-price">
-                                             $99.00
-                                          </span>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                           <div className="swiper-slide">
-                              <div className="best-seller-product-items-two">
-                                 <div className="icon-box2">
-                                    <button
-                                       data-bs-toggle="modal"
-                                       data-bs-target="#exampleModal2"
-                                    >
-                                       <i className="fa-regular fa-eye"></i>
-                                    </button>
-                                    <a href="wishlist.html">
-                                       <i className="fa-regular fa-heart"></i>
-                                    </a>
-                                    <a href="cart.html">
-                                       <i className="fa-light fa-bag-shopping"></i>
-                                    </a>
-                                 </div>
-                                 <div className="best-seller-product-items-two__badge1">
-                                    25% off
-                                 </div>
-                                 <div className="best-seller-product-items-two__thumb">
-                                    <img src="/images/boy-1.png" alt="thumb" />
-                                 </div>
-                                 <div className="best-seller-product-items-two__content">
-                                    <div className="best-seller-product-items-two__details">
-                                       <p className="best-seller-product-items-two__details--subtitle">
-                                          FASHION BAG
-                                       </p>
-                                       <h6 className="best-seller-product-items-two__details--title">
-                                          <a href="shop-details-one.html">
-                                             High-Neck puff jacket
-                                          </a>
-                                       </h6>
-                                       <div className="best-seller-product-items-two__details--price">
-                                          <span className="offer-price">
-                                             $79.00
-                                          </span>
-                                          <span className="original-price">
-                                             $99.00
-                                          </span>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
+
+                     <Swiper
+                        slidesPerView={1}
+                        spaceBetween={30}
+                        autoplay={{ delay: 2500, pauseOnMouseEnter: true }}
+                        loop
+                        breakpoints={{
+                           640: {
+                              slidesPerView: 1,
+                              spaceBetween: 20,
+                           },
+                           768: {
+                              slidesPerView: 2,
+                              spaceBetween: 30,
+                           },
+                           1024: {
+                              slidesPerView: 3,
+                              spaceBetween: 30,
+                           },
+                        }}
+                        modules={[Autoplay]}
+                        className="mySwiper"
+                     >
+                        {newItemData.map((item) => (
+                           <SwiperSlide key={item.id}>
+                              <NewItemCard {...item} />
+                           </SwiperSlide>
+                        ))}
+                     </Swiper>
                   </div>
                </div>
             </div>
          </div>
       </section>
+   );
+};
+
+const NewItemCard = ({
+   category,
+   img,
+   name,
+   offerPrice,
+   price,
+}: NewItemDataType) => {
+   return (
+      <div className="best-seller-product-items-two">
+         <div className="icon-box2">
+            <button data-bs-toggle="modal" data-bs-target="#exampleModal2">
+               <i className="fa-regular fa-eye"></i>
+            </button>
+            <a href="wishlist.html">
+               <i className="fa-regular fa-heart"></i>
+            </a>
+            <a href="cart.html">
+               <i className="fa-light fa-bag-shopping"></i>
+            </a>
+         </div>
+         <div className="best-seller-product-items-two__thumb">
+            <Image width={138} height={255} src={img} alt="thumb" />
+         </div>
+         <div className="best-seller-product-items-two__content">
+            <div className="best-seller-product-items-two__details">
+               <p className="best-seller-product-items-two__details--subtitle">
+                  {category}
+               </p>
+               <h6 className="best-seller-product-items-two__details--title">
+                  <Link href="/shop-details-one">{name}</Link>
+               </h6>
+               <div className="best-seller-product-items-two__details--price">
+                  <span className="offer-price">${offerPrice}</span>
+                  <span className="original-price">${price}</span>
+               </div>
+            </div>
+         </div>
+      </div>
    );
 };
 
