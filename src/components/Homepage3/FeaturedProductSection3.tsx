@@ -1,4 +1,4 @@
-import React from "react";
+import Image from "next/image";
 
 const FeaturedProductSection3 = () => {
    return (
@@ -8,7 +8,12 @@ const FeaturedProductSection3 = () => {
                <div className="col-xl-3 col-md-6">
                   <div className="feature-box-item-three">
                      <div className="feature-box-item-three__icon">
-                        <img src="/images/icon/featureIcon3_1.svg" alt="icon" />
+                        <Image
+                           width={80}
+                           height={63}
+                           src="/images/icon/featureIcon3_1.svg"
+                           alt="icon"
+                        />
                      </div>
                      <div className="feature-box-item-three__content">
                         <h6>Free Delivery</h6>
@@ -21,7 +26,12 @@ const FeaturedProductSection3 = () => {
                <div className="col-xl-3 col-md-6">
                   <div className="feature-box-item-three">
                      <div className="feature-box-item-three__icon">
-                        <img src="/images/icon/featureIcon3_2.svg" alt="icon" />
+                        <Image
+                           width={60}
+                           height={60}
+                           src="/images/icon/featureIcon3_2.svg"
+                           alt="icon"
+                        />
                      </div>
                      <div className="feature-box-item-three__content">
                         <h6>Money Return</h6>
@@ -34,7 +44,12 @@ const FeaturedProductSection3 = () => {
                <div className="col-xl-3 col-md-6">
                   <div className="feature-box-item-three">
                      <div className="feature-box-item-three__icon">
-                        <img src="/images/icon/featureIcon3_3.svg" alt="icon" />
+                        <Image
+                           width={64}
+                           height={63}
+                           src="/images/icon/featureIcon3_3.svg"
+                           alt="icon"
+                        />
                      </div>
                      <div className="feature-box-item-three__content">
                         <h6>Online Support 24/7</h6>
@@ -47,7 +62,12 @@ const FeaturedProductSection3 = () => {
                <div className="col-xl-3 col-md-6">
                   <div className="feature-box-item-three">
                      <div className="feature-box-item-three__icon">
-                        <img src="/images/icon/featureIcon3_4.svg" alt="icon" />
+                        <Image
+                           width={56}
+                           height={57}
+                           src="/images/icon/featureIcon3_4.svg"
+                           alt="icon"
+                        />
                      </div>
                      <div className="feature-box-item-three__content">
                         <h6>Reliable</h6>
