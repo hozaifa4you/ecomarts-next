@@ -1,6 +1,6 @@
 import React from "react";
 
-const FeaturedProductSection = () => {
+const FeaturesSection = () => {
    return (
       <section className="featured-product-banner-section section-padding3 pb-0 fix">
          <div className="container">
@@ -9,7 +9,12 @@ const FeaturedProductSection = () => {
                   <div className="featured-item-three">
                      <div
                         className="featured-product-banner-three"
-                        data-bg-src="/images/featured-item/featured-product-banner3_1.jpg"
+                        style={{
+                           backgroundImage:
+                              "url(/images/featured-item/featured-product-banner3_1.jpg)",
+                           backgroundSize: "cover",
+                           backgroundRepeat: "no-repeat",
+                        }}
                      >
                         <div className="feature-product-banner-three-content">
                            <h2>100% Fresh Cow Milk</h2>
@@ -30,7 +35,12 @@ const FeaturedProductSection = () => {
                   <div className="featured-item-three">
                      <div
                         className="featured-product-banner-three"
-                        data-bg-src="/images/featured-item/featured-product-banner3_2.jpg"
+                        style={{
+                           backgroundImage:
+                              "url(/images/featured-item/featured-product-banner3_2.jpg)",
+                           backgroundSize: "cover",
+                           backgroundRepeat: "no-repeat",
+                        }}
                      >
                         <div className="feature-product-banner-three-content right-content">
                            <h6>Drink Sale</h6>
@@ -49,7 +59,12 @@ const FeaturedProductSection = () => {
                   <div className="featured-item-three">
                      <div
                         className="featured-product-banner-three"
-                        data-bg-src="/images/featured-item/featured-product-banner3_3.jpg"
+                        style={{
+                           backgroundImage:
+                              "url(/images/featured-item/featured-product-banner3_3.jpg)",
+                           backgroundSize: "cover",
+                           backgroundRepeat: "no-repeat",
+                        }}
                      >
                         <div className="feature-product-banner-three-content">
                            <h6>100% Organic</h6>
@@ -70,4 +85,4 @@ const FeaturedProductSection = () => {
    );
 };
 
-export default FeaturedProductSection;
+export { FeaturesSection };

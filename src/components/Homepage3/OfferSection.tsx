@@ -41,4 +41,4 @@ const OfferSection = () => {
    );
 };
 
-export default OfferSection;
+export { OfferSection };

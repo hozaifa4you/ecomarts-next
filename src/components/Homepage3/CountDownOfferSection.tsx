@@ -55,4 +55,4 @@ const CountDownOfferSection = () => {
    );
 };
 
-export default CountDownOfferSection;
+export { CountDownOfferSection };

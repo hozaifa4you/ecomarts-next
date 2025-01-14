@@ -63,4 +63,4 @@ const FeaturedProductSection3 = () => {
    );
 };
 
-export default FeaturedProductSection3;
+export { FeaturedProductSection3 };

@@ -36,4 +36,4 @@ const CTASection = () => {
    );
 };
 
-export default CTASection;
+export { CTASection };

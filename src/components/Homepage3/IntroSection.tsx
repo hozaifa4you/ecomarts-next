@@ -108,4 +108,4 @@ const IntroSlide = ({ description, img, subtitle, title }: IntroDataType) => {
    );
 };
 
-export default IntroSection;
+export  {IntroSection};

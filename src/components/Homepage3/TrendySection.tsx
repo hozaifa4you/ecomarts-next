@@ -1415,4 +1415,4 @@ const TrendySection = () => {
    );
 };
 
-export default TrendySection;
+export { TrendySection };

@@ -134,4 +134,4 @@ const ProductSection = () => {
    );
 };
 
-export default ProductSection;
+export  {ProductSection};

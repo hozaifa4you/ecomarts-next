@@ -222,4 +222,4 @@ const BestSellerSection = () => {
    );
 };
 
-export default BestSellerSection;
+export { BestSellerSection };

@@ -163,4 +163,4 @@ const FeaturedProductSection2 = () => {
    );
 };
 
-export default FeaturedProductSection2;
+export { FeaturedProductSection2 };

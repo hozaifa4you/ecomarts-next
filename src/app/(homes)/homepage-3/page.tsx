@@ -1,19 +1,19 @@
-import BestSellerSection from "@/components/Homepage3/BestSellerSection";
-import CountDownOfferSection from "@/components/Homepage3/CountDownOfferSection";
-import CTASection from "@/components/Homepage3/CTASection";
-import FeaturedProductSection from "@/components/Homepage3/FeaturedProductSection";
-import FeaturedProductSection2 from "@/components/Homepage3/FeaturedProductSection2";
-import FeaturedProductSection3 from "@/components/Homepage3/FeaturedProductSection3";
-import IntroSection from "@/components/Homepage3/IntroSection";
-import OfferSection from "@/components/Homepage3/OfferSection";
-import ProductSection from "@/components/Homepage3/ProductSection";
-import TrendySection from "@/components/Homepage3/TrendySection";
+import { BestSellerSection } from "@/components/Homepage3/BestSellerSection";
+import { CountDownOfferSection } from "@/components/Homepage3/CountDownOfferSection";
+import { CTASection } from "@/components/Homepage3/CTASection";
+import { FeaturesSection } from "@/components/Homepage3/FeaturesSection";
+import { FeaturedProductSection2 } from "@/components/Homepage3/FeaturedProductSection2";
+import { FeaturedProductSection3 } from "@/components/Homepage3/FeaturedProductSection3";
+import { IntroSection } from "@/components/Homepage3/IntroSection";
+import { OfferSection } from "@/components/Homepage3/OfferSection";
+import { ProductSection } from "@/components/Homepage3/ProductSection";
+import { TrendySection } from "@/components/Homepage3/TrendySection";
 
 const Homepage3 = () => {
    return (
       <>
          <IntroSection />
-         <FeaturedProductSection />
+         <FeaturesSection />
          <ProductSection />
          <TrendySection />
          <OfferSection />
