@@ -1,11 +1,13 @@
-import React from "react";
+import Link from "next/link";
 
 const CountDownOfferSection = () => {
    return (
       <section className="offer-timer-section section-padding3 pb-0 fix">
          <div
             className="offer-timer-container-wrapper section-padding style3"
-            data-bg-src="/images/offer/offerTimerBg3_1.jpg"
+            style={{
+               backgroundImage: `url(${"/images/offer/offerTimerBg3_1.jpg"})`,
+            }}
          >
             <div className="container">
                <div className="row">
@@ -43,9 +45,9 @@ const CountDownOfferSection = () => {
                      </div>
 
                      <div className="btn-wrapper d-flex align-items-center justify-content-center">
-                        <a className="theme-btn style4" href="contact.html">
+                        <Link className="theme-btn style4" href="/contact">
                            Buy Now
-                        </a>
+                        </Link>
                      </div>
                   </div>
                </div>

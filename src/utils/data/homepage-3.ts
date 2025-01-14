@@ -199,8 +199,42 @@ const bestSellerData = [
    },
 ];
 
+const featuredProductData = [
+   {
+      id: 1,
+      img: "/images/featured-item/featuredItemThumb3_1.png",
+      name: "A Organic Avocado",
+      price: "USD 20.00",
+   },
+   {
+      id: 2,
+      img: "/images/featured-item/featuredItemThumb3_2.png",
+      name: "Cheddar Fries",
+      price: "USD 100.00",
+   },
+   {
+      id: 3,
+      img: "/images/featured-item/featuredItemThumb3_3.png",
+      name: "Broccoli Organic",
+      price: "USD 55.00",
+   },
+   {
+      id: 4,
+      img: "/images/featured-item/featuredItemThumb3_4.png",
+      name: "Broccoli Farms",
+      price: "USD 7.00",
+   },
+];
+
 export type IntroDataType = (typeof introData)[0];
 export type CategoryCardsDataType = (typeof categoryCardsData)[0];
 export type TrendyProductDataType = (typeof trendyProductData)[0];
 export type BestSellerDataType = (typeof bestSellerData)[0];
-export { introData, categoryCardsData, trendyProductData, bestSellerData };
+export type FeaturedProductDataType = (typeof featuredProductData)[0];
+export {
+   introData,
+   categoryCardsData,
+   trendyProductData,
+   bestSellerData,
+   featuredProductData,
+};
