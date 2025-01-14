@@ -278,6 +278,25 @@ const newItemData = [
    },
 ];
 
+const GalleryData = [
+   "/images/insta-gallery/gallery-Thumb2_1.jpg",
+   "/images/insta-gallery/gallery-Thumb2_2.jpg",
+   "/images/insta-gallery/gallery-Thumb2_3.jpg",
+   "/images/insta-gallery/gallery-Thumb2_4.jpg",
+   "/images/insta-gallery/gallery-Thumb2_5.jpg",
+   "/images/insta-gallery/gallery-Thumb2_6.jpg",
+   "/images/insta-gallery/gallery-Thumb2_7.jpg",
+   "/images/insta-gallery/gallery-Thumb2_8.jpg",
+   "/images/insta-gallery/gallery-Thumb2_1.jpg",
+   "/images/insta-gallery/gallery-Thumb2_2.jpg",
+   "/images/insta-gallery/gallery-Thumb2_3.jpg",
+   "/images/insta-gallery/gallery-Thumb2_4.jpg",
+   "/images/insta-gallery/gallery-Thumb2_5.jpg",
+   "/images/insta-gallery/gallery-Thumb2_6.jpg",
+   "/images/insta-gallery/gallery-Thumb2_7.jpg",
+   "/images/insta-gallery/gallery-Thumb2_8.jpg",
+];
+
 export type OfferDataType = (typeof offerData)[0];
 export type BestSellerDataType = (typeof bestSellerData)[0];
 export type PackageShopDataType = (typeof packageShopData)[0];
@@ -289,4 +308,5 @@ export {
    packageShopData,
    featuredProductData,
    newItemData,
+   GalleryData,
 };

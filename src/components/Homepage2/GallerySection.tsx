@@ -1,4 +1,9 @@
-import React from "react";
+"use client";
+import Image from "next/image";
+import { Autoplay } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import { GalleryData } from "@/utils/data/homepage-2";
 
 const GallerySection = () => {
    return (
@@ -11,117 +16,40 @@ const GallerySection = () => {
                </div>
 
                <div className="slider-area gallerySliderTwo">
-                  <div
-                     className="swiper gt-slider"
-                     id="brandSliderFour"
-                     data-slider-options='{"loop": true,"autoplay": true,"breakpoints":{"0":{"slidesPerView":2},"576":{"slidesPerView":3},"767":{"slidesPerView":4},"1200":{"slidesPerView":5}}}'
+                  <Swiper
+                     loop
+                     autoplay={{ delay: 3000 }}
+                     slidesPerView={"auto"}
+                     spaceBetween={10}
+                     breakpoints={{
+                        0: { slidesPerView: 2, spaceBetween: 10 },
+                        576: { slidesPerView: 3, spaceBetween: 20 },
+                        767: { slidesPerView: 4, spaceBetween: 30 },
+                        1200: { slidesPerView: 5, spaceBetween: 30 },
+                     }}
+                     modules={[Autoplay]}
                   >
-                     <div className="swiper-wrapper">
-                        <div className="swiper-slide">
-                           <div className="gallery-thumb">
-                              <img
-                                 src="/images/insta-gallery/gallery-Thumb2_1.jpg"
-                                 alt="thumb"
-                              />
-                              <div className="icon">
-                                 <i className="fa-brands fa-instagram"></i>
-                              </div>
-                           </div>
-                        </div>
-                        <div className="swiper-slide">
-                           <div className="gallery-thumb">
-                              <img
-                                 src="/images/insta-gallery/gallery-Thumb2_2.jpg"
-                                 alt="thumb"
-                              />
-                              <div className="icon">
-                                 <i className="fa-brands fa-instagram"></i>
-                              </div>
-                           </div>
-                        </div>
-                        <div className="swiper-slide">
-                           <div className="gallery-thumb">
-                              <img
-                                 src="/images/insta-gallery/gallery-Thumb2_3.jpg"
-                                 alt="thumb"
-                              />
-                              <div className="icon">
-                                 <i className="fa-brands fa-instagram"></i>
-                              </div>
-                           </div>
-                        </div>
-                        <div className="swiper-slide">
-                           <div className="gallery-thumb">
-                              <img
-                                 src="/images/insta-gallery/gallery-Thumb2_4.jpg"
-                                 alt="thumb"
-                              />
-                              <div className="icon">
-                                 <i className="fa-brands fa-instagram"></i>
-                              </div>
-                           </div>
-                        </div>
-                        <div className="swiper-slide">
-                           <div className="gallery-thumb">
-                              <img
-                                 src="/images/insta-gallery/gallery-Thumb2_5.jpg"
-                                 alt="thumb"
-                              />
-                              <div className="icon">
-                                 <i className="fa-brands fa-instagram"></i>
-                              </div>
-                           </div>
-                        </div>
-                        <div className="swiper-slide">
-                           <div className="gallery-thumb">
-                              <img
-                                 src="/images/insta-gallery/gallery-Thumb2_6.jpg"
-                                 alt="thumb"
-                              />
-                              <div className="icon">
-                                 <i className="fa-brands fa-instagram"></i>
-                              </div>
-                           </div>
-                        </div>
-                        <div className="swiper-slide">
-                           <div className="gallery-thumb">
-                              <img
-                                 src="/images/insta-gallery/gallery-Thumb2_7.jpg"
-                                 alt="thumb"
-                              />
-                              <div className="icon">
-                                 <i className="fa-brands fa-instagram"></i>
-                              </div>
-                           </div>
-                        </div>
-                        <div className="swiper-slide">
-                           <div className="gallery-thumb">
-                              <img
-                                 src="/images/insta-gallery/gallery-Thumb2_8.jpg"
-                                 alt="thumb"
-                              />
-                              <div className="icon">
-                                 <i className="fa-brands fa-instagram"></i>
-                              </div>
-                           </div>
-                        </div>
-                        <div className="swiper-slide">
-                           <div className="gallery-thumb">
-                              <img
-                                 src="/images/insta-gallery/gallery-Thumb2_2.jpg"
-                                 alt="thumb"
-                              />
-                              <div className="icon">
-                                 <i className="fa-brands fa-instagram"></i>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
+                     {GalleryData.map((item, index) => (
+                        <SwiperSlide key={index}>
+                           <GalleryCard img={item} />
+                        </SwiperSlide>
+                     ))}
+                  </Swiper>
                </div>
             </div>
          </div>
       </section>
+   );
+};
+
+const GalleryCard = ({ img }: { img: string }) => {
+   return (
+      <div className="gallery-thumb">
+         <Image width={262} height={340} src={img} alt="thumb" />
+         <div className="icon">
+            <i className="fa-brands fa-instagram"></i>
+         </div>
+      </div>
    );
 };
 
