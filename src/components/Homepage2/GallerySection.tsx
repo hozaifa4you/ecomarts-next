@@ -23,9 +23,9 @@ const GallerySection = () => {
                      spaceBetween={10}
                      breakpoints={{
                         0: { slidesPerView: 2, spaceBetween: 10 },
-                        576: { slidesPerView: 3, spaceBetween: 20 },
-                        767: { slidesPerView: 4, spaceBetween: 30 },
-                        1200: { slidesPerView: 5, spaceBetween: 30 },
+                        767: { slidesPerView: 3, spaceBetween: 30 },
+                        1290: { slidesPerView: 4, spaceBetween: 30 },
+                        1400: { slidesPerView: 5, spaceBetween: 30 },
                      }}
                      modules={[Autoplay]}
                   >

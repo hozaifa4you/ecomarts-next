@@ -42,7 +42,7 @@ const NewItemsSection = () => {
                               slidesPerView: 2,
                               spaceBetween: 30,
                            },
-                           1024: {
+                           1400: {
                               slidesPerView: 3,
                               spaceBetween: 30,
                            },

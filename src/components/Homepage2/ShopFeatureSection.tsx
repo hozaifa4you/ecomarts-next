@@ -1,6 +1,6 @@
-import { ShopFeatureDataType, shopFeatureData } from "@/utils/data/homepage-2";
 import Image from "next/image";
-import React from "react";
+
+import { ShopFeatureDataType, shopFeatureData } from "@/utils/data/homepage-2";
 
 const ShopFeatureSection = () => {
    return (

@@ -1,4 +1,4 @@
-import Image from "next/image";
+/* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
 
 const IntroSection = () => {
@@ -17,41 +17,31 @@ const IntroSection = () => {
                         </h1>
                         <div className="intro-thumbs">
                            <div className="thumb1">
-                              <Image
+                              <img
                                  src="/images/intro/introThumb2_1.jpg"
                                  alt="thumb"
-                                 width={235}
-                                 height={300}
                               />
                            </div>
                            <div className="thumb2">
-                              <Image
-                                 width={235}
-                                 height={300}
+                              <img
                                  src="/images/intro/introThumb2_2.jpg"
                                  alt="thumb"
                               />
                            </div>
                            <div className="thumb3">
-                              <Image
-                                 width={340}
-                                 height={455}
+                              <img
                                  src="/images/intro/introThumb2_3.jpg"
                                  alt="thumb"
                               />
                            </div>
                            <div className="thumb4">
-                              <Image
-                                 width={235}
-                                 height={300}
+                              <img
                                  src="/images/intro/introThumb2_4.jpg"
                                  alt="thumb"
                               />
                            </div>
                            <div className="thumb5">
-                              <Image
-                                 width={235}
-                                 height={300}
+                              <img
                                  src="/images/intro/introThumb2_5.jpg"
                                  alt="thumb"
                               />
