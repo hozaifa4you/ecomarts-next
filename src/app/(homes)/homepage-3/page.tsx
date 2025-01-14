@@ -6,7 +6,7 @@ import { FeaturedProductSection2 } from "@/components/Homepage3/FeaturedProductS
 import { FeaturedProductSection3 } from "@/components/Homepage3/FeaturedProductSection3";
 import { IntroSection } from "@/components/Homepage3/IntroSection";
 import { OfferSection } from "@/components/Homepage3/OfferSection";
-import { ProductSection } from "@/components/Homepage3/ProductSection";
+import { CategoryCardsSection } from "@/components/Homepage3/CategoryCardsSection";
 import { TrendySection } from "@/components/Homepage3/TrendySection";
 
 const Homepage3 = () => {
@@ -14,7 +14,7 @@ const Homepage3 = () => {
       <>
          <IntroSection />
          <FeaturesSection />
-         <ProductSection />
+         <CategoryCardsSection />
          <TrendySection />
          <OfferSection />
          <BestSellerSection />
