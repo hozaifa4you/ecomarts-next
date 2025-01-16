@@ -1,4 +1,12 @@
+"use client";
+import {
+   popularCategoryDate,
+   PopularCategoryDateType,
+} from "@/utils/data/homepage-4";
+import Image from "next/image";
 import React from "react";
+import { Autoplay } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 const PopularCategorySection = () => {
    return (
@@ -12,81 +20,53 @@ const PopularCategorySection = () => {
                   <div className="subtitle style4">SHOP BY CATEGORIES</div>
                   <h2 className="title">Popular Categories</h2>
                </div>
-               <div className="swiper popular-category-slider">
-                  <div className="swiper-wrapper">
-                     <div className="swiper-slide">
-                        <div className="popular-category-items-four">
-                           <div className="popular-category-items-four__thumb">
-                              <img
-                                 src="/images/popular-categories/popularCategories4_1.jpg"
-                                 alt="thumb"
-                              />
-                           </div>
-                           <div className="popular-category-items-four__content">
-                              <div className="popular-category-items-four__content--title">
-                                 {" "}
-                                 Eye Shadow{" "}
-                              </div>
-                              <p>19 Item</p>
-                           </div>
-                        </div>
-                     </div>
-                     <div className="swiper-slide">
-                        <div className="popular-category-items-four">
-                           <div className="popular-category-items-four__thumb">
-                              <img
-                                 src="/images/popular-categories/popularCategories4_2.jpg"
-                                 alt="thumb"
-                              />
-                           </div>
-                           <div className="popular-category-items-four__content">
-                              <div className="popular-category-items-four__content--title">
-                                 {" "}
-                                 Face Cream{" "}
-                              </div>
-                              <p>21 Item</p>
-                           </div>
-                        </div>
-                     </div>
-                     <div className="swiper-slide">
-                        <div className="popular-category-items-four">
-                           <div className="popular-category-items-four__thumb">
-                              <img
-                                 src="/images/popular-categories/popularCategories4_3.jpg"
-                                 alt="thumb"
-                              />
-                           </div>
-                           <div className="popular-category-items-four__content">
-                              <div className="popular-category-items-four__content--title">
-                                 {" "}
-                                 Skin Care{" "}
-                              </div>
-                              <p>25 Item</p>
-                           </div>
-                        </div>
-                     </div>
-                     <div className="swiper-slide">
-                        <div className="popular-category-items-four">
-                           <div className="popular-category-items-four__thumb">
-                              <img
-                                 src="/images/popular-categories/popularCategories4_4.jpg"
-                                 alt="thumb"
-                              />
-                           </div>
-                           <div className="popular-category-items-four__content">
-                              <div className="popular-category-items-four__content--title">
-                                 {" "}
-                                 Body Cream{" "}
-                              </div>
-                              <p>30 Item</p>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
+               <Swiper
+                  loop
+                  autoplay={{ delay: 2500 }}
+                  breakpoints={{
+                     1199: {
+                        slidesPerView: 4,
+                     },
+                     991: {
+                        slidesPerView: 3,
+                     },
+                     767: {
+                        slidesPerView: 2,
+                     },
+                     575: {
+                        slidesPerView: 1,
+                     },
+                     0: {
+                        slidesPerView: 1,
+                     },
+                  }}
+                  modules={[Autoplay]}
+               >
+                  {popularCategoryDate.map((category) => (
+                     <SwiperSlide key={category.id}>
+                        <PopularCategoryCard {...category} />
+                     </SwiperSlide>
+                  ))}
+               </Swiper>
             </div>
          </div>
       </section>
+   );
+};
+
+const PopularCategoryCard = ({ count, img, name }: PopularCategoryDateType) => {
+   return (
+      <div className="popular-category-items-four">
+         <div className="popular-category-items-four__thumb">
+            <Image width={330} height={468} src={img} alt="thumb" />
+         </div>
+         <div className="popular-category-items-four__content">
+            <div className="popular-category-items-four__content--title">
+               {name}
+            </div>
+            <p>{count}</p>
+         </div>
+      </div>
    );
 };
 
