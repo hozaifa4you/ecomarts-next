@@ -1,7 +1,31 @@
-import React from "react";
+import { BeautyCareProductSection } from "@/components/Homepage4/BeautyCareProductSection";
+import { BlogSection } from "@/components/Homepage4/BlogSection";
+import { BrandSection } from "@/components/Homepage4/BrandSection";
+import { CTASection } from "@/components/Homepage4/CTASection";
+import { FeatureSection } from "@/components/Homepage4/FeatureSection";
+import { GallerySection } from "@/components/Homepage4/GallerySection";
+import { GallerySection2 } from "@/components/Homepage4/GallerySection2";
+import { IntroSection } from "@/components/Homepage4/IntroSection";
+import { PopularCategorySection } from "@/components/Homepage4/PopularCategorySection";
+import { TestimonialSection } from "@/components/Homepage4/TestimonialSection";
+import { TopRatedSection } from "@/components/Homepage4/TopRatedSection";
 
-const page = () => {
-   return <div>page</div>;
+const Homepage4 = () => {
+   return (
+      <>
+         <IntroSection />
+         <PopularCategorySection />
+         <BeautyCareProductSection />
+         <GallerySection />
+         <TopRatedSection />
+         <CTASection />
+         <TestimonialSection />
+         <BlogSection />
+         <BrandSection />
+         <GallerySection2 />
+         <FeatureSection />
+      </>
+   );
 };
 
-export default page;
+export default Homepage4;
