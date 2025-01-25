@@ -174,7 +174,18 @@ const beautyCareProductData = [
    },
 ];
 
+const brandData = [
+   "/images/brand-logo/brand-logo4_1.png",
+   "/images/brand-logo/brand-logo4_2.png",
+   "/images/brand-logo/brand-logo4_3.png",
+   "/images/brand-logo/brand-logo4_4.png",
+   "/images/brand-logo/brand-logo4_5.png",
+   "/images/brand-logo/brand-logo4_6.png",
+   "/images/brand-logo/brand-logo4_1.png",
+   "/images/brand-logo/brand-logo4_2.png",
+];
+
 export type IntroDataType = (typeof introData)[0];
 export type PopularCategoryDateType = (typeof popularCategoryDate)[0];
 export type BeautyCareProductDataType = (typeof beautyCareProductData)[0];
-export { introData, popularCategoryDate, beautyCareProductData };
+export { introData, popularCategoryDate, beautyCareProductData, brandData };
