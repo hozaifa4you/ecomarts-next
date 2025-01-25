@@ -82,6 +82,18 @@ const topRatedProductsData = [
    },
 ];
 
+const brandLogoData = [
+   "/images/brand-logo/brand-logo4_1.png",
+   "/images/brand-logo/brand-logo4_2.png",
+   "/images/brand-logo/brand-logo4_3.png",
+   "/images/brand-logo/brand-logo4_4.png",
+   "/images/brand-logo/brand-logo4_5.png",
+   "/images/brand-logo/brand-logo4_6.png",
+   "/images/brand-logo/brand-logo4_1.png",
+   "/images/brand-logo/brand-logo4_2.png",
+   "/images/brand-logo/brand-logo4_3.png",
+];
+
 export type JewelryCategoryType = (typeof jewelryCategoryData)[0];
 export type TopRatedProductType = (typeof topRatedProductsData)[0];
-export { jewelryCategoryData, topRatedProductsData };
+export { jewelryCategoryData, topRatedProductsData, brandLogoData };
