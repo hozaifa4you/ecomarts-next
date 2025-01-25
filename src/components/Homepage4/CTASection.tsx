@@ -1,10 +1,11 @@
+import Link from "next/link";
 import React from "react";
 
 const CTASection = () => {
    return (
       <section
          className="cta-section section-padding4 fix"
-         data-bg-src="/images/cta/ctaBg4_1.jpg"
+         style={{ backgroundImage: "url(/images/cta/ctaBg4_1.jpg" }}
       >
          <div className="container">
             <div className="row">
@@ -21,7 +22,7 @@ const CTASection = () => {
                      </p>
 
                      <div className="btn-wrapper">
-                        <a className="theme-btn style6" href="cart.html">
+                        <Link className="theme-btn style6" href="/cart">
                            Explore Now{" "}
                            <svg
                               xmlns="http://www.w3.org/2000/svg"
@@ -35,7 +36,7 @@ const CTASection = () => {
                                  fill="white"
                               />
                            </svg>
-                        </a>
+                        </Link>
                      </div>
                   </div>
                </div>

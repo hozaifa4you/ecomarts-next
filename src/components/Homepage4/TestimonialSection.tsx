@@ -1,4 +1,7 @@
-import React from "react";
+"use client";
+import Image from "next/image";
+import { Autoplay, Navigation } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 const TestimonialSection = () => {
    return (
@@ -9,47 +12,32 @@ const TestimonialSection = () => {
                <h2 className="title">What Our Clients Say</h2>
             </div>
             <div className="slider-area testimonialSliderFour">
-               <div
-                  className="swiper gt-slider"
-                  id="testimonialSliderFour"
-                  data-slider-options='{"loop": true,"autoplay": true,"breakpoints":{"0":{"slidesPerView":1},"576":{"slidesPerView":1}}}'
+               <Swiper
+                  loop
+                  autoplay
+                  navigation={{
+                     nextEl: "#testimonial4-prev",
+                     prevEl: "#testimonial-next",
+                  }}
+                  modules={[Autoplay, Navigation]}
                >
-                  <div className="swiper-wrapper">
-                     <div className="swiper-slide">
-                        <div className="testimonial-card-items-four">
-                           <p>
-                              “Nulla bibendum volutpat nisl, in ullamcorper sem
-                              vehicula non. Vestibulum quis ipsum elementum,
-                              pulvinar enim eget, suscipit nisl. Nullam aliquam
-                              est a vulputate placerat. Ut quis lectus sodales,
-                              laoreet nisi ut, ultricies ex Maecenas consequat
-                              nunc purus, non maximus nunc gravida nec.”
-                           </p>
-                           <div className="testimonial-card-items-four_thumb">
-                              <img
-                                 src="/images/testimonial/testimonialProfileThumb4_1.jpg"
-                                 alt="thumb"
-                              />
-                              <div className="bg">
-                                 <img
-                                    src="/images/testimonial/testimonialProfileThumbbg4_1.jpg"
-                                    alt="thumbbg"
-                                 />
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
+                  <SwiperSlide>
+                     <TestimonialSlide />
+                  </SwiperSlide>
+                  <SwiperSlide>
+                     <TestimonialSlide />
+                  </SwiperSlide>
+               </Swiper>
+
                <div className="arrow-btn">
                   <button
-                     data-slider-prev="#testimonialSliderFour"
+                     id="testimonial4-prev"
                      className="slider-arrow slider-prev"
                   >
                      <i className="fa-sharp fa-light fa-arrow-left"></i>
                   </button>
                   <button
-                     data-slider-next="#testimonialSliderFour"
+                     id="testimonial-next"
                      className="slider-arrow slider-next"
                   >
                      <i className="fa-sharp fa-light fa-arrow-right"></i>
@@ -58,6 +46,38 @@ const TestimonialSection = () => {
             </div>
          </div>
       </section>
+   );
+};
+
+// data-slider-options='{"loop": true,"autoplay": true,"breakpoints":{"0":{"slidesPerView":1},"576":{"slidesPerView":1}}}'
+
+const TestimonialSlide = () => {
+   return (
+      <div className="testimonial-card-items-four">
+         <p>
+            “Nulla bibendum volutpat nisl, in ullamcorper sem vehicula non.
+            Vestibulum quis ipsum elementum, pulvinar enim eget, suscipit nisl.
+            Nullam aliquam est a vulputate placerat. Ut quis lectus sodales,
+            laoreet nisi ut, ultricies ex Maecenas consequat nunc purus, non
+            maximus nunc gravida nec.”
+         </p>
+         <div className="testimonial-card-items-four_thumb">
+            <Image
+               width={80}
+               height={80}
+               src="/images/testimonial/testimonialProfileThumb4_1.jpg"
+               alt="thumb"
+            />
+            <div className="bg">
+               <Image
+                  width={185}
+                  height={132}
+                  src="/images/testimonial/testimonialProfileThumbbg4_1.jpg"
+                  alt="thumbbg"
+               />
+            </div>
+         </div>
+      </div>
    );
 };
 
