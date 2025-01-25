@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const GallerySection = () => {
@@ -8,7 +9,9 @@ const GallerySection = () => {
                <div className="col-lg-6">
                   <div className="product-gallery-items-four style-1">
                      <div className="product-gallery-items-four__thumb">
-                        <img
+                        <Image
+                           width={693}
+                           height={795}
                            src="/images/product-gallery/productGalleryThumb4_1.jpg"
                            alt="thumb"
                         />
@@ -36,7 +39,9 @@ const GallerySection = () => {
                <div className="col-lg-6">
                   <div className="product-gallery-items-four style-2">
                      <div className="product-gallery-items-four__thumb">
-                        <img
+                        <Image
+                           width={693}
+                           height={363}
                            src="/images/product-gallery/productGalleryThumb4_2.jpg"
                            alt="thumb"
                         />
@@ -62,7 +67,9 @@ const GallerySection = () => {
                   </div>
                   <div className="product-gallery-items-four style-3">
                      <div className="product-gallery-items-four__thumb">
-                        <img
+                        <Image
+                           width={693}
+                           height={363}
                            src="/images/product-gallery/productGalleryThumb4_3.jpg"
                            alt="thumb"
                         />
