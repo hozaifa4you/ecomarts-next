@@ -185,7 +185,24 @@ const brandData = [
    "/images/brand-logo/brand-logo4_2.png",
 ];
 
+const incredibleProductsData = [
+   "/images/insta-gallery/gallery-Thumb4_1.jpg",
+   "/images/insta-gallery/gallery-Thumb4_2.jpg",
+   "/images/insta-gallery/gallery-Thumb4_3.jpg",
+   "/images/insta-gallery/gallery-Thumb4_4.jpg",
+   "/images/insta-gallery/gallery-Thumb4_5.jpg",
+   "/images/insta-gallery/gallery-Thumb4_1.jpg",
+   "/images/insta-gallery/gallery-Thumb4_2.jpg",
+   "/images/insta-gallery/gallery-Thumb4_3.jpg",
+];
+
 export type IntroDataType = (typeof introData)[0];
 export type PopularCategoryDateType = (typeof popularCategoryDate)[0];
 export type BeautyCareProductDataType = (typeof beautyCareProductData)[0];
-export { introData, popularCategoryDate, beautyCareProductData, brandData };
+export {
+   introData,
+   popularCategoryDate,
+   beautyCareProductData,
+   brandData,
+   incredibleProductsData,
+};

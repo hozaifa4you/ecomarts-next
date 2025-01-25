@@ -4,7 +4,7 @@ import { BrandSection } from "@/components/Homepage4/BrandSection";
 import { CTASection } from "@/components/Homepage4/CTASection";
 import { FeatureSection } from "@/components/Homepage4/FeatureSection";
 import { GallerySection } from "@/components/Homepage4/GallerySection";
-import { GallerySection2 } from "@/components/Homepage4/GallerySection2";
+import { IncredibleProducts } from "@/components/Homepage4/IncredibleProducts";
 import { IntroSection } from "@/components/Homepage4/IntroSection";
 import { PopularCategorySection } from "@/components/Homepage4/PopularCategorySection";
 import { TestimonialSection } from "@/components/Homepage4/TestimonialSection";
@@ -22,7 +22,7 @@ const Homepage4 = () => {
          <TestimonialSection />
          <BlogSection />
          <BrandSection />
-         <GallerySection2 />
+         <IncredibleProducts />
          <FeatureSection />
       </>
    );
