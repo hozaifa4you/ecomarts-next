@@ -1,4 +1,4 @@
-import React from "react";
+import Image from "next/image";
 
 const CtaDiscountSection = () => {
    return (
@@ -6,10 +6,17 @@ const CtaDiscountSection = () => {
          <div className="container">
             <div
                className="cta-discount-wrapper bg-cover"
-               // style="background-image: url('/images/home-5/cta-discount.jpg');"
+               style={{
+                  backgroundImage: "url('/images/home-5/cta-discount.jpg')",
+               }}
             >
                <div className="girl-image">
-                  <img src="/images/home-5/girl-shape.png" alt="img" />
+                  <Image
+                     width={602}
+                     height={395}
+                     src="/images/home-5/girl-shape.png"
+                     alt="img"
+                  />
                </div>
                <div className="row justify-content-end">
                   <div className="col-lg-5">
