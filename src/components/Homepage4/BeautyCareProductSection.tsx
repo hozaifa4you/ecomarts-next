@@ -1,4 +1,9 @@
-import React from "react";
+import Image from "next/image";
+
+import {
+   beautyCareProductData,
+   BeautyCareProductDataType,
+} from "@/utils/data/homepage-4";
 
 const BeautyCareProductSection = () => {
    return (
@@ -21,378 +26,59 @@ const BeautyCareProductSection = () => {
                   </div>
                </div>
                <div className="row g-4">
-                  <div className="col-xl-3 col-md-6">
-                     <div className="best-seller-product-items-two style-seller-3">
-                        <div className="icon-box2">
-                           <button
-                              data-bs-toggle="modal"
-                              data-bs-target="#exampleModal2"
-                           >
-                              <i className="fa-regular fa-eye"></i>
-                           </button>
-                           <a href="wishlist.html">
-                              <i className="fa-regular fa-heart"></i>
-                           </a>
-                           <a href="cart.html">
-                              <i className="fa-light fa-bag-shopping"></i>
-                           </a>
-                        </div>
-                        <div className="best-seller-product-items-two__badge1">
-                           25% off
-                        </div>
-                        <div className="best-seller-product-items-two__thumb">
-                           <img
-                              src="/images/beauty-care/beautyCareProductThumb4_1.png"
-                              alt="thumb"
-                           />
-                        </div>
-                        <div className="best-seller-product-items-two__content">
-                           <div className="best-seller-product-items-two__details">
-                              <p className="best-seller-product-items-two__details--subtitle">
-                                 FASHION BAG
-                              </p>
-                              <h6 className="best-seller-product-items-two__details--title">
-                                 <a href="shop-details-one.html">
-                                    Brightening Face Oil
-                                 </a>
-                              </h6>
-                              <div className="best-seller-product-items-two__details--price">
-                                 {" "}
-                                 <span className="offer-price">
-                                    $79.00
-                                 </span>{" "}
-                                 <span className="original-price">$99.00</span>
-                              </div>
-                           </div>
-                        </div>
+                  {beautyCareProductData.map((product) => (
+                     <div className="col-xl-3 col-md-6" key={product.id}>
+                        <BeautyCareProductCard {...product} />
                      </div>
-                  </div>
-                  <div className="col-xl-3 col-md-6">
-                     <div className="best-seller-product-items-two style-seller-3">
-                        <div className="icon-box2">
-                           <button
-                              data-bs-toggle="modal"
-                              data-bs-target="#exampleModal2"
-                           >
-                              <i className="fa-regular fa-eye"></i>
-                           </button>
-                           <a href="wishlist.html">
-                              <i className="fa-regular fa-heart"></i>
-                           </a>
-                           <a href="cart.html">
-                              <i className="fa-light fa-bag-shopping"></i>
-                           </a>
-                        </div>
-                        <div className="best-seller-product-items-two__badge1">
-                           TRANDING
-                        </div>
-                        <div className="best-seller-product-items-two__thumb">
-                           <img
-                              src="/images/beauty-care/beautyCareProductThumb4_2.png"
-                              alt="thumb"
-                           />
-                        </div>
-                        <div className="best-seller-product-items-two__content">
-                           <div className="best-seller-product-items-two__details">
-                              <p className="best-seller-product-items-two__details--subtitle">
-                                 FASHION BAG
-                              </p>
-                              <h6 className="best-seller-product-items-two__details--title">
-                                 <a href="shop-details-one.html">
-                                    Eternal Youth Serum
-                                 </a>
-                              </h6>
-                              <div className="best-seller-product-items-two__details--price">
-                                 {" "}
-                                 <span className="offer-price">
-                                    $79.00
-                                 </span>{" "}
-                                 <span className="original-price">$99.00</span>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                  <div className="col-xl-3 col-md-6">
-                     <div className="best-seller-product-items-two style-seller-3">
-                        <div className="icon-box2">
-                           <button
-                              data-bs-toggle="modal"
-                              data-bs-target="#exampleModal2"
-                           >
-                              <i className="fa-regular fa-eye"></i>
-                           </button>
-                           <a href="wishlist.html">
-                              <i className="fa-regular fa-heart"></i>
-                           </a>
-                           <a href="cart.html">
-                              <i className="fa-light fa-bag-shopping"></i>
-                           </a>
-                        </div>
-                        <div className="best-seller-product-items-two__badge1">
-                           NEW
-                        </div>
-                        <div className="best-seller-product-items-two__thumb">
-                           <img
-                              src="/images/beauty-care/beautyCareProductThumb4_3.png"
-                              alt="thumb"
-                           />
-                        </div>
-                        <div className="best-seller-product-items-two__content">
-                           <div className="best-seller-product-items-two__details">
-                              <p className="best-seller-product-items-two__details--subtitle">
-                                 FASHION BAG
-                              </p>
-                              <h6 className="best-seller-product-items-two__details--title">
-                                 <a href="shop-details-one.html">
-                                    Elite Whitening Serum
-                                 </a>
-                              </h6>
-                              <div className="best-seller-product-items-two__details--price">
-                                 {" "}
-                                 <span className="offer-price">
-                                    $79.00
-                                 </span>{" "}
-                                 <span className="original-price">$99.00</span>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                  <div className="col-xl-3 col-md-6">
-                     <div className="best-seller-product-items-two style-seller-3">
-                        <div className="icon-box2">
-                           <button
-                              data-bs-toggle="modal"
-                              data-bs-target="#exampleModal2"
-                           >
-                              <i className="fa-regular fa-eye"></i>
-                           </button>
-                           <a href="wishlist.html">
-                              <i className="fa-regular fa-heart"></i>
-                           </a>
-                           <a href="cart.html">
-                              <i className="fa-light fa-bag-shopping"></i>
-                           </a>
-                        </div>
-                        <div className="best-seller-product-items-two__badge1">
-                           25% off
-                        </div>
-                        <div className="best-seller-product-items-two__thumb">
-                           <img
-                              src="/images/beauty-care/beautyCareProductThumb4_4.png"
-                              alt="thumb"
-                           />
-                        </div>
-                        <div className="best-seller-product-items-two__content">
-                           <div className="best-seller-product-items-two__details">
-                              <p className="best-seller-product-items-two__details--subtitle">
-                                 FASHION BAG
-                              </p>
-                              <h6 className="best-seller-product-items-two__details--title">
-                                 <a href="shop-details-one.html">
-                                    Exclusive Body Lotion
-                                 </a>
-                              </h6>
-                              <div className="best-seller-product-items-two__details--price">
-                                 {" "}
-                                 <span className="offer-price">
-                                    $79.00
-                                 </span>{" "}
-                                 <span className="original-price">$99.00</span>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                  <div className="col-xl-3 col-md-6">
-                     <div className="best-seller-product-items-two style-seller-3">
-                        <div className="icon-box2">
-                           <button
-                              data-bs-toggle="modal"
-                              data-bs-target="#exampleModal2"
-                           >
-                              <i className="fa-regular fa-eye"></i>
-                           </button>
-                           <a href="wishlist.html">
-                              <i className="fa-regular fa-heart"></i>
-                           </a>
-                           <a href="cart.html">
-                              <i className="fa-light fa-bag-shopping"></i>
-                           </a>
-                        </div>
-                        <div className="best-seller-product-items-two__badge1">
-                           25% off
-                        </div>
-                        <div className="best-seller-product-items-two__thumb">
-                           <img
-                              src="/images/beauty-care/beautyCareProductThumb4_5.png"
-                              alt="thumb"
-                           />
-                        </div>
-                        <div className="best-seller-product-items-two__content">
-                           <div className="best-seller-product-items-two__details">
-                              <p className="best-seller-product-items-two__details--subtitle">
-                                 FASHION BAG
-                              </p>
-                              <h6 className="best-seller-product-items-two__details--title">
-                                 <a href="shop-details-one.html">
-                                    Flawless Finish Powder
-                                 </a>
-                              </h6>
-                              <div className="best-seller-product-items-two__details--price">
-                                 {" "}
-                                 <span className="offer-price">
-                                    $79.00
-                                 </span>{" "}
-                                 <span className="original-price">$99.00</span>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                  <div className="col-xl-3 col-md-6">
-                     <div className="best-seller-product-items-two style-seller-3">
-                        <div className="icon-box2">
-                           <button
-                              data-bs-toggle="modal"
-                              data-bs-target="#exampleModal2"
-                           >
-                              <i className="fa-regular fa-eye"></i>
-                           </button>
-                           <a href="wishlist.html">
-                              <i className="fa-regular fa-heart"></i>
-                           </a>
-                           <a href="cart.html">
-                              <i className="fa-light fa-bag-shopping"></i>
-                           </a>
-                        </div>
-                        <div className="best-seller-product-items-two__badge1">
-                           TRANDING
-                        </div>
-                        <div className="best-seller-product-items-two__thumb">
-                           <img
-                              src="/images/beauty-care/beautyCareProductThumb4_6.png"
-                              alt="thumb"
-                           />
-                        </div>
-                        <div className="best-seller-product-items-two__content">
-                           <div className="best-seller-product-items-two__details">
-                              <p className="best-seller-product-items-two__details--subtitle">
-                                 FASHION BAG
-                              </p>
-                              <h6 className="best-seller-product-items-two__details--title">
-                                 <a href="shop-details-one.html">
-                                    Gentle Purity Cleanser
-                                 </a>
-                              </h6>
-                              <div className="best-seller-product-items-two__details--price">
-                                 {" "}
-                                 <span className="offer-price">
-                                    $79.00
-                                 </span>{" "}
-                                 <span className="original-price">$99.00</span>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                  <div className="col-xl-3 col-md-6">
-                     <div className="best-seller-product-items-two style-seller-3">
-                        <div className="icon-box2">
-                           <button
-                              data-bs-toggle="modal"
-                              data-bs-target="#exampleModal2"
-                           >
-                              <i className="fa-regular fa-eye"></i>
-                           </button>
-                           <a href="wishlist.html">
-                              <i className="fa-regular fa-heart"></i>
-                           </a>
-                           <a href="cart.html">
-                              <i className="fa-light fa-bag-shopping"></i>
-                           </a>
-                        </div>
-                        <div className="best-seller-product-items-two__badge1">
-                           NEW
-                        </div>
-                        <div className="best-seller-product-items-two__thumb">
-                           <img
-                              src="/images/beauty-care/beautyCareProductThumb4_7.png"
-                              alt="thumb"
-                           />
-                        </div>
-                        <div className="best-seller-product-items-two__content">
-                           <div className="best-seller-product-items-two__details">
-                              <p className="best-seller-product-items-two__details--subtitle">
-                                 FASHION BAG
-                              </p>
-                              <h6 className="best-seller-product-items-two__details--title">
-                                 <a href="shop-details-one.html">
-                                    Intensive Repair Mask
-                                 </a>
-                              </h6>
-                              <div className="best-seller-product-items-two__details--price">
-                                 {" "}
-                                 <span className="offer-price">
-                                    $79.00
-                                 </span>{" "}
-                                 <span className="original-price">$99.00</span>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                  <div className="col-xl-3 col-md-6">
-                     <div className="best-seller-product-items-two style-seller-3">
-                        <div className="icon-box2">
-                           <button
-                              data-bs-toggle="modal"
-                              data-bs-target="#exampleModal2"
-                           >
-                              <i className="fa-regular fa-eye"></i>
-                           </button>
-                           <a href="wishlist.html">
-                              <i className="fa-regular fa-heart"></i>
-                           </a>
-                           <a href="cart.html">
-                              <i className="fa-light fa-bag-shopping"></i>
-                           </a>
-                        </div>
-                        <div className="best-seller-product-items-two__badge1">
-                           25% off
-                        </div>
-                        <div className="best-seller-product-items-two__thumb">
-                           <img
-                              src="/images/beauty-care/beautyCareProductThumb4_8.png"
-                              alt="thumb"
-                           />
-                        </div>
-                        <div className="best-seller-product-items-two__content">
-                           <div className="best-seller-product-items-two__details">
-                              <p className="best-seller-product-items-two__details--subtitle">
-                                 FASHION BAG
-                              </p>
-                              <h6 className="best-seller-product-items-two__details--title">
-                                 <a href="shop-details-one.html">
-                                    Luminous Glow Primer
-                                 </a>
-                              </h6>
-                              <div className="best-seller-product-items-two__details--price">
-                                 {" "}
-                                 <span className="offer-price">
-                                    $79.00
-                                 </span>{" "}
-                                 <span className="original-price">$99.00</span>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
+                  ))}
                </div>
             </div>
          </div>
       </section>
+   );
+};
+
+const BeautyCareProductCard = ({
+   category,
+   img,
+   name,
+   offerPrice,
+   price,
+   tag,
+}: BeautyCareProductDataType) => {
+   return (
+      <div className="best-seller-product-items-two style-seller-3">
+         <div className="icon-box2">
+            <button data-bs-toggle="modal" data-bs-target="#exampleModal2">
+               <i className="fa-regular fa-eye"></i>
+            </button>
+            <a href="wishlist.html">
+               <i className="fa-regular fa-heart"></i>
+            </a>
+            <a href="cart.html">
+               <i className="fa-light fa-bag-shopping"></i>
+            </a>
+         </div>
+         <div className="best-seller-product-items-two__badge1">{tag}</div>
+         <div className="best-seller-product-items-two__thumb">
+            <Image width={img.w} height={img.h} src={img.url} alt="thumb" />
+         </div>
+         <div className="best-seller-product-items-two__content">
+            <div className="best-seller-product-items-two__details">
+               <p className="best-seller-product-items-two__details--subtitle">
+                  {category}
+               </p>
+               <h6 className="best-seller-product-items-two__details--title">
+                  <a href="shop-details-one.html">{name}</a>
+               </h6>
+               <div className="best-seller-product-items-two__details--price">
+                  {" "}
+                  <span className="offer-price">${offerPrice}</span>{" "}
+                  <span className="original-price">${price}</span>
+               </div>
+            </div>
+         </div>
+      </div>
    );
 };
 
