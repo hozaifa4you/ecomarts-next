@@ -10,7 +10,10 @@ const CtaCollectionSection = () => {
                   <div className="col-lg-5">
                      <div
                         className="cta-collection-image bg-cover"
-                        // style="background-image: url('/images/home-5/banner/01.jpg');"
+                        style={{
+                           backgroundImage:
+                              "url('/images/home-5/banner/01.jpg')",
+                        }}
                      >
                         <div className="content">
                            <h3>
@@ -31,7 +34,10 @@ const CtaCollectionSection = () => {
                         <div className="col-md-6">
                            <div
                               className="cta-collection-image bg-cover"
-                              // style="background-image: url('/images/home-5/banner/02.jpg');"
+                              style={{
+                                 backgroundImage:
+                                    "url('/images/home-5/banner/02.jpg')",
+                              }}
                            >
                               <div className="content">
                                  <h4>
@@ -46,7 +52,10 @@ const CtaCollectionSection = () => {
                         <div className="col-md-6">
                            <div
                               className="cta-collection-image bg-cover"
-                              // style="background-image: url('/images/home-5/banner/03.jpg');"
+                              style={{
+                                 backgroundImage:
+                                    "url('/images/home-5/banner/03.jpg')",
+                              }}
                            >
                               <div className="content">
                                  <h4>
