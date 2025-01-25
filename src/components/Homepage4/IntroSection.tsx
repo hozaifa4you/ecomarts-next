@@ -88,13 +88,13 @@ const IntroSection = () => {
                                  <h6>starting from</h6>
                                  <h4>$25.00</h4>
                                  <div className="btn-wrapper">
-                                    <a
+                                    <Link
                                        className="theme-btn style7"
-                                       href="cart.html"
+                                       href="/cart"
                                     >
                                        Buy Now{" "}
                                        <i className="fa-light fa-chevron-right"></i>
-                                    </a>
+                                    </Link>
                                  </div>
                               </div>
                            </div>

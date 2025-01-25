@@ -44,7 +44,13 @@ const IncredibleProductsSection = () => {
 const IncredibleProductCard = ({ img }: { img: string }) => {
    return (
       <div className="gallery-thumb">
-         <Image width={335} height={335} alt="ecomarts-next" src={img} />
+         <Image
+            width={335}
+            height={335}
+            alt="ecomarts-next"
+            src={img}
+            className="object-fit-contain"
+         />
          <div className="icon">
             <i className="fa-brands fa-instagram"></i>
          </div>
