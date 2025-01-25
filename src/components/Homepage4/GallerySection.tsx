@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React from "react";
+import Link from "next/link";
 
 const GallerySection = () => {
    return (
@@ -18,7 +18,7 @@ const GallerySection = () => {
                      </div>
                      <div className="product-gallery-items-four__content">
                         <h2>Flawless Finish Powder</h2>
-                        <a href="#">
+                        <Link href="#">
                            Now Up To -30%{" "}
                            <svg
                               xmlns="http://www.w3.org/2000/svg"
@@ -32,7 +32,7 @@ const GallerySection = () => {
                                  fill="#0A111E"
                               />
                            </svg>
-                        </a>
+                        </Link>
                      </div>
                   </div>
                </div>
@@ -48,7 +48,7 @@ const GallerySection = () => {
                      </div>
                      <div className="product-gallery-items-four__content">
                         <h2>Stripes are back!</h2>
-                        <a href="#">
+                        <Link href="#">
                            New collection arrival!
                            <svg
                               xmlns="http://www.w3.org/2000/svg"
@@ -62,7 +62,7 @@ const GallerySection = () => {
                                  fill="#0A111E"
                               />
                            </svg>
-                        </a>
+                        </Link>
                      </div>
                   </div>
                   <div className="product-gallery-items-four style-3">
@@ -76,7 +76,7 @@ const GallerySection = () => {
                      </div>
                      <div className="product-gallery-items-four__content">
                         <h2>Body Lotion</h2>
-                        <a href="#">
+                        <Link href="#">
                            Check Now
                            <svg
                               xmlns="http://www.w3.org/2000/svg"
@@ -90,7 +90,7 @@ const GallerySection = () => {
                                  fill="#0A111E"
                               />
                            </svg>
-                        </a>
+                        </Link>
                      </div>
                   </div>
                </div>
