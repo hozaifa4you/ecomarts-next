@@ -67,12 +67,8 @@ const HeroSlider = () => {
          </div>
          <div className="col-lg-6">
             <div className="hero-image">
-               <Image
-                  width={793}
-                  height={735}
-                  src="/images/home-5/hero/01.png"
-                  alt="img"
-               />
+               {/* eslint-disable-next-line @next/next/no-img-element */}
+               <img src="/images/home-5/hero/01.png" alt="img" />
             </div>
          </div>
       </div>
