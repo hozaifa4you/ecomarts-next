@@ -94,6 +94,33 @@ const brandLogoData = [
    "/images/brand-logo/brand-logo4_3.png",
 ];
 
+const newProductsData = [
+   {
+      id: 1,
+      img: "/images/home-5/news/01.jpg",
+      name: "Quick and Easy Flaky Pastry for Tasty Breakfast",
+      category: "JEWELRY",
+   },
+   {
+      id: 2,
+      img: "/images/home-5/news/02.jpg",
+      name: "The Ultimate Guide to Choosing the Perfect Necklace",
+      category: "JEWELRY",
+   },
+   {
+      id: 3,
+      img: "/images/home-5/news/03.jpg",
+      name: "Top 10 Earrings Trends for This Season",
+      category: "JEWELRY",
+   },
+];
+
 export type JewelryCategoryType = (typeof jewelryCategoryData)[0];
 export type TopRatedProductType = (typeof topRatedProductsData)[0];
-export { jewelryCategoryData, topRatedProductsData, brandLogoData };
+export type NewProductType = (typeof newProductsData)[0];
+export {
+   jewelryCategoryData,
+   topRatedProductsData,
+   brandLogoData,
+   newProductsData,
+};

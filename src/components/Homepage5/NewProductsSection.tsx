@@ -1,4 +1,7 @@
-import React from "react";
+import Image from "next/image";
+import Link from "next/link";
+
+import { newProductsData, NewProductType } from "@/utils/data/homepage-5";
 
 const NewProductsSection = () => {
    return (
@@ -9,81 +12,39 @@ const NewProductsSection = () => {
                <h2 className="title">Stay updated with our latest posts</h2>
             </div>
             <div className="row">
-               <div className="col-xl-4 col-lg-4 col-md-6">
-                  <div className="news-box-items-5">
-                     <div className="thumb">
-                        <img src="/images/home-5/news/01.jpg" alt="img" />
-                        <div className="post-date">
-                           <span className="date">25</span>
-                           <span className="month">AUG</span>
-                        </div>
-                     </div>
-                     <div className="content">
-                        <a href="blog-details.html" className="post-box">
-                           JEWELRY
-                        </a>
-                        <h3>
-                           <a href="blog-details.html">
-                              Quick and Easy Flaky Pastry for Tasty Breakfast
-                           </a>
-                        </h3>
-                        <a href="blog-details.html" className="link-btn">
-                           READ MORE
-                        </a>
-                     </div>
+               {newProductsData.map((item) => (
+                  <div className="col-xl-4 col-lg-4 col-md-6" key={item.id}>
+                     <NewProductCard {...item} />
                   </div>
-               </div>
-               <div className="col-xl-4 col-lg-4 col-md-6">
-                  <div className="news-box-items-5">
-                     <div className="thumb">
-                        <img src="/images/home-5/news/02.jpg" alt="img" />
-                        <div className="post-date">
-                           <span className="date">20</span>
-                           <span className="month">AUG</span>
-                        </div>
-                     </div>
-                     <div className="content">
-                        <a href="blog-details.html" className="post-box">
-                           JEWELRY
-                        </a>
-                        <h3>
-                           <a href="blog-details.html">
-                              Quick and Easy Flaky Pastry for Tasty Breakfast
-                           </a>
-                        </h3>
-                        <a href="blog-details.html" className="link-btn">
-                           READ MORE
-                        </a>
-                     </div>
-                  </div>
-               </div>
-               <div className="col-xl-4 col-lg-4 col-md-6">
-                  <div className="news-box-items-5">
-                     <div className="thumb">
-                        <img src="/images/home-5/news/03.jpg" alt="img" />
-                        <div className="post-date">
-                           <span className="date">02</span>
-                           <span className="month">AUG</span>
-                        </div>
-                     </div>
-                     <div className="content">
-                        <a href="blog-details.html" className="post-box">
-                           JEWELRY
-                        </a>
-                        <h3>
-                           <a href="blog-details.html">
-                              Quick and Easy Flaky Pastry for Tasty Breakfast
-                           </a>
-                        </h3>
-                        <a href="blog-details.html" className="link-btn">
-                           READ MORE
-                        </a>
-                     </div>
-                  </div>
-               </div>
+               ))}
             </div>
          </div>
       </section>
+   );
+};
+
+const NewProductCard = ({ category, img, name }: NewProductType) => {
+   return (
+      <div className="news-box-items-5">
+         <div className="thumb">
+            <Image width={455} height={255} src={img} alt="img" />
+            <div className="post-date">
+               <span className="date">25</span>
+               <span className="month">AUG</span>
+            </div>
+         </div>
+         <div className="content">
+            <a href="blog-details.html" className="post-box">
+               {category}
+            </a>
+            <h3>
+               <Link href="/blog-details">{name}</Link>
+            </h3>
+            <Link href="/blog-details" className="link-btn">
+               READ MORE
+            </Link>
+         </div>
+      </div>
    );
 };
 
