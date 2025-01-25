@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 import { incredibleProductsData } from "@/utils/data/homepage-4";
 
-const IncredibleProducts = () => {
+const IncredibleProductsSection = () => {
    return (
       <section className="gallery-section fix">
          <div className="container">
@@ -52,4 +52,4 @@ const IncredibleProductCard = ({ img }: { img: string }) => {
    );
 };
 
-export { IncredibleProducts };
+export { IncredibleProductsSection };
