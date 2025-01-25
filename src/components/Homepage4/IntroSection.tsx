@@ -1,9 +1,10 @@
 "use client";
-import { introData, IntroDataType } from "@/utils/data/homepage-4";
 import Image from "next/image";
-import React from "react";
+import Link from "next/link";
 import { Autoplay, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+
+import { introData, IntroDataType } from "@/utils/data/homepage-4";
 
 const IntroSection = () => {
    return (
@@ -24,10 +25,10 @@ const IntroSection = () => {
                               orci luctus et ultrices.
                            </p>
                            <div className="btn-wrapper">
-                              <a className="theme-btn style7" href="cart.html">
+                              <Link className="theme-btn style7" href="/cart">
                                  Explore collection{" "}
                                  <i className="fa-light fa-chevron-right"></i>
-                              </a>
+                              </Link>
                            </div>
                            <div className="thumb">
                               <Image

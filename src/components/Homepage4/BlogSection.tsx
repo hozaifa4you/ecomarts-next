@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const BlogSection = () => {
    return (
@@ -35,11 +36,11 @@ const BlogSection = () => {
                            </div>
                         </div>
                         <h3>
-                           <a href="blog-details.html">
+                           <Link href="/blog-details">
                               Including Animation In Your Design System
-                           </a>
+                           </Link>
                         </h3>
-                        <a href="blog-details.html">
+                        <Link href="/blog-details">
                            Read More{" "}
                            <svg
                               xmlns="http://www.w3.org/2000/svg"
@@ -53,7 +54,7 @@ const BlogSection = () => {
                                  fill="#C97F5F"
                               />
                            </svg>
-                        </a>
+                        </Link>
                      </div>
                   </div>
                </div>
@@ -70,11 +71,11 @@ const BlogSection = () => {
                            </div>
                         </div>
                         <h3>
-                           <a href="blog-details.html">
+                           <Link href="/blog-details">
                               Including Animation In Your Design System
-                           </a>
+                           </Link>
                         </h3>
-                        <a href="blog-details.html">
+                        <Link href="/blog-details">
                            Read More{" "}
                            <svg
                               xmlns="http://www.w3.org/2000/svg"
@@ -88,7 +89,7 @@ const BlogSection = () => {
                                  fill="#C97F5F"
                               />
                            </svg>
-                        </a>
+                        </Link>
                      </div>
                      <div className="blog-card-items-four__thumb">
                         <Image
@@ -121,11 +122,11 @@ const BlogSection = () => {
                            </div>
                         </div>
                         <h3>
-                           <a href="blog-details.html">
+                           <Link href="/blog-details">
                               Including Animation In Your Design System
-                           </a>
+                           </Link>
                         </h3>
-                        <a href="blog-details.html">
+                        <Link href="/blog-details">
                            Read More{" "}
                            <svg
                               xmlns="http://www.w3.org/2000/svg"
@@ -139,7 +140,7 @@ const BlogSection = () => {
                                  fill="#C97F5F"
                               />
                            </svg>
-                        </a>
+                        </Link>
                      </div>
                   </div>
                </div>

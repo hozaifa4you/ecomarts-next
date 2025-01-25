@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 import {
    beautyCareProductData,
@@ -19,9 +20,9 @@ const BeautyCareProductSection = () => {
                   </div>
                   <div className="col-xl-6 d-flex justify-content-md-end">
                      <div className="btn-wrapper">
-                        <a className="theme-btn style10" href="#">
+                        <Link className="theme-btn style10" href="#">
                            View All
-                        </a>
+                        </Link>
                      </div>
                   </div>
                </div>
@@ -52,12 +53,12 @@ const BeautyCareProductCard = ({
             <button data-bs-toggle="modal" data-bs-target="#exampleModal2">
                <i className="fa-regular fa-eye"></i>
             </button>
-            <a href="wishlist.html">
+            <Link href="/wishlist">
                <i className="fa-regular fa-heart"></i>
-            </a>
-            <a href="cart.html">
+            </Link>
+            <Link href="/cart">
                <i className="fa-light fa-bag-shopping"></i>
-            </a>
+            </Link>
          </div>
          <div className="best-seller-product-items-two__badge1">{tag}</div>
          <div className="best-seller-product-items-two__thumb">
@@ -69,7 +70,7 @@ const BeautyCareProductCard = ({
                   {category}
                </p>
                <h6 className="best-seller-product-items-two__details--title">
-                  <a href="shop-details-one.html">{name}</a>
+                  <Link href="/shop-details-one">{name}</Link>
                </h6>
                <div className="best-seller-product-items-two__details--price">
                   {" "}
