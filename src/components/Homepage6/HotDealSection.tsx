@@ -1,3 +1,6 @@
+import Image from "next/image";
+import { hotDealData, HotDealType } from "@/utils/data/homepage-6";
+
 const HotDealSection = () => {
    return (
       <section className="beauty-care-product-section section-padding2 pt-0 fix">
@@ -22,7 +25,12 @@ const HotDealSection = () => {
                   <div className="col-xl-3 col-lg-4">
                      <div className="product-card-items">
                         <div className="product-image">
-                           <img src="/images/home-6/product/23.jpg" alt="img" />
+                           <Image
+                              width={336}
+                              height={340}
+                              src="/images/home-6/product/23.jpg"
+                              alt="img"
+                           />
                            <div className="product-content">
                               <h6 className="subtitle">Summer Sale</h6>
                               <h2>
@@ -54,244 +62,73 @@ const HotDealSection = () => {
                   </div>
                   <div className="col-xl-9 col-lg-8">
                      <div className="row">
-                        <div className="col-xl-3 col-lg-6 col-md-6">
-                           <div className="best-seller-product-items-two style-seller-3 style-11">
-                              <div className="icon-box2 new-style">
-                                 <button
-                                    data-bs-toggle="modal"
-                                    data-bs-target="#exampleModal2"
-                                 >
-                                    <i className="fa-regular fa-eye"></i>
-                                 </button>
-                                 <a href="wishlist.html">
-                                    <i className="fa-regular fa-heart"></i>
-                                 </a>
-                              </div>
-                              <div className="badge2">Sale 25%</div>
-                              <div className="product-thumb">
-                                 <img
-                                    src="/images/home-6/product/24.png"
-                                    alt="img"
-                                 />
-                              </div>
-                              <div className="product-content">
-                                 <div className="product-details">
-                                    <p className="subtitle">Dining Room</p>
-                                    <div className="pricee">
-                                       <div className="text">
-                                          <span className="offer-price">
-                                             $14.99
-                                          </span>
-                                       </div>
-                                       <a href="cart.html" className="icon">
-                                          <svg
-                                             xmlns="http://www.w3.org/2000/svg"
-                                             width="20"
-                                             height="20"
-                                             viewBox="0 0 20 20"
-                                             fill="none"
-                                          >
-                                             <path
-                                                d="M6.66667 8.33333H4.16667L2.5 17.5H17.5L15.8333 8.33333H13.3333M6.66667 8.33333V5.83333C6.66667 3.99239 8.15905 2.5 10 2.5V2.5C11.8409 2.5 13.3333 3.99238 13.3333 5.83333V8.33333M6.66667 8.33333H13.3333M6.66667 8.33333V10.8333M13.3333 8.33333V10.8333"
-                                                stroke="#0A111E"
-                                                stroke-width="1.3"
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                             />
-                                          </svg>
-                                       </a>
-                                    </div>
-                                 </div>
-                                 <div className="star">
-                                    <i className="fas fa-star"></i>
-                                    <i className="fas fa-star"></i>
-                                    <i className="fas fa-star"></i>
-                                    <i className="fas fa-star"></i>
-                                    <i className="fas fa-star color"></i>
-                                 </div>
-                              </div>
+                        {hotDealData.map((product) => (
+                           <div
+                              key={product.id}
+                              className="col-xl-3 col-lg-6 col-md-6"
+                           >
+                              <HotDealCard {...product} />
                            </div>
-                        </div>
-                        <div className="col-xl-3 col-lg-6 col-md-6">
-                           <div className="best-seller-product-items-two style-seller-3 style-11">
-                              <div className="icon-box2 new-style">
-                                 <button
-                                    data-bs-toggle="modal"
-                                    data-bs-target="#exampleModal2"
-                                 >
-                                    <i className="fa-regular fa-eye"></i>
-                                 </button>
-                                 <a href="wishlist.html">
-                                    <i className="fa-regular fa-heart"></i>
-                                 </a>
-                              </div>
-                              <div className="badge2">Sale 25%</div>
-                              <div className="product-thumb">
-                                 <img
-                                    src="/images/home-6/product/25.png"
-                                    alt="img"
-                                 />
-                              </div>
-                              <div className="product-content">
-                                 <div className="product-details">
-                                    <p className="subtitle">Handmade Pillow</p>
-                                    <div className="pricee">
-                                       <div className="text">
-                                          <span className="offer-price">
-                                             $14.99
-                                          </span>
-                                       </div>
-                                       <a href="cart.html" className="icon">
-                                          <svg
-                                             xmlns="http://www.w3.org/2000/svg"
-                                             width="20"
-                                             height="20"
-                                             viewBox="0 0 20 20"
-                                             fill="none"
-                                          >
-                                             <path
-                                                d="M6.66667 8.33333H4.16667L2.5 17.5H17.5L15.8333 8.33333H13.3333M6.66667 8.33333V5.83333C6.66667 3.99239 8.15905 2.5 10 2.5V2.5C11.8409 2.5 13.3333 3.99238 13.3333 5.83333V8.33333M6.66667 8.33333H13.3333M6.66667 8.33333V10.8333M13.3333 8.33333V10.8333"
-                                                stroke="#0A111E"
-                                                stroke-width="1.3"
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                             />
-                                          </svg>
-                                       </a>
-                                    </div>
-                                 </div>
-                                 <div className="star">
-                                    <i className="fas fa-star"></i>
-                                    <i className="fas fa-star"></i>
-                                    <i className="fas fa-star"></i>
-                                    <i className="fas fa-star"></i>
-                                    <i className="fas fa-star color"></i>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                        <div className="col-xl-3 col-lg-6 col-md-6">
-                           <div className="best-seller-product-items-two style-seller-3 style-11">
-                              <div className="icon-box2 new-style">
-                                 <button
-                                    data-bs-toggle="modal"
-                                    data-bs-target="#exampleModal2"
-                                 >
-                                    <i className="fa-regular fa-eye"></i>
-                                 </button>
-                                 <a href="wishlist.html">
-                                    <i className="fa-regular fa-heart"></i>
-                                 </a>
-                              </div>
-                              <div className="badge2">Sale 25%</div>
-                              <div className="product-thumb">
-                                 <img
-                                    src="/images/home-6/product/26.png"
-                                    alt="img"
-                                 />
-                              </div>
-                              <div className="product-content">
-                                 <div className="product-details">
-                                    <p className="subtitle">Armchair</p>
-                                    <div className="pricee">
-                                       <div className="text">
-                                          <span className="offer-price">
-                                             $14.99
-                                          </span>
-                                       </div>
-                                       <a href="cart.html" className="icon">
-                                          <svg
-                                             xmlns="http://www.w3.org/2000/svg"
-                                             width="20"
-                                             height="20"
-                                             viewBox="0 0 20 20"
-                                             fill="none"
-                                          >
-                                             <path
-                                                d="M6.66667 8.33333H4.16667L2.5 17.5H17.5L15.8333 8.33333H13.3333M6.66667 8.33333V5.83333C6.66667 3.99239 8.15905 2.5 10 2.5V2.5C11.8409 2.5 13.3333 3.99238 13.3333 5.83333V8.33333M6.66667 8.33333H13.3333M6.66667 8.33333V10.8333M13.3333 8.33333V10.8333"
-                                                stroke="#0A111E"
-                                                stroke-width="1.3"
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                             />
-                                          </svg>
-                                       </a>
-                                    </div>
-                                 </div>
-                                 <div className="star">
-                                    <i className="fas fa-star"></i>
-                                    <i className="fas fa-star"></i>
-                                    <i className="fas fa-star"></i>
-                                    <i className="fas fa-star"></i>
-                                    <i className="fas fa-star color"></i>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                        <div className="col-xl-3 col-lg-6 col-md-6">
-                           <div className="best-seller-product-items-two style-seller-3 style-11">
-                              <div className="icon-box2 new-style">
-                                 <button
-                                    data-bs-toggle="modal"
-                                    data-bs-target="#exampleModal2"
-                                 >
-                                    <i className="fa-regular fa-eye"></i>
-                                 </button>
-                                 <a href="wishlist.html">
-                                    <i className="fa-regular fa-heart"></i>
-                                 </a>
-                              </div>
-                              <div className="badge2">Sale 25%</div>
-                              <div className="product-thumb">
-                                 <img
-                                    src="/images/home-6/product/27.png"
-                                    alt="img"
-                                 />
-                              </div>
-                              <div className="product-content">
-                                 <div className="product-details">
-                                    <p className="subtitle">Armchair</p>
-                                    <div className="pricee">
-                                       <div className="text">
-                                          <span className="offer-price">
-                                             $14.99
-                                          </span>
-                                       </div>
-                                       <a href="cart.html" className="icon">
-                                          <svg
-                                             xmlns="http://www.w3.org/2000/svg"
-                                             width="20"
-                                             height="20"
-                                             viewBox="0 0 20 20"
-                                             fill="none"
-                                          >
-                                             <path
-                                                d="M6.66667 8.33333H4.16667L2.5 17.5H17.5L15.8333 8.33333H13.3333M6.66667 8.33333V5.83333C6.66667 3.99239 8.15905 2.5 10 2.5V2.5C11.8409 2.5 13.3333 3.99238 13.3333 5.83333V8.33333M6.66667 8.33333H13.3333M6.66667 8.33333V10.8333M13.3333 8.33333V10.8333"
-                                                stroke="#0A111E"
-                                                stroke-width="1.3"
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                             />
-                                          </svg>
-                                       </a>
-                                    </div>
-                                 </div>
-                                 <div className="star">
-                                    <i className="fas fa-star"></i>
-                                    <i className="fas fa-star"></i>
-                                    <i className="fas fa-star"></i>
-                                    <i className="fas fa-star"></i>
-                                    <i className="fas fa-star color"></i>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
+                        ))}
                      </div>
                   </div>
                </div>
             </div>
          </div>
       </section>
+   );
+};
+
+const HotDealCard = ({ img, name, price, tag }: HotDealType) => {
+   return (
+      <div className="best-seller-product-items-two style-seller-3 style-11">
+         <div className="icon-box2 new-style">
+            <button data-bs-toggle="modal" data-bs-target="#exampleModal2">
+               <i className="fa-regular fa-eye"></i>
+            </button>
+            <a href="wishlist.html">
+               <i className="fa-regular fa-heart"></i>
+            </a>
+         </div>
+         <div className="badge2">{tag}</div>
+         <div className="product-thumb">
+            <Image width={204} height={204} src={img} alt="img" />
+         </div>
+         <div className="product-content">
+            <div className="product-details">
+               <p className="subtitle">{name}</p>
+               <div className="pricee">
+                  <div className="text">
+                     <span className="offer-price">${price}</span>
+                  </div>
+                  <a href="cart.html" className="icon">
+                     <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                     >
+                        <path
+                           d="M6.66667 8.33333H4.16667L2.5 17.5H17.5L15.8333 8.33333H13.3333M6.66667 8.33333V5.83333C6.66667 3.99239 8.15905 2.5 10 2.5V2.5C11.8409 2.5 13.3333 3.99238 13.3333 5.83333V8.33333M6.66667 8.33333H13.3333M6.66667 8.33333V10.8333M13.3333 8.33333V10.8333"
+                           stroke="#0A111E"
+                           stroke-width="1.3"
+                           stroke-linecap="round"
+                           stroke-linejoin="round"
+                        />
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            <div className="star">
+               <i className="fas fa-star"></i>
+               <i className="fas fa-star"></i>
+               <i className="fas fa-star"></i>
+               <i className="fas fa-star"></i>
+               <i className="fas fa-star color"></i>
+            </div>
+         </div>
+      </div>
    );
 };
 

@@ -6,7 +6,7 @@ const CtaSection = () => {
          <div className="container">
             <div
                className="cta-bg-wrapper section-padding style3"
-               // data-bg-src="images/home-6/cta-bg.jpg"
+               style={{ backgroundImage: "url(images/home-6/cta-bg.jpg)" }}
             >
                <div className="row justify-content-end">
                   <div className="col-xl-5">

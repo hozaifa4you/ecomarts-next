@@ -80,6 +80,38 @@ const featuredProductData = [
    },
 ];
 
+const hotDealData = [
+   {
+      id: 1,
+      tag: "Sale 25%",
+      name: "Handmade Pillow",
+      price: 14.99,
+      img: "/images/home-6/product/25.png",
+   },
+   {
+      id: 2,
+      tag: "New Arrival",
+      name: "Wooden Chair",
+      price: 29.99,
+      img: "/images/home-6/product/26.png",
+   },
+   {
+      id: 3,
+      tag: "Best Seller",
+      name: "Decorative Vase",
+      price: 49.99,
+      img: "/images/home-6/product/27.png",
+   },
+   {
+      id: 4,
+      tag: "Limited Edition",
+      name: "Wall Clock",
+      price: 89.99,
+      img: "/images/home-6/product/24.png",
+   },
+];
+
 export type TopCategoryType = (typeof topCategoryData)[0];
 export type FeaturedProductType = (typeof featuredProductData)[0];
-export { topCategoryData, featuredProductData };
+export type HotDealType = (typeof hotDealData)[0];
+export { topCategoryData, featuredProductData, hotDealData };
