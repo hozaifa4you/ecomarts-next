@@ -13,5 +13,73 @@ const topCategoryData = [
    { id: 12, img: "/images/home-6/product/12.png", name: "Wall Art" },
 ];
 
+const featuredProductData = [
+   {
+      id: 1,
+      tag: "Sale 25%",
+      img: "/images/home-6/product/13.png",
+      name: "Armchair",
+      OfferPrice: 14.99,
+      price: 20.99,
+   },
+   {
+      id: 2,
+      tag: "New Arrival",
+      img: "/images/home-6/product/14.png",
+      name: "Ceiling Fan",
+      OfferPrice: 29.99,
+      price: 39.99,
+   },
+   {
+      id: 3,
+      tag: "Best Seller",
+      img: "/images/home-6/product/15.png",
+      name: "Chandelier",
+      OfferPrice: 49.99,
+      price: 59.99,
+   },
+   {
+      id: 4,
+      tag: "Limited Edition",
+      img: "/images/home-6/product/16.png",
+      name: "Coffee Table",
+      OfferPrice: 89.99,
+      price: 99.99,
+   },
+   {
+      id: 5,
+      tag: "Hot Deal",
+      img: "/images/home-6/product/17.png",
+      name: "Desk Lamp",
+      OfferPrice: 19.99,
+      price: 29.99,
+   },
+   {
+      id: 6,
+      tag: "Discount 15%",
+      img: "/images/home-6/product/18.png",
+      name: "Floor Lamp",
+      OfferPrice: 34.99,
+      price: 40.99,
+   },
+   {
+      id: 7,
+      tag: "Special Offer",
+      img: "/images/home-6/product/19.png",
+      name: "Loveseat",
+      OfferPrice: 199.99,
+      price: 249.99,
+   },
+   {
+      id: 8,
+      tag: "Clearance",
+      img: "/images/home-6/product/20.png",
+      name: "Nightstand",
+      OfferPrice: 59.99,
+      price: 69.99,
+   },
+];
+
 export type TopCategoryType = (typeof topCategoryData)[0];
-export { topCategoryData };
+export type FeaturedProductType = (typeof featuredProductData)[0];
+export { topCategoryData, featuredProductData };
