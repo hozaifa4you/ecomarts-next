@@ -1,4 +1,4 @@
-import React from "react";
+import Image from "next/image";
 
 const CountDownSection = () => {
    return (
@@ -8,7 +8,12 @@ const CountDownSection = () => {
                <div className="row align-items-center">
                   <div className="col-xl-4">
                      <div className="offer-image">
-                        <img src="/images/home-6/offer/01.png" alt="img" />
+                        <Image
+                           width={455}
+                           height={315}
+                           src="/images/home-6/offer/01.png"
+                           alt="img"
+                        />
                      </div>
                   </div>
                   <div className="col-xl-4">
@@ -69,7 +74,12 @@ const CountDownSection = () => {
                   </div>
                   <div className="col-xl-4">
                      <div className="offer-image2">
-                        <img src="/images/home-6/offer/02.png" alt="img" />
+                        <Image
+                           width={370}
+                           height={495}
+                           src="/images/home-6/offer/02.png"
+                           alt="img"
+                        />
                      </div>
                   </div>
                </div>
