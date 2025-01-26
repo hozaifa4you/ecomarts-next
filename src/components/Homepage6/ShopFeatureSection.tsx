@@ -1,4 +1,4 @@
-import React from "react";
+import Image from "next/image";
 
 const ShopFeatureSection = () => {
    return (
@@ -8,12 +8,17 @@ const ShopFeatureSection = () => {
                <div className="col-xl-3 col-md-6">
                   <div className="feature-box-item-three">
                      <div className="feature-box-item-three__icon">
-                        <img src="/images/home-6/icon/01.svg" alt="icon" />
+                        <Image
+                           width={80}
+                           height={63}
+                           src="/images/home-6/icon/01.svg"
+                           alt="icon"
+                        />
                      </div>
                      <div className="feature-box-item-three__content">
                         <h6>Free Delivery</h6>
                         <p className="feature-box-item-three__content--text">
-                           Free shipping on all order{" "}
+                           Free shipping on all order
                         </p>
                      </div>
                   </div>
@@ -21,7 +26,12 @@ const ShopFeatureSection = () => {
                <div className="col-xl-3 col-md-6">
                   <div className="feature-box-item-three">
                      <div className="feature-box-item-three__icon">
-                        <img src="/images/home-6/icon/02.svg" alt="icon" />
+                        <Image
+                           width={60}
+                           height={60}
+                           src="/images/home-6/icon/02.svg"
+                           alt="icon"
+                        />
                      </div>
                      <div className="feature-box-item-three__content">
                         <h6>Money Return</h6>
@@ -34,7 +44,12 @@ const ShopFeatureSection = () => {
                <div className="col-xl-3 col-md-6">
                   <div className="feature-box-item-three">
                      <div className="feature-box-item-three__icon">
-                        <img src="/images/home-6/icon/03.svg" alt="icon" />
+                        <Image
+                           width={64}
+                           height={63}
+                           src="/images/home-6/icon/03.svg"
+                           alt="icon"
+                        />
                      </div>
                      <div className="feature-box-item-three__content">
                         <h6>Online Support 24/7</h6>
@@ -47,12 +62,17 @@ const ShopFeatureSection = () => {
                <div className="col-xl-3 col-md-6">
                   <div className="feature-box-item-three">
                      <div className="feature-box-item-three__icon">
-                        <img src="/images/home-6/icon/04.svg" alt="icon" />
+                        <Image
+                           width={56}
+                           height={57}
+                           src="/images/home-6/icon/04.svg"
+                           alt="icon"
+                        />
                      </div>
                      <div className="feature-box-item-three__content">
                         <h6>Reliable</h6>
                         <p className="feature-box-item-three__content--text">
-                           Trusted by 1000+ brandst
+                           Trusted by 1000+ brand
                         </p>
                      </div>
                   </div>

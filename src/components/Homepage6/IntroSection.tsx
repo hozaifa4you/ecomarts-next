@@ -1,11 +1,11 @@
-import React from "react";
+import Link from "next/link";
 
 const IntroSection = () => {
    return (
       <section className="hero-section-6">
          <div
             className="hero-6 bg-cover"
-            // style="background-image: url('/images/home-6/hero/01.jpg');"
+            style={{ backgroundImage: "url('/images/home-6/hero/01.jpg')" }}
          >
             <div className="container">
                <div className="row justify-content-end">
@@ -18,12 +18,15 @@ const IntroSection = () => {
                            elit. Integer nunc viverra laoreet est, a pretium
                         </p>
                         <div className="hero-button">
-                           <a href="cart.html" className="theme-btn">
+                           <Link href="/cart" className="theme-btn">
                               Add to cart
-                           </a>
-                           <a href="index-6.html" className="theme-btn style-2">
+                           </Link>
+                           <Link
+                              href="/homepage-6"
+                              className="theme-btn style-2"
+                           >
                               view now
-                           </a>
+                           </Link>
                         </div>
                      </div>
                   </div>
