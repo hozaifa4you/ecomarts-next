@@ -1,4 +1,4 @@
-import React from "react";
+import Image from "next/image";
 
 const BannerSection = () => {
    return (
@@ -39,7 +39,12 @@ const BannerSection = () => {
                         </div>
                      </div>
                      <div className="dog-image">
-                        <img src="/images/home-7/animal/01.png" alt="img" />
+                        <Image
+                           width={193}
+                           height={208}
+                           src="/images/home-7/animal/01.png"
+                           alt="img"
+                        />
                      </div>
                   </div>
                </div>
@@ -56,7 +61,12 @@ const BannerSection = () => {
                      </a>
 
                      <div className="dog-image">
-                        <img src="/images/home-7/animal/02.png" alt="img" />
+                        <Image
+                           width={210}
+                           height={262}
+                           src="/images/home-7/animal/02.png"
+                           alt="img"
+                        />
                      </div>
                   </div>
                </div>
@@ -72,7 +82,12 @@ const BannerSection = () => {
                         Shop Now
                      </a>
                      <div className="dog-image">
-                        <img src="/images/home-7/animal/03.png" alt="img" />
+                        <Image
+                           width={230}
+                           height={227}
+                           src="/images/home-7/animal/03.png"
+                           alt="img"
+                        />
                      </div>
                   </div>
                </div>

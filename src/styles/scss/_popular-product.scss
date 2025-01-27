@@ -257,6 +257,9 @@
 }
 
 .popular-product-timer-box {
+   display: flex;
+   align-items: center;
+   gap: 5px;
    .box {
       display: inline-block;
       .number {

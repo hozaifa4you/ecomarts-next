@@ -1,12 +1,11 @@
-import React from "react";
-
 const IntroSection = () => {
    return (
       <section
          className="hero-section-7 hero-7 bg-cover"
-         // style="background-image: url('/images/home-7/hero/hero-bg.png')"
+         style={{ backgroundImage: "url('/images/home-7/hero/hero-bg.png')" }}
       >
          <div className="food-shape">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src="/images/home-7/hero/food-shape.png" alt="img" />
          </div>
          <div className="container">
@@ -32,6 +31,7 @@ const IntroSection = () => {
                </div>
                <div className="col-lg-4">
                   <div className="hero-image">
+                     {/* eslint-disable-next-line @next/next/no-img-element */}
                      <img src="/images/home-7/hero/hero-image.png" alt="img" />
                   </div>
                </div>
