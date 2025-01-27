@@ -29,7 +29,7 @@ const FoodCollectionSection = () => {
    );
 };
 
-const FoodCollectionCard = ({
+export const FoodCollectionCard = ({
    img,
    name,
    offerPrice,

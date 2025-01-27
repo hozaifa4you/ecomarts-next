@@ -1,3 +1,10 @@
+"use client";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Navigation } from "swiper/modules";
+
+import { FoodCollectionCard } from "./FoodCollectionSection";
+import { foodCollectionData } from "@/utils/data/homepage-7";
+
 const StylishCollectionSection = () => {
    return (
       <section
@@ -14,195 +21,50 @@ const StylishCollectionSection = () => {
                </div>
                <div className="col-xl-2">
                   <div className="array-button">
-                     <button className="array-prev">
+                     <button className="array-prev" id="stylish-7-prev">
                         <i className="far fa-chevron-left"></i>
                      </button>
-                     <button className="array-next">
+                     <button className="array-next" id="stylish-7-next">
                         <i className="far fa-chevron-right"></i>
                      </button>
                   </div>
                </div>
             </div>
-            <div className="swiper food-collection-slider">
-               <div className="swiper-wrapper">
-                  <div className="swiper-slide">
-                     <div className="best-seller-product-items-two style-seller-3 style-border style-7">
-                        <div className="icon-box2">
-                           <button
-                              data-bs-toggle="modal"
-                              data-bs-target="#exampleModal2"
-                           >
-                              <i className="fa-regular fa-eye"></i>
-                           </button>
-                           <a href="wishlist.html">
-                              <i className="fa-regular fa-heart"></i>
-                           </a>
-                           <a href="cart.html">
-                              <i className="fa-light fa-bag-shopping"></i>
-                           </a>
-                        </div>
-                        <div className="best-seller-product-items-two__thumb">
-                           <img
-                              src="/images/home-7/product/05.png"
-                              alt="thumb"
-                           />
-                        </div>
-                        <div className="best-seller-product-items-two__content">
-                           <div className="best-seller-product-items-two__details">
-                              <div className="best-seller-product-items-two__details--price">
-                                 <span className="original-price">$99.00</span>
-                                 <span className="offer-price">$79.00</span>
-                              </div>
-                              <h6 className="best-seller-product-items-two__details--title">
-                                 <a href="shop-details-one.html">
-                                    Trapper Hat Acorn
-                                 </a>
-                              </h6>
-                              <div className="star">
-                                 <i className="fa-solid fa-star"></i>
-                                 <i className="fa-solid fa-star"></i>
-                                 <i className="fa-solid fa-star"></i>
-                                 <i className="fa-solid fa-star"></i>
-                                 <i className="fa-solid fa-star color-2"></i>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                  <div className="swiper-slide">
-                     <div className="best-seller-product-items-two style-seller-3 style-border style-7">
-                        <div className="icon-box2">
-                           <button
-                              data-bs-toggle="modal"
-                              data-bs-target="#exampleModal2"
-                           >
-                              <i className="fa-regular fa-eye"></i>
-                           </button>
-                           <a href="wishlist.html">
-                              <i className="fa-regular fa-heart"></i>
-                           </a>
-                           <a href="cart.html">
-                              <i className="fa-light fa-bag-shopping"></i>
-                           </a>
-                        </div>
-                        <div className="best-seller-product-items-two__thumb">
-                           <img
-                              src="/images/home-7/product/06.png"
-                              alt="thumb"
-                           />
-                        </div>
-                        <div className="best-seller-product-items-two__content">
-                           <div className="best-seller-product-items-two__details">
-                              <div className="best-seller-product-items-two__details--price">
-                                 <span className="original-price">$99.00</span>
-                                 <span className="offer-price">$79.00</span>
-                              </div>
-                              <h6 className="best-seller-product-items-two__details--title">
-                                 <a href="shop-details-one.html">
-                                    S1 Anatomical Pacifier Cloud
-                                 </a>
-                              </h6>
-                              <div className="star">
-                                 <i className="fa-solid fa-star"></i>
-                                 <i className="fa-solid fa-star"></i>
-                                 <i className="fa-solid fa-star"></i>
-                                 <i className="fa-solid fa-star"></i>
-                                 <i className="fa-solid fa-star color-2"></i>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                  <div className="swiper-slide">
-                     <div className="best-seller-product-items-two style-seller-3 style-border style-7">
-                        <div className="icon-box2">
-                           <button
-                              data-bs-toggle="modal"
-                              data-bs-target="#exampleModal2"
-                           >
-                              <i className="fa-regular fa-eye"></i>
-                           </button>
-                           <a href="wishlist.html">
-                              <i className="fa-regular fa-heart"></i>
-                           </a>
-                           <a href="cart.html">
-                              <i className="fa-light fa-bag-shopping"></i>
-                           </a>
-                        </div>
-                        <div className="best-seller-product-items-two__thumb">
-                           <img
-                              src="/images/home-7/product/07.png"
-                              alt="thumb"
-                           />
-                        </div>
-                        <div className="best-seller-product-items-two__content">
-                           <div className="best-seller-product-items-two__details">
-                              <div className="best-seller-product-items-two__details--price">
-                                 <span className="original-price">$99.00</span>
-                                 <span className="offer-price">$79.00</span>
-                              </div>
-                              <h6 className="best-seller-product-items-two__details--title">
-                                 <a href="shop-details-one.html">
-                                    Mum & me Pink nursing Pillow
-                                 </a>
-                              </h6>
-                              <div className="star">
-                                 <i className="fa-solid fa-star"></i>
-                                 <i className="fa-solid fa-star"></i>
-                                 <i className="fa-solid fa-star"></i>
-                                 <i className="fa-solid fa-star"></i>
-                                 <i className="fa-solid fa-star color-2"></i>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                  <div className="swiper-slide">
-                     <div className="best-seller-product-items-two style-seller-3 style-border style-7">
-                        <div className="icon-box2">
-                           <button
-                              data-bs-toggle="modal"
-                              data-bs-target="#exampleModal2"
-                           >
-                              <i className="fa-regular fa-eye"></i>
-                           </button>
-                           <a href="wishlist.html">
-                              <i className="fa-regular fa-heart"></i>
-                           </a>
-                           <a href="cart.html">
-                              <i className="fa-light fa-bag-shopping"></i>
-                           </a>
-                        </div>
-                        <div className="best-seller-product-items-two__thumb">
-                           <img
-                              src="/images/home-7/product/08.png"
-                              alt="thumb"
-                           />
-                        </div>
-                        <div className="best-seller-product-items-two__content">
-                           <div className="best-seller-product-items-two__details">
-                              <div className="best-seller-product-items-two__details--price">
-                                 <span className="original-price">$99.00</span>
-                                 <span className="offer-price">$79.00</span>
-                              </div>
-                              <h6 className="best-seller-product-items-two__details--title">
-                                 <a href="shop-details-one.html">
-                                    Millano Shell coverall
-                                 </a>
-                              </h6>
-                              <div className="star">
-                                 <i className="fa-solid fa-star"></i>
-                                 <i className="fa-solid fa-star"></i>
-                                 <i className="fa-solid fa-star"></i>
-                                 <i className="fa-solid fa-star"></i>
-                                 <i className="fa-solid fa-star color-2"></i>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
+            <Swiper
+               loop
+               autoplay
+               navigation={{
+                  nextEl: "#stylish-7-next",
+                  prevEl: "#stylish-7-prev",
+               }}
+               breakpoints={{
+                  1399: {
+                     slidesPerView: 4,
+                  },
+                  1199: {
+                     slidesPerView: 3,
+                  },
+                  991: {
+                     slidesPerView: 3,
+                  },
+                  767: {
+                     slidesPerView: 2,
+                  },
+                  575: {
+                     slidesPerView: 1,
+                  },
+                  0: {
+                     slidesPerView: 1,
+                  },
+               }}
+               modules={[Autoplay, Navigation]}
+            >
+               {foodCollectionData.map((food) => (
+                  <SwiperSlide key={food.id}>
+                     <FoodCollectionCard {...food} />
+                  </SwiperSlide>
+               ))}
+            </Swiper>
          </div>
       </section>
    );
