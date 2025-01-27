@@ -111,7 +111,18 @@ const hotDealData = [
    },
 ];
 
+const brandLogoData = [
+   "/images/brand-logo/brand-logo4_1.png",
+   "/images/brand-logo/brand-logo4_2.png",
+   "/images/brand-logo/brand-logo4_3.png",
+   "/images/brand-logo/brand-logo4_4.png",
+   "/images/brand-logo/brand-logo4_5.png",
+   "/images/brand-logo/brand-logo4_6.png",
+   "/images/brand-logo/brand-logo4_1.png",
+   "/images/brand-logo/brand-logo4_2.png",
+];
+
 export type TopCategoryType = (typeof topCategoryData)[0];
 export type FeaturedProductType = (typeof featuredProductData)[0];
 export type HotDealType = (typeof hotDealData)[0];
-export { topCategoryData, featuredProductData, hotDealData };
+export { topCategoryData, featuredProductData, hotDealData, brandLogoData };

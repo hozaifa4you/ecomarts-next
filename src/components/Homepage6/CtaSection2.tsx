@@ -9,7 +9,10 @@ const CtaSection2 = () => {
                   <div className="cta-card-items">
                      <div
                         className="cta-image bg-cover"
-                        // style="background-image: url('/images/home-6/cta-image.jpg');"
+                        style={{
+                           backgroundImage:
+                              "url('/images/home-6/cta-image.jpg')",
+                        }}
                      >
                         <div className="cta-content">
                            <h6 className="subtitle">100% Organic</h6>
@@ -46,7 +49,10 @@ const CtaSection2 = () => {
                   <div className="cta-card-items">
                      <div
                         className="cta-image bg-cover"
-                        // style="background-image: url('/images/home-6/cta-image2.jpg');"
+                        style={{
+                           backgroundImage:
+                              "url('/images/home-6/cta-image2.jpg')",
+                        }}
                      >
                         <div className="cta-content">
                            <h6 className="subtitle">sale off the week</h6>
