@@ -1,4 +1,7 @@
-import React from "react";
+import Image from "next/image";
+import Link from "next/link";
+
+import { blogData, BlogType } from "@/utils/data/homepage-6";
 
 const BlogSection = () => {
    return (
@@ -9,117 +12,51 @@ const BlogSection = () => {
                <h2 className="title">Stay updated with our latest posts</h2>
             </div>
             <div className="row">
-               <div className="col-xl-4 col-lg-6 col-md-6">
-                  <div className="blog-card-items2">
-                     <div className="blog-image">
-                        <img src="/images/home-6/news/01.jpg" alt="img" />
-                        <ul className="post">
-                           <li>
-                              <i className="fa-solid fa-calendar-days"></i>
-                           </li>
-                           <li>Oct 05, 2024</li>
-                        </ul>
-                     </div>
-                     <div className="blog-content">
-                        <ul className="post-meta">
-                           <li>
-                              <i className="fa-regular fa-user"></i>
-                              By admin
-                           </li>
-                           <li>
-                              <i className="fa-solid fa-tag"></i>
-                              Business
-                           </li>
-                        </ul>
-                        <h3>
-                           <a href="blog-details.html">
-                              What are organic? All You Need <br /> to Know
-                           </a>
-                        </h3>
-                        <a
-                           href="blog-details.html"
-                           className="theme-btn-2 mt-3"
-                        >
-                           Read More
-                        </a>
-                     </div>
+               {blogData.map((blog) => (
+                  <div className="col-xl-4 col-lg-6 col-md-6" key={blog.id}>
+                     <BlogCard {...blog} />
                   </div>
-               </div>
-               <div className="col-xl-4 col-lg-6 col-md-6">
-                  <div className="blog-card-items2">
-                     <div className="blog-image">
-                        <img src="/images/home-6/news/02.jpg" alt="img" />
-                        <ul className="post">
-                           <li>
-                              <i className="fa-solid fa-calendar-days"></i>
-                           </li>
-                           <li>Oct 05, 2024</li>
-                        </ul>
-                     </div>
-                     <div className="blog-content">
-                        <ul className="post-meta">
-                           <li>
-                              <i className="fa-regular fa-user"></i>
-                              By admin
-                           </li>
-                           <li>
-                              <i className="fa-solid fa-tag"></i>
-                              Business
-                           </li>
-                        </ul>
-                        <h3>
-                           <a href="blog-details.html">
-                              What are organic? All You Need <br /> to Know
-                           </a>
-                        </h3>
-                        <a
-                           href="blog-details.html"
-                           className="theme-btn-2 mt-3"
-                        >
-                           Read More
-                        </a>
-                     </div>
-                  </div>
-               </div>
-               <div className="col-xl-4 col-lg-6 col-md-6">
-                  <div className="blog-card-items2">
-                     <div className="blog-image">
-                        <img src="/images/home-6/news/03.jpg" alt="img" />
-                        <ul className="post">
-                           <li>
-                              <i className="fa-solid fa-calendar-days"></i>
-                           </li>
-                           <li>Oct 05, 2024</li>
-                        </ul>
-                     </div>
-                     <div className="blog-content">
-                        <ul className="post-meta">
-                           <li>
-                              <i className="fa-regular fa-user"></i>
-                              By admin
-                           </li>
-                           <li>
-                              <i className="fa-solid fa-tag"></i>
-                              Business
-                           </li>
-                        </ul>
-                        <h3>
-                           <a href="blog-details.html">
-                              What are organic? All You Need <br /> to Know
-                           </a>
-                        </h3>
-                        <a
-                           href="blog-details.html"
-                           className="theme-btn-2 mt-3"
-                        >
-                           Read More
-                        </a>
-                     </div>
-                  </div>
-               </div>
+               ))}
             </div>
          </div>
       </section>
+   );
+};
+
+const BlogCard = ({ author, category, date, img, title }: BlogType) => {
+   return (
+      <div className="blog-card-items2">
+         <div className="blog-image">
+            <Image width={455} height={370} src={img} alt="img" />
+            <ul className="post">
+               <li>
+                  <i className="fa-solid fa-calendar-days"></i>
+               </li>
+               <li>{date}</li>
+            </ul>
+         </div>
+         <div className="blog-content">
+            <ul className="post-meta">
+               <li>
+                  <i className="fa-regular fa-user"></i>
+                  {author}
+               </li>
+               <li>
+                  <i className="fa-solid fa-tag"></i>
+                  {category}
+               </li>
+            </ul>
+            <h3>
+               <Link
+                  href="/blog-details"
+                  dangerouslySetInnerHTML={{ __html: title }}
+               ></Link>
+            </h3>
+            <Link href="/blog-details" className="theme-btn-2 mt-3">
+               Read More
+            </Link>
+         </div>
+      </div>
    );
 };
 

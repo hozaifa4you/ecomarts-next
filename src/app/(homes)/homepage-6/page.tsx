@@ -8,10 +8,12 @@ import { HotDealSection } from "@/components/Homepage6/HotDealSection";
 import { CtaSection2 } from "@/components/Homepage6/CtaSection2";
 import { BrandLogoSection } from "@/components/Homepage6/BrandLogoSection";
 import { BlogSection } from "@/components/Homepage6/BlogSection";
+import { Navbar2 } from "@/components/Homepage6/Navbar2";
 
 const Homepage6 = () => {
    return (
       <>
+         <Navbar2 />
          <IntroSection />
          <ShopFeatureSection />
          <TopCategorySection />

@@ -122,7 +122,41 @@ const brandLogoData = [
    "/images/brand-logo/brand-logo4_2.png",
 ];
 
+const blogData = [
+   {
+      id: 1,
+      img: "/images/home-6/news/01.jpg",
+      date: "Oct 05, 2024",
+      author: "By admin",
+      category: "Business",
+      title: "What are organic? All You Need <br /> to Know",
+   },
+   {
+      id: 2,
+      img: "/images/home-6/news/02.jpg",
+      date: "Oct 10, 2024",
+      author: "By admin",
+      category: "Technology",
+      title: "The Future of Smart Home <br /> Technology",
+   },
+   {
+      id: 3,
+      img: "/images/home-6/news/03.jpg",
+      date: "Oct 15, 2024",
+      author: "By admin",
+      category: "Lifestyle",
+      title: "How to Decorate Your Home <br /> on a Budget",
+   },
+];
+
 export type TopCategoryType = (typeof topCategoryData)[0];
 export type FeaturedProductType = (typeof featuredProductData)[0];
 export type HotDealType = (typeof hotDealData)[0];
-export { topCategoryData, featuredProductData, hotDealData, brandLogoData };
+export type BlogType = (typeof blogData)[0];
+export {
+   topCategoryData,
+   featuredProductData,
+   hotDealData,
+   brandLogoData,
+   blogData,
+};
