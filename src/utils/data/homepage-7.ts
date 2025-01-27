@@ -57,5 +57,33 @@ const foodCollectionData = [
    },
 ];
 
+const blogData = [
+   {
+      id: 1,
+      category: "Fashion",
+      author: "Adam Smith",
+      date: "07 May,2024",
+      title: "ConCung Good Compact Elite stroller <br /> in dark blue color",
+      img: "/images/home-6/news/04.jpg",
+   },
+   {
+      id: 2,
+      category: "Health",
+      author: "Jane Doe",
+      date: "15 June,2024",
+      title: "The Benefits of a Plant-Based Diet",
+      img: "/images/home-6/news/05.jpg",
+   },
+   {
+      id: 3,
+      category: "Lifestyle",
+      author: "John Doe",
+      date: "22 July,2024",
+      title: "10 Tips for a More Sustainable Lifestyle",
+      img: "/images/home-6/news/06.jpg",
+   },
+];
+
 export type FoodCollectionType = (typeof foodCollectionData)[0];
-export { foodCollectionData };
+export type BlogType = (typeof blogData)[0];
+export { foodCollectionData, blogData };
