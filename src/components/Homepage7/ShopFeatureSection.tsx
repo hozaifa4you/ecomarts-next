@@ -1,4 +1,4 @@
-import React from "react";
+import Image from "next/image";
 
 const ShopFeatureSection = () => {
    return (
@@ -7,7 +7,12 @@ const ShopFeatureSection = () => {
             <div className="cta-wrapper-4">
                <div className="cta-items2">
                   <div className="icon">
-                     <img src="/images/home-6/icon/05.svg" alt="img" />
+                     <Image
+                        width={50}
+                        height={50}
+                        src="/images/home-6/icon/05.svg"
+                        alt="img"
+                     />
                   </div>
                   <div className="content">
                      <h4>High Quality</h4>
@@ -16,7 +21,12 @@ const ShopFeatureSection = () => {
                </div>
                <div className="cta-items2">
                   <div className="icon">
-                     <img src="/images/home-6/icon/06.svg" alt="img" />
+                     <Image
+                        width={38}
+                        height={50}
+                        src="/images/home-6/icon/06.svg"
+                        alt="img"
+                     />
                   </div>
                   <div className="content">
                      <h4>Warrany Protection</h4>
@@ -25,7 +35,12 @@ const ShopFeatureSection = () => {
                </div>
                <div className="cta-items2">
                   <div className="icon">
-                     <img src="/images/home-6/icon/07.svg" alt="img" />
+                     <Image
+                        width={46}
+                        height={50}
+                        src="/images/home-6/icon/07.svg"
+                        alt="img"
+                     />
                   </div>
                   <div className="content">
                      <h4>Free Shipping</h4>
@@ -34,7 +49,12 @@ const ShopFeatureSection = () => {
                </div>
                <div className="cta-items2">
                   <div className="icon">
-                     <img src="/images/home-6/icon/08.svg" alt="img" />
+                     <Image
+                        width={50}
+                        height={50}
+                        src="/images/home-6/icon/08.svg"
+                        alt="img"
+                     />
                   </div>
                   <div className="content">
                      <h4>24 / 7 Support</h4>
