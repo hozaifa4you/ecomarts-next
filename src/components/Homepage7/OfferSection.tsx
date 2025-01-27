@@ -1,0 +1,94 @@
+const OfferSection = () => {
+   return (
+      <section className="product-section section-padding2">
+         <div className="container">
+            <div className="product-wrapper">
+               <div className="row g-4 justify-content-between">
+                  <div className="col-xl-8 col-lg-7">
+                     <div className="product-animal-items">
+                        <div className="product-content">
+                           <div className="text">
+                              <h6>Big Sale</h6>
+                              <span>Sale Offer 20% Of This Week</span>
+                           </div>
+                           <h2>Modern Fashion Look 2024</h2>
+                           <p>
+                              Consectetur adipiscing elit. Integer nunc viverra
+                              laoreet <br />
+                              est, a pretium metus aliquam eget.
+                           </p>
+                           <a
+                              className="theme-btn style6"
+                              href="shop-details-one.html"
+                           >
+                              Read More
+                           </a>
+                        </div>
+                        <div className="animal-image">
+                           <img
+                              src="/images/home-6/product/dog.png"
+                              alt="img"
+                           />
+                        </div>
+                        <div className="animal-image2">
+                           <img
+                              src="/images/home-6/product/dog-2.png"
+                              alt="img"
+                           />
+                        </div>
+                     </div>
+                  </div>
+                  <div className="col-xl-4 col-lg-5">
+                     <div className="row">
+                        <div className="col-md-6 col-lg-12 ">
+                           <div className="product-animal-items mx-sm-auto mx-md-0 style-2 mb-4">
+                              <div className="animal-image3">
+                                 <img
+                                    src="/images/home-6/product/dog-3.png"
+                                    alt="img"
+                                 />
+                              </div>
+                              <div className="product-content">
+                                 <h6>COLLACTION</h6>
+                                 <h2>Top Treading</h2>
+                                 <span>Flat 30% Off</span>
+                                 <a
+                                    className="theme-btn style6"
+                                    href="shop-details-one.html"
+                                 >
+                                    Read More
+                                 </a>
+                              </div>
+                           </div>
+                        </div>
+                        <div className="col-md-6 col-lg-12 ">
+                           <div className="product-animal-items mx-sm-auto mx-md-0 style-2 bg-color">
+                              <div className="product-content">
+                                 <h6>COLLACTION</h6>
+                                 <h2>New Arrivals</h2>
+                                 <span>Flat 30% Off</span>
+                                 <a
+                                    className="theme-btn style6"
+                                    href="shop-details-one.html"
+                                 >
+                                    Read More
+                                 </a>
+                              </div>
+                              <div className="animal-image3">
+                                 <img
+                                    src="/images/home-6/product/dog-4.png"
+                                    alt="img"
+                                 />
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+   );
+};
+
+export { OfferSection };
