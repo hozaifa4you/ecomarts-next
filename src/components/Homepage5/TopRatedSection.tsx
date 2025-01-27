@@ -251,12 +251,12 @@ export const TopRatedProductCard = ({
             <button data-bs-toggle="modal" data-bs-target="#exampleModal2">
                <i className="fa-regular fa-eye"></i>
             </button>
-            <a href="wishlist.html">
+            <Link href="/wishlist">
                <i className="fa-regular fa-heart"></i>
-            </a>
-            <a href="cart.html">
+            </Link>
+            <Link href="/cart">
                <i className="fa-light fa-bag-shopping"></i>
-            </a>
+            </Link>
          </div>
          <div className="best-seller-product-items-two__badge1">{tag}</div>
          <div className="best-seller-product-items-two__thumb">

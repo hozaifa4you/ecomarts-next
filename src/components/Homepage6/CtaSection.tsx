@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const CtaSection = () => {
@@ -20,9 +21,9 @@ const CtaSection = () => {
                            money-back guarantee
                         </p>
                         <div className="btn-wrapper">
-                           <a
+                           <Link
                               className="theme-btn style6 color"
-                              href="cart.html"
+                              href="/cart"
                            >
                               Shop now
                               <svg
@@ -37,7 +38,7 @@ const CtaSection = () => {
                                     fill="white"
                                  />
                               </svg>
-                           </a>
+                           </Link>
                         </div>
                      </div>
                   </div>

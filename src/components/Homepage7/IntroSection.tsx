@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const IntroSection = () => {
    return (
       <section
@@ -20,12 +22,12 @@ const IntroSection = () => {
                         Maecenas porta
                      </p>
                      <div className="hero-button">
-                        <a href="cart.html" className="theme-btn">
+                        <Link href="/cart" className="theme-btn">
                            Add to cart
-                        </a>
-                        <a href="index-7.html" className="theme-btn style-2">
-                           view now
-                        </a>
+                        </Link>
+                        <Link href="/homepage-7" className="theme-btn style-2">
+                           View Now
+                        </Link>
                      </div>
                   </div>
                </div>

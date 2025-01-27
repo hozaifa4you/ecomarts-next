@@ -34,9 +34,9 @@ const NewProductCard = ({ category, img, name }: NewProductType) => {
             </div>
          </div>
          <div className="content">
-            <a href="blog-details.html" className="post-box">
+            <Link href="/blog-details" className="post-box">
                {category}
-            </a>
+            </Link>
             <h3>
                <Link href="/blog-details">{name}</Link>
             </h3>

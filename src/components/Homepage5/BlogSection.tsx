@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const BlogSection = () => {
@@ -23,9 +24,9 @@ const BlogSection = () => {
                            Praesent ut lacus at tincidunt aliquam a eget urna.
                            Sed ullamcorper
                         </p>
-                        <a href="shop-details-one.html" className="theme-btn">
+                        <Link href="/shop-details-one" className="theme-btn">
                            Discover More
-                        </a>
+                        </Link>
                      </div>
                   </div>
                </div>
@@ -38,9 +39,9 @@ const BlogSection = () => {
                            Praesent ut lacus at tincidunt aliquam a eget urna.
                            Sed ullamcorper
                         </p>
-                        <a href="shop-details-one.html" className="theme-btn">
+                        <Link href="/shop-details-one" className="theme-btn">
                            Discover More
-                        </a>
+                        </Link>
                      </div>
                      <div className="blog-card-items-four__thumb">
                         <Image
@@ -69,9 +70,9 @@ const BlogSection = () => {
                            Praesent ut lacus at tincidunt aliquam a eget urna.
                            Sed ullamcorper
                         </p>
-                        <a href="shop-details-one.html" className="theme-btn">
+                        <Link href="/shop-details-one" className="theme-btn">
                            Discover More
-                        </a>
+                        </Link>
                      </div>
                   </div>
                </div>

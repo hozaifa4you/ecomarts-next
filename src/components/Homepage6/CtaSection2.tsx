@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const CtaSection2 = () => {
@@ -22,9 +23,9 @@ const CtaSection2 = () => {
                               <div className="post">$11.99</div>
                            </div>
                            <div className="btn-wrapper">
-                              <a
+                              <Link
                                  className="theme-btn style6 color"
-                                 href="shop-details-one.htmlt.html"
+                                 href="/shop-details-one"
                               >
                                  Shop now
                                  <svg
@@ -39,7 +40,7 @@ const CtaSection2 = () => {
                                        fill="white"
                                     />
                                  </svg>
-                              </a>
+                              </Link>
                            </div>
                         </div>
                      </div>
@@ -84,9 +85,9 @@ const CtaSection2 = () => {
                               </div>
                            </div>
                            <div className="btn-wrapper">
-                              <a
+                              <Link
                                  className="theme-btn style6 color"
-                                 href="shop-details-one.htmlt.html"
+                                 href="/shop-details-one"
                               >
                                  Shop now
                                  <svg
@@ -101,7 +102,7 @@ const CtaSection2 = () => {
                                        fill="white"
                                     />
                                  </svg>
-                              </a>
+                              </Link>
                            </div>
                         </div>
                      </div>

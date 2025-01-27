@@ -47,10 +47,10 @@ const BlogCard = ({ author, category, date, img, title }: BlogType) => {
                   dangerouslySetInnerHTML={{ __html: title }}
                ></Link>
             </h3>
-            <a href="blog-details.html" className="theme-btn-2 style-2">
+            <Link href="/blog-details" className="theme-btn-2 style-2">
                Read More
                <i className="fa-solid fa-arrow-up-right"></i>
-            </a>
+            </Link>
          </div>
       </div>
    );

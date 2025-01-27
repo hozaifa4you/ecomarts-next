@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import { Autoplay, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -60,9 +61,9 @@ const HeroSlider = () => {
                   eget. Maecenas porta is nunc ut viverra. Aenean pulvinar
                   maximus leo,
                </p>
-               <a href="shop-details-one.html" className="theme-btn">
+               <Link href="/shop-details-one" className="theme-btn">
                   Shop now
-               </a>
+               </Link>
             </div>
          </div>
          <div className="col-lg-6">

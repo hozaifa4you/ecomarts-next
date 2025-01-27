@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { hotDealData, HotDealType } from "@/utils/data/homepage-6";
+import Link from "next/link";
 
 const HotDealSection = () => {
    return (
@@ -15,9 +16,9 @@ const HotDealSection = () => {
                   </div>
                   <div className="col-xl-6 d-flex justify-content-md-end">
                      <div className="btn-wrapper">
-                        <a className="theme-btn style15" href="$">
+                        <Link className="theme-btn style15" href="$">
                            View All <i className="fa-solid fa-arrow-right"></i>
-                        </a>
+                        </Link>
                      </div>
                   </div>
                </div>
@@ -37,9 +38,9 @@ const HotDealSection = () => {
                                  <span>75%</span> OFF
                               </h2>
                               <div className="btn-wrapper">
-                                 <a
+                                 <Link
                                     className="theme-btn style6 color"
-                                    href="cart.html"
+                                    href="/cart"
                                  >
                                     Shop now
                                     <svg
@@ -54,7 +55,7 @@ const HotDealSection = () => {
                                           fill="white"
                                        ></path>
                                     </svg>
-                                 </a>
+                                 </Link>
                               </div>
                            </div>
                         </div>
@@ -86,9 +87,9 @@ const HotDealCard = ({ img, name, price, tag }: HotDealType) => {
             <button data-bs-toggle="modal" data-bs-target="#exampleModal2">
                <i className="fa-regular fa-eye"></i>
             </button>
-            <a href="wishlist.html">
+            <Link href="/wishlist">
                <i className="fa-regular fa-heart"></i>
-            </a>
+            </Link>
          </div>
          <div className="badge2">{tag}</div>
          <div className="product-thumb">
@@ -101,7 +102,7 @@ const HotDealCard = ({ img, name, price, tag }: HotDealType) => {
                   <div className="text">
                      <span className="offer-price">${price}</span>
                   </div>
-                  <a href="cart.html" className="icon">
+                  <Link href="/cart" className="icon">
                      <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="20"
@@ -117,7 +118,7 @@ const HotDealCard = ({ img, name, price, tag }: HotDealType) => {
                            stroke-linejoin="round"
                         />
                      </svg>
-                  </a>
+                  </Link>
                </div>
             </div>
             <div className="star">

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const CtaDiscountSection = () => {
    return (
@@ -31,9 +32,9 @@ const CtaDiscountSection = () => {
                            elit. Integer nunc viverra laoreet est, a pretium
                            metus
                         </p>
-                        <a href="shop-details-one.html" className="theme-btn">
+                        <Link href="/shop-details-one" className="theme-btn">
                            Shop now
-                        </a>
+                        </Link>
                      </div>
                   </div>
                </div>

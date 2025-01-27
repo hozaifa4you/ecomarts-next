@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const BannerSection = () => {
    return (
@@ -56,9 +57,9 @@ const BannerSection = () => {
                         Integer nunc viverra
                      </p>
 
-                     <a href="shop-details-one.html" className="link-btn">
+                     <Link href="/shop-details-one" className="link-btn">
                         Shop Now
-                     </a>
+                     </Link>
 
                      <div className="dog-image">
                         <Image
@@ -78,9 +79,9 @@ const BannerSection = () => {
                         Integer nunc viverra
                      </p>
 
-                     <a href="shop-details-one.html" className="link-btn">
+                     <Link href="/shop-details-one" className="link-btn">
                         Shop Now
-                     </a>
+                     </Link>
                      <div className="dog-image">
                         <Image
                            width={230}

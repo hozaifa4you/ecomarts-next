@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const CtaCollectionSection = () => {
@@ -24,9 +25,9 @@ const CtaCollectionSection = () => {
                               elit. Integer nc
                            </p>
                         </div>
-                        <a href="shop-details-one.html" className="theme-btn">
+                        <Link href="/shop-details-one" className="theme-btn">
                            Shop Now
-                        </a>
+                        </Link>
                      </div>
                   </div>
                   <div className="col-lg-7">
@@ -44,9 +45,9 @@ const CtaCollectionSection = () => {
                                     Where style and <br /> value unite
                                  </h4>
                               </div>
-                              <a href="shop-details-one.html" className="icon">
+                              <Link href="/shop-details-one" className="icon">
                                  <i className="fa-solid fa-chevron-right"></i>
-                              </a>
+                              </Link>
                            </div>
                         </div>
                         <div className="col-md-6">
@@ -63,9 +64,9 @@ const CtaCollectionSection = () => {
                                     affordability
                                  </h4>
                               </div>
-                              <a href="shop-details-one.html" className="icon">
+                              <Link href="/shop-details-one" className="icon">
                                  <i className="fa-solid fa-chevron-right"></i>
-                              </a>
+                              </Link>
                            </div>
                         </div>
                      </div>

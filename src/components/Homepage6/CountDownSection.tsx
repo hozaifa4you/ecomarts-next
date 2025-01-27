@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const CountDownSection = () => {
    return (
@@ -51,9 +52,9 @@ const CountDownSection = () => {
                            </div>
                         </div>
                         <div className="btn-wrapper d-flex align-items-center justify-content-center">
-                           <a
+                           <Link
                               className="theme-btn style6 color"
-                              href="cart.html"
+                              href="/cart"
                            >
                               Shop now
                               <svg
@@ -68,7 +69,7 @@ const CountDownSection = () => {
                                     fill="white"
                                  />
                               </svg>
-                           </a>
+                           </Link>
                         </div>
                      </div>
                   </div>

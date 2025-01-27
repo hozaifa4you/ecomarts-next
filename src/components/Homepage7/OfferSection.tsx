@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const OfferSection = () => {
    return (
@@ -19,12 +20,12 @@ const OfferSection = () => {
                               laoreet <br />
                               est, a pretium metus aliquam eget.
                            </p>
-                           <a
+                           <Link
                               className="theme-btn style6"
-                              href="shop-details-one.html"
+                              href="/shop-details-one"
                            >
                               Read More
-                           </a>
+                           </Link>
                         </div>
                         <div className="animal-image">
                            <Image
@@ -60,12 +61,12 @@ const OfferSection = () => {
                                  <h6>COLLACTION</h6>
                                  <h2>Top Treading</h2>
                                  <span>Flat 30% Off</span>
-                                 <a
+                                 <Link
                                     className="theme-btn style6"
-                                    href="shop-details-one.html"
+                                    href="/shop-details-one"
                                  >
                                     Read More
-                                 </a>
+                                 </Link>
                               </div>
                            </div>
                         </div>
@@ -75,12 +76,12 @@ const OfferSection = () => {
                                  <h6>COLLACTION</h6>
                                  <h2>New Arrivals</h2>
                                  <span>Flat 30% Off</span>
-                                 <a
+                                 <Link
                                     className="theme-btn style6"
-                                    href="shop-details-one.html"
+                                    href="/shop-details-one"
                                  >
                                     Read More
-                                 </a>
+                                 </Link>
                               </div>
                               <div className="animal-image3">
                                  <Image
