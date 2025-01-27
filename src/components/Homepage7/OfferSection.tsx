@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const OfferSection = () => {
    return (
       <section className="product-section section-padding2">
@@ -25,13 +27,17 @@ const OfferSection = () => {
                            </a>
                         </div>
                         <div className="animal-image">
-                           <img
+                           <Image
+                              width={144}
+                              height={230}
                               src="/images/home-6/product/dog.png"
                               alt="img"
                            />
                         </div>
                         <div className="animal-image2">
-                           <img
+                           <Image
+                              width={278}
+                              height={432}
                               src="/images/home-6/product/dog-2.png"
                               alt="img"
                            />
@@ -43,7 +49,9 @@ const OfferSection = () => {
                         <div className="col-md-6 col-lg-12 ">
                            <div className="product-animal-items mx-sm-auto mx-md-0 style-2 mb-4">
                               <div className="animal-image3">
-                                 <img
+                                 <Image
+                                    width={166}
+                                    height={195}
                                     src="/images/home-6/product/dog-3.png"
                                     alt="img"
                                  />
@@ -75,7 +83,9 @@ const OfferSection = () => {
                                  </a>
                               </div>
                               <div className="animal-image3">
-                                 <img
+                                 <Image
+                                    width={169}
+                                    height={232}
                                     src="/images/home-6/product/dog-4.png"
                                     alt="img"
                                  />

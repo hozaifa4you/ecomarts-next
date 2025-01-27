@@ -15,7 +15,7 @@ const FoodCollectionSection = () => {
          <div className="container">
             <div className="section-title text-center style-7">
                <div className="subtitle">Collection</div>
-               <h2 className="title">Find Jewelry by Category</h2>
+               <h2 className="title">Find Animal Food by Category</h2>
             </div>
             <div className="row">
                {foodCollectionData.map((food) => (
