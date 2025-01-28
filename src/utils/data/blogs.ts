@@ -103,7 +103,27 @@ const recentPostData = [
    },
 ];
 
+const commentData = [
+   {
+      id: 1,
+      name: "temptics pro",
+      date: "March 20, 2023 at 2:37 pm",
+      img: "/images/blog/blog-details-autho1.jpg",
+      comment:
+         "Phasellus eget fermentum mauris. Suspendisse nec dignissim nulla. Integer non quam commodo, scelerisque felis id, eleifend turpis. Phasellus in nulla quis erat tempor tristique eget vel purus. Nulla pharetra pharetra pharetra. Praesent varius eget justo ut lacinia. Phasellus pharetra, velit viverra lacinia consequat, ipsum odio mollis dolor,",
+   },
+   {
+      id: 2,
+      name: "john doe",
+      date: "April 15, 2023 at 4:12 pm",
+      img: "/images/blog/blog-details-autho2.jpg",
+      comment:
+         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum. Cras venenatis euismod malesuada. Nullam ac erat ante. Integer nec libero venenatis, faucibus libero nec, ultricies mi. Sed at ligula quis est convallis tempor.",
+   },
+];
+
 export type BlogType = (typeof blogData)[0];
 export type BlogClassicType = (typeof blogClassicData)[0];
 export type RecentPostType = (typeof recentPostData)[0];
-export { blogData, blogClassicData, recentPostData };
+export type CommentType = (typeof commentData)[0];
+export { blogData, blogClassicData, recentPostData, commentData };
