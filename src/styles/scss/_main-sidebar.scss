@@ -425,9 +425,10 @@
             margin-top: 20px;
 
             &--recent-thumb {
+               flex-shrink: 0;
                img {
-                  width: 135px;
-                  height: 80px;
+                  width: 75px;
+                  height: 75px;
                   object-fit: cover;
                }
             }

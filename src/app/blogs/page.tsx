@@ -1,8 +1,9 @@
+import Image from "next/image";
+import Link from "next/link";
+
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { Icons } from "@/components/Icons";
 import { blogData, BlogType } from "@/utils/data/blogs";
-import Image from "next/image";
-import Link from "next/link";
 
 const BlogsPage = () => {
    return (
