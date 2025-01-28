@@ -492,7 +492,7 @@ const Navbar = () => {
                                                 </Link>
                                              </li>
                                              <li>
-                                                <Link href="/blog-left-sidebar">
+                                                <Link href="/blog-details-left-sidebar">
                                                    Blog Left Sidebar
                                                 </Link>
                                              </li>

@@ -201,7 +201,7 @@ const ResponsiveSidebar = () => {
                                           </Link>
                                        </li>
                                        <li>
-                                          <Link href="/blogs-left-sidebar">
+                                          <Link href="/blog-details-left-sidebar">
                                              Blogs Left Sidebar
                                           </Link>
                                        </li>
