@@ -416,7 +416,7 @@ const Navbar = () => {
                                           </Link>
                                           <ul className="submenu">
                                              <li>
-                                                <Link href="/about">
+                                                <Link href="/about-us">
                                                    About Us
                                                 </Link>
                                              </li>

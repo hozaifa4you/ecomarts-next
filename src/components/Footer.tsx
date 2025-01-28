@@ -209,7 +209,7 @@ const Footer = () => {
                         </div>
                         <ul className="list-area">
                            <li>
-                              <Link className="style1" href="/about">
+                              <Link className="style1" href="/about-us">
                                  <i className="fa-solid fa-chevrons-right"></i>
                                  About Us
                               </Link>
