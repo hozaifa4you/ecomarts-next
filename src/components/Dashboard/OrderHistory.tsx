@@ -26,7 +26,7 @@ const OrderHistory = () => {
                         <span className={`status ${order.statusClass}`}>
                            {order.status}
                         </span>
-                        <Link href="/order-details">View Details</Link>
+                        <Link href="/order-details-one">View Details</Link>
                      </td>
                   </tr>
                ))}
