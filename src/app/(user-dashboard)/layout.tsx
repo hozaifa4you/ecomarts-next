@@ -31,11 +31,3 @@ export default UserDashboardLayout;
              wishlist 
          </div> */
 }
-// <div
-//    className=" fade"
-//    id="v-pills-settings"
-//    role="tabpanel"
-//    aria-labelledby="v-pills-settings-tab"
-// >
-//     settings
-// </div>
