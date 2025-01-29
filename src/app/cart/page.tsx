@@ -140,9 +140,9 @@ const CartPage = () => {
                            <p className="cart_amount">${total}</p>
                         </div>
                         <div className="checkout-btn">
-                           <a href="checkout.html" className="theme-btn style6">
+                           <Link href="/checkout" className="theme-btn style6">
                               Proceed to Checkout
-                           </a>
+                           </Link>
                         </div>
                      </div>
                   </div>
