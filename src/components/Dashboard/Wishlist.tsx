@@ -3,7 +3,7 @@ import { wishlistData } from "@/utils/data/dashboard";
 
 const Wishlist = () => {
    return (
-      <div className="wishlist-wrapper fix bg-white">
+      <div className="wishlist-wrapper fix bg-white ">
          <div className="container">
             <form action="#" className="woocommerce-cart-form">
                <table className="wishlist_table">
