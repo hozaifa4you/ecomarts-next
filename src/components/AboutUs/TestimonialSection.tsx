@@ -1,9 +1,10 @@
 "use client";
-
-import { testimonialData, TestimonialType } from "@/utils/data/about-us";
 import Image from "next/image";
 import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+
+import { testimonialData, TestimonialType } from "@/utils/data/about-us";
+import { Icons } from "../Icons";
 
 const TestimonialSection = () => {
    return (
@@ -50,7 +51,7 @@ const TestimonialSection = () => {
    );
 };
 
-const TestimonialCardSlider = ({
+export const TestimonialCardSlider = ({
    designation,
    img,
    name,
@@ -79,7 +80,7 @@ const TestimonialCardSlider = ({
                </div>
             </div>
             <div className="testimonial-card-items-two__client-info">
-               <i className="icon-quote"></i>
+               {Icons.Quote}
             </div>
          </div>
       </div>
