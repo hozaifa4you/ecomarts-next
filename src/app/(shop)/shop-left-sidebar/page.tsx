@@ -32,7 +32,7 @@ const ShopLeftSidebarPage = () => {
                   </div>
                   <div className="col-lg-9">
                      <div className="row g-4">
-                        {productData.map((product) => (
+                        {productData.slice(0, 12).map((product) => (
                            <div
                               key={product.id}
                               className="col-xl-4 col-lg-4 col-md-6"
@@ -50,7 +50,7 @@ const ShopLeftSidebarPage = () => {
    );
 };
 
-const ProductCard = ({
+export const ProductCard = ({
    category,
    image,
    name,

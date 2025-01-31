@@ -178,6 +178,58 @@ const productData = [
       price: 129.5,
       offerPrice: 58.5,
    },
+   {
+      id: 13,
+      tag: "25% Off",
+      image: {
+         url: "/images/best-seller/bestSellerProductThumb2_1.png",
+         w: 138,
+         h: 255,
+      },
+      category: "Winter jacket",
+      name: "High-Neck puff jacket",
+      price: 79.5,
+      offerPrice: 59.5,
+   },
+   {
+      id: 14,
+      tag: "30% Off",
+      image: {
+         url: "/images/best-seller/bestSellerProductThumb2_2.png",
+         w: 107,
+         h: 255,
+      },
+      category: "Summer dress",
+      name: "Floral print dress",
+      price: 49.5,
+      offerPrice: 34.5,
+   },
+   {
+      id: 15,
+      tag: "15% Off",
+      image: {
+         url: "/images/best-seller/bestSellerProductThumb2_3.png",
+         w: 198,
+         h: 255,
+      },
+      category: "Casual shirt",
+      name: "Checked casual shirt",
+      price: 39.5,
+      offerPrice: 33.5,
+   },
+   {
+      id: 16,
+      tag: "20% Off",
+      image: {
+         url: "/images/best-seller/bestSellerProductThumb2_4.png",
+         w: 115,
+         h: 255,
+      },
+      category: "Formal shirt",
+      name: "Slim fit formal shirt",
+      price: 59.5,
+      offerPrice: 47.5,
+   },
 ];
 
 const topCategoryData = [

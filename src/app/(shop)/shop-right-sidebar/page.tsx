@@ -7,9 +7,8 @@ import { ProductStatus } from "@/components/Shop/ProductStatus";
 import { ReviewStarts } from "@/components/Shop/ReviewStarts";
 import { SearchBox } from "@/components/Shop/SearchBox";
 import { TopCategories } from "@/components/Shop/TopCategories";
-import { productData, ProductType } from "@/utils/data/shop";
-import Image from "next/image";
-import Link from "next/link";
+import { productData } from "@/utils/data/shop";
+import { ProductCard } from "../shop-left-sidebar/page";
 
 const ShopLeftSidebarPage = () => {
    return (
@@ -21,7 +20,7 @@ const ShopLeftSidebarPage = () => {
                <div className="row gx-30 gy-30">
                   <div className="col-lg-9">
                      <div className="row g-4">
-                        {productData.map((product) => (
+                        {productData.slice(0, 12).map((product) => (
                            <div
                               key={product.id}
                               className="col-xl-4 col-lg-4 col-md-6"
@@ -47,54 +46,6 @@ const ShopLeftSidebarPage = () => {
             </div>
          </section>
       </>
-   );
-};
-
-const ProductCard = ({
-   category,
-   image,
-   name,
-   offerPrice,
-   price,
-   tag,
-}: ProductType) => {
-   return (
-      <div className="best-seller-product-items-two item-border">
-         <div className="icon-box2">
-            <button data-bs-toggle="modal" data-bs-target="#exampleModal2">
-               <i className="fa-regular fa-eye"></i>
-            </button>
-            <a href="wishlist.html">
-               <i className="fa-regular fa-heart"></i>
-            </a>
-            <a href="cart.html">
-               <i className="fa-light fa-bag-shopping"></i>
-            </a>
-         </div>
-         <div className="best-seller-product-items-two__badge1">{tag}</div>
-         <div className="best-seller-product-items-two__thumb">
-            <Image
-               width={image.w}
-               height={image.h}
-               src={image.url}
-               alt="thumb"
-            />
-         </div>
-         <div className="best-seller-product-items-two__content">
-            <div className="best-seller-product-items-two__details">
-               <p className="best-seller-product-items-two__details--subtitle">
-                  {category}
-               </p>
-               <h6 className="best-seller-product-items-two__details--title">
-                  <Link href="/shop-details-one">{name}</Link>
-               </h6>
-               <div className="best-seller-product-items-two__details--price">
-                  <span className="offer-price">${offerPrice}</span>
-                  <span className="original-price">${price}</span>
-               </div>
-            </div>
-         </div>
-      </div>
    );
 };
 
