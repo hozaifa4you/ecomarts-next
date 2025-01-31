@@ -26,7 +26,7 @@ const TopRatedSection = () => {
    );
 };
 
-const TopRatedCard = ({
+export const TopRatedCard = ({
    category,
    img,
    name,
