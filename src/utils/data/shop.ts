@@ -144,7 +144,7 @@ const productData = [
       tag: "60% Off",
       image: {
          url: "/images/best-seller/bestSellerProductThumb2_2.png",
-         w: 138,
+         w: 107,
          h: 255,
       },
       category: "Shorts",
@@ -157,7 +157,7 @@ const productData = [
       tag: "70% Off",
       image: {
          url: "/images/best-seller/bestSellerProductThumb2_3.png",
-         w: 138,
+         w: 198,
          h: 255,
       },
       category: "Jumpsuit",
@@ -170,7 +170,7 @@ const productData = [
       tag: "55% Off",
       image: {
          url: "/images/best-seller/bestSellerProductThumb2_4.png",
-         w: 138,
+         w: 115,
          h: 255,
       },
       category: "Coat",
