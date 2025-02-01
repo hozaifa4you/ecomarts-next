@@ -1,40 +1,61 @@
+"use client";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
 import { SearchModal } from "@/components/Navbar/SearchModal";
-import { ResponsiveSidebar } from "./ResponsiveSidebar";
-import { NewsletterModal } from "../NewsletterModal";
+import { ResponsiveSidebar } from "@/components/Navbar/ResponsiveSidebar";
+import { NewsletterModal } from "@/components/NewsletterModal";
+import NiceSelect from "@/components/NiceSelect/NiceSelect";
 
 const Navbar = () => {
+   const [visible, setVisible] = useState(false);
+
+   useEffect(() => {
+      const toggleVisibility = () => {
+         if (window.scrollY > 200) {
+            setVisible(true);
+         } else {
+            setVisible(false);
+         }
+      };
+
+      window.addEventListener("scroll", toggleVisibility);
+      return () => window.removeEventListener("scroll", toggleVisibility);
+   }, []);
+
    return (
       <>
          <NewsletterModal />
          <header className="header-section-1">
-            <div id="header-sticky" className="header-1">
+            <div className={`header-1 ${visible ? "sticky" : ""}`}>
                <div className="header-top-one">
                   <div className="phone-icon">
-                     <i className="icon-telephone"></i>
+                     <i className="fa-sharp fa-solid fa-phone"></i>
                      <Link href="tel:32534534534">+61 000 321 555 004</Link>
                   </div>
                   <div className="offer">
                      <div className="subtitle style1">
-                        <i className="icon-tag"></i>
-                        59% <span className="color-text"> discount </span> for
-                        all items
+                        <i className="fa-solid fa-tag"></i> 59%{" "}
+                        <span className="color-text"> discount </span> for all
+                        items
                      </div>
                   </div>
                   <div className="lang">
                      <div className="language">
-                        <i className="icon-earth"></i>
-
+                        <i className="fa-regular fa-earth-americas"></i>
                         <div className="form">
-                           <select className="single-select w-100">
-                              <option>English</option>
-                              <option>Bangla</option>
-                              <option>Spanish</option>
-                              <option>German</option>
-                              <option>Arabic</option>
-                           </select>
+                           <NiceSelect
+                              defaultValue="en"
+                              id="a-select"
+                              className="single-select w-100"
+                           >
+                              <option value="en">English</option>
+                              <option value="bn">Bangla</option>
+                              <option value="sn">Spanish</option>
+                              <option value="gn">German</option>
+                              <option value="ab">Arabic</option>
+                           </NiceSelect>
                         </div>
                      </div>
 
