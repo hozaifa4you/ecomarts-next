@@ -7,6 +7,7 @@ import { SearchModal } from "@/components/Navbar/SearchModal";
 import { ResponsiveSidebar } from "@/components/Navbar/ResponsiveSidebar";
 import { NewsletterModal } from "@/components/NewsletterModal";
 import NiceSelect from "@/components/NiceSelect/NiceSelect";
+import { MotionDiv } from "../animation";
 
 const Navbar = () => {
    const [visible, setVisible] = useState(false);
@@ -30,18 +31,33 @@ const Navbar = () => {
          <header className="header-section-1">
             <div className={`header-1 ${visible ? "sticky" : ""}`}>
                <div className="header-top-one">
-                  <div className="phone-icon">
+                  <MotionDiv
+                     initial={{ opacity: 0 }}
+                     animate={{ opacity: 1 }}
+                     transition={{ duration: 0.5 }}
+                     className="phone-icon"
+                  >
                      <i className="fa-sharp fa-solid fa-phone"></i>
                      <Link href="tel:32534534534">+61 000 321 555 004</Link>
-                  </div>
-                  <div className="offer">
+                  </MotionDiv>
+                  <MotionDiv
+                     initial={{ opacity: 0 }}
+                     animate={{ opacity: 1 }}
+                     transition={{ duration: 0.5, delay: 0.15 }}
+                     className="offer"
+                  >
                      <div className="subtitle style1">
                         <i className="fa-solid fa-tag"></i> 59%{" "}
                         <span className="color-text"> discount </span> for all
                         items
                      </div>
-                  </div>
-                  <div className="lang">
+                  </MotionDiv>
+                  <MotionDiv
+                     initial={{ opacity: 0 }}
+                     animate={{ opacity: 1 }}
+                     transition={{ duration: 0.5, delay: 0.3 }}
+                     className="lang"
+                  >
                      <div className="language">
                         <i className="fa-regular fa-earth-americas"></i>
                         <div className="form">
@@ -65,7 +81,7 @@ const Navbar = () => {
                            My account
                         </Link>
                      </div>
-                  </div>
+                  </MotionDiv>
                </div>
 
                <div className="container-fluid">

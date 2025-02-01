@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const Promotion = () => {
+const PromotionSection = () => {
    return (
       <section className="promo-section section-padding fix pt-0">
          <div className="container">
@@ -68,4 +68,4 @@ const Promotion = () => {
    );
 };
 
-export { Promotion };
+export { PromotionSection };

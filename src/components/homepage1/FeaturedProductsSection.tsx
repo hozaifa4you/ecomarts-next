@@ -8,7 +8,7 @@ import {
 } from "@/utils/data/homepage-1";
 import Link from "next/link";
 
-const FeaturedProducts = () => {
+const FeaturedProductsSection = () => {
    const [filter, setFilter] = useState<
       "all" | "oven" | "computer" | "watch" | "camera" | "drone"
    >("all");
@@ -342,4 +342,4 @@ const FeatureCard = ({
    );
 };
 
-export { FeaturedProducts };
+export { FeaturedProductsSection };

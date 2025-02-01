@@ -1,25 +1,25 @@
-import { BestSeller } from "@/components/homepage1/BestSeller";
-import { Blogs } from "@/components/homepage1/Blogs";
-import { FeaturedProducts } from "@/components/homepage1/FeaturedProducts";
-import { Intro } from "@/components/homepage1/Intro";
-import { OfferMarquee } from "@/components/homepage1/OfferMarquee";
-import { PopularProducts } from "@/components/homepage1/PopularProducts";
-import { CategoryCards } from "@/components/homepage1/CategoryCards";
-import { Promotion } from "@/components/homepage1/Promotion";
-import { Testimonials } from "@/components/homepage1/Testimonials";
+import { BestSellerSection } from "@/components/homepage1/BestSellerSection";
+import { BlogsSection } from "@/components/homepage1/BlogsSection";
+import { FeaturedProductsSection } from "@/components/homepage1/FeaturedProductsSection";
+import { IntroSection } from "@/components/homepage1/IntroSection";
+import { OfferMarqueeSection } from "@/components/homepage1/OfferMarqueeSection";
+import { PopularProductsSection } from "@/components/homepage1/PopularProductsSection";
+import { CategoriesSection } from "@/components/homepage1/CategoriesSection";
+import { PromotionSection } from "@/components/homepage1/PromotionSection";
+import { TestimonialsSection } from "@/components/homepage1/TestimonialsSection";
 
 const Homepage1 = () => {
    return (
       <>
-         <Intro />
-         <OfferMarquee />
-         <CategoryCards />
-         <BestSeller />
-         <FeaturedProducts />
-         <Promotion />
-         <PopularProducts />
-         <Testimonials />
-         <Blogs />
+         <IntroSection />
+         <OfferMarqueeSection />
+         <CategoriesSection />
+         <BestSellerSection />
+         <FeaturedProductsSection />
+         <PromotionSection />
+         <PopularProductsSection />
+         <TestimonialsSection />
+         <BlogsSection />
       </>
    );
 };

@@ -9,7 +9,7 @@ import {
 } from "@/utils/data/homepage-1";
 import Link from "next/link";
 
-const PopularProducts = () => {
+const PopularProductsSection = () => {
    return (
       <div className="popular-product-section section-padding bg-color2 fix">
          <div className="container">
@@ -176,4 +176,4 @@ const PopularProductCard2 = ({
    );
 };
 
-export { PopularProducts };
+export { PopularProductsSection };

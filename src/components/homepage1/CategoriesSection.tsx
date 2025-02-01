@@ -3,7 +3,7 @@ import { categoryData, CategoryType } from "@/utils/data/homepage-1";
 import { Autoplay, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-const CategoryCards = () => {
+const CategoriesSection = () => {
    return (
       <section className="product-section section-padding fix">
          <div className="product-contianer-wrapper style1">
@@ -85,4 +85,4 @@ const CategoryCard = ({ category, count, svg }: CategoryType) => {
    );
 };
 
-export { CategoryCards };
+export { CategoriesSection };

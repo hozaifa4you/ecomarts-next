@@ -6,7 +6,7 @@ import Image from "next/image";
 
 import { testimonialData, TestimonialType } from "@/utils/data/homepage-1";
 
-const Testimonials = () => {
+const TestimonialsSection = () => {
    return (
       <section className="testimonial-section fix section-padding margin-bottom-40">
          <div className="container">
@@ -87,4 +87,4 @@ const TestimonialCard = ({ author, comment }: TestimonialType) => {
    );
 };
 
-export { Testimonials };
+export { TestimonialsSection };

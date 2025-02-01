@@ -2,10 +2,16 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { offerData, type OfferDataType } from "@/utils/data/homepage-2";
+import { MotionSection } from "../animation";
 
 const OfferSection = () => {
    return (
-      <section className="offer-section fix section-padding2">
+      <MotionSection
+         initial={{ opacity: 0 }}
+         animate={{ opacity: 1 }}
+         transition={{ duration: 0.5 }}
+         className="offer-section fix section-padding2"
+      >
          <div className="container">
             <div className="offer-card-items-fashon-two">
                <div className="row g-4">
@@ -49,7 +55,7 @@ const OfferSection = () => {
                </div>
             </div>
          </div>
-      </section>
+      </MotionSection>
    );
 };
 

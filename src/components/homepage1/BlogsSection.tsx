@@ -3,7 +3,7 @@ import Link from "next/link";
 
 import { blogData, BlogType } from "@/utils/data/homepage-1";
 
-const Blogs = () => {
+const BlogsSection = () => {
    return (
       <section className="blog-section section-padding pt-0 fix">
          <div className="container">
@@ -147,4 +147,4 @@ const BlogCard = ({ by, category, date, img, title }: BlogType) => {
    );
 };
 
-export { Blogs };
+export { BlogsSection };

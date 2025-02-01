@@ -1,9 +1,7 @@
-import React from "react";
 import Image from "next/image";
-
 import { marqueeData } from "@/utils/data/homepage-1";
 
-const OfferMarquee = () => {
+const OfferMarqueeSection = () => {
    return (
       <div className="marquee-section1 pt-20">
          <div className="container">
@@ -26,10 +24,10 @@ const OfferMarquee = () => {
    );
 };
 
-const MarqueItem = ({ title }: { title: string }) => {
+export const MarqueItem = ({ title }: { title: string }) => {
    return (
       <>
-         <div>
+         <div className="flex-shrink-0">
             <Image
                width={16}
                height={16}
@@ -42,4 +40,4 @@ const MarqueItem = ({ title }: { title: string }) => {
    );
 };
 
-export { OfferMarquee };
+export { OfferMarqueeSection };
