@@ -3,6 +3,7 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 import { testimonialData, TestimonialType } from "@/utils/data/homepage-1";
 
@@ -10,10 +11,16 @@ const TestimonialsSection = () => {
    return (
       <section className="testimonial-section fix section-padding margin-bottom-40">
          <div className="container">
-            <div className="section-title">
+            <motion.div
+               initial={{ opacity: 0, y: 25 }}
+               whileInView={{ opacity: 1, y: 0 }}
+               transition={{ duration: 0.5 }}
+               viewport={{ once: true }}
+               className="section-title"
+            >
                <div className="subtitle style1">Testimonial</div>
                <h2 className="title">What our client say</h2>
-            </div>
+            </motion.div>
             <div className=" testimonial-slider-one">
                <Swiper
                   loop

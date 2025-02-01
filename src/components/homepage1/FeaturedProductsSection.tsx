@@ -1,12 +1,13 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
+import { motion } from "framer-motion";
 
 import {
    featuredProductData,
    FeaturedProductType,
 } from "@/utils/data/homepage-1";
-import Link from "next/link";
 
 const FeaturedProductsSection = () => {
    const [filter, setFilter] = useState<
@@ -27,12 +28,24 @@ const FeaturedProductsSection = () => {
          <div className="container">
             <div className="featured-product-wrapper style1">
                <div className="top-deals-wrapper style1 text-center mb-30">
-                  <div className="section-title">
+                  <motion.div
+                     initial={{ opacity: 0, y: 25 }}
+                     whileInView={{ opacity: 1, y: 0 }}
+                     transition={{ duration: 0.5 }}
+                     viewport={{ once: true }}
+                     className="section-title"
+                  >
                      <div className="subtitle style1">featured products</div>
                      <h2 className="title">Our featured products</h2>
-                  </div>
+                  </motion.div>
                </div>
-               <div className="feature-flex-tab-wrapper">
+               <motion.div
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.1 }}
+                  viewport={{ once: true }}
+                  className="feature-flex-tab-wrapper"
+               >
                   <div className="feature-tab-btn-wrapper">
                      <ul
                         className="nav nav-pills"
@@ -144,7 +157,7 @@ const FeaturedProductsSection = () => {
                         </div>
                      </div>
                   </div>
-               </div>
+               </motion.div>
 
                <div className="tab-content" id="pills-tabContent2">
                   {filter === "all" && (
@@ -157,13 +170,20 @@ const FeaturedProductsSection = () => {
                         <div className="feature-tab-content">
                            <div className="row g-4">
                               {shuffleArray(featuredProductData).map(
-                                 (product) => (
-                                    <div
+                                 (product, index) => (
+                                    <motion.div
                                        key={product.id}
+                                       initial={{ opacity: 0 }}
+                                       whileInView={{ opacity: 1 }}
+                                       transition={{
+                                          duration: 0.5,
+                                          delay: 0.1 * index,
+                                       }}
+                                       viewport={{ once: true }}
                                        className="col-xl-3 col-md-6"
                                     >
                                        <FeatureCard {...product} />
-                                    </div>
+                                    </motion.div>
                                  )
                               )}
                            </div>

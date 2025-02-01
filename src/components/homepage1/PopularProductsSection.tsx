@@ -1,5 +1,6 @@
-import Image from "next/image";
-import React from "react";
+"use client";
+import React, { useEffect, useState } from "react";
+import Link from "next/link";
 
 import {
    popularProductsData,
@@ -7,13 +8,37 @@ import {
    PopularProductType,
    PopularProductType2,
 } from "@/utils/data/homepage-1";
-import Link from "next/link";
+import { MotionDiv } from "../animation";
+import { calculateTimeLeft, TimeLeft } from "@/utils/utils";
 
 const PopularProductsSection = () => {
+   const TARGET_DATE = new Date();
+   TARGET_DATE.setDate(TARGET_DATE.getDate() + 3);
+   const TARGET_DATE_STRING =
+      TARGET_DATE.toISOString().split("T")[0] + "T23:59:59";
+
+   const [timeLeft, setTimeLeft] = useState<TimeLeft>(
+      calculateTimeLeft(TARGET_DATE_STRING)
+   );
+
+   useEffect(() => {
+      const timer = setTimeout(() => {
+         setTimeLeft(calculateTimeLeft(TARGET_DATE_STRING));
+      }, 1000);
+
+      return () => clearTimeout(timer);
+   });
+
    return (
       <div className="popular-product-section section-padding bg-color2 fix">
          <div className="container">
-            <div className="row gy-4 d-flex align-items-center mb-30">
+            <MotionDiv
+               initial={{ opacity: 0, y: 50 }}
+               whileInView={{ opacity: 1, y: 0 }}
+               transition={{ duration: 0.75 }}
+               viewport={{ once: true }}
+               className="row gy-4 d-flex align-items-center mb-30"
+            >
                <div className="col-xl-6">
                   <div className="section-title">
                      <div className="subtitle style1">Hot Sell</div>
@@ -30,17 +55,29 @@ const PopularProductsSection = () => {
                      </Link>
                   </div>
                </div>
-            </div>
-            <div className="popular-product-wrapper style1">
-               <div className="card-items-wrapper style1">
-                  {popularProductsData.map((item) => (
-                     <PopularProductCard key={item.id} {...item} />
-                  ))}
+            </MotionDiv>
+            <div className="row g-4">
+               <div className="col-xxl-4">
+                  <div className="row">
+                     {popularProductsData.map((item) => (
+                        <div className="col-lg-6 col-xxl-12" key={item.id}>
+                           <PopularProductCard {...item} timeLeft={timeLeft} />
+                        </div>
+                     ))}
+                  </div>
                </div>
-               <div className="card-items-wrapper style2">
-                  {popularProductsData2.map((item) => (
-                     <PopularProductCard2 key={item.id} {...item} />
-                  ))}
+               <div className="col-xxl-8">
+                  <div className="row g-4">
+                     {popularProductsData2.map((item, index) => (
+                        <div className="col-md-6 col-lg-4" key={item.id}>
+                           <PopularProductCard2
+                              index={index}
+                              {...item}
+                              timeLeft={timeLeft}
+                           />
+                        </div>
+                     ))}
+                  </div>
                </div>
             </div>
          </div>
@@ -54,8 +91,9 @@ const PopularProductCard = ({
    tag,
    title,
    img,
+   timeLeft,
    id,
-}: PopularProductType) => {
+}: PopularProductType & { timeLeft: TimeLeft }) => {
    return (
       <div
          className={`popular-product-card-item-one ${id === 2 ? "mb-0" : ""}`}
@@ -97,27 +135,39 @@ const PopularProductCard = ({
                <div className="timer-box-2 mb-0">
                   <i className="fa-sharp fa-solid fa-alarm-clock"></i>
                   <span className="text">
-                     23 : 23 : 56 :<span className="sec">56</span>
+                     {timeLeft.days} : {timeLeft.hours} : {timeLeft.minutes} :{" "}
+                     <span className="sec">{timeLeft.seconds}</span>
                   </span>
                </div>
             </div>
          </div>
          <div className="popular-product-card-item-one__thumb">
-            <Image width={100} height={100} src={img} alt="thumb" />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={img} alt="thumb" />
          </div>
       </div>
    );
 };
+
 const PopularProductCard2 = ({
    discountPrice,
    img,
    name,
    price,
-}: PopularProductType2) => {
+   index,
+   timeLeft,
+}: PopularProductType2 & { index: number; timeLeft: TimeLeft }) => {
    return (
-      <div className="popular-product-card-item-two">
+      <MotionDiv
+         initial={{ opacity: 0, y: 50 }}
+         whileInView={{ opacity: 1, y: 0 }}
+         transition={{ duration: 0.75, delay: index * 0.1 }}
+         viewport={{ once: true }}
+         className="popular-product-card-item-two"
+      >
          <div className="popular-product-card-item-two__thumb">
-            <Image width={130} height={165} src={img} alt="thumb" />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={img} alt="thumb" />
          </div>
          <div className="popular-product-card-item-two__content">
             <h6>
@@ -133,25 +183,25 @@ const PopularProductCard2 = ({
             <div className="popular-product-timer-box">
                <div className="box">
                   <h5 id="day" className="number">
-                     24
+                     {timeLeft.days}
                   </h5>
                   <p className="text">Days</p>
                </div>
                <div className="box">
                   <h5 id="hrs" className="number">
-                     09
+                     {timeLeft.hours}
                   </h5>
                   <p className="text">Hour</p>
                </div>
                <div className="box">
                   <h5 id="min" className="number">
-                     25
+                     {timeLeft.minutes}
                   </h5>
                   <p className="text">Min</p>
                </div>
                <div className="box">
                   <h5 id="sec" className="number">
-                     05
+                     {timeLeft.seconds}
                   </h5>
                   <p className="text">Sec</p>
                </div>
@@ -172,7 +222,7 @@ const PopularProductCard2 = ({
                </Link>
             </div>
          </div>
-      </div>
+      </MotionDiv>
    );
 };
 

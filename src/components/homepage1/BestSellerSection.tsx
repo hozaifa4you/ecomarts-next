@@ -2,22 +2,15 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 import { bestSellerData, BestSellerType } from "@/utils/data/homepage-1";
+import { shuffleArray } from "@/utils/utils";
 
 const BestSellerSection = () => {
    const [filter, setFilter] = useState<"latest" | "popular" | "on-sale">(
       "latest"
    );
-
-   function shuffleArray(array: BestSellerType[]) {
-      for (let i = array.length - 1; i > 0; i--) {
-         const randomIndex = Math.floor(Math.random() * (i + 1));
-
-         [array[i], array[randomIndex]] = [array[randomIndex], array[i]];
-      }
-      return array;
-   }
 
    const handleSelectChange = () => {
       shuffleArray(bestSellerData);
@@ -29,10 +22,16 @@ const BestSellerSection = () => {
             <div className="section-top-wrapper">
                <div className="row gy-3">
                   <div className="col-lg-3">
-                     <div className="section-title">
+                     <motion.div
+                        initial={{ opacity: 0, y: 25 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5 }}
+                        viewport={{ once: true }}
+                        className="section-title"
+                     >
                         <div className="subtitle style1">Best deals</div>
                         <h2 className="title">Best Sellers</h2>
-                     </div>
+                     </motion.div>
                   </div>
                   <div className="col-lg-9 d-flex justify-content-xl-end">
                      <div className="best-seller-tab-btn-wrapper">
@@ -128,14 +127,19 @@ const BestSellerSection = () => {
                         >
                            <div className="best-seller-tab-content-wrapper">
                               <div className="row g-4">
-                                 {shuffleArray(bestSellerData).map((item) => (
-                                    <div
-                                       className="col-xl-3 col-md-6"
-                                       key={item.id}
-                                    >
-                                       <BestSellerCard {...item} />
-                                    </div>
-                                 ))}
+                                 {shuffleArray(bestSellerData).map(
+                                    (item, index) => (
+                                       <div
+                                          className="col-xl-3 col-md-6"
+                                          key={item.id}
+                                       >
+                                          <BestSellerCard
+                                             {...item}
+                                             index={index}
+                                          />
+                                       </div>
+                                    )
+                                 )}
                               </div>
                            </div>
                         </div>
@@ -150,14 +154,19 @@ const BestSellerSection = () => {
                         >
                            <div className="best-seller-tab-content-wrapper">
                               <div className="row g-4">
-                                 {shuffleArray(bestSellerData).map((item) => (
-                                    <div
-                                       key={item.id}
-                                       className="col-xl-3 col-md-6"
-                                    >
-                                       <BestSellerCard {...item} />
-                                    </div>
-                                 ))}
+                                 {shuffleArray(bestSellerData).map(
+                                    (item, index) => (
+                                       <div
+                                          key={item.id}
+                                          className="col-xl-3 col-md-6"
+                                       >
+                                          <BestSellerCard
+                                             {...item}
+                                             index={index}
+                                          />
+                                       </div>
+                                    )
+                                 )}
                               </div>
                            </div>
                         </div>
@@ -172,14 +181,19 @@ const BestSellerSection = () => {
                         >
                            <div className="best-seller-tab-content-wrapper">
                               <div className="row g-4">
-                                 {shuffleArray(bestSellerData).map((item) => (
-                                    <div
-                                       key={item.id}
-                                       className="col-xl-3 col-md-6"
-                                    >
-                                       <BestSellerCard {...item} />
-                                    </div>
-                                 ))}
+                                 {shuffleArray(bestSellerData).map(
+                                    (item, index) => (
+                                       <div
+                                          key={item.id}
+                                          className="col-xl-3 col-md-6"
+                                       >
+                                          <BestSellerCard
+                                             {...item}
+                                             index={index}
+                                          />
+                                       </div>
+                                    )
+                                 )}
                               </div>
                            </div>
                         </div>
@@ -187,7 +201,11 @@ const BestSellerSection = () => {
                   </div>
                </div>
             </div>
-            <div
+            <motion.div
+               initial={{ opacity: 0 }}
+               whileInView={{ opacity: 1 }}
+               transition={{ duration: 0.75, delay: 0.5 }}
+               viewport={{ once: true }}
                className="video-container bg-img"
                style={{ backgroundImage: "url(/images/video/video-bg.jpg)" }}
             >
@@ -210,6 +228,7 @@ const BestSellerSection = () => {
                         </Link>
                      </div>
                   </div>
+
                   <div className="col-lg-6">
                      <div className="video-thumb">
                         <Image
@@ -221,7 +240,7 @@ const BestSellerSection = () => {
                      </div>
                   </div>
                </div>
-            </div>
+            </motion.div>
          </div>
       </section>
    );
@@ -233,9 +252,16 @@ const BestSellerCard = ({
    offerPrice,
    reviews,
    img,
-}: BestSellerType) => {
+   index,
+}: BestSellerType & { index: number }) => {
    return (
-      <div className="best-seller-one">
+      <motion.div
+         initial={{ opacity: 0, y: 50 }}
+         whileInView={{ opacity: 1, y: 0 }}
+         transition={{ duration: 0.5, delay: (index - 1) * 0.1 }}
+         viewport={{ once: true }}
+         className="best-seller-one"
+      >
          <div className="best-seller-one__thumb">
             <Image width={100} height={100} src={img} alt="thumb" />
          </div>
@@ -266,7 +292,7 @@ const BestSellerCard = ({
                </Link>
             </div>
          </div>
-      </div>
+      </motion.div>
    );
 };
 

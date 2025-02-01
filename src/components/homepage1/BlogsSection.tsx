@@ -2,21 +2,35 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { blogData, BlogType } from "@/utils/data/homepage-1";
+import { MotionDiv } from "../animation";
 
 const BlogsSection = () => {
    return (
       <section className="blog-section section-padding pt-0 fix">
          <div className="container">
             <div className="blog-wrapper style1">
-               <div className="section-title text-center">
+               <MotionDiv
+                  initial={{ opacity: 0, y: 25 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5 }}
+                  viewport={{ once: true }}
+                  className="section-title text-center"
+               >
                   <div className="subtitle style2">News & Blog</div>
                   <h2 className="title">Latest news & blog</h2>
-               </div>
+               </MotionDiv>
                <div className="row">
-                  {blogData.map((blog) => (
-                     <div className="col-xl-3 col-md-6" key={blog.id}>
+                  {blogData.map((blog, index) => (
+                     <MotionDiv
+                        initial={{ opacity: 0, y: 25 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: 0.1 * index }}
+                        viewport={{ once: true }}
+                        className="col-xl-3 col-md-6"
+                        key={blog.id}
+                     >
                         <BlogCard {...blog} />
-                     </div>
+                     </MotionDiv>
                   ))}
                </div>
             </div>

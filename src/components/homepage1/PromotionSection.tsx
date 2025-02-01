@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { MotionDiv } from "../animation";
 
 const PromotionSection = () => {
    return (
@@ -8,7 +9,13 @@ const PromotionSection = () => {
             <div className="promo-wrapper style1">
                <div className="row">
                   <div className="col-lg-5">
-                     <div className="promo-card promo-card_1">
+                     <MotionDiv
+                        initial={{ opacity: 0, y: 50 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.75 }}
+                        viewport={{ once: true }}
+                        className="promo-card promo-card_1"
+                     >
                         <div className="thumb">
                            <Image
                               width={350}
@@ -31,10 +38,16 @@ const PromotionSection = () => {
                               </Link>
                            </div>
                         </div>
-                     </div>
+                     </MotionDiv>
                   </div>
                   <div className="col-lg-7">
-                     <div className="promo-card promo-card_2">
+                     <MotionDiv
+                        initial={{ opacity: 0, y: 50 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.75 }}
+                        viewport={{ once: true }}
+                        className="promo-card promo-card_2"
+                     >
                         <div className="thumb">
                            <Image
                               width={510}
@@ -59,7 +72,7 @@ const PromotionSection = () => {
                               </Link>
                            </div>
                         </div>
-                     </div>
+                     </MotionDiv>
                   </div>
                </div>
             </div>

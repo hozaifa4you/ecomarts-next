@@ -1,11 +1,19 @@
 "use client";
-import { categoryData, CategoryType } from "@/utils/data/homepage-1";
 import { Autoplay, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
+import { categoryData, CategoryType } from "@/utils/data/homepage-1";
+import { MotionSection } from "@/components/animation";
+
 const CategoriesSection = () => {
    return (
-      <section className="product-section section-padding fix">
+      <MotionSection
+         initial={{ opacity: 0, y: 50 }}
+         whileInView={{ opacity: 1, y: 0 }}
+         transition={{ duration: 0.5 }}
+         viewport={{ once: true }}
+         className="product-section section-padding fix"
+      >
          <div className="product-contianer-wrapper style1">
             <div className="container">
                <div className="row">
@@ -69,7 +77,7 @@ const CategoriesSection = () => {
                </button>
             </div>
          </div>
-      </section>
+      </MotionSection>
    );
 };
 
