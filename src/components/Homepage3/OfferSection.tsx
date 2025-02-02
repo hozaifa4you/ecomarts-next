@@ -1,11 +1,18 @@
 import Link from "next/link";
+import { Div } from "../animation";
 
 const OfferSection = () => {
    return (
       <section className="offer-section section-padding3 pb-0 fix">
          <div className="container">
             <div className="row gy-5">
-               <div className="col-xl-5">
+               <Div
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ duration: 0.5 }}
+                  viewport={{ once: true }}
+                  className="col-xl-5"
+               >
                   <div
                      className="offer-card-items-one"
                      style={{
@@ -24,8 +31,14 @@ const OfferSection = () => {
                         </Link>
                      </div>
                   </div>
-               </div>
-               <div className="col-xl-7">
+               </Div>
+               <Div
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ duration: 0.5, delay: 0.05 }}
+                  viewport={{ once: true }}
+                  className="col-xl-7"
+               >
                   <div
                      className="offer-card-items-two"
                      style={{
@@ -46,7 +59,7 @@ const OfferSection = () => {
                         </Link>
                      </div>
                   </div>
-               </div>
+               </Div>
             </div>
          </div>
       </section>

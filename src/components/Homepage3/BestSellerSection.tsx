@@ -1,21 +1,35 @@
-import { bestSellerData, BestSellerDataType } from "@/utils/data/homepage-3";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+
+import { Div } from "../animation";
+import { bestSellerData, BestSellerDataType } from "@/utils/data/homepage-3";
 
 const BestSellerSection = () => {
    return (
       <section className="best-seller-section section-padding3 pb-0 fix">
          <div className="container">
             <div className="row">
-               <div className="section-title">
+               <Div
+                  initial={{ opacity: 0, y: 25 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5 }}
+                  viewport={{ once: true }}
+                  className="section-title"
+               >
                   <div className="subtitle style3">THIS WEEK</div>
                   <h2 className="title style3">Best Sellers</h2>
-               </div>
-               {bestSellerData.map((item) => (
-                  <div className="col-xl-4 col-md-6" key={item.id}>
+               </Div>
+               {bestSellerData.map((item, index) => (
+                  <Div
+                     initial={{ opacity: 0 }}
+                     whileInView={{ opacity: 1 }}
+                     transition={{ duration: 0.75, delay: index * 0.07 }}
+                     viewport={{ once: true }}
+                     className="col-xl-4 col-md-6"
+                     key={item.id}
+                  >
                      <BestSellerCard {...item} />
-                  </div>
+                  </Div>
                ))}
             </div>
          </div>

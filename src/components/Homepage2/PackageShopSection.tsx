@@ -167,7 +167,8 @@ const PackageCardSlider = ({
 }) => {
    return (
       <div className="swiper-slide packges-thumb">
-         <Image width={540} height={605} src={img} alt="thumb" />
+         {/* eslint-disable-next-line @next/next/no-img-element */}
+         <img src={img} alt="thumb" />
          <div className="content">
             <h4 dangerouslySetInnerHTML={{ __html: name }}></h4>
             <p>${price}</p>
@@ -177,16 +178,3 @@ const PackageCardSlider = ({
 };
 
 export { PackageShopSection };
-
-{
-   /* <div className="swiper-slide packges-thumb">
-   <img src="/images/package-shop/package-shop-preview.png" alt="thumb" />
-   <div className="content">
-      <h4>
-         Fashionable Bags For <br />
-         Women
-      </h4>
-      <p>$179.00</p>
-   </div>
-</div>; */
-}

@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { Autoplay, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { motion } from "framer-motion";
 
 import {
    categoryCardsData,
@@ -10,7 +11,13 @@ import {
 
 const CategoryCardsSection = () => {
    return (
-      <section className="product-section section-padding3 pb-0 fix">
+      <motion.div
+         initial={{ opacity: 0 }}
+         whileInView={{ opacity: 1 }}
+         transition={{ duration: 0.5, delay: 0.3 }}
+         viewport={{ once: true }}
+         className="product-section section-padding3 pb-0 fix"
+      >
          <div className="product-contianer-wrapper style3">
             <div className="container">
                <div className="row">
@@ -58,7 +65,7 @@ const CategoryCardsSection = () => {
                </button>
             </div>
          </div>
-      </section>
+      </motion.div>
    );
 };
 

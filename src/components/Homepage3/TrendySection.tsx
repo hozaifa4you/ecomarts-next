@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 import {
    trendyProductData,
@@ -21,13 +22,25 @@ const TrendySection = () => {
       <section className="trendy-section section-padding3 pb-0 fix">
          <div className="container">
             <div className="row gy-3 d-flex align-items-end">
-               <div className="col-xl-6">
+               <motion.div
+                  initial={{ opacity: 0, y: 25 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5 }}
+                  viewport={{ once: true }}
+                  className="col-xl-6"
+               >
                   <div className="section-title">
                      <div className="subtitle style3">THIS MONTH</div>
                      <h2 className="title style3">Trendy Collection</h2>
                   </div>
-               </div>
-               <div className="col-xl-6">
+               </motion.div>
+               <motion.div
+                  initial={{ opacity: 0, y: 25 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5 }}
+                  viewport={{ once: true }}
+                  className="col-xl-6"
+               >
                   <ul
                      className="nav nav-pills mb-3"
                      id="pills-tab"
@@ -96,7 +109,7 @@ const TrendySection = () => {
                         </button>
                      </li>
                   </ul>
-               </div>
+               </motion.div>
             </div>
             <div className="tab-content" id="pills-tabContent">
                {filter === "all" && (
@@ -107,10 +120,20 @@ const TrendySection = () => {
                      aria-labelledby="pills-all-collection-tab"
                   >
                      <div className="row">
-                        {shuffleArray(trendyProductData).map((item) => (
-                           <div className="col-xl-3 col-md-6" key={item.id}>
+                        {shuffleArray(trendyProductData).map((item, index) => (
+                           <motion.div
+                              initial={{ opacity: 0, y: 25 }}
+                              whileInView={{ opacity: 1, y: 0 }}
+                              transition={{
+                                 duration: 0.75,
+                                 delay: index * 0.1,
+                              }}
+                              viewport={{ once: true }}
+                              className="col-xl-3 col-md-6"
+                              key={item.id}
+                           >
                               <TrendyCard {...item} />
-                           </div>
+                           </motion.div>
                         ))}
                      </div>
                   </div>

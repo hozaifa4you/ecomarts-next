@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Div } from "../animation";
 
 const CTASection = () => {
    return (
@@ -7,7 +8,13 @@ const CTASection = () => {
          <div className="container">
             <div className="cta-wrapper-two">
                <div className="row d-flex align-items-center">
-                  <div className="col-xl-6 order-2 order-xl-1">
+                  <Div
+                     initial={{ opacity: 0 }}
+                     whileInView={{ opacity: 1 }}
+                     transition={{ duration: 0.75 }}
+                     viewport={{ once: true }}
+                     className="col-xl-6 order-2 order-xl-1"
+                  >
                      <div className="cta-content section-padding3">
                         <h2>Shop Faster With EcomArts App</h2>
                         <p>
@@ -34,8 +41,14 @@ const CTASection = () => {
                            </Link>
                         </div>
                      </div>
-                  </div>
-                  <div className="col-xl-6 order-1 order-xl-2 mt-xl-0 mt-5 d-flex justify-content-xl-end">
+                  </Div>
+                  <Div
+                     initial={{ opacity: 0 }}
+                     whileInView={{ opacity: 1 }}
+                     transition={{ duration: 0.75 }}
+                     viewport={{ once: true }}
+                     className="col-xl-6 order-1 order-xl-2 mt-xl-0 mt-5 d-flex justify-content-xl-end"
+                  >
                      <div className="cta-thumb">
                         <Image
                            width={309}
@@ -44,7 +57,7 @@ const CTASection = () => {
                            alt="thumb"
                         />
                      </div>
-                  </div>
+                  </Div>
                </div>
             </div>
          </div>

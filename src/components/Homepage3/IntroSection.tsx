@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Autoplay, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { motion } from "framer-motion";
 
 import { introData, IntroDataType } from "@/utils/data/homepage-3";
 
@@ -51,14 +52,20 @@ const IntroSection = () => {
                      </div>
                      <div className="col-xl-3">
                         <div className="intro-second-thumb">
-                           <div className="thumb">
+                           <motion.div
+                              initial={{ opacity: 0, y: 25 }}
+                              whileInView={{ opacity: 1, y: 0 }}
+                              transition={{ duration: 0.5 }}
+                              viewport={{ once: true }}
+                              className="thumb"
+                           >
                               <Image
                                  width={335}
                                  height={430}
                                  src="/images/intro/intro-thumb3_2.jpg"
                                  alt="Thumb"
                               />
-                           </div>
+                           </motion.div>
                            <div className="content">
                               <h6>Summer Sale</h6>
                               <h4>75% OFF</h4>
@@ -108,4 +115,4 @@ const IntroSlide = ({ description, img, subtitle, title }: IntroDataType) => {
    );
 };
 
-export  {IntroSection};
+export { IntroSection };

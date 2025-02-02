@@ -1,12 +1,19 @@
 import Link from "next/link";
 import React from "react";
+import { Div } from "../animation";
 
 const FeaturesSection = () => {
    return (
       <section className="featured-product-banner-section section-padding3 pb-0 fix">
          <div className="container">
             <div className="row">
-               <div className="col-xl-4 col-md-6">
+               <Div
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ duration: 0.5 }}
+                  viewport={{ once: true }}
+                  className="col-xl-4 col-md-6"
+               >
                   <div className="featured-item-three">
                      <div
                         className="featured-product-banner-three"
@@ -31,8 +38,14 @@ const FeaturesSection = () => {
                         </div>
                      </div>
                   </div>
-               </div>
-               <div className="col-xl-4 col-md-6">
+               </Div>
+               <Div
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ duration: 0.5, delay: 0.1 }}
+                  viewport={{ once: true }}
+                  className="col-xl-4 col-md-6"
+               >
                   <div className="featured-item-three">
                      <div
                         className="featured-product-banner-three"
@@ -55,8 +68,14 @@ const FeaturesSection = () => {
                         </div>
                      </div>
                   </div>
-               </div>
-               <div className="col-xl-4 col-md-6 mx-md-auto mx-lg-start">
+               </Div>
+               <Div
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ duration: 0.5, delay: 0.2 }}
+                  viewport={{ once: true }}
+                  className="col-xl-4 col-md-6 mx-md-auto mx-lg-start"
+               >
                   <div className="featured-item-three">
                      <div
                         className="featured-product-banner-three"
@@ -79,7 +98,7 @@ const FeaturesSection = () => {
                         </div>
                      </div>
                   </div>
-               </div>
+               </Div>
             </div>
          </div>
       </section>

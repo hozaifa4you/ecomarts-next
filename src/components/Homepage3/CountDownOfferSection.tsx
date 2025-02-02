@@ -1,6 +1,27 @@
+"use client";
 import Link from "next/link";
+import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
+import { calculateTimeLeft, TimeLeft } from "@/utils/utils";
 
 const CountDownOfferSection = () => {
+   const TARGET_DATE = new Date();
+   TARGET_DATE.setDate(TARGET_DATE.getDate() + 3);
+   const TARGET_DATE_STRING =
+      TARGET_DATE.toISOString().split("T")[0] + "T23:59:59";
+
+   const [timeLeft, setTimeLeft] = useState<TimeLeft>(
+      calculateTimeLeft(TARGET_DATE_STRING)
+   );
+
+   useEffect(() => {
+      const timer = setTimeout(() => {
+         setTimeLeft(calculateTimeLeft(TARGET_DATE_STRING));
+      }, 1000);
+
+      return () => clearTimeout(timer);
+   });
+
    return (
       <section className="offer-timer-section section-padding3 pb-0 fix">
          <div
@@ -12,43 +33,79 @@ const CountDownOfferSection = () => {
             <div className="container">
                <div className="row">
                   <div className="offer-timer-content">
-                     <div className="section-title text-center mb-50">
+                     <motion.div
+                        initial={{ opacity: 0, y: 25 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5 }}
+                        viewport={{ once: true }}
+                        className="section-title text-center mb-50"
+                     >
                         <div className="subtitle style3">THIS WEEK</div>
                         <h2 className="title style3">Weekly Best Deals</h2>
-                     </div>
+                     </motion.div>
 
                      <div className="timer-box">
-                        <div className="box">
+                        <motion.div
+                           initial={{ opacity: 0, y: 25 }}
+                           whileInView={{ opacity: 1, y: 0 }}
+                           transition={{ duration: 0.5 }}
+                           viewport={{ once: true }}
+                           className="box"
+                        >
                            <h5 className="number" id="days">
-                              28
+                              {timeLeft.days}
                            </h5>
                            <p className="text">days</p>
-                        </div>
-                        <div className="box">
+                        </motion.div>
+                        <motion.div
+                           initial={{ opacity: 0, y: 25 }}
+                           whileInView={{ opacity: 1, y: 0 }}
+                           transition={{ duration: 0.5, delay: 0.05 }}
+                           viewport={{ once: true }}
+                           className="box"
+                        >
                            <h5 className="number" id="hours">
-                              22
+                              {timeLeft.hours}
                            </h5>
                            <p className="text">hrs</p>
-                        </div>
-                        <div className="box">
+                        </motion.div>
+                        <motion.div
+                           initial={{ opacity: 0, y: 25 }}
+                           whileInView={{ opacity: 1, y: 0 }}
+                           transition={{ duration: 0.5, delay: 0.1 }}
+                           viewport={{ once: true }}
+                           className="box"
+                        >
                            <h5 className="number" id="minutes">
-                              17
+                              {timeLeft.minutes}
                            </h5>
                            <p className="text">mins</p>
-                        </div>
-                        <div className="box">
+                        </motion.div>
+                        <motion.div
+                           initial={{ opacity: 0, y: 25 }}
+                           whileInView={{ opacity: 1, y: 0 }}
+                           transition={{ duration: 0.5, delay: 0.15 }}
+                           viewport={{ once: true }}
+                           className="box"
+                        >
                            <h5 className="number" id="seconds">
-                              48
+                              {timeLeft.seconds}
                            </h5>
                            <p className="text">secs</p>
-                        </div>
+                        </motion.div>
                      </div>
 
-                     <div className="btn-wrapper d-flex align-items-center justify-content-center">
+                     <motion.div
+                        initial={{ opacity: 0, y: 25 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: 0.2 }}
+                        viewport={{ once: true }}
+                        className="btn-wrapper d-flex align-items-center justify-content-center"
+                     >
                         <Link className="theme-btn style4" href="/contact">
                            Buy Now
                         </Link>
-                     </div>
+                     </motion.div>
                   </div>
                </div>
             </div>

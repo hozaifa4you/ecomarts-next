@@ -1,11 +1,18 @@
 import Image from "next/image";
+import { Div } from "../animation";
 
 const FeaturedProductSection3 = () => {
    return (
       <section className="feature-section section-padding3 fix">
          <div className="container">
             <div className="row g-4">
-               <div className="col-xl-3 col-md-6">
+               <Div
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ duration: 0.75 }}
+                  viewport={{ once: true }}
+                  className="col-xl-3 col-md-6"
+               >
                   <div className="feature-box-item-three">
                      <div className="feature-box-item-three__icon">
                         <Image
@@ -22,8 +29,14 @@ const FeaturedProductSection3 = () => {
                         </p>
                      </div>
                   </div>
-               </div>
-               <div className="col-xl-3 col-md-6">
+               </Div>
+               <Div
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ duration: 0.75, delay: 0.1 }}
+                  viewport={{ once: true }}
+                  className="col-xl-3 col-md-6"
+               >
                   <div className="feature-box-item-three">
                      <div className="feature-box-item-three__icon">
                         <Image
@@ -40,8 +53,14 @@ const FeaturedProductSection3 = () => {
                         </p>
                      </div>
                   </div>
-               </div>
-               <div className="col-xl-3 col-md-6">
+               </Div>
+               <Div
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ duration: 0.75, delay: 0.2 }}
+                  viewport={{ once: true }}
+                  className="col-xl-3 col-md-6"
+               >
                   <div className="feature-box-item-three">
                      <div className="feature-box-item-three__icon">
                         <Image
@@ -58,8 +77,14 @@ const FeaturedProductSection3 = () => {
                         </p>
                      </div>
                   </div>
-               </div>
-               <div className="col-xl-3 col-md-6">
+               </Div>
+               <Div
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ duration: 0.5, delay: 0.3 }}
+                  viewport={{ once: true }}
+                  className="col-xl-3 col-md-6"
+               >
                   <div className="feature-box-item-three">
                      <div className="feature-box-item-three__icon">
                         <Image
@@ -76,7 +101,7 @@ const FeaturedProductSection3 = () => {
                         </p>
                      </div>
                   </div>
-               </div>
+               </Div>
             </div>
          </div>
       </section>
