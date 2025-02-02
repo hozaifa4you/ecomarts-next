@@ -1,8 +1,29 @@
+"use client";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
 
-const CountDownOffer = () => {
+import { Div } from "@/components/animation";
+import { calculateTimeLeft, TimeLeft } from "@/utils/utils";
+
+const CountDownOfferSection = () => {
+   const TARGET_DATE = new Date();
+   TARGET_DATE.setDate(TARGET_DATE.getDate() + 3);
+   const TARGET_DATE_STRING =
+      TARGET_DATE.toISOString().split("T")[0] + "T23:59:59";
+
+   const [timeLeft, setTimeLeft] = useState<TimeLeft>(
+      calculateTimeLeft(TARGET_DATE_STRING)
+   );
+
+   useEffect(() => {
+      const timer = setTimeout(() => {
+         setTimeLeft(calculateTimeLeft(TARGET_DATE_STRING));
+      }, 1000);
+
+      return () => clearTimeout(timer);
+   });
+
    return (
       <section className="offer-section fix bg-color7">
          <div className="offer-container-wrapper style2">
@@ -10,17 +31,29 @@ const CountDownOffer = () => {
                <div className="offer-wrapper style2">
                   <div className="row d-flex align-items-center gx-60 gy-5 gy-lg-0">
                      <div className="col-xl-7">
-                        <div className="thumb">
+                        <Div
+                           initial={{ opacity: 0 }}
+                           whileInView={{ opacity: 1 }}
+                           transition={{ duration: 0.75 }}
+                           viewport={{ once: true }}
+                           className="thumb"
+                        >
                            <Image
                               width={850}
                               height={560}
                               src="/images/offer/offerThumb2_1.png"
                               alt="thumb"
                            />
-                        </div>
+                        </Div>
                      </div>
                      <div className="col-xl-5">
-                        <div className="offer-content">
+                        <Div
+                           initial={{ opacity: 0 }}
+                           whileInView={{ opacity: 1 }}
+                           transition={{ duration: 0.75 }}
+                           viewport={{ once: true }}
+                           className="offer-content"
+                        >
                            <h6>Clearing Sale</h6>
                            <h2>60% sale on selected products</h2>
                            <p>
@@ -32,25 +65,25 @@ const CountDownOffer = () => {
                            <div className="timer-box2">
                               <div className="box">
                                  <div className="number" id="days">
-                                    15
+                                    {timeLeft.days}
                                  </div>
                                  <div className="text">Day</div>
                               </div>
                               <div className="box">
                                  <div className="number" id="hours">
-                                    59
+                                    {timeLeft.hours}
                                  </div>
                                  <div className="text">Hour</div>
                               </div>
                               <div className="box">
                                  <div className="number" id="minutes">
-                                    45
+                                    {timeLeft.minutes}
                                  </div>
                                  <div className="text">Min</div>
                               </div>
                               <div className="box">
                                  <div className="number" id="seconds">
-                                    49
+                                    {timeLeft.seconds}
                                  </div>
                                  <div className="text">Sec</div>
                               </div>
@@ -67,7 +100,7 @@ const CountDownOffer = () => {
                               <span className="date">December 11, 2024</span>{" "}
                               HURRY UP!
                            </h6>
-                        </div>
+                        </Div>
                      </div>
                   </div>
                </div>
@@ -77,4 +110,4 @@ const CountDownOffer = () => {
    );
 };
 
-export { CountDownOffer };
+export { CountDownOfferSection };

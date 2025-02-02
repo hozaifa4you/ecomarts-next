@@ -5,6 +5,7 @@ import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import { newItemData, NewItemDataType } from "@/utils/data/homepage-2";
+import { Div } from "../animation";
 
 const NewItemsSection = () => {
    return (
@@ -12,21 +13,33 @@ const NewItemsSection = () => {
          <div className="feature-shop-wrapper">
             <div className="row align-items-center">
                <div className="col-xl-6">
-                  <div className="feature-shop-thumb">
+                  <Div
+                     initial={{ opacity: 0 }}
+                     whileInView={{ opacity: 1 }}
+                     transition={{ duration: 0.75 }}
+                     viewport={{ once: true }}
+                     className="feature-shop-thumb"
+                  >
                      <Image
                         width={940}
                         height={770}
                         src="/images/feature-shop.jpg"
                         alt="img"
                      />
-                  </div>
+                  </Div>
                </div>
                <div className="col-xl-6">
                   <div className="feature-shop-wrapper mt-4 mt-lg-0">
-                     <div className="section-title mb-40">
+                     <Div
+                        initial={{ opacity: 0, y: 25 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5 }}
+                        viewport={{ once: true }}
+                        className="section-title mb-40"
+                     >
                         <div className="subtitle style1">New Products</div>
                         <h3 className="title text-white">Meet New Arrivals</h3>
-                     </div>
+                     </Div>
 
                      <Swiper
                         slidesPerView={1}

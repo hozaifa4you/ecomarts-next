@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { offerData, type OfferDataType } from "@/utils/data/homepage-2";
-import { MotionSection } from "../animation";
+import { Div, MotionSection } from "../animation";
 
 const OfferSection = () => {
    return (
@@ -15,12 +15,24 @@ const OfferSection = () => {
          <div className="container">
             <div className="offer-card-items-fashon-two">
                <div className="row g-4">
-                  <div className="col-xl-6 col-lg-6 col-md-6">
+                  <Div
+                     initial={{ opacity: 0 }}
+                     whileInView={{ opacity: 1 }}
+                     transition={{ duration: 0.75 }}
+                     viewport={{ once: true }}
+                     className="col-xl-6 col-lg-6 col-md-6"
+                  >
                      {offerData.map((offer) => (
                         <OfferCard key={offer.id} {...offer} />
                      ))}
-                  </div>
-                  <div className="col-xl-6 col-lg-6 col-md-6">
+                  </Div>
+                  <Div
+                     initial={{ opacity: 0 }}
+                     whileInView={{ opacity: 1 }}
+                     transition={{ duration: 0.75 }}
+                     viewport={{ once: true }}
+                     className="col-xl-6 col-lg-6 col-md-6"
+                  >
                      <div className="offer-card-items-fashon-two2">
                         <div className="offer-card-items-fashon-two2__thumb">
                            <Image
@@ -51,7 +63,7 @@ const OfferSection = () => {
                            </div>
                         </div>
                      </div>
-                  </div>
+                  </Div>
                </div>
             </div>
          </div>

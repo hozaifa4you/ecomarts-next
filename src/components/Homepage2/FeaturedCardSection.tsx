@@ -1,14 +1,21 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { Div } from "../animation";
 
-const FeaturedCards = () => {
+const FeaturedCardSection = () => {
    return (
       <section className="featured-item-section section-padding2 fix">
          <div className="container">
             <div className="featured-item-wrapper style1">
                <div className="row gy-4">
-                  <div className="col-xl-4 col-md-6">
+                  <Div
+                     initial={{ opacity: 0 }}
+                     whileInView={{ opacity: 1 }}
+                     transition={{ duration: 0.75 }}
+                     viewport={{ once: true }}
+                     className="col-xl-4 col-md-6"
+                  >
                      <div className="featured_item_two">
                         <div className="featured_item_two__content">
                            <span className="featured_item_two__content--subtitle">
@@ -39,8 +46,14 @@ const FeaturedCards = () => {
                            <div className="featured_item_two__thumb--shape"></div>
                         </div>
                      </div>
-                  </div>
-                  <div className="col-xl-4 col-md-6">
+                  </Div>
+                  <Div
+                     initial={{ opacity: 0 }}
+                     whileInView={{ opacity: 1 }}
+                     transition={{ duration: 0.75 }}
+                     viewport={{ once: true }}
+                     className="col-xl-4 col-md-6"
+                  >
                      <div className="featured_item_two bg-orange2">
                         <div className="featured_item_two__content">
                            <span className="featured_item_two__content--subtitle">
@@ -71,8 +84,14 @@ const FeaturedCards = () => {
                            <div className="featured_item_two__thumb--shape"></div>
                         </div>
                      </div>
-                  </div>
-                  <div className="col-xl-4 col-md-6 mx-md-auto mx-lg-start">
+                  </Div>
+                  <Div
+                     initial={{ opacity: 0 }}
+                     whileInView={{ opacity: 1 }}
+                     transition={{ duration: 0.75 }}
+                     viewport={{ once: true }}
+                     className="col-xl-4 col-md-6 mx-md-auto mx-lg-start"
+                  >
                      <div className="featured_item_two bg-theme6">
                         <div className="featured_item_two__content">
                            <span className="featured_item_two__content--subtitle">
@@ -103,7 +122,7 @@ const FeaturedCards = () => {
                            <div className="featured_item_two__thumb--shape"></div>
                         </div>
                      </div>
-                  </div>
+                  </Div>
                </div>
             </div>
          </div>
@@ -111,4 +130,4 @@ const FeaturedCards = () => {
    );
 };
 
-export { FeaturedCards };
+export { FeaturedCardSection };

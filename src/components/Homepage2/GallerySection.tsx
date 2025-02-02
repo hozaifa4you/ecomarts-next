@@ -4,16 +4,23 @@ import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import { GalleryData } from "@/utils/data/homepage-2";
+import { Div } from "../animation";
 
 const GallerySection = () => {
    return (
       <section className="gallery-section fix">
          <div className="container">
             <div className="gallery-wrapper-two">
-               <div className="section-title text-center mb-50">
+               <Div
+                  initial={{ opacity: 0, y: 25 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5 }}
+                  viewport={{ once: true }}
+                  className="section-title text-center mb-50"
+               >
                   <div className="subtitle style2">Top Rated</div>
                   <h3 className="title">Incredible Products</h3>
-               </div>
+               </Div>
 
                <div className="slider-area gallerySliderTwo">
                   <Swiper
@@ -31,7 +38,7 @@ const GallerySection = () => {
                   >
                      {GalleryData.map((item, index) => (
                         <SwiperSlide key={index}>
-                           <GalleryCard img={item} />
+                           <GalleryCard img={item} index={index} />
                         </SwiperSlide>
                      ))}
                   </Swiper>
@@ -42,14 +49,20 @@ const GallerySection = () => {
    );
 };
 
-const GalleryCard = ({ img }: { img: string }) => {
+const GalleryCard = ({ img, index }: { img: string; index: number }) => {
    return (
-      <div className="gallery-thumb">
+      <Div
+         initial={{ opacity: 0, y: 25 }}
+         whileInView={{ opacity: 1, y: 0 }}
+         transition={{ duration: 0.5, delay: 0.1 * index }}
+         viewport={{ once: true }}
+         className="gallery-thumb"
+      >
          <Image width={262} height={340} src={img} alt="thumb" />
          <div className="icon">
             <i className="fa-brands fa-instagram"></i>
          </div>
-      </div>
+      </Div>
    );
 };
 

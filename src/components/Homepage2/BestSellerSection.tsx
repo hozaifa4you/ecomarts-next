@@ -1,8 +1,10 @@
 "use client";
-import { bestSellerData, BestSellerDataType } from "@/utils/data/homepage-2";
+import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react";
+import { motion } from "framer-motion";
+
+import { bestSellerData, BestSellerDataType } from "@/utils/data/homepage-2";
 
 const BestSellerSection = () => {
    const [filter, setFilter] = useState<
@@ -23,12 +25,24 @@ const BestSellerSection = () => {
          <div className="best-seller-product-items-container-wrapper style4">
             <div className="container">
                <div className="best-seller-product-items-wrapper style1 text-center mb-30">
-                  <div className="section-title">
+                  <motion.div
+                     initial={{ opacity: 0, y: 25 }}
+                     whileInView={{ opacity: 1, y: 0 }}
+                     transition={{ duration: 0.5 }}
+                     viewport={{ once: true }}
+                     className="section-title"
+                  >
                      <div className="subtitle style1">Trendy Items</div>
                      <h3 className="title">our trendy fashion products</h3>
-                  </div>
+                  </motion.div>
                </div>
-               <div className="feature-flex-tab-wrapper">
+               <motion.div
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ duration: 0.75 }}
+                  viewport={{ once: true }}
+                  className="feature-flex-tab-wrapper"
+               >
                   <div className="feature-tab-btn-wrapper">
                      <ul
                         className="nav nav-pills"
@@ -140,7 +154,7 @@ const BestSellerSection = () => {
                         </div>
                      </div>
                   </div>
-               </div>
+               </motion.div>
 
                <div className="tab-content" id="pills-tabContent">
                   {filter === "all" && (
@@ -151,14 +165,23 @@ const BestSellerSection = () => {
                         aria-labelledby="pills-one-tab"
                      >
                         <div className="row g-4">
-                           {shuffleArray(bestSellerData).map((product) => (
-                              <div
-                                 key={product.id}
-                                 className="col-xl-3 col-md-6"
-                              >
-                                 <BestSellerCard {...product} />
-                              </div>
-                           ))}
+                           {shuffleArray(bestSellerData).map(
+                              (product, index) => (
+                                 <motion.div
+                                    initial={{ opacity: 0, y: 15 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    transition={{
+                                       duration: 0.75,
+                                       delay: index * 0.1,
+                                    }}
+                                    viewport={{ once: true }}
+                                    key={product.id}
+                                    className="col-xl-3 col-md-6"
+                                 >
+                                    <BestSellerCard {...product} />
+                                 </motion.div>
+                              )
+                           )}
                         </div>
                      </div>
                   )}
@@ -272,6 +295,7 @@ const BestSellerCard = ({
    offer,
    offerPrice,
    originalPrice,
+   w,
 }: BestSellerDataType) => {
    return (
       <div className="best-seller-product-items-two">
@@ -288,7 +312,7 @@ const BestSellerCard = ({
          </div>
          <div className="best-seller-product-items-two__badge1">{offer}</div>
          <div className="best-seller-product-items-two__thumb">
-            <Image width={140} height={255} src={img} alt="thumb" />
+            <Image width={w} height={255} src={img} alt="thumb" />
          </div>
          <div className="best-seller-product-items-two__content">
             <div className="best-seller-product-items-two__details">

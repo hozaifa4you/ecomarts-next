@@ -1,16 +1,24 @@
 import Image from "next/image";
 
 import { ShopFeatureDataType, shopFeatureData } from "@/utils/data/homepage-2";
+import { Div } from "@/components/animation";
 
 const ShopFeatureSection = () => {
    return (
       <section className="feature-section section-padding2 fix">
          <div className="container">
             <div className="row g-5">
-               {shopFeatureData.map((feature) => (
-                  <div className="col-xl-3 col-md-6" key={feature.id}>
+               {shopFeatureData.map((feature, index) => (
+                  <Div
+                     initial={{ opacity: 0 }}
+                     whileInView={{ opacity: 1 }}
+                     transition={{ duration: 0.75, delay: 0.1 * index }}
+                     viewport={{ once: true }}
+                     className="col-xl-3 col-md-6"
+                     key={feature.id}
+                  >
                      <ShopFeatureCard {...feature} />
-                  </div>
+                  </Div>
                ))}
             </div>
          </div>

@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper/modules";
+import { motion } from "framer-motion";
 
 import { packageShopData, PackageShopDataType } from "@/utils/data/homepage-2";
 
@@ -13,10 +14,16 @@ const PackageShopSection = () => {
             <div className="section-top-wrapper mb-20">
                <div className="row gy-4 pb-3">
                   <div className="col-md-6">
-                     <div className="section-title">
+                     <motion.div
+                        initial={{ opacity: 0, y: 25 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5 }}
+                        viewport={{ once: true }}
+                        className="section-title"
+                     >
                         <div className="subtitle style1">Package and save</div>
                         <h3 className="title">Shop This Look</h3>
-                     </div>
+                     </motion.div>
                   </div>
                   <div className="col-md-6 d-flex align-items-center justify-content-end">
                      <Link
@@ -30,17 +37,35 @@ const PackageShopSection = () => {
             </div>
 
             <div className="row gy-30 gx-30">
-               <div className="col-xxl-3 col-md-6">
+               <motion.div
+                  className="col-xxl-3 col-md-6"
+                  initial={{ opacity: 0, y: 25 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5 }}
+                  viewport={{ once: true }}
+               >
                   {packageShopData.slice(0, 4).map((item) => (
                      <PackageCard key={item.id} {...item} />
                   ))}
-               </div>
-               <div className="col-xxl-3 col-md-6">
+               </motion.div>
+               <motion.div
+                  initial={{ opacity: 0, y: 25 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.15 }}
+                  viewport={{ once: true }}
+                  className="col-xxl-3 col-md-6"
+               >
                   {packageShopData.slice(4, 8).map((item) => (
                      <PackageCard key={item.id} {...item} />
                   ))}
-               </div>
-               <div className="col-xxl-6 col-md-12">
+               </motion.div>
+               <motion.div
+                  initial={{ opacity: 0, y: 25 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.2 }}
+                  viewport={{ once: true }}
+                  className="col-xxl-6 col-md-12"
+               >
                   <div className="package-shop-preview">
                      <Swiper
                         loop
@@ -81,7 +106,7 @@ const PackageShopSection = () => {
                         </button>
                      </div>
                   </div>
-               </div>
+               </motion.div>
             </div>
          </div>
       </section>

@@ -1,10 +1,11 @@
+import Image from "next/image";
+import Link from "next/link";
+
 import {
    featuredProductData,
    FeaturedProductDataType,
 } from "@/utils/data/homepage-2";
-import Image from "next/image";
-import Link from "next/link";
-import React from "react";
+import { Div } from "../animation";
 
 const FeaturedProductSection = () => {
    return (
@@ -12,17 +13,30 @@ const FeaturedProductSection = () => {
          <div className="feature-product-items-container-wrapper style2">
             <div className="container">
                <div className="top-deals-wrapper style1 text-center mb-50">
-                  <div className="section-title">
+                  <Div
+                     initial={{ opacity: 0, y: 25 }}
+                     whileInView={{ opacity: 1, y: 0 }}
+                     transition={{ duration: 0.5 }}
+                     viewport={{ once: true }}
+                     className="section-title"
+                  >
                      <div className="subtitle style2">Featured Items</div>
                      <h3 className="title">our featured products</h3>
-                  </div>
+                  </Div>
                </div>
 
                <div className="row g-4">
-                  {featuredProductData.map((product) => (
-                     <div className="col-xl-3 col-md-6" key={product.id}>
+                  {featuredProductData.map((product, index) => (
+                     <Div
+                        initial={{ opacity: 0, y: -25 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: index * 0.1 }}
+                        viewport={{ once: true }}
+                        className="col-xl-3 col-md-6"
+                        key={product.id}
+                     >
                         <FeaturedProductCard {...product} />
-                     </div>
+                     </Div>
                   ))}
                </div>
             </div>

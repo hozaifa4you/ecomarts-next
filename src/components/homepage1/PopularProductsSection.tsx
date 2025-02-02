@@ -2,14 +2,14 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 
+import { MotionDiv } from "@/components/animation";
+import { calculateTimeLeft, TimeLeft } from "@/utils/utils";
 import {
    popularProductsData,
    popularProductsData2,
    PopularProductType,
    PopularProductType2,
 } from "@/utils/data/homepage-1";
-import { MotionDiv } from "../animation";
-import { calculateTimeLeft, TimeLeft } from "@/utils/utils";
 
 const PopularProductsSection = () => {
    const TARGET_DATE = new Date();

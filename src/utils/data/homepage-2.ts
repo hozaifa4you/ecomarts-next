@@ -24,6 +24,7 @@ const bestSellerData = [
       name: "High-Neck puff jacket",
       originalPrice: 99.0,
       offerPrice: 79.0,
+      w: 138,
    },
    {
       id: 2,
@@ -33,6 +34,7 @@ const bestSellerData = [
       name: "Relax Fit Leggings",
       originalPrice: 54.0,
       offerPrice: 30.99,
+      w: 107,
    },
    {
       id: 3,
@@ -42,6 +44,7 @@ const bestSellerData = [
       name: "Overshirt With Pocket",
       originalPrice: 13.0,
       offerPrice: 22.0,
+      w: 198,
    },
    {
       id: 4,
@@ -51,6 +54,7 @@ const bestSellerData = [
       name: "Overshirt With Pocket",
       originalPrice: 13.0,
       offerPrice: 22.0,
+      w: 115,
    },
    {
       id: 5,
@@ -60,6 +64,7 @@ const bestSellerData = [
       name: "Rose Printed Hoodie",
       originalPrice: 99.99,
       offerPrice: 88.88,
+      w: 138,
    },
    {
       id: 6,
@@ -69,6 +74,7 @@ const bestSellerData = [
       name: "Overshirt With Pocket",
       originalPrice: 44.99,
       offerPrice: 22.88,
+      w: 169,
    },
    {
       id: 7,
@@ -78,6 +84,7 @@ const bestSellerData = [
       name: "Customize Formal Shirt",
       originalPrice: 50.0,
       offerPrice: 25.0,
+      w: 212,
    },
    {
       id: 8,
@@ -87,6 +94,7 @@ const bestSellerData = [
       name: "Rose Printed Hoodie",
       originalPrice: 74.0,
       offerPrice: 70.0,
+      w: 127,
    },
 ];
 
@@ -314,7 +322,7 @@ const shopFeatureData = [
       id: 3,
       image: { img: "/images/icon/featureIcon4_3.svg", width: 46, height: 50 },
       title: "Free Shipping",
-      feature: "Order over 150 $",
+      feature: "Order over 150$",
    },
    {
       id: 4,

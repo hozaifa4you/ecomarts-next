@@ -15,7 +15,7 @@ const Footer = () => {
                      data-wow-delay=".2s"
                   >
                      <div className="icon">
-                        <i className="icon-footer-telephone"></i>
+                        <i className="fa-solid fa-phone-volume"></i>
                      </div>
                      <div className="content">
                         <p>Call Us 7/24</p>

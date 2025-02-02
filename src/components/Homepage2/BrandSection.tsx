@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Div } from "../animation";
 
 const BrandSection = () => {
    return (
@@ -21,54 +22,84 @@ const BrandSection = () => {
                   modules={[Autoplay]}
                >
                   <SwiperSlide>
-                     <div className="brand-img-two">
+                     <Div
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        transition={{ duration: 0.75 }}
+                        viewport={{ once: true }}
+                        className="brand-img-two"
+                     >
                         <Image
                            width={195}
                            height={30}
                            src="/images/brand-logo/brand-logo2_1.png"
                            alt="brand-logo"
                         />
-                     </div>
+                     </Div>
                   </SwiperSlide>
                   <SwiperSlide>
-                     <div className="brand-img-two">
+                     <Div
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        transition={{ duration: 0.75, delay: 0.1 }}
+                        viewport={{ once: true }}
+                        className="brand-img-two"
+                     >
                         <Image
                            width={195}
                            height={30}
                            src="/images/brand-logo/brand-logo2_2.png"
                            alt="brand-logo"
                         />
-                     </div>
+                     </Div>
                   </SwiperSlide>
                   <SwiperSlide>
-                     <div className="brand-img-two">
+                     <Div
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        transition={{ duration: 0.75, delay: 0.15 }}
+                        viewport={{ once: true }}
+                        className="brand-img-two"
+                     >
                         <Image
                            width={195}
                            height={30}
                            src="/images/brand-logo/brand-logo2_3.png"
                            alt="brand-logo"
                         />
-                     </div>
+                     </Div>
                   </SwiperSlide>
                   <SwiperSlide>
-                     <div className="brand-img-two">
+                     <Div
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        transition={{ duration: 0.75, delay: 0.2 }}
+                        viewport={{ once: true }}
+                        className="brand-img-two"
+                     >
                         <Image
                            width={195}
                            height={30}
                            src="/images/brand-logo/brand-logo2_4.png"
                            alt="brand-logo"
                         />
-                     </div>
+                     </Div>
                   </SwiperSlide>
                   <SwiperSlide>
-                     <div className="brand-img-two">
+                     <Div
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        transition={{ duration: 0.75, delay: 0.25 }}
+                        viewport={{ once: true }}
+                        className="brand-img-two"
+                     >
                         <Image
                            width={195}
                            height={30}
                            src="/images/brand-logo/brand-logo2_5.png"
                            alt="brand-logo"
                         />
-                     </div>
+                     </Div>
                   </SwiperSlide>
                   <SwiperSlide>
                      <div className="brand-img-two">
