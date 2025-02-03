@@ -2,20 +2,31 @@
 import Image from "next/image";
 import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { motion } from "framer-motion";
 
 import { incredibleProductsData } from "@/utils/data/homepage-4";
+import { titleEffect } from "@/utils/utils";
 
 const IncredibleProductsSection = () => {
    return (
       <section className="gallery-section fix">
          <div className="container">
             <div className="gallery-wrapper-four">
-               <div className="section-title text-center mb-40">
+               <motion.div
+                  {...titleEffect}
+                  className="section-title text-center mb-40"
+               >
                   <div className="subtitle style4">Top Rated</div>
                   <h2 className="title">Incredible Products</h2>
-               </div>
+               </motion.div>
 
-               <div className="slider-area gallerySliderFour">
+               <motion.div
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ duration: 0.75 }}
+                  viewport={{ once: true }}
+                  className="slider-area gallerySliderFour"
+               >
                   <Swiper
                      loop
                      autoplay
@@ -28,13 +39,13 @@ const IncredibleProductsSection = () => {
                      }}
                      modules={[Autoplay]}
                   >
-                     {incredibleProductsData.map((img) => (
-                        <SwiperSlide key={img}>
+                     {incredibleProductsData.map((img, index) => (
+                        <SwiperSlide key={index}>
                            <IncredibleProductCard img={img} />
                         </SwiperSlide>
                      ))}
                   </Swiper>
-               </div>
+               </motion.div>
             </div>
          </div>
       </section>

@@ -45,4 +45,11 @@ const calculateTimeLeft = (targetDate: string): TimeLeft => {
    return timeLeft;
 };
 
-export { shuffleArray, calculateTimeLeft };
+const titleEffect = {
+   initial: { opacity: 0, y: 25 },
+   whileInView: { opacity: 1, y: 0 },
+   transition: { duration: 0.5 },
+   viewport: { once: true },
+};
+
+export { shuffleArray, calculateTimeLeft, titleEffect };

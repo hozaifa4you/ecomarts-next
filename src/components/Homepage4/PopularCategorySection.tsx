@@ -1,16 +1,21 @@
 "use client";
+import Image from "next/image";
+import { Autoplay } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { motion } from "framer-motion";
+
 import {
    popularCategoryDate,
    PopularCategoryDateType,
 } from "@/utils/data/homepage-4";
-import Image from "next/image";
-import React from "react";
-import { Autoplay } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
 
 const PopularCategorySection = () => {
    return (
-      <section
+      <motion.section
+         initial={{ opacity: 0, y: 25 }}
+         whileInView={{ opacity: 1, y: 0 }}
+         transition={{ duration: 0.5 }}
+         viewport={{ once: true }}
          className="popular-category-section section-padding4 fix"
          id="category"
       >
@@ -50,7 +55,7 @@ const PopularCategorySection = () => {
                </Swiper>
             </div>
          </div>
-      </section>
+      </motion.section>
    );
 };
 

@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
+import { motion } from "framer-motion";
 
 import { brandData } from "@/utils/data/homepage-4";
 
@@ -9,7 +10,13 @@ const BrandSection = () => {
    return (
       <div className="brand-logo-slider-section">
          <div className="container">
-            <div className="brand-logo-slider-wrapper-four">
+            <motion.div
+               initial={{ opacity: 0 }}
+               whileInView={{ opacity: 1 }}
+               transition={{ duration: 0.75 }}
+               viewport={{ once: true }}
+               className="brand-logo-slider-wrapper-four"
+            >
                <Swiper
                   loop
                   autoplay
@@ -21,8 +28,8 @@ const BrandSection = () => {
                   }}
                   modules={[Autoplay]}
                >
-                  {brandData.map((brand) => (
-                     <SwiperSlide key={brand}>
+                  {brandData.map((brand, index) => (
+                     <SwiperSlide key={index}>
                         <Image
                            src={brand}
                            width={150}
@@ -32,7 +39,7 @@ const BrandSection = () => {
                      </SwiperSlide>
                   ))}
                </Swiper>
-            </div>
+            </motion.div>
          </div>
       </div>
    );

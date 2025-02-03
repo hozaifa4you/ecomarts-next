@@ -2,16 +2,28 @@
 import Image from "next/image";
 import { Autoplay, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { motion } from "framer-motion";
+
+import { titleEffect } from "@/utils/utils";
 
 const TestimonialSection = () => {
    return (
       <section className="testimonial-section section-padding4 fix">
          <div className="container">
-            <div className="section-title text-center mb-40">
+            <motion.div
+               {...titleEffect}
+               className="section-title text-center mb-40"
+            >
                <div className="subtitle style4">TESTIMONIAL</div>
                <h2 className="title">What Our Clients Say</h2>
-            </div>
-            <div className="slider-area testimonialSliderFour">
+            </motion.div>
+            <motion.div
+               initial={{ opacity: 0, y: 25 }}
+               whileInView={{ opacity: 1, y: 0 }}
+               transition={{ duration: 0.75 }}
+               viewport={{ once: true }}
+               className="slider-area testimonialSliderFour"
+            >
                <Swiper
                   loop
                   autoplay
@@ -43,7 +55,7 @@ const TestimonialSection = () => {
                      <i className="fa-sharp fa-light fa-arrow-right"></i>
                   </button>
                </div>
-            </div>
+            </motion.div>
          </div>
       </section>
    );

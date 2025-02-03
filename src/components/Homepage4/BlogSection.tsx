@@ -1,5 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Div } from "../animation";
+import { titleEffect } from "@/utils/utils";
 
 const BlogSection = () => {
    return (
@@ -7,15 +9,24 @@ const BlogSection = () => {
          <div className="container">
             <div className="row gy-4 d-flex align-items-center justify-content-center">
                <div className="col-xl-6">
-                  <div className="section-title text-center mb-40">
+                  <Div
+                     {...titleEffect}
+                     className="section-title text-center mb-40"
+                  >
                      <div className="subtitle style4">Latest News</div>
                      <h2 className="title">From the blog</h2>
-                  </div>
+                  </Div>
                </div>
             </div>
 
             <div className="row gy-4 gx-30">
-               <div className="col-xl-4 col-md-6">
+               <Div
+                  initial={{ opacity: 0, y: 25 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5 }}
+                  viewport={{ once: true }}
+                  className="col-xl-4 col-md-6"
+               >
                   <div className="blog-card-items-four">
                      <div className="blog-card-items-four__thumb">
                         <Image
@@ -57,8 +68,14 @@ const BlogSection = () => {
                         </Link>
                      </div>
                   </div>
-               </div>
-               <div className="col-xl-4 col-md-6">
+               </Div>
+               <Div
+                  initial={{ opacity: 0, y: -25 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5 }}
+                  viewport={{ once: true }}
+                  className="col-xl-4 col-md-6"
+               >
                   <div className="blog-card-items-four">
                      <div className="blog-card-items-four__content mt-0">
                         <div className="meta">
@@ -100,8 +117,14 @@ const BlogSection = () => {
                         />
                      </div>
                   </div>
-               </div>
-               <div className="col-xl-4 col-md-6">
+               </Div>
+               <Div
+                  initial={{ opacity: 0, y: 25 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5 }}
+                  viewport={{ once: true }}
+                  className="col-xl-4 col-md-6"
+               >
                   <div className="blog-card-items-four">
                      <div className="blog-card-items-four__thumb">
                         <Image
@@ -143,7 +166,7 @@ const BlogSection = () => {
                         </Link>
                      </div>
                   </div>
-               </div>
+               </Div>
             </div>
          </div>
       </section>

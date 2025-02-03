@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Autoplay, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { motion } from "framer-motion";
 
 import { introData, IntroDataType } from "@/utils/data/homepage-4";
 
@@ -16,7 +17,13 @@ const IntroSection = () => {
             <div className="container">
                <div className="intro-wrapper style4">
                   <div className="row">
-                     <div className="col-xl-4">
+                     <motion.div
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        transition={{ duration: 0.5 }}
+                        viewport={{ once: true }}
+                        className="col-xl-4"
+                     >
                         <div className="intro-content-left">
                            <h3>ecomarts beauty cosmetics</h3>
                            <p>
@@ -39,8 +46,14 @@ const IntroSection = () => {
                               />
                            </div>
                         </div>
-                     </div>
-                     <div className="col-xl-5 col-lg-7 ">
+                     </motion.div>
+                     <motion.div
+                        initial={{ opacity: 0, y: 25 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5 }}
+                        viewport={{ once: true }}
+                        className="col-xl-5 col-lg-7 "
+                     >
                         <div className="intro-middle-thumb-wrapper">
                            <Swiper
                               loop
@@ -71,8 +84,14 @@ const IntroSection = () => {
                               />
                            </div>
                         </div>
-                     </div>
-                     <div className="col-xl-3 col-lg-5">
+                     </motion.div>
+                     <motion.div
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        transition={{ duration: 0.5 }}
+                        viewport={{ once: true }}
+                        className="col-xl-3 col-lg-5"
+                     >
                         <div className="intro-content-right">
                            <h3 className="title">luxurious beauty product</h3>
                            <div className="intro-content-flexbox">
@@ -110,7 +129,7 @@ const IntroSection = () => {
                               </div>
                            </div>
                         </div>
-                     </div>
+                     </motion.div>
                   </div>
                </div>
             </div>

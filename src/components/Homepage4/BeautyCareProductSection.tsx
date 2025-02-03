@@ -5,6 +5,7 @@ import {
    beautyCareProductData,
    BeautyCareProductDataType,
 } from "@/utils/data/homepage-4";
+import { Div } from "../animation";
 
 const BeautyCareProductSection = () => {
    return (
@@ -12,25 +13,44 @@ const BeautyCareProductSection = () => {
          <div className="beauty-care-product-container-wrapper style4">
             <div className="container">
                <div className="row gy-4 d-flex align-items-center mb-40">
-                  <div className="col-xl-6">
+                  <Div
+                     initial={{ opacity: 0, y: 25 }}
+                     whileInView={{ opacity: 1, y: 0 }}
+                     transition={{ duration: 0.5 }}
+                     viewport={{ once: true }}
+                     className="col-xl-6"
+                  >
                      <div className="section-title">
                         <div className="subtitle style4">TOP BRAND</div>
                         <h2 className="title">Beauty Care Products</h2>
                      </div>
-                  </div>
-                  <div className="col-xl-6 d-flex justify-content-md-end">
+                  </Div>
+                  <Div
+                     initial={{ opacity: 0, y: 25 }}
+                     whileInView={{ opacity: 1, y: 0 }}
+                     transition={{ duration: 0.75 }}
+                     viewport={{ once: true }}
+                     className="col-xl-6 d-flex justify-content-md-end"
+                  >
                      <div className="btn-wrapper">
                         <Link className="theme-btn style10" href="#">
                            View All
                         </Link>
                      </div>
-                  </div>
+                  </Div>
                </div>
                <div className="row g-4">
                   {beautyCareProductData.map((product) => (
-                     <div className="col-xl-3 col-md-6" key={product.id}>
+                     <Div
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        transition={{ duration: 0.5, delay: 0.05 * product.id }}
+                        viewport={{ once: true }}
+                        className="col-xl-3 col-md-6"
+                        key={product.id}
+                     >
                         <BeautyCareProductCard {...product} />
-                     </div>
+                     </Div>
                   ))}
                </div>
             </div>

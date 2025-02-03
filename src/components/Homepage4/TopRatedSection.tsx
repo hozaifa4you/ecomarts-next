@@ -5,20 +5,34 @@ import {
    beautyCareProductData,
    BeautyCareProductDataType,
 } from "@/utils/data/homepage-4";
+import { Div } from "../animation";
 
 const TopRatedSection = () => {
    return (
       <section className="top-rated-section section-padding4 fix">
          <div className="container">
-            <div className="section-title text-center mb-40">
+            <Div
+               initial={{ opacity: 0, y: 25 }}
+               whileInView={{ opacity: 1, y: 0 }}
+               transition={{ duration: 0.5 }}
+               viewport={{ once: true }}
+               className="section-title text-center mb-40"
+            >
                <div className="subtitle style4">Top Rated</div>
                <h2 className="title">Incredible Products</h2>
-            </div>
+            </Div>
             <div className="row g-4">
-               {beautyCareProductData.slice(4, 8).map((product) => (
-                  <div className="col-xl-3 col-md-6" key={product.id}>
+               {beautyCareProductData.slice(4, 8).map((product, index) => (
+                  <Div
+                     initial={{ opacity: 0 }}
+                     whileInView={{ opacity: 1 }}
+                     transition={{ duration: 0.5, delay: 0.1 * index }}
+                     viewport={{ once: true }}
+                     className="col-xl-3 col-md-6"
+                     key={product.id}
+                  >
                      <TopRatedCard {...product} />
-                  </div>
+                  </Div>
                ))}
             </div>
          </div>
