@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { ScrollToTop } from "./ScrollToTop";
+import { Div } from "./animation";
 
 const Footer = () => {
    return (
@@ -10,9 +11,16 @@ const Footer = () => {
          <footer className="footer-section bg-title">
             <div className="container">
                <div className="contact-info-area">
-                  <div
-                     className="contact-info-items wow fadeInUp"
-                     data-wow-delay=".2s"
+                  <Div
+                     initial={{ opacity: 0 }}
+                     whileInView={{ opacity: 1 }}
+                     transition={{
+                        duration: 0.5,
+                        ease: "easeOut",
+                        delay: 0.2,
+                     }}
+                     viewport={{ once: true }}
+                     className="contact-info-items"
                   >
                      <div className="icon">
                         <i className="fa-solid fa-phone-volume"></i>
@@ -23,10 +31,17 @@ const Footer = () => {
                            <Link href="tel:+2085550112">+208-555-0112</Link>
                         </h3>
                      </div>
-                  </div>
-                  <div
-                     className="contact-info-items wow fadeInUp"
-                     data-wow-delay=".4s"
+                  </Div>
+                  <Div
+                     className="contact-info-items "
+                     initial={{ opacity: 0 }}
+                     whileInView={{ opacity: 1 }}
+                     transition={{
+                        duration: 0.5,
+                        ease: "easeOut",
+                        delay: 0.4,
+                     }}
+                     viewport={{ once: true }}
                   >
                      <div className="icon">
                         <svg
@@ -58,10 +73,17 @@ const Footer = () => {
                            </Link>
                         </h3>
                      </div>
-                  </div>
-                  <div
-                     className="contact-info-items wow fadeInUp"
-                     data-wow-delay=".6s"
+                  </Div>
+                  <Div
+                     initial={{ opacity: 0 }}
+                     whileInView={{ opacity: 1 }}
+                     transition={{
+                        duration: 0.5,
+                        ease: "easeOut",
+                        delay: 0.6,
+                     }}
+                     viewport={{ once: true }}
+                     className="contact-info-items"
                   >
                      <div className="icon">
                         <svg
@@ -90,10 +112,17 @@ const Footer = () => {
                         <p>Opening Hour</p>
                         <h3>Sunday - Fri: 9 aM - 6 pM</h3>
                      </div>
-                  </div>
-                  <div
-                     className="contact-info-items wow fadeInUp"
-                     data-wow-delay=".8s"
+                  </Div>
+                  <Div
+                     initial={{ opacity: 0 }}
+                     whileInView={{ opacity: 1 }}
+                     transition={{
+                        duration: 0.5,
+                        ease: "easeOut",
+                        delay: 0.8,
+                     }}
+                     viewport={{ once: true }}
+                     className="contact-info-items"
                   >
                      <div className="icon">
                         <svg
@@ -121,15 +150,22 @@ const Footer = () => {
                         <p>Location</p>
                         <h3>4517 Washington ave.</h3>
                      </div>
-                  </div>
+                  </Div>
                </div>
             </div>
             <div className="footer-widgets-wrapper">
                <div className="container">
                   <div className="row">
-                     <div
-                        className="col-xl-3 col-lg-4 col-md-6 wow fadeInUp"
-                        data-wow-delay=".2s"
+                     <Div
+                        initial={{ opacity: 0, y: 50 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{
+                           duration: 0.75,
+                           ease: "easeOut",
+                           delay: 0.2,
+                        }}
+                        viewport={{ once: true }}
+                        className="col-xl-3 col-lg-4 col-md-6 "
                      >
                         <div className="single-footer-widget">
                            <div className="widget-head">
@@ -164,10 +200,17 @@ const Footer = () => {
                               </div>
                            </div>
                         </div>
-                     </div>
-                     <div
-                        className="col-xl-3 col-lg-4 col-md-6 ps-lg-5 wow fadeInUp"
-                        data-wow-delay=".4s"
+                     </Div>
+                     <Div
+                        initial={{ opacity: 0, y: 50 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{
+                           duration: 0.75,
+                           ease: "easeOut",
+                           delay: 0.4,
+                        }}
+                        viewport={{ once: true }}
+                        className="col-xl-3 col-lg-4 col-md-6 ps-lg-5"
                      >
                         <div className="single-footer-widget">
                            <div className="widget-head">
@@ -203,10 +246,17 @@ const Footer = () => {
                               </li>
                            </ul>
                         </div>
-                     </div>
-                     <div
-                        className="col-xl-3 col-lg-4 col-md-6 ps-lg-5 wow fadeInUp"
-                        data-wow-delay=".6s"
+                     </Div>
+                     <Div
+                        initial={{ opacity: 0, y: 50 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{
+                           duration: 0.75,
+                           ease: "easeOut",
+                           delay: 0.6,
+                        }}
+                        viewport={{ once: true }}
+                        className="col-xl-3 col-lg-4 col-md-6 ps-lg-5"
                      >
                         <div className="single-footer-widget">
                            <div className="widget-head">
@@ -239,10 +289,17 @@ const Footer = () => {
                               </li>
                            </ul>
                         </div>
-                     </div>
-                     <div
-                        className="col-xl-3 col-lg-4 col-md-6 wow fadeInUp"
-                        data-wow-delay=".8s"
+                     </Div>
+                     <Div
+                        className="col-xl-3 col-lg-4 col-md-6"
+                        initial={{ opacity: 0, y: 50 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{
+                           duration: 0.75,
+                           ease: "easeOut",
+                           delay: 0.8,
+                        }}
+                        viewport={{ once: true }}
                      >
                         <div className="single-footer-widget">
                            <div className="widget-head">
@@ -268,13 +325,23 @@ const Footer = () => {
                               </div>
                            </div>
                         </div>
-                     </div>
+                     </Div>
                   </div>
                </div>
             </div>
             <div className="footer-bottom">
                <div className="container">
-                  <div className="footer-wrapper d-flex align-items-center justify-content-between">
+                  <Div
+                     initial={{ opacity: 0, y: 20 }}
+                     whileInView={{ opacity: 1, y: 0 }}
+                     transition={{
+                        duration: 0.75,
+                        ease: "easeOut",
+                        delay: 1,
+                     }}
+                     viewport={{ once: true }}
+                     className="footer-wrapper d-flex align-items-center justify-content-between"
+                  >
                      <p className="wow fadeInLeft" data-wow-delay=".3s">
                         © All Copyright 2024 by <Link href="/">EcomArts</Link>
                      </p>
@@ -323,7 +390,7 @@ const Footer = () => {
                            </Link>
                         </li>
                      </ul>
-                  </div>
+                  </Div>
                </div>
             </div>
          </footer>

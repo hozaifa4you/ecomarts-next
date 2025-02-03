@@ -4,7 +4,7 @@ import { Autoplay, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { motion } from "framer-motion";
 
-import { titleEffect } from "@/utils/utils";
+import { titleEffect } from "../animation";
 
 const TestimonialSection = () => {
    return (

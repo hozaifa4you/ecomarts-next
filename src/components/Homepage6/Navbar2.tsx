@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import { Ul } from "@/components/animation";
+
 const Navbar2 = () => {
    return (
       <header id="header-sticky" className="header-6 d-none d-xl-block">
@@ -37,7 +39,12 @@ const Navbar2 = () => {
                         <div className="category__items">
                            <div className="category-item">
                               <nav>
-                                 <ul>
+                                 <Ul
+                                    initial={{ opacity: 0, y: 10 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    transition={{ duration: 0.75 }}
+                                    viewport={{ once: true }}
+                                 >
                                     <li>
                                        <Link href="/shop-details-one">
                                           <span>
@@ -128,7 +135,7 @@ const Navbar2 = () => {
                                           <span>(5)</span>
                                        </Link>
                                     </li>
-                                 </ul>
+                                 </Ul>
                               </nav>
                            </div>
                         </div>

@@ -4,11 +4,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
-import { shuffleArray, titleEffect } from "@/utils/utils";
+import { shuffleArray } from "@/utils/utils";
 import {
    topRatedProductsData,
    TopRatedProductType,
 } from "@/utils/data/homepage-5";
+import { titleEffect } from "../animation";
 
 type FilterType = "all" | "new-in" | "top-rated" | "tensing";
 

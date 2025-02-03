@@ -1,5 +1,5 @@
 import Link from "next/link";
-import React from "react";
+import { Div } from "../animation";
 
 const CtaSection2 = () => {
    return (
@@ -7,7 +7,13 @@ const CtaSection2 = () => {
          <div className="container">
             <div className="row g-4">
                <div className="col-lg-6">
-                  <div className="cta-card-items">
+                  <Div
+                     initial={{ opacity: 0, x: -25 }}
+                     whileInView={{ opacity: 1, x: 0 }}
+                     transition={{ duration: 0.5 }}
+                     viewport={{ once: true }}
+                     className="cta-card-items"
+                  >
                      <div
                         className="cta-image bg-cover"
                         style={{
@@ -44,10 +50,16 @@ const CtaSection2 = () => {
                            </div>
                         </div>
                      </div>
-                  </div>
+                  </Div>
                </div>
                <div className="col-lg-6">
-                  <div className="cta-card-items">
+                  <Div
+                     initial={{ opacity: 0, x: 25 }}
+                     whileInView={{ opacity: 1, x: 0 }}
+                     transition={{ duration: 0.5 }}
+                     viewport={{ once: true }}
+                     className="cta-card-items"
+                  >
                      <div
                         className="cta-image bg-cover"
                         style={{
@@ -106,7 +118,7 @@ const CtaSection2 = () => {
                            </div>
                         </div>
                      </div>
-                  </div>
+                  </Div>
                </div>
             </div>
          </div>

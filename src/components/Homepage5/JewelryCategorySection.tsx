@@ -9,7 +9,7 @@ import {
    jewelryCategoryData,
    JewelryCategoryType,
 } from "@/utils/data/homepage-5";
-import { titleEffect } from "@/utils/utils";
+import { titleEffect } from "../animation";
 
 const JewelryCategorySection = () => {
    return (

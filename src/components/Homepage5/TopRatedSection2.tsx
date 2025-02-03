@@ -1,7 +1,6 @@
 import { topRatedProductsData } from "@/utils/data/homepage-5";
 import { TopRatedProductCard } from "./TopRatedSection";
-import { Div } from "../animation";
-import { titleEffect } from "@/utils/utils";
+import { Div, titleEffect } from "../animation";
 
 const TopRatedSection2 = () => {
    return (

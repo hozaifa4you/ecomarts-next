@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Div } from "../animation";
-import { titleEffect } from "@/utils/utils";
+import { Div, titleEffect } from "../animation";
 
 const BlogSection = () => {
    return (

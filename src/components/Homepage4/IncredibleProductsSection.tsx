@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { motion } from "framer-motion";
 
 import { incredibleProductsData } from "@/utils/data/homepage-4";
-import { titleEffect } from "@/utils/utils";
+import { titleEffect } from "../animation";
 
 const IncredibleProductsSection = () => {
    return (

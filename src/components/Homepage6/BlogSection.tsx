@@ -2,20 +2,32 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { blogData, BlogType } from "@/utils/data/homepage-6";
+import { Div, titleEffect } from "@/components/animation";
 
 const BlogSection = () => {
    return (
       <section className="blog-section section-padding2 pt-0 fix">
          <div className="container">
-            <div className="section-title style-6 text-center">
+            <Div {...titleEffect} className="section-title style-6 text-center">
                <div className="subtitle">Blog</div>
                <h2 className="title">Stay updated with our latest posts</h2>
-            </div>
+            </Div>
             <div className="row">
-               {blogData.map((blog) => (
-                  <div className="col-xl-4 col-lg-6 col-md-6" key={blog.id}>
+               {blogData.map((blog, index) => (
+                  <Div
+                     initial={{ opacity: 0, y: 25 }}
+                     whileInView={{ opacity: 1, y: 0 }}
+                     transition={{
+                        duration: 0.5,
+                        ease: "easeOut",
+                        delay: 0.1 * index,
+                     }}
+                     viewport={{ once: true }}
+                     className="col-xl-4 col-lg-6 col-md-6"
+                     key={blog.id}
+                  >
                      <BlogCard {...blog} />
-                  </div>
+                  </Div>
                ))}
             </div>
          </div>

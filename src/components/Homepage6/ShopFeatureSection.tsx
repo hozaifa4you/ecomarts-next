@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Div } from "../animation";
 
 const ShopFeatureSection = () => {
    return (
@@ -6,7 +7,13 @@ const ShopFeatureSection = () => {
          <div className="container">
             <div className="row g-5">
                <div className="col-xl-3 col-md-6">
-                  <div className="feature-box-item-three">
+                  <Div
+                     initial={{ opacity: 0 }}
+                     whileInView={{ opacity: 1 }}
+                     transition={{ duration: 0.75, delay: 0.1 }}
+                     viewport={{ once: true }}
+                     className="feature-box-item-three"
+                  >
                      <div className="feature-box-item-three__icon">
                         <Image
                            width={80}
@@ -21,10 +28,16 @@ const ShopFeatureSection = () => {
                            Free shipping on all order
                         </p>
                      </div>
-                  </div>
+                  </Div>
                </div>
                <div className="col-xl-3 col-md-6">
-                  <div className="feature-box-item-three">
+                  <Div
+                     initial={{ opacity: 0 }}
+                     whileInView={{ opacity: 1 }}
+                     transition={{ duration: 0.75, delay: 0.2 }}
+                     viewport={{ once: true }}
+                     className="feature-box-item-three"
+                  >
                      <div className="feature-box-item-three__icon">
                         <Image
                            width={60}
@@ -39,10 +52,16 @@ const ShopFeatureSection = () => {
                            Back guarantee under 7 day
                         </p>
                      </div>
-                  </div>
+                  </Div>
                </div>
                <div className="col-xl-3 col-md-6">
-                  <div className="feature-box-item-three">
+                  <Div
+                     initial={{ opacity: 0 }}
+                     whileInView={{ opacity: 1 }}
+                     transition={{ duration: 0.75, delay: 0.3 }}
+                     viewport={{ once: true }}
+                     className="feature-box-item-three"
+                  >
                      <div className="feature-box-item-three__icon">
                         <Image
                            width={64}
@@ -57,10 +76,16 @@ const ShopFeatureSection = () => {
                            Support online 24 hours a day
                         </p>
                      </div>
-                  </div>
+                  </Div>
                </div>
                <div className="col-xl-3 col-md-6">
-                  <div className="feature-box-item-three">
+                  <Div
+                     initial={{ opacity: 0 }}
+                     whileInView={{ opacity: 1 }}
+                     transition={{ duration: 0.75, delay: 0.4 }}
+                     viewport={{ once: true }}
+                     className="feature-box-item-three"
+                  >
                      <div className="feature-box-item-three__icon">
                         <Image
                            width={56}
@@ -75,7 +100,7 @@ const ShopFeatureSection = () => {
                            Trusted by 1000+ brand
                         </p>
                      </div>
-                  </div>
+                  </Div>
                </div>
             </div>
          </div>

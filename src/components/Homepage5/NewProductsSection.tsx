@@ -2,8 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { newProductsData, NewProductType } from "@/utils/data/homepage-5";
-import { Div } from "@/components/animation";
-import { titleEffect } from "@/utils/utils";
+import { Div, titleEffect } from "@/components/animation";
 
 const NewProductsSection = () => {
    return (

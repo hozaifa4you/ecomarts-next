@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import { Div, titleEffect } from "@/components/animation";
 import {
    featuredProductData,
    type FeaturedProductType,
@@ -13,27 +14,41 @@ const FeaturedProductSection = () => {
             <div className="container">
                <div className="row gy-4 d-flex align-items-center mb-40">
                   <div className="col-xl-6">
-                     <div className="section-title style-6">
+                     <Div {...titleEffect} className="section-title style-6">
                         <div className="subtitle style4">Products</div>
                         <h2 className="title">Our Featured Products</h2>
-                     </div>
+                     </Div>
                   </div>
                   <div className="col-xl-6 d-flex justify-content-md-end">
-                     <div className="btn-wrapper">
+                     <Div
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        transition={{ duration: 0.75, ease: "easeInOut" }}
+                        viewport={{ once: true }}
+                        className="btn-wrapper"
+                     >
                         <Link className="theme-btn style15" href="/shop">
                            View All <i className="fa-solid fa-arrow-right"></i>
                         </Link>
-                     </div>
+                     </Div>
                   </div>
                </div>
                <div className="row g-0">
-                  {featuredProductData.map((product) => (
-                     <div
+                  {featuredProductData.map((product, index) => (
+                     <Div
+                        initial={{ opacity: 0, y: 25 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{
+                           duration: 0.5,
+                           ease: "easeInOut",
+                           delay: index * 0.1,
+                        }}
+                        viewport={{ once: true }}
                         className="col-xl-3 col-lg-6 col-md-6"
                         key={product.id}
                      >
                         <FeaturedProductCard {...product} />
-                     </div>
+                     </Div>
                   ))}
                </div>
             </div>

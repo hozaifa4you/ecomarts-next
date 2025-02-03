@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Div } from "../animation";
 
 const IntroSection = () => {
    return (
@@ -10,7 +11,13 @@ const IntroSection = () => {
             <div className="container">
                <div className="row justify-content-end">
                   <div className="col-xl-6">
-                     <div className="hero-content">
+                     <Div
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        transition={{ duration: 0.75 }}
+                        viewport={{ once: true }}
+                        className="hero-content"
+                     >
                         <span>Best Quality</span>
                         <h1>Help You To Make Modern Furniture</h1>
                         <p>
@@ -28,7 +35,7 @@ const IntroSection = () => {
                               view now
                            </Link>
                         </div>
-                     </div>
+                     </Div>
                   </div>
                </div>
             </div>

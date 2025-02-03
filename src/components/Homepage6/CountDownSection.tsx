@@ -1,52 +1,84 @@
+"use client";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
+
+import { calculateTimeLeft, TimeLeft } from "@/utils/utils";
+import { titleEffect } from "../animation";
 
 const CountDownSection = () => {
+   const TARGET_DATE = new Date();
+   TARGET_DATE.setDate(TARGET_DATE.getDate() + 3);
+   const TARGET_DATE_STRING =
+      TARGET_DATE.toISOString().split("T")[0] + "T23:59:59";
+
+   const [timeLeft, setTimeLeft] = useState<TimeLeft>(
+      calculateTimeLeft(TARGET_DATE_STRING)
+   );
+
+   useEffect(() => {
+      const timer = setTimeout(() => {
+         setTimeLeft(calculateTimeLeft(TARGET_DATE_STRING));
+      }, 1000);
+
+      return () => clearTimeout(timer);
+   });
+
    return (
       <section className="offer-timer-section section-padding2 pb-0 fix section-bg">
          <div className="offer-timer-container-wrapper style3">
             <div className="container">
                <div className="row align-items-center">
                   <div className="col-xl-4">
-                     <div className="offer-image">
+                     <motion.div
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        transition={{ duration: 0.75, ease: "easeInOut" }}
+                        viewport={{ once: true }}
+                        className="offer-image"
+                     >
                         <Image
                            width={455}
                            height={315}
                            src="/images/home-6/offer/01.png"
                            alt="img"
                         />
-                     </div>
+                     </motion.div>
                   </div>
                   <div className="col-xl-4">
                      <div className="offer-timer-content">
-                        <div className="section-title style-6 text-center">
+                        <motion.div
+                           {...titleEffect}
+                           className="section-title style-6 text-center"
+                        >
                            <div className="subtitle">Best DealsS</div>
                            <h2 className="title">
                               Our Special Products Deal of the Month
                            </h2>
-                        </div>
+                        </motion.div>
                         <div className="timer-box style-7">
                            <div className="box">
                               <h5 className="number" id="days">
-                                 28
+                                 {timeLeft.days}
                               </h5>
                               <p className="text">days</p>
                            </div>
                            <div className="box">
                               <h5 className="number" id="hours">
-                                 22
+                                 {timeLeft.hours}
                               </h5>
                               <p className="text">hrs</p>
                            </div>
                            <div className="box">
                               <h5 className="number" id="minutes">
-                                 17
+                                 {timeLeft.minutes}
                               </h5>
                               <p className="text">mins</p>
                            </div>
                            <div className="box">
                               <h5 className="number" id="seconds">
-                                 48
+                                 {timeLeft.seconds}
                               </h5>
                               <p className="text">secs</p>
                            </div>
@@ -74,14 +106,20 @@ const CountDownSection = () => {
                      </div>
                   </div>
                   <div className="col-xl-4">
-                     <div className="offer-image2">
+                     <motion.div
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        transition={{ duration: 0.75, ease: "easeInOut" }}
+                        viewport={{ once: true }}
+                        className="offer-image2"
+                     >
                         <Image
                            width={370}
                            height={495}
                            src="/images/home-6/offer/02.png"
                            alt="img"
                         />
-                     </div>
+                     </motion.div>
                   </div>
                </div>
             </div>
