@@ -124,10 +124,19 @@ const LoginPage = () => {
                                  </div>
                               </form>
 
-                              <div className="or-border">
+                              <Div
+                                 initial={{ opacity: 0 }}
+                                 whileInView={{ opacity: 1 }}
+                                 transition={{
+                                    duration: 0.75,
+                                    delay: 0.8,
+                                 }}
+                                 viewport={{ once: true }}
+                                 className="or-border"
+                              >
                                  <div className="border"></div>
                                  <p>Or</p>
-                              </div>
+                              </Div>
 
                               <Div
                                  initial={{ opacity: 0, y: 35 }}

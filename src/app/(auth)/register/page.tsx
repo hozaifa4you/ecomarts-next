@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import Link from "next/link";
+import { Div, H2, H5, P } from "@/components/animation";
 
 const RegisterPage = () => {
    return (
@@ -14,24 +15,40 @@ const RegisterPage = () => {
                      <div className="col-xl-6 offset-xl-0 col-md-8 offset-md-2">
                         <div className="contact-info-area">
                            <div className="contact-content">
-                              <h2 className="contact-content__title">
+                              <H2
+                                 initial={{ opacity: 0 }}
+                                 whileInView={{ opacity: 1 }}
+                                 transition={{ duration: 0.75 }}
+                                 viewport={{ once: true }}
+                                 className="contact-content__title"
+                              >
                                  Get Started Now
-                              </h2>
-                              <p className="contact-content__subtitle">
+                              </H2>
+                              <P
+                                 initial={{ opacity: 0 }}
+                                 whileInView={{ opacity: 1 }}
+                                 transition={{ duration: 0.75 }}
+                                 viewport={{ once: true }}
+                                 className="contact-content__subtitle"
+                              >
                                  Enter your Credentials to access your account
-                              </p>
+                              </P>
                               <form
-                                 action="contact.php"
                                  id="contact-form"
                                  method="POST"
                                  className="contact-form-items"
                               >
                                  <div className="row g-4">
-                                    <div
-                                       className="col-lg-12 wow fadeInUp"
-                                       data-wow-delay=".3s"
-                                    >
-                                       <div className="form-clt">
+                                    <div className="col-lg-12 ">
+                                       <Div
+                                          initial={{ opacity: 0, y: 35 }}
+                                          whileInView={{ opacity: 1, y: 0 }}
+                                          transition={{
+                                             duration: 0.75,
+                                          }}
+                                          viewport={{ once: true }}
+                                          className="form-clt"
+                                       >
                                           <span>Your name*</span>
                                           <input
                                              type="text"
@@ -39,13 +56,19 @@ const RegisterPage = () => {
                                              id="name"
                                              placeholder="Enter your name"
                                           />
-                                       </div>
+                                       </Div>
                                     </div>
-                                    <div
-                                       className="col-lg-12 wow fadeInUp"
-                                       data-wow-delay=".5s"
-                                    >
-                                       <div className="form-clt">
+                                    <div className="col-lg-12  ">
+                                       <Div
+                                          initial={{ opacity: 0, y: 35 }}
+                                          whileInView={{ opacity: 1, y: 0 }}
+                                          transition={{
+                                             duration: 0.75,
+                                             delay: 0.2,
+                                          }}
+                                          viewport={{ once: true }}
+                                          className="form-clt"
+                                       >
                                           <span>Email address*</span>
                                           <input
                                              type="text"
@@ -53,13 +76,19 @@ const RegisterPage = () => {
                                              id="email"
                                              placeholder="Enter your email"
                                           />
-                                       </div>
+                                       </Div>
                                     </div>
-                                    <div
-                                       className="col-lg-12 wow fadeInUp"
-                                       data-wow-delay=".7s"
-                                    >
-                                       <div className="form-clt">
+                                    <div className="col-lg-12 ">
+                                       <Div
+                                          initial={{ opacity: 0, y: 35 }}
+                                          whileInView={{ opacity: 1, y: 0 }}
+                                          transition={{
+                                             duration: 0.75,
+                                             delay: 0.4,
+                                          }}
+                                          viewport={{ once: true }}
+                                          className="form-clt"
+                                       >
                                           <span>Password*</span>
                                           <input
                                              type="text"
@@ -67,10 +96,18 @@ const RegisterPage = () => {
                                              id="password"
                                              placeholder="********"
                                           />
-                                       </div>
+                                       </Div>
                                     </div>
                                     <div className="form-check">
-                                       <div className="">
+                                       <Div
+                                          initial={{ opacity: 0, y: 35 }}
+                                          whileInView={{ opacity: 1, y: 0 }}
+                                          transition={{
+                                             duration: 0.75,
+                                             delay: 0.6,
+                                          }}
+                                          viewport={{ once: true }}
+                                       >
                                           <input
                                              id="reviewcheck"
                                              name="reviewcheck"
@@ -83,11 +120,17 @@ const RegisterPage = () => {
                                              I agree to the{" "}
                                              <span>terms & policy</span>
                                           </label>
-                                       </div>
+                                       </Div>
                                     </div>
-                                    <div
-                                       className="col-lg-12 wow fadeInUp"
-                                       data-wow-delay=".9s"
+                                    <Div
+                                       initial={{ opacity: 0, y: 35 }}
+                                       whileInView={{ opacity: 1, y: 0 }}
+                                       transition={{
+                                          duration: 0.75,
+                                          delay: 0.8,
+                                       }}
+                                       viewport={{ once: true }}
+                                       className="col-lg-12  "
                                     >
                                        <button
                                           type="submit"
@@ -95,7 +138,7 @@ const RegisterPage = () => {
                                        >
                                           Sign Up
                                        </button>
-                                    </div>
+                                    </Div>
                                  </div>
                               </form>
 
@@ -104,7 +147,16 @@ const RegisterPage = () => {
                                  <p>Or</p>
                               </div>
 
-                              <div className="button-items-1">
+                              <Div
+                                 initial={{ opacity: 0, y: 35 }}
+                                 whileInView={{ opacity: 1, y: 0 }}
+                                 transition={{
+                                    duration: 0.75,
+                                    delay: 0.8,
+                                 }}
+                                 viewport={{ once: true }}
+                                 className="button-items-1"
+                              >
                                  <Link href="#!">
                                     <div className="button-items-1__google-button">
                                        <Image
@@ -128,11 +180,20 @@ const RegisterPage = () => {
                                        <p>Sign in with Apple</p>
                                     </div>
                                  </Link>
-                              </div>
-                              <h5 className="contact-content__logtitle center">
+                              </Div>
+                              <H5
+                                 initial={{ opacity: 0, y: 35 }}
+                                 whileInView={{ opacity: 1, y: 0 }}
+                                 transition={{
+                                    duration: 0.75,
+                                    delay: 0.8,
+                                 }}
+                                 viewport={{ once: true }}
+                                 className="contact-content__logtitle center"
+                              >
                                  Have an account?{" "}
                                  <Link href="/login">Sign Up</Link>
-                              </h5>
+                              </H5>
                            </div>
                         </div>
                      </div>
