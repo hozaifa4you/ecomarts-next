@@ -1,28 +1,12 @@
 "use client";
-import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
 import { Div } from "@/components/animation";
-import { calculateTimeLeft, TimeLeft } from "@/utils/utils";
+import { useCountdownTimer } from "@/hooks/useCountdownTimer";
 
 const CountDownOfferSection = () => {
-   const TARGET_DATE = new Date();
-   TARGET_DATE.setDate(TARGET_DATE.getDate() + 3);
-   const TARGET_DATE_STRING =
-      TARGET_DATE.toISOString().split("T")[0] + "T23:59:59";
-
-   const [timeLeft, setTimeLeft] = useState<TimeLeft>(
-      calculateTimeLeft(TARGET_DATE_STRING)
-   );
-
-   useEffect(() => {
-      const timer = setTimeout(() => {
-         setTimeLeft(calculateTimeLeft(TARGET_DATE_STRING));
-      }, 1000);
-
-      return () => clearTimeout(timer);
-   });
+   const timeLeft = useCountdownTimer();
 
    return (
       <section className="offer-section fix bg-color7">

@@ -1,33 +1,17 @@
 "use client";
-import React, { useEffect, useState } from "react";
 import Link from "next/link";
 
 import { MotionDiv } from "@/components/animation";
-import { calculateTimeLeft, TimeLeft } from "@/utils/utils";
 import {
    popularProductsData,
    popularProductsData2,
    PopularProductType,
    PopularProductType2,
 } from "@/utils/data/homepage-1";
+import { TimeLeft, useCountdownTimer } from "@/hooks/useCountdownTimer";
 
 const PopularProductsSection = () => {
-   const TARGET_DATE = new Date();
-   TARGET_DATE.setDate(TARGET_DATE.getDate() + 3);
-   const TARGET_DATE_STRING =
-      TARGET_DATE.toISOString().split("T")[0] + "T23:59:59";
-
-   const [timeLeft, setTimeLeft] = useState<TimeLeft>(
-      calculateTimeLeft(TARGET_DATE_STRING)
-   );
-
-   useEffect(() => {
-      const timer = setTimeout(() => {
-         setTimeLeft(calculateTimeLeft(TARGET_DATE_STRING));
-      }, 1000);
-
-      return () => clearTimeout(timer);
-   });
+   const timeLeft = useCountdownTimer();
 
    return (
       <div className="popular-product-section section-padding bg-color2 fix">
