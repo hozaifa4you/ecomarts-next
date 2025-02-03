@@ -165,7 +165,9 @@ const RegisterPage = () => {
                                           src="/images/register/googleIcon.png"
                                           alt="icon"
                                        />
-                                       <p>Sign in with Google</p>
+                                       <p>
+                                          Sign in <span>with</span> Google
+                                       </p>
                                     </div>
                                  </Link>
 
@@ -177,7 +179,9 @@ const RegisterPage = () => {
                                           src="/images/register/appleIcon.png"
                                           alt="icon"
                                        />
-                                       <p>Sign in with Apple</p>
+                                       <p>
+                                          Sign in <span>with</span> Apple
+                                       </p>
                                     </div>
                                  </Link>
                               </Div>
@@ -192,12 +196,12 @@ const RegisterPage = () => {
                                  className="contact-content__logtitle center"
                               >
                                  Have an account?{" "}
-                                 <Link href="/login">Sign Up</Link>
+                                 <Link href="/login">Sign In</Link>
                               </H5>
                            </div>
                         </div>
                      </div>
-                     <div className="col-xl-6 offset-xl-0 col-md-8 offset-md-2">
+                     <div className="col-xl-6 d-none d-lg-block offset-xl-0 col-md-8 offset-md-2">
                         <div className="register-thumb">
                            <Image
                               width={670}

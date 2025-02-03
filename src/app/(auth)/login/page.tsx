@@ -19,7 +19,7 @@ const LoginPage = () => {
                               <H2
                                  initial={{ opacity: 0 }}
                                  whileInView={{ opacity: 1 }}
-                                 transition={{ duration: 0.75 }}
+                                 transition={{ duration: 0.5 }}
                                  viewport={{ once: true }}
                                  className="contact-content__title"
                               >
@@ -28,7 +28,7 @@ const LoginPage = () => {
                               <P
                                  initial={{ opacity: 0 }}
                                  whileInView={{ opacity: 1 }}
-                                 transition={{ duration: 0.75 }}
+                                 transition={{ duration: 0.5 }}
                                  viewport={{ once: true }}
                                  className="contact-content__subtitle"
                               >
@@ -45,7 +45,7 @@ const LoginPage = () => {
                                           initial={{ opacity: 0, y: 35 }}
                                           whileInView={{ opacity: 1, y: 0 }}
                                           transition={{
-                                             duration: 0.75,
+                                             duration: 0.5,
                                              delay: 0.2,
                                           }}
                                           viewport={{ once: true }}
@@ -65,7 +65,7 @@ const LoginPage = () => {
                                           initial={{ opacity: 0, y: 35 }}
                                           whileInView={{ opacity: 1, y: 0 }}
                                           transition={{
-                                             duration: 0.75,
+                                             duration: 0.5,
                                              delay: 0.4,
                                           }}
                                           viewport={{ once: true }}
@@ -85,7 +85,7 @@ const LoginPage = () => {
                                           initial={{ opacity: 0, y: 35 }}
                                           whileInView={{ opacity: 1, y: 0 }}
                                           transition={{
-                                             duration: 0.75,
+                                             duration: 0.5,
                                              delay: 0.6,
                                           }}
                                           viewport={{ once: true }}
@@ -108,7 +108,7 @@ const LoginPage = () => {
                                        initial={{ opacity: 0, y: 35 }}
                                        whileInView={{ opacity: 1, y: 0 }}
                                        transition={{
-                                          duration: 0.75,
+                                          duration: 0.5,
                                           delay: 0.8,
                                        }}
                                        viewport={{ once: true }}
@@ -128,7 +128,7 @@ const LoginPage = () => {
                                  initial={{ opacity: 0 }}
                                  whileInView={{ opacity: 1 }}
                                  transition={{
-                                    duration: 0.75,
+                                    duration: 0.5,
                                     delay: 0.8,
                                  }}
                                  viewport={{ once: true }}
@@ -142,7 +142,7 @@ const LoginPage = () => {
                                  initial={{ opacity: 0, y: 35 }}
                                  whileInView={{ opacity: 1, y: 0 }}
                                  transition={{
-                                    duration: 0.75,
+                                    duration: 0.5,
                                     delay: 0.8,
                                  }}
                                  viewport={{ once: true }}
@@ -180,7 +180,7 @@ const LoginPage = () => {
                                  initial={{ opacity: 0, y: 35 }}
                                  whileInView={{ opacity: 1, y: 0 }}
                                  transition={{
-                                    duration: 0.75,
+                                    duration: 0.5,
                                     delay: 0.8,
                                  }}
                                  viewport={{ once: true }}
@@ -192,7 +192,7 @@ const LoginPage = () => {
                            </div>
                         </div>
                      </div>
-                     <div className="col-xl-6 offset-xl-0 col-md-8 offset-md-2">
+                     <div className="col-xl-6 d-none d-lg-block offset-xl-0 col-md-8 offset-md-2">
                         <div className="login-thumb">
                            <Image
                               width={670}
