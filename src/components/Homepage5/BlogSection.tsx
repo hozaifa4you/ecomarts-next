@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import { Div } from "../animation";
 
 const BlogSection = () => {
    return (
@@ -8,7 +8,13 @@ const BlogSection = () => {
          <div className="container">
             <div className="row g-0 align-items-center">
                <div className="col-xl-4 col-md-6">
-                  <div className="blog-card-items-four style-2">
+                  <Div
+                     initial={{ opacity: 0, y: -25 }}
+                     whileInView={{ opacity: 1, y: 0 }}
+                     transition={{ duration: 0.75 }}
+                     viewport={{ once: true }}
+                     className="blog-card-items-four style-2"
+                  >
                      <div className="blog-card-items-four__thumb">
                         <Image
                            width={470}
@@ -28,10 +34,16 @@ const BlogSection = () => {
                            Discover More
                         </Link>
                      </div>
-                  </div>
+                  </Div>
                </div>
                <div className="col-xl-4 col-md-6">
-                  <div className="blog-card-items-four style-2">
+                  <Div
+                     initial={{ opacity: 0, y: 25 }}
+                     whileInView={{ opacity: 1, y: 0 }}
+                     transition={{ duration: 0.75 }}
+                     viewport={{ once: true }}
+                     className="blog-card-items-four style-2"
+                  >
                      <div className="blog-card-items-four__content style-two pt-0 mb-0">
                         <span>New collection</span>
                         <h3>Wedding Rings</h3>
@@ -51,9 +63,15 @@ const BlogSection = () => {
                            alt="thumb"
                         />
                      </div>
-                  </div>
+                  </Div>
                </div>
-               <div className="col-xl-4 col-md-6">
+               <Div
+                  initial={{ opacity: 0, y: -25 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.75 }}
+                  viewport={{ once: true }}
+                  className="col-xl-4 col-md-6"
+               >
                   <div className="blog-card-items-four style-2">
                      <div className="blog-card-items-four__thumb">
                         <Image
@@ -75,7 +93,7 @@ const BlogSection = () => {
                         </Link>
                      </div>
                   </div>
-               </div>
+               </Div>
             </div>
          </div>
       </section>

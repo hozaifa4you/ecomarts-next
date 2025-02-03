@@ -2,20 +2,29 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { newProductsData, NewProductType } from "@/utils/data/homepage-5";
+import { Div } from "@/components/animation";
+import { titleEffect } from "@/utils/utils";
 
 const NewProductsSection = () => {
    return (
       <section className="news-section-5 fix section-padding2 fix section-padding">
          <div className="container">
-            <div className="section-title style-5 text-center">
+            <Div {...titleEffect} className="section-title style-5 text-center">
                <div className="subtitle">Our Latest News & Blog </div>
                <h2 className="title">Stay updated with our latest posts</h2>
-            </div>
+            </Div>
             <div className="row">
-               {newProductsData.map((item) => (
-                  <div className="col-xl-4 col-lg-4 col-md-6" key={item.id}>
+               {newProductsData.map((item, index) => (
+                  <Div
+                     initial={{ opacity: 0, y: 25 }}
+                     whileInView={{ opacity: 1, y: 0 }}
+                     transition={{ duration: 0.75, delay: 0.1 * index }}
+                     viewport={{ once: true }}
+                     className="col-xl-4 col-lg-4 col-md-6"
+                     key={item.id}
+                  >
                      <NewProductCard {...item} />
-                  </div>
+                  </Div>
                ))}
             </div>
          </div>

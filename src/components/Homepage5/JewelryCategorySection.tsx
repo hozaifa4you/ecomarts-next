@@ -3,11 +3,13 @@ import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Link from "next/link";
 import { Autoplay } from "swiper/modules";
+import { motion } from "framer-motion";
 
 import {
    jewelryCategoryData,
    JewelryCategoryType,
 } from "@/utils/data/homepage-5";
+import { titleEffect } from "@/utils/utils";
 
 const JewelryCategorySection = () => {
    return (
@@ -16,11 +18,20 @@ const JewelryCategorySection = () => {
          id="category"
       >
          <div className="container">
-            <div className="row gy-5">
-               <div className="section-title text-center style-5">
+            <motion.div
+               initial={{ opacity: 0 }}
+               whileInView={{ opacity: 1 }}
+               transition={{ duration: 0.75 }}
+               viewport={{ once: true }}
+               className="row gy-5"
+            >
+               <motion.div
+                  {...titleEffect}
+                  className="section-title text-center style-5"
+               >
                   <div className="subtitle">Our Category</div>
                   <h2 className="title">Find Jewelry by Category</h2>
-               </div>
+               </motion.div>
                <Swiper
                   loop
                   autoplay
@@ -50,7 +61,7 @@ const JewelryCategorySection = () => {
                      </SwiperSlide>
                   ))}
                </Swiper>
-            </div>
+            </motion.div>
          </div>
       </section>
    );

@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import { Div } from "../animation";
+
 const CtaDiscountSection = () => {
    return (
       <section className="cta-discount-section fix section-padding2 pt-0">
@@ -11,15 +13,27 @@ const CtaDiscountSection = () => {
                   backgroundImage: "url('/images/home-5/cta-discount.jpg')",
                }}
             >
-               <div className="girl-image">
+               <Div
+                  initial={{ opacity: 0, y: 25 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.75 }}
+                  viewport={{ once: true }}
+                  className="girl-image"
+               >
                   <Image
                      width={602}
                      height={395}
                      src="/images/home-5/girl-shape.png"
                      alt="img"
                   />
-               </div>
-               <div className="row justify-content-end">
+               </Div>
+               <Div
+                  initial={{ opacity: 0, y: 25 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.75 }}
+                  viewport={{ once: true }}
+                  className="row justify-content-end"
+               >
                   <div className="col-lg-5">
                      <div className="content">
                         <span>Up To 15% DISCOUNT</span>
@@ -37,7 +51,7 @@ const CtaDiscountSection = () => {
                         </Link>
                      </div>
                   </div>
-               </div>
+               </Div>
             </div>
          </div>
       </section>

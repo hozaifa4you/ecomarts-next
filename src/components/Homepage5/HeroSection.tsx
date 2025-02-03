@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Autoplay, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { motion } from "framer-motion";
 
 const HeroSection = () => {
    return (
@@ -26,7 +27,13 @@ const HeroSection = () => {
                <i className="far fa-chevron-down"></i>
             </button>
          </div>
-         <div className="container">
+         <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.75 }}
+            viewport={{ once: true }}
+            className="container"
+         >
             <Swiper
                loop
                autoplay={{ pauseOnMouseEnter: true }}
@@ -43,7 +50,7 @@ const HeroSection = () => {
                   <HeroSlider />
                </SwiperSlide>
             </Swiper>
-         </div>
+         </motion.div>
       </section>
    );
 };

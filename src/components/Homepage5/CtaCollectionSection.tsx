@@ -1,14 +1,27 @@
 import Link from "next/link";
-import React from "react";
+import { Div, H2 } from "../animation";
 
 const CtaCollectionSection = () => {
    return (
       <section className="cta-collection-section section-bg-5 section-padding2">
          <div className="container">
             <div className="cta-collection-wrapper">
-               <h2>Explore Collections</h2>
+               <H2
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ duration: 0.75 }}
+                  viewport={{ once: true }}
+               >
+                  Explore Collections
+               </H2>
                <div className="row">
-                  <div className="col-lg-5">
+                  <Div
+                     initial={{ opacity: 0 }}
+                     whileInView={{ opacity: 1 }}
+                     transition={{ duration: 1 }}
+                     viewport={{ once: true }}
+                     className="col-lg-5"
+                  >
                      <div
                         className="cta-collection-image bg-cover"
                         style={{
@@ -29,11 +42,15 @@ const CtaCollectionSection = () => {
                            Shop Now
                         </Link>
                      </div>
-                  </div>
+                  </Div>
                   <div className="col-lg-7">
                      <div className="row">
                         <div className="col-md-6">
-                           <div
+                           <Div
+                              initial={{ opacity: 0 }}
+                              whileInView={{ opacity: 1 }}
+                              transition={{ duration: 1, delay: 0.05 }}
+                              viewport={{ once: true }}
                               className="cta-collection-image bg-cover"
                               style={{
                                  backgroundImage:
@@ -48,10 +65,14 @@ const CtaCollectionSection = () => {
                               <Link href="/shop-details-one" className="icon">
                                  <i className="fa-solid fa-chevron-right"></i>
                               </Link>
-                           </div>
+                           </Div>
                         </div>
                         <div className="col-md-6">
-                           <div
+                           <Div
+                              initial={{ opacity: 0 }}
+                              whileInView={{ opacity: 1 }}
+                              transition={{ duration: 1, delay: 0.1 }}
+                              viewport={{ once: true }}
                               className="cta-collection-image bg-cover"
                               style={{
                                  backgroundImage:
@@ -67,7 +88,7 @@ const CtaCollectionSection = () => {
                               <Link href="/shop-details-one" className="icon">
                                  <i className="fa-solid fa-chevron-right"></i>
                               </Link>
-                           </div>
+                           </Div>
                         </div>
                      </div>
                   </div>

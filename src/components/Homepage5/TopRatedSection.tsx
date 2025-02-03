@@ -2,7 +2,9 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
+import { shuffleArray, titleEffect } from "@/utils/utils";
 import {
    topRatedProductsData,
    TopRatedProductType,
@@ -13,36 +15,21 @@ type FilterType = "all" | "new-in" | "top-rated" | "tensing";
 const TopRatedSection = () => {
    const [filter, setFilter] = useState<FilterType>("all");
 
-   const shuffleArray = (array: TopRatedProductType[]) => {
-      let currentIndex = array.length,
-         randomIndex;
-      while (currentIndex !== 0) {
-         randomIndex = Math.floor(Math.random() * currentIndex);
-         currentIndex--;
-         [array[currentIndex], array[randomIndex]] = [
-            array[randomIndex],
-            array[currentIndex],
-         ];
-      }
-      return array;
-   };
-
    return (
       <section className="top-rated-section section-padding2 fix pt-0">
          <div className="container">
             <div className="row gy-3 d-flex align-items-end">
                <div className="col-xl-6">
-                  <div className="section-title style-5">
+                  <motion.div
+                     {...titleEffect}
+                     className="section-title style-5"
+                  >
                      <div className="subtitle before-none">New Arrivals</div>
                      <h2 className="title">Discover New Arrivals</h2>
-                  </div>
+                  </motion.div>
                </div>
                <div className="col-xl-6">
-                  <ul
-                     className="nav nav-pills style-5 mb-3"
-                     id="pills-tab"
-                     role="tablist"
-                  >
+                  <ul className="nav nav-pills style-5 mb-3" role="tablist">
                      <li className="nav-item" role="presentation">
                         <button
                            className={`nav-link ${
@@ -50,8 +37,6 @@ const TopRatedSection = () => {
                            }`}
                            type="button"
                            role="tab"
-                           aria-controls="pills-all-collection"
-                           aria-selected="true"
                            onClick={() => setFilter("all")}
                         >
                            All Collection
@@ -77,8 +62,6 @@ const TopRatedSection = () => {
                            }`}
                            type="button"
                            role="tab"
-                           aria-controls="pills-new-in"
-                           aria-selected="false"
                            onClick={() => setFilter("new-in")}
                         >
                            New In
@@ -104,8 +87,6 @@ const TopRatedSection = () => {
                            }`}
                            type="button"
                            role="tab"
-                           aria-controls="pills-top-rated"
-                           aria-selected="false"
                            onClick={() => setFilter("top-rated")}
                         >
                            Top Rated
@@ -156,14 +137,11 @@ const TopRatedSection = () => {
             </div>
             <div className="tab-content" id="pills-tabContent">
                {filter === "all" && (
-                  <div
-                     className="tab-pane fade show active"
-                     id="pills-all-collection"
-                     role="tabpanel"
-                     aria-labelledby="pills-all-collection-tab"
-                  >
+                  <div className="tab-pane fade show active">
                      <div className="row">
-                        {shuffleArray(topRatedProductsData).map((product) => (
+                        {shuffleArray<TopRatedProductType>(
+                           topRatedProductsData
+                        ).map((product) => (
                            <div
                               className="col-xl-3 col-md-6 col-lg-4"
                               key={product.id}
@@ -175,14 +153,11 @@ const TopRatedSection = () => {
                   </div>
                )}
                {filter === "new-in" && (
-                  <div
-                     className="tab-pane fade show active"
-                     id="pills-all-collection"
-                     role="tabpanel"
-                     aria-labelledby="pills-all-collection-tab"
-                  >
+                  <div className="tab-pane fade show active">
                      <div className="row">
-                        {shuffleArray(topRatedProductsData).map((product) => (
+                        {shuffleArray<TopRatedProductType>(
+                           topRatedProductsData
+                        ).map((product) => (
                            <div
                               className="col-xl-3 col-md-6 col-lg-4"
                               key={product.id}
@@ -194,14 +169,11 @@ const TopRatedSection = () => {
                   </div>
                )}
                {filter === "tensing" && (
-                  <div
-                     className="tab-pane fade show active"
-                     id="pills-all-collection"
-                     role="tabpanel"
-                     aria-labelledby="pills-all-collection-tab"
-                  >
+                  <div className="tab-pane fade show active">
                      <div className="row">
-                        {shuffleArray(topRatedProductsData).map((product) => (
+                        {shuffleArray<TopRatedProductType>(
+                           topRatedProductsData
+                        ).map((product) => (
                            <div
                               className="col-xl-3 col-md-6 col-lg-4"
                               key={product.id}
@@ -213,14 +185,11 @@ const TopRatedSection = () => {
                   </div>
                )}
                {filter === "top-rated" && (
-                  <div
-                     className="tab-pane fade show active"
-                     id="pills-all-collection"
-                     role="tabpanel"
-                     aria-labelledby="pills-all-collection-tab"
-                  >
+                  <div className="tab-pane fade show active">
                      <div className="row">
-                        {shuffleArray(topRatedProductsData).map((product) => (
+                        {shuffleArray<TopRatedProductType>(
+                           topRatedProductsData
+                        ).map((product) => (
                            <div
                               className="col-xl-3 col-md-6 col-lg-4"
                               key={product.id}
