@@ -5,6 +5,7 @@ import {
    foodCollectionData,
    FoodCollectionType,
 } from "@/utils/data/homepage-7";
+import { Div, titleEffect } from "../animation";
 
 const FoodCollectionSection = () => {
    return (
@@ -13,15 +14,22 @@ const FoodCollectionSection = () => {
          id="category"
       >
          <div className="container">
-            <div className="section-title text-center style-7">
+            <Div {...titleEffect} className="section-title text-center style-7">
                <div className="subtitle">Collection</div>
                <h2 className="title">Find Animal Food by Category</h2>
-            </div>
+            </Div>
             <div className="row">
-               {foodCollectionData.map((food) => (
-                  <div className="col-xl-3 col-lg-4 col-md-6" key={food.id}>
+               {foodCollectionData.map((food, index) => (
+                  <Div
+                     initial={{ opacity: 0, y: 25 }}
+                     whileInView={{ opacity: 1, y: 0 }}
+                     transition={{ duration: 0.75, delay: index * 0.1 }}
+                     viewport={{ once: true }}
+                     className="col-xl-3 col-lg-4 col-md-6"
+                     key={food.id}
+                  >
                      <FoodCollectionCard {...food} />
-                  </div>
+                  </Div>
                ))}
             </div>
          </div>

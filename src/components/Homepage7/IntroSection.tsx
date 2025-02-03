@@ -1,19 +1,37 @@
 import Link from "next/link";
+import { Div } from "../animation";
 
 const IntroSection = () => {
    return (
       <section
-         className="hero-section-7 hero-7 bg-cover"
+         className="hero-section-7 hero-7 bg-cover overflow-hidden"
          style={{ backgroundImage: "url('/images/home-7/hero/hero-bg.png')" }}
       >
-         <div className="food-shape">
+         <Div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{
+               duration: 0.75,
+               ease: "easeOut",
+            }}
+            className="food-shape"
+         >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src="/images/home-7/hero/food-shape.png" alt="img" />
-         </div>
+         </Div>
          <div className="container">
             <div className="row g-4 align-items-center justify-content-between">
                <div className="col-lg-6">
-                  <div className="hero-content">
+                  <Div
+                     initial={{ opacity: 0, y: 50 }}
+                     whileInView={{ opacity: 1, y: 0 }}
+                     transition={{
+                        duration: 0.75,
+                        ease: "easeOut",
+                     }}
+                     viewport={{ once: true }}
+                     className="hero-content"
+                  >
                      <span>Best Quality</span>
                      <h1>25% Off On Premium Dog Foods</h1>
                      <p>
@@ -29,13 +47,22 @@ const IntroSection = () => {
                            View Now
                         </Link>
                      </div>
-                  </div>
+                  </Div>
                </div>
                <div className="col-lg-4">
-                  <div className="hero-image">
+                  <Div
+                     initial={{ opacity: 0, y: 50 }}
+                     whileInView={{ opacity: 1, y: 0 }}
+                     transition={{
+                        duration: 0.75,
+                        ease: "easeOut",
+                     }}
+                     viewport={{ once: true }}
+                     className="hero-image"
+                  >
                      {/* eslint-disable-next-line @next/next/no-img-element */}
                      <img src="/images/home-7/hero/hero-image.png" alt="img" />
-                  </div>
+                  </Div>
                </div>
             </div>
          </div>

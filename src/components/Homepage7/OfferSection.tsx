@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Div } from "../animation";
 
 const OfferSection = () => {
    return (
@@ -8,7 +9,13 @@ const OfferSection = () => {
             <div className="product-wrapper">
                <div className="row g-4 justify-content-between">
                   <div className="col-xl-8 col-lg-7">
-                     <div className="product-animal-items">
+                     <Div
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        transition={{ duration: 0.75 }}
+                        viewport={{ once: true }}
+                        className="product-animal-items"
+                     >
                         <div className="product-content">
                            <div className="text">
                               <h6>Big Sale</h6>
@@ -43,12 +50,18 @@ const OfferSection = () => {
                               alt="img"
                            />
                         </div>
-                     </div>
+                     </Div>
                   </div>
                   <div className="col-xl-4 col-lg-5">
                      <div className="row">
                         <div className="col-md-6 col-lg-12 ">
-                           <div className="product-animal-items mx-sm-auto mx-md-0 style-2 mb-4">
+                           <Div
+                              initial={{ opacity: 0 }}
+                              whileInView={{ opacity: 1 }}
+                              transition={{ duration: 0.75, delay: 0.3 }}
+                              viewport={{ once: true }}
+                              className="product-animal-items mx-sm-auto mx-md-0 style-2 mb-4"
+                           >
                               <div className="animal-image3">
                                  <Image
                                     width={166}
@@ -68,10 +81,16 @@ const OfferSection = () => {
                                     Read More
                                  </Link>
                               </div>
-                           </div>
+                           </Div>
                         </div>
                         <div className="col-md-6 col-lg-12 ">
-                           <div className="product-animal-items mx-sm-auto mx-md-0 style-2 bg-color">
+                           <Div
+                              initial={{ opacity: 0 }}
+                              whileInView={{ opacity: 1 }}
+                              transition={{ duration: 0.75, delay: 0.6 }}
+                              viewport={{ once: true }}
+                              className="product-animal-items mx-sm-auto mx-md-0 style-2 bg-color"
+                           >
                               <div className="product-content">
                                  <h6>COLLACTION</h6>
                                  <h2>New Arrivals</h2>
@@ -91,7 +110,7 @@ const OfferSection = () => {
                                     alt="img"
                                  />
                               </div>
-                           </div>
+                           </Div>
                         </div>
                      </div>
                   </div>

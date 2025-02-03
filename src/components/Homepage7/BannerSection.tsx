@@ -1,13 +1,25 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
+
+import { useCountdownTimer } from "@/hooks/useCountdownTimer";
 
 const BannerSection = () => {
+   const timeLeft = useCountdownTimer();
+
    return (
       <section className="banner-section-7 fix section-padding4">
          <div className="container">
             <div className="row g-4">
                <div className="col-xl-4 col-lg-6 col-md-6">
-                  <div className="banner-shop-7">
+                  <motion.div
+                     initial={{ opacity: 0, y: 25 }}
+                     whileInView={{ opacity: 1, y: 0 }}
+                     transition={{ duration: 0.75 }}
+                     viewport={{ once: true }}
+                     className="banner-shop-7"
+                  >
                      <h3>
                         Exclusive Early Bird <br />
                         Offer: 20% Off
@@ -16,25 +28,25 @@ const BannerSection = () => {
                      <div className="popular-product-timer-box">
                         <div className="box">
                            <h5 id="day" className="number">
-                              0
+                              {timeLeft.days}
                            </h5>
                            <p className="text">Days</p>
                         </div>
                         <div className="box">
                            <h5 id="hrs" className="number">
-                              23
+                              {timeLeft.hours}
                            </h5>
                            <p className="text">Hour</p>
                         </div>
                         <div className="box">
                            <h5 id="min" className="number">
-                              59
+                              {timeLeft.minutes}
                            </h5>
                            <p className="text">Min</p>
                         </div>
                         <div className="box">
                            <h5 id="sec" className="number">
-                              36
+                              {timeLeft.seconds}
                            </h5>
                            <p className="text">Sec</p>
                         </div>
@@ -47,10 +59,16 @@ const BannerSection = () => {
                            alt="img"
                         />
                      </div>
-                  </div>
+                  </motion.div>
                </div>
                <div className="col-xl-4 col-lg-6 col-md-6">
-                  <div className="banner-shop-7 bg-2">
+                  <motion.div
+                     initial={{ opacity: 0, y: 25 }}
+                     whileInView={{ opacity: 1, y: 0 }}
+                     transition={{ duration: 0.75, delay: 0.2 }}
+                     viewport={{ once: true }}
+                     className="banner-shop-7 bg-2"
+                  >
                      <h3>Kennels</h3>
                      <p>
                         Consectetur adipiscing elit. <br />
@@ -69,10 +87,16 @@ const BannerSection = () => {
                            alt="img"
                         />
                      </div>
-                  </div>
+                  </motion.div>
                </div>
                <div className="col-xl-4 col-lg-6 col-md-6 mx-md-auto mx-lg-0">
-                  <div className="banner-shop-7 bg-2 bg-3">
+                  <motion.div
+                     initial={{ opacity: 0, y: 25 }}
+                     whileInView={{ opacity: 1, y: 0 }}
+                     transition={{ duration: 0.75, delay: 0.4 }}
+                     viewport={{ once: true }}
+                     className="banner-shop-7 bg-2 bg-3"
+                  >
                      <h3>Home Boarding</h3>
                      <p>
                         Consectetur adipiscing elit. <br />
@@ -90,7 +114,7 @@ const BannerSection = () => {
                            alt="img"
                         />
                      </div>
-                  </div>
+                  </motion.div>
                </div>
             </div>
          </div>

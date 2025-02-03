@@ -1,9 +1,11 @@
 "use client";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper/modules";
+import { motion } from "framer-motion";
 
 import { FoodCollectionCard } from "./FoodCollectionSection";
 import { foodCollectionData } from "@/utils/data/homepage-7";
+import { titleEffect } from "../animation";
 
 const StylishCollectionSection = () => {
    return (
@@ -14,20 +16,23 @@ const StylishCollectionSection = () => {
          <div className="container">
             <div className="row gy-3 justify-content-between">
                <div className="col-xl-6">
-                  <div className="section-title style-7">
+                  <motion.div
+                     {...titleEffect}
+                     className="section-title style-7"
+                  >
                      <div className="subtitle">Collection</div>
                      <h2 className="title">Stylish Collection</h2>
-                  </div>
+                  </motion.div>
                </div>
                <div className="col-xl-2">
-                  <div className="array-button">
+                  <motion.div {...titleEffect} className="array-button">
                      <button className="array-prev" id="stylish-7-prev">
                         <i className="far fa-chevron-left"></i>
                      </button>
                      <button className="array-next" id="stylish-7-next">
                         <i className="far fa-chevron-right"></i>
                      </button>
-                  </div>
+                  </motion.div>
                </div>
             </div>
             <Swiper
