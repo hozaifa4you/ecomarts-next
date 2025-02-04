@@ -150,7 +150,7 @@
       &:hover {
          background-color: $current-theme;
          color: $white;
-         border-color: $theme-color !important;
+         border-color: $current-theme !important;
       }
    }
 

@@ -2154,7 +2154,7 @@
             font-family: $body-font;
 
             &:hover {
-               color: $theme-color !important;
+               color: $current-theme !important;
             }
          }
       }
@@ -2169,7 +2169,7 @@
       font-family: $body-font;
 
       &:hover {
-         color: $theme-color !important;
+         color: $current-theme !important;
       }
    }
 }

@@ -196,14 +196,6 @@
                color: rgba(255, 255, 255, 0.8);
                bottom: 5px;
 
-               &.style3 {
-                  background-color: #ffb22c;
-               }
-
-               &.style4 {
-                  background-color: $current-theme;
-               }
-
                i {
                   font-size: 24px;
                }
@@ -231,133 +223,7 @@
             &:hover {
                a {
                   margin-left: 5px;
-                  &.style1 {
-                     color: $theme-color-3 !important;
-                  }
-
-                  &.style3 {
-                     color: #ffb22c !important;
-                  }
-
-                  &.style4 {
-                     color: $theme-color-5 !important;
-                  }
-               }
-            }
-         }
-      }
-   }
-
-   &.style-6 {
-      .single-footer-widget {
-         .widget-head {
-            h3 {
-               &::before {
-                  background-color: #ffb22c !important;
-               }
-            }
-         }
-
-         .footer-content {
-            p {
-               color: rgba(255, 255, 255, 0.85);
-            }
-
-            .social-icon {
-               a {
-                  &:hover {
-                     background-color: #ffb22c !important;
-                  }
-               }
-            }
-
-            .footer-input {
-               .newsletter-btn {
-                  background-color: #ffb22c;
-               }
-            }
-         }
-
-         .list-area {
-            li {
-               @include transition;
-               font-weight: 500;
-
-               &:not(:last-child) {
-                  margin-bottom: 20px;
-               }
-
-               a {
-                  color: rgba(255, 255, 255, 0.8);
-
-                  i {
-                     margin-right: 5px;
-                  }
-               }
-
-               &:hover {
-                  a {
-                     margin-left: 5px;
-                     color: #ffb22c !important;
-                  }
-               }
-            }
-         }
-      }
-   }
-
-   &.style-7 {
-      .single-footer-widget {
-         .widget-head {
-            h3 {
-               &::before {
-                  background-color: $theme-color-9 !important;
-               }
-            }
-         }
-
-         .footer-content {
-            p {
-               color: rgba(255, 255, 255, 0.85);
-            }
-
-            .social-icon {
-               a {
-                  &:hover {
-                     background-color: $theme-color-9 !important;
-                  }
-               }
-            }
-
-            .footer-input {
-               .newsletter-btn {
-                  background-color: $current-theme;
-               }
-            }
-         }
-
-         .list-area {
-            li {
-               @include transition;
-               font-weight: 500;
-
-               &:not(:last-child) {
-                  margin-bottom: 20px;
-               }
-
-               a {
-                  color: rgba(255, 255, 255, 0.8);
-
-                  i {
-                     margin-right: 5px;
-                  }
-               }
-
-               &:hover {
-                  a {
-                     margin-left: 5px;
-                     color: $theme-color-9 !important;
-                  }
+                  color: $current-theme !important;
                }
             }
          }

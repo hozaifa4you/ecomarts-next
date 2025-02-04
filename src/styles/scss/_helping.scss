@@ -495,7 +495,7 @@ br {
 }
 
 .bg-theme {
-   background-color: $theme-color !important;
+   background-color: $current-theme !important;
 }
 
 .bg-theme2 {
@@ -579,7 +579,7 @@ br {
 }
 
 .text-theme-color {
-   color: $theme-color !important;
+   color: $current-theme !important;
 }
 
 .text-theme-color2 {
