@@ -2,7 +2,6 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { useTheme } from "next-themes";
 import { usePathname } from "next/navigation";
 
 import { SearchModal } from "@/components/Navbar/SearchModal";
@@ -33,8 +32,6 @@ export type HomePathTypes =
 
 const Navbar = () => {
    const [visible, setVisible] = useState(false);
-   const [mounted, setMounted] = useState(false);
-   const { setTheme } = useTheme();
    const pathname = usePathname() as HomePathTypes;
 
    useEffect(() => {
@@ -51,28 +48,29 @@ const Navbar = () => {
    }, []);
 
    useEffect(() => {
-      if (!mounted) return;
-
-      const themeMap: Record<HomePathTypes, ThemeValues> = {
-         "/": themes.default,
-         "/homepage-2": themes.default,
-         "/homepage-3": themes.green,
-         "/homepage-4": themes.brawn,
-         "/homepage-5": themes.brawnLight,
-         "/homepage-6": themes.yellow,
-         "/homepage-7": themes.lightBlue,
-      };
-
-      const newTheme = themeMap[pathname] ?? themes.default;
-
-      document.documentElement.classList.remove(...Object.values(themes));
-
-      setTheme(newTheme);
-   }, [mounted, pathname, setTheme]);
-
-   useEffect(() => {
-      setMounted(true);
-   }, []);
+      if (pathname === "/" || pathname === "/homepage-2") {
+         document.documentElement.classList.remove(...Object.values(themes));
+         document.documentElement.classList.add(themes.default);
+      } else if (pathname === "/homepage-3") {
+         document.documentElement.classList.remove(...Object.values(themes));
+         document.documentElement.classList.add(themes.green);
+      } else if (pathname === "/homepage-4") {
+         document.documentElement.classList.remove(...Object.values(themes));
+         document.documentElement.classList.add(themes.brawn);
+      } else if (pathname === "/homepage-5") {
+         document.documentElement.classList.remove(...Object.values(themes));
+         document.documentElement.classList.add(themes.brawnLight);
+      } else if (pathname === "/homepage-6") {
+         document.documentElement.classList.remove(...Object.values(themes));
+         document.documentElement.classList.add(themes.yellow);
+      } else if (pathname === "/homepage-7") {
+         document.documentElement.classList.remove(...Object.values(themes));
+         document.documentElement.classList.add(themes.lightBlue);
+      } else {
+         document.documentElement.classList.remove(...Object.values(themes));
+         document.documentElement.classList.add(themes.default);
+      }
+   }, [pathname]);
 
    return (
       <>
@@ -154,7 +152,7 @@ const Navbar = () => {
                                  <li>
                                     <Link href="#">
                                        <span className="left-icon">
-                                          <i className="icon-app"></i>
+                                          <i className="fa-solid fa-grid-2"></i>
                                        </span>
                                        all categories
                                        <span className="right-icon">
@@ -228,7 +226,7 @@ const Navbar = () => {
                         <div className="header-right d-flex justify-content-end align-items-center">
                            <div className="mean__menu-wrapper d-none d-xl-block">
                               <div className="main-menu">
-                                 <nav id="mobile-menu">
+                                 <nav>
                                     <ul>
                                        <li className="has-dropdown active menu-thumb">
                                           <Link href="#">
