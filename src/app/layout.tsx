@@ -8,6 +8,7 @@ import "@/styles/css/all.min.css";
 import "@/styles/scss/main.scss";
 import { Footer } from "@/components/Footer";
 import { Navbar } from "@/components/Navbar/Navbar";
+import { ThemeProvider } from "@/components/ThemeProvider";
 
 const albertSans = Albert_Sans({
    variable: "--font-albert-sans",
@@ -35,9 +36,11 @@ export default function RootLayout({
    return (
       <html lang="en">
          <body className={`${albertSans.variable} ${jost.variable}`}>
-            <Navbar />
-            {children}
-            <Footer />
+            <ThemeProvider attribute="class" defaultTheme="theme-default">
+               <Navbar />
+               {children}
+               <Footer />
+            </ThemeProvider>
          </body>
       </html>
    );

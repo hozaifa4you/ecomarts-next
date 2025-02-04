@@ -11,6 +11,8 @@
    --theme7: #cb8161;
    --theme8: #ffb22c;
    --theme9: #00c9d5;
+   // default theme
+   --current-theme: #ff4035;
    --title: #0a111e;
    --title2: #1e1e1e;
    --orange: #e78c45;
@@ -72,5 +74,30 @@ $bg-color-8: var(--bg-8);
 $bg-color-9: var(--bg-9);
 $bg-color-10: var(--bg-10);
 $green-gray: var(--green-gray);
-
 $shadow: var(--box-shadow);
+
+.theme-default {
+   --current-theme: var(--theme);
+}
+
+.theme-green {
+   --current-theme: var(--theme4);
+}
+
+.theme-brawn {
+   --current-theme: var(--theme5);
+}
+
+.theme-brawn-light {
+   --current-theme: var(--theme7);
+}
+
+.theme-yellow {
+   --current-theme: var(--theme8);
+}
+
+.theme-light-blue {
+   --current-theme: var(--theme6);
+}
+
+$current-theme: var(--current-theme);

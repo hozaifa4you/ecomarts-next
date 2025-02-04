@@ -2,15 +2,40 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useTheme } from "next-themes";
+import { usePathname } from "next/navigation";
 
 import { SearchModal } from "@/components/Navbar/SearchModal";
 import { ResponsiveSidebar } from "@/components/Navbar/ResponsiveSidebar";
 import { NewsletterModal } from "@/components/NewsletterModal";
 import NiceSelect from "@/components/NiceSelect/NiceSelect";
-import { MotionDiv } from "../animation";
+import { MotionDiv } from "@/components/animation";
+
+const themes = {
+   default: "theme-default",
+   green: "theme-green",
+   brawn: "theme-brawn",
+   brawnLight: "theme-brawn-light",
+   yellow: "theme-yellow",
+   lightBlue: "theme-light-blue",
+} as const;
+
+export type ThemeKeys = keyof typeof themes;
+export type ThemeValues = (typeof themes)[ThemeKeys];
+export type HomePathTypes =
+   | "/"
+   | "/homepage-2"
+   | "/homepage-3"
+   | "/homepage-4"
+   | "/homepage-5"
+   | "/homepage-6"
+   | "/homepage-7";
 
 const Navbar = () => {
    const [visible, setVisible] = useState(false);
+   const [mounted, setMounted] = useState(false);
+   const { setTheme } = useTheme();
+   const pathname = usePathname() as HomePathTypes;
 
    useEffect(() => {
       const toggleVisibility = () => {
@@ -23,6 +48,30 @@ const Navbar = () => {
 
       window.addEventListener("scroll", toggleVisibility);
       return () => window.removeEventListener("scroll", toggleVisibility);
+   }, []);
+
+   useEffect(() => {
+      if (!mounted) return;
+
+      const themeMap: Record<HomePathTypes, ThemeValues> = {
+         "/": themes.default,
+         "/homepage-2": themes.default,
+         "/homepage-3": themes.green,
+         "/homepage-4": themes.brawn,
+         "/homepage-5": themes.brawnLight,
+         "/homepage-6": themes.yellow,
+         "/homepage-7": themes.lightBlue,
+      };
+
+      const newTheme = themeMap[pathname] ?? themes.default;
+
+      document.documentElement.classList.remove(...Object.values(themes));
+
+      setTheme(newTheme);
+   }, [mounted, pathname, setTheme]);
+
+   useEffect(() => {
+      setMounted(true);
    }, []);
 
    return (
