@@ -173,7 +173,7 @@
             line-height: 26px;
             .date {
                padding: 8px 12px;
-               background-color: $theme-color-3;
+               background-color: $current-theme;
                color: $white;
                font-family: $title-font;
                font-size: 16px;
@@ -271,7 +271,7 @@
 
          .offer-card-items-fashon-two1-info1__content {
             &--subtitle {
-               color: $theme-color-5;
+               color: $current-theme;
             }
 
             &--btn-wrapper {
@@ -349,7 +349,7 @@
                color: $title-color;
 
                &::before {
-                  background-color: $theme-color-3;
+                  background-color: $current-theme;
                }
 
                &:hover {
@@ -391,7 +391,7 @@
       span {
          font-size: 16px;
          font-weight: 600;
-         color: $theme-color-7;
+         color: $current-theme;
          display: inline-block;
          margin-bottom: 10px;
 
@@ -421,7 +421,7 @@
 
       .theme-btn {
          border-radius: 0;
-         background-color: $theme-color-7;
+         background-color: $current-theme;
       }
    }
 }

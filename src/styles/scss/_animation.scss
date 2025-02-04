@@ -1129,7 +1129,7 @@
 
 .water-wave {
    -webkit-text-stroke-width: 1px;
-   -webkit-text-stroke-color: $theme-color;
+   -webkit-text-stroke-color: $current-theme;
    color: transparent;
    transition: all 0.5s;
    position: relative;
@@ -1137,12 +1137,12 @@
    &::before {
       content: attr(data-text);
       position: absolute;
-      color: $theme-color;
+      color: $current-theme;
       width: 0px;
       overflow: hidden;
       animation: pulse-width 3s ease-in infinite;
       -webkit-text-stroke-width: 1px;
-      -webkit-text-stroke-color: $theme-color;
+      -webkit-text-stroke-color: $current-theme;
    }
 }
 

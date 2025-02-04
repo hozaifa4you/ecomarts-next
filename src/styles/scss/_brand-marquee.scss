@@ -10,7 +10,7 @@
    margin-bottom: 50px;
 
    b {
-      color: $theme-color;
+      color: $current-theme;
    }
 }
 
@@ -121,7 +121,7 @@
    border-radius: 40px;
    background: linear-gradient(90deg, #ff4035 0%, #e9cf10 100%);
    &.bg-2 {
-      background-color: $theme-color-2;
+      background-color: $current-theme;
    }
 
    &.bg-3 {

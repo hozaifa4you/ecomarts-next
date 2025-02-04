@@ -66,7 +66,7 @@
    }
 
    .star {
-      color: $theme-color-3;
+      color: $current-theme;
    }
 }
 
@@ -85,7 +85,7 @@
 
    .swiper-slide-active {
       .testimonial-card-items-one {
-         border-top: 3px solid $theme-color-3;
+         border-top: 3px solid $current-theme;
          background-color: $white;
          box-shadow: 0px 4px 25px 0px rgba(51, 39, 39, 0.06);
          transition: all 01s;
@@ -379,8 +379,8 @@
       width: 56px;
       height: 56px;
       background-color: $white;
-      border: 1px solid $theme-color-5;
-      color: $theme-color-5;
+      border: 1px solid $current-theme;
+      color: $current-theme;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -396,7 +396,7 @@
       -o-transition: all 0.3s linear;
 
       &:hover {
-         background-color: $theme-color-5;
+         background-color: $current-theme;
          color: $white;
       }
    }

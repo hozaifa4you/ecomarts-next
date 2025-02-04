@@ -113,7 +113,7 @@
 
             &:hover {
                background-color: #ffeceb;
-               color: $theme-color-3;
+               color: $current-theme;
             }
          }
       }
@@ -124,7 +124,7 @@
    position: relative;
    padding: 51px 75px;
    border-radius: 20px;
-   border: 1px solid $theme-color-3;
+   border: 1px solid $current-theme;
    background-color: $white;
 
    img {
@@ -145,7 +145,7 @@
 
          p {
             font-size: 18px;
-            color: $theme-color;
+            color: $current-theme;
             margin-top: 7px;
          }
       }
@@ -164,7 +164,7 @@
          transition: all 0.3s;
 
          &:hover {
-            background-color: $theme-color-3;
+            background-color: $current-theme;
          }
       }
 

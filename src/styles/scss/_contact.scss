@@ -13,7 +13,7 @@
 
       &__contact {
          padding: 40px 0px 36px 45px;
-         background-color: $theme-color-3;
+         background-color: $current-theme;
          border-radius: 10px;
          z-index: 9;
 
@@ -92,11 +92,11 @@
                background-color: $white;
 
                i {
-                  color: $theme-color-3;
+                  color: $current-theme;
                }
 
                &:hover {
-                  background-color: $theme-color-2;
+                  background-color: $current-theme;
                }
             }
          }

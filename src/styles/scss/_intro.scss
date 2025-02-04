@@ -89,7 +89,7 @@
       .intro-content {
          .subtitle {
             .color-text {
-               color: $theme-color-3;
+               color: $current-theme;
                font-family: $body-font;
                font-size: 16px;
                font-style: normal;
@@ -630,7 +630,7 @@
 .intro-wrapper {
    &.style2 {
       .intro-subtitle {
-         color: $theme-color-3;
+         color: $current-theme;
          text-align: center;
          font-family: $title-font;
          font-size: 18px;
@@ -786,7 +786,7 @@
             }
 
             .subtitle {
-               color: $theme-color-3;
+               color: $current-theme;
                font-family: $title-color;
                font-size: 16px;
                font-style: normal;
@@ -826,7 +826,7 @@
                text-transform: capitalize;
 
                i {
-                  color: $theme-color-3;
+                  color: $current-theme;
                   margin-left: 10px;
                }
 
@@ -849,7 +849,7 @@
             }
 
             .subtitle {
-               color: $theme-color-3;
+               color: $current-theme;
                font-family: $title-color;
                font-size: 16px;
                font-style: normal;
@@ -889,7 +889,7 @@
                text-transform: capitalize;
 
                i {
-                  color: $theme-color-3;
+                  color: $current-theme;
                   margin-left: 10px;
                }
 
@@ -1008,7 +1008,7 @@
          background-color: transparent;
          border-radius: 50%;
          z-index: 2;
-         border: 1px solid $theme-color-3;
+         border: 1px solid $current-theme;
       }
    }
 }
@@ -1121,22 +1121,22 @@
       }
 
       .array-prev {
-         border: 1px solid $theme-color-5;
-         color: $theme-color-5;
+         border: 1px solid $current-theme;
+         color: $current-theme;
 
          &:hover {
-            background-color: $theme-color-5;
+            background-color: $current-theme;
             color: $white;
          }
       }
 
       .array-next {
          border: 1px solid $white;
-         color: $theme-color-5;
+         color: $current-theme;
          background-color: $white;
 
          &:hover {
-            background-color: $theme-color-5;
+            background-color: $current-theme;
             color: $white;
          }
       }
@@ -1173,7 +1173,7 @@
 
       .theme-btn {
          border-radius: 0;
-         background-color: $theme-color-7;
+         background-color: $current-theme;
          margin-top: 50px;
       }
    }
@@ -1337,13 +1337,13 @@
          }
 
          .theme-btn {
-            background-color: $theme-color-8;
+            background-color: $current-theme;
 
             &.style-2 {
                background-color: $title-color;
 
                &::before {
-                  background-color: $theme-color-8;
+                  background-color: $current-theme;
                }
             }
          }

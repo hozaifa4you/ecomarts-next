@@ -62,10 +62,10 @@
          }
 
          &:hover {
-            color: $theme-color-5;
+            color: $current-theme;
 
             svg path {
-               color: $theme-color-5;
+               color: $current-theme;
             }
          }
       }

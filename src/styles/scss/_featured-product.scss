@@ -89,7 +89,7 @@
 
             &:hover {
                background-color: #f5b4a6;
-               color: $theme-color-3;
+               color: $current-theme;
 
                svg {
                   path {
@@ -105,7 +105,7 @@
       &--details-wrapper {
          .price {
             display: block;
-            color: $theme-color-3;
+            color: $current-theme;
             font-family: $body-font;
             font-size: 18px;
             font-style: normal;
@@ -178,7 +178,7 @@
 
    &:hover {
       .featured-product-item-one__thumb {
-         border: 1px solid $theme-color-3;
+         border: 1px solid $current-theme;
 
          .badge {
             opacity: 1;
@@ -228,7 +228,7 @@
 //         font-style: normal;
 //         font-weight: 500;
 //         line-height: normal;
-//         background:$theme-color-3;
+//         background:$current-theme;
 //     }
 //     &__thumb {
 //         text-align: center;
@@ -304,7 +304,7 @@
 //         align-items: center;
 //         justify-content: center;
 //         background-color:#FFD9D7;
-//         color: $theme-color-3;
+//         color: $current-theme;
 //         border-radius: 50%;
 //         -webkit-border-radius: 50%;
 //         -moz-border-radius: 50%;
@@ -314,21 +314,21 @@
 //              transition: all 0.3s linear;
 
 //              i {
-//                 color: $theme-color-3;
+//                 color: $current-theme;
 //                 transition: all 0.3s;
 // }
 
 //              svg {
 //                  transition: all 0.3s linear;
 //                  path {
-//                     fill: $theme-color-3;
+//                     fill: $current-theme;
 //                      stroke: $title-color;
 //                      transition: all 0.3s linear;
 //                  }
 //              }
 
 //              &:hover {
-//                  background-color: $theme-color-3;
+//                  background-color: $current-theme;
 //                  color: $white;
 //                  i {
 //                     color: $white;
@@ -420,7 +420,7 @@
          }
 
          .offer-price {
-            color: $theme-color-3;
+            color: $current-theme;
             font-family: $title-font;
             font-size: 16px;
             font-style: normal;

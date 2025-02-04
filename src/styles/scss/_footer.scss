@@ -31,7 +31,7 @@
                content: "";
                width: 25px;
                height: 2px;
-               background-color: $theme-color-2;
+               background-color: $current-theme;
             }
 
             &::after {
@@ -46,7 +46,7 @@
 
             &.style1 {
                &::before {
-                  background-color: $theme-color-3;
+                  background-color: $current-theme;
                }
 
                &::after {
@@ -65,7 +65,7 @@
 
             &.style4 {
                &::before {
-                  background-color: $theme-color-5;
+                  background-color: $current-theme;
                }
 
                &::after {
@@ -145,7 +145,7 @@
                color: rgba(255, 255, 255, 0.8);
 
                &:hover {
-                  background-color: $theme-color-3;
+                  background-color: $current-theme;
                }
 
                &.style3 {
@@ -157,7 +157,7 @@
 
                &.style4 {
                   &:hover {
-                     background-color: $theme-color-5;
+                     background-color: $current-theme;
                      color: $white !important;
                   }
                }
@@ -192,7 +192,7 @@
                line-height: 50px;
                border-radius: 8px;
                text-align: center;
-               background-color: $theme-color-3;
+               background-color: $current-theme;
                color: rgba(255, 255, 255, 0.8);
                bottom: 5px;
 
@@ -201,7 +201,7 @@
                }
 
                &.style4 {
-                  background-color: $theme-color-5;
+                  background-color: $current-theme;
                }
 
                i {
@@ -331,7 +331,7 @@
 
             .footer-input {
                .newsletter-btn {
-                  background-color: $theme-color-9;
+                  background-color: $current-theme;
                }
             }
          }

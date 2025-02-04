@@ -50,7 +50,7 @@
                width: 20px;
                font-size: 18px;
                height: 100%;
-               color: $theme-color-3;
+               color: $current-theme;
                text-align: center;
                transition: all 0.3s ease-in-out;
 
@@ -77,7 +77,7 @@
          //       appearance: none;
          //       width: 16px;
          //       height: 16px;
-         //       background: $theme-color-3;
+         //       background: $current-theme;
 
          //       border-radius: 50%;
          //       cursor: pointer;
@@ -113,7 +113,7 @@
             //     appearance: none;
             //     width: 16px;
             //     height: 16px;
-            //     background: $theme-color-3;
+            //     background: $current-theme;
             //     border-radius: 50%;
             //     cursor: pointer;
             //     transition: transform 0.2s ease, background-color 0.3s;
@@ -220,7 +220,7 @@
 
                &:hover {
                   a {
-                     color: $theme-color-3;
+                     color: $current-theme;
                   }
                }
             }
@@ -310,7 +310,7 @@
                      font-family: $fa;
                      top: -10px;
                      left: 1px;
-                     color: $theme-color;
+                     color: $current-theme;
                      font-size: 13px;
                   }
 
@@ -390,7 +390,7 @@
                   height: 2px;
                   width: 83px;
                   content: "";
-                  background-color: $theme-color;
+                  background-color: $current-theme;
                }
             }
 
@@ -406,7 +406,7 @@
                transition: all 0.3s ease-in-out;
 
                &:hover {
-                  color: $theme-color-3;
+                  color: $current-theme;
                }
             }
          }
@@ -438,7 +438,7 @@
                   margin-bottom: 8px;
 
                   li {
-                     color: $theme-color-3;
+                     color: $current-theme;
                      font-family: $title-font;
                      font-size: 16px;
                      font-style: normal;
@@ -446,7 +446,7 @@
                      line-height: 26px;
 
                      i {
-                        color: $theme-color-3;
+                        color: $current-theme;
                         margin-right: 5px;
                      }
                   }
@@ -457,7 +457,7 @@
 
                   a {
                      &:hover {
-                        color: $theme-color;
+                        color: $current-theme;
                      }
                   }
                }
@@ -495,7 +495,7 @@
                }
 
                &:hover {
-                  background-color: $theme-color;
+                  background-color: $current-theme;
                   color: $white;
                }
             }

@@ -156,7 +156,7 @@
    border: none;
 
    &:hover {
-      color: $theme-color-3;
+      color: $current-theme;
    }
 }
 
@@ -165,7 +165,7 @@
 }
 
 .mean-container .mean-nav ul li a:hover {
-   color: $theme-color-2;
+   color: $current-theme;
 }
 
 .mean-container .mean-nav ul li a.mean-expand {

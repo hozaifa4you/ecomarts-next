@@ -94,7 +94,7 @@
       }
 
       //  &--price {
-      //      color: $theme-color-3;
+      //      color: $current-theme;
       //      font-family: $title-font;
       //      font-size: 20px;
       //      font-style: normal;
@@ -147,7 +147,7 @@
 
             &:hover {
                background-color: #ffeceb;
-               color: $theme-color-3;
+               color: $current-theme;
             }
          }
       }
@@ -185,7 +185,7 @@
       font-style: normal;
       font-weight: 500;
       line-height: normal;
-      background: $theme-color-3;
+      background: $current-theme;
       text-transform: uppercase;
    }
 
@@ -243,7 +243,7 @@
          }
 
          .offer-price {
-            color: $theme-color-3;
+            color: $current-theme;
             font-family: $title-font;
             font-size: 16px;
             font-style: normal;
@@ -272,7 +272,7 @@
       -o-border-radius: 50%;
 
       i {
-         color: $theme-color-3;
+         color: $current-theme;
          transition: all 0.3s;
          -webkit-transition: all 0.3s;
          -moz-transition: all 0.3s;
@@ -281,7 +281,7 @@
       }
 
       &:hover {
-         background-color: $theme-color-3;
+         background-color: $current-theme;
          i {
             color: $white;
          }
@@ -299,7 +299,7 @@
 
    &.style-seller-3 {
       &:hover {
-         border: 3px solid $theme-color-5;
+         border: 3px solid $current-theme;
       }
 
       .icon-box2 {
@@ -307,18 +307,18 @@
          button {
             &:hover {
                color: $white;
-               background: $theme-color-5;
+               background: $current-theme;
             }
          }
       }
 
       .best-seller-product-items-two__badge1 {
-         background-color: $theme-color-5;
+         background-color: $current-theme;
       }
 
       .best-seller-product-items-two__details--price {
          .offer-price {
-            color: $theme-color-5;
+            color: $current-theme;
          }
       }
 
@@ -327,7 +327,7 @@
 
          a {
             &:hover {
-               color: $theme-color-5;
+               color: $current-theme;
             }
          }
       }
@@ -342,18 +342,18 @@
       margin-top: 24px;
 
       .best-seller-product-items-two__badge1 {
-         background-color: $theme-color-7;
+         background-color: $current-theme;
       }
 
       &__badge1 {
-         background: $theme-color-7;
-         border: 1px solid $theme-color-7;
+         background: $current-theme;
+         border: 1px solid $current-theme;
       }
 
       .best-seller-product-items-two__details--title {
          a {
             &:hover {
-               color: $theme-color-7;
+               color: $current-theme;
             }
          }
       }
@@ -379,12 +379,12 @@
       }
 
       .best-seller-product-items-two__badge1 {
-         background-color: $theme-color-9;
+         background-color: $current-theme;
       }
 
       &__badge1 {
-         background: $theme-color-9;
-         border: 1px solid $theme-color-9;
+         background: $current-theme;
+         border: 1px solid $current-theme;
       }
 
       .best-seller-product-items-two__details--title {
@@ -392,7 +392,7 @@
 
          a {
             &:hover {
-               color: $theme-color-9;
+               color: $current-theme;
             }
          }
       }
@@ -420,13 +420,13 @@
 
          a,
          button {
-            border: 1px solid $theme-color-9;
+            border: 1px solid $current-theme;
             i {
-               color: $theme-color-9;
+               color: $current-theme;
             }
 
             &:hover {
-               background-color: $theme-color-9;
+               background-color: $current-theme;
                i {
                   color: $white !important;
                }
@@ -454,7 +454,7 @@
          font-style: normal;
          font-weight: 500;
          line-height: normal;
-         background: $theme-color-3;
+         background: $current-theme;
          text-transform: uppercase;
       }
 
@@ -517,7 +517,7 @@
 
          .star {
             i {
-               color: $theme-color-8;
+               color: $current-theme;
 
                &.color {
                   color: #cccccc;
@@ -527,7 +527,7 @@
       }
 
       &:hover {
-         border: 1px solid $theme-color-8;
+         border: 1px solid $current-theme;
       }
    }
 }
@@ -603,7 +603,7 @@
       align-items: center;
       justify-content: center;
       background-color: white;
-      color: $theme-color-3;
+      color: $current-theme;
       border: 1px solid #f0bab7;
       transition: all 0.3s linear;
       border-radius: 50%;
@@ -614,13 +614,13 @@
 
       svg {
          path {
-            fill: $theme-color-3;
-            stroke: $theme-color-3;
+            fill: $current-theme;
+            stroke: $current-theme;
          }
       }
 
       &:hover {
-         background-color: $theme-color-3;
+         background-color: $current-theme;
          color: $white;
 
          i {
@@ -685,7 +685,7 @@
             margin-bottom: 30px;
 
             span {
-               color: $theme-color-8;
+               color: $current-theme;
             }
          }
       }
@@ -697,7 +697,7 @@
    margin: 0 auto;
    .product-animal-items {
       padding: 60px;
-      background-color: $theme-color-9;
+      background-color: $current-theme;
       border-radius: 10px;
       position: relative;
       height: 492px;
@@ -767,7 +767,7 @@
                margin-top: 10px;
                border: none;
                padding: 10px;
-               background-color: $theme-color-9;
+               background-color: $current-theme;
                color: $white;
 
                &::before {
@@ -799,7 +799,7 @@
          color: $title-color;
 
          &::before {
-            background-color: $theme-color-3;
+            background-color: $current-theme;
          }
 
          &:hover {

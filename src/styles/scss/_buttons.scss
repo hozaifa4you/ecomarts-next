@@ -14,7 +14,7 @@
    font-weight: 600;
    line-height: normal;
    text-transform: capitalize;
-   background: $theme-color-3;
+   background: $current-theme;
    z-index: 1;
    line-height: 1;
    overflow: hidden;
@@ -74,7 +74,7 @@
          content: "";
          top: 162%;
          left: 50%;
-         background: $theme-color-3;
+         background: $current-theme;
          -webkit-transform: translateX(-50%);
          transform: translateX(-50%) rotate(-8deg);
          border-radius: 80%;
@@ -91,7 +91,7 @@
    &.style3 {
       padding: 15px 20px;
       border: none;
-      color: $theme-color-3;
+      color: $current-theme;
       font-weight: 600;
       border-radius: 22px;
       background: $bg-color-3;
@@ -179,7 +179,7 @@
       color: $white;
       font-weight: 600;
       border-radius: 22px;
-      background: $theme-color-3;
+      background: $current-theme;
       -webkit-border-radius: 22px;
       -moz-border-radius: 22px;
       -ms-border-radius: 22px;
@@ -272,7 +272,7 @@
    &.style9 {
       padding: 10px 15px;
       border: 1px solid rgba(10, 17, 30, 0.25);
-      color: $theme-color-3;
+      color: $current-theme;
       font-family: $title-font;
       font-size: 14px;
       font-style: normal;
@@ -315,8 +315,8 @@
 
    &.style10 {
       padding: 8px 10px;
-      border: 1px solid $theme-color-5;
-      color: $theme-color-5;
+      border: 1px solid $current-theme;
+      color: $current-theme;
       font-family: $title-font;
       font-size: 14px;
       font-style: normal;
@@ -526,12 +526,12 @@
    }
 
    &.color {
-      background-color: $theme-color-8;
+      background-color: $current-theme;
    }
 
    &.style15 {
       font-weight: 500;
-      color: $theme-color-8;
+      color: $current-theme;
       background: $white;
       border: none;
       padding: 0;
@@ -546,7 +546,7 @@
 
       i {
          margin-left: 12px;
-         color: $theme-color-8;
+         color: $current-theme;
       }
    }
 

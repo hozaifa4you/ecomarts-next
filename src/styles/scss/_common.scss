@@ -19,7 +19,7 @@
    gap: 5px;
 
    li {
-      color: $theme-color-3;
+      color: $current-theme;
    }
 }
 
@@ -45,7 +45,7 @@
          -o-border-radius: 30px;
 
          &:hover {
-            background-color: $theme-color;
+            background-color: $current-theme;
             color: $white !important;
          }
       }
@@ -60,7 +60,7 @@
    white-space: nowrap;
    height: 107px;
    padding-top: 24px;
-   background: $theme-color;
+   background: $current-theme;
    z-index: 9;
 
    &.style-1 {
@@ -138,7 +138,7 @@
          text-transform: uppercase;
 
          &:hover {
-            color: $theme-color;
+            color: $current-theme;
             background-size: 100% 3px;
             opacity: 1;
          }
@@ -167,7 +167,7 @@
          background-size: 0% 2px;
 
          &:hover {
-            color: $theme-color-2;
+            color: $current-theme;
             background-size: 100% 3px;
             opacity: 0.7;
          }
@@ -225,7 +225,7 @@
       }
 
       .percentage {
-         color: $theme-color;
+         color: $current-theme;
          font-family: $title-font;
          font-size: 20px;
          font-style: normal;
@@ -252,7 +252,7 @@
 
       .progress-bar {
          height: 7px;
-         background-color: $theme-color-2;
+         background-color: $current-theme;
          border-radius: 10px;
          position: relative;
          display: flex;
@@ -269,7 +269,7 @@
       &.style2 {
          &:before,
          &:after {
-            background-color: $theme-color-2;
+            background-color: $current-theme;
          }
       }
    }
@@ -291,7 +291,7 @@
    width: 6px;
    height: 6px;
    z-index: 10000001;
-   background-color: $theme-color-2;
+   background-color: $current-theme;
    -webkit-transition: width 0.3s ease-in-out, height 0.3s ease-in-out,
       margin 0.3s ease-in-out, opacity 0.3s ease-in-out;
    -o-transition: width 0.3s ease-in-out, height 0.3s ease-in-out,
@@ -304,7 +304,7 @@
       margin-top: -35px;
       width: 70px;
       height: 70px;
-      background-color: $theme-color-2;
+      background-color: $current-theme;
       opacity: 0.3;
    }
 }
@@ -314,7 +314,7 @@
    margin-top: -12px;
    width: 30px;
    height: 30px;
-   border: 1px solid $theme-color-2;
+   border: 1px solid $current-theme;
    -webkit-box-sizing: border-box;
    box-sizing: border-box;
    z-index: 10000000;
@@ -757,8 +757,8 @@ input.main-search-input::placeholder {
    .single-select:after,
    .form-select:after,
    select:after {
-      border-bottom: 1px solid $theme-color-3;
-      border-right: 1px solid $theme-color-3;
+      border-bottom: 1px solid $current-theme;
+      border-right: 1px solid $current-theme;
       right: 20px;
       height: 7px;
       width: 7px;
@@ -861,7 +861,7 @@ input.main-search-input::placeholder {
       .show > .nav-link {
          padding: 5px !important;
          position: relative;
-         background-color: $theme-color-3;
+         background-color: $current-theme;
          width: 110px;
          height: 40px;
          color: $white;
@@ -976,7 +976,7 @@ input.main-search-input::placeholder {
          padding: 5px !important;
          position: relative;
          background-color: transparent;
-         color: $theme-color-7;
+         color: $current-theme;
          font-size: 16px;
          transition: all 0.3s;
          .badge {
@@ -986,12 +986,12 @@ input.main-search-input::placeholder {
             height: 24px;
             top: -20px;
             right: 0;
-            background-color: $theme-color-5;
+            background-color: $current-theme;
             color: $white;
             border-radius: 0;
          }
          &:before {
-            background-color: $theme-color-5;
+            background-color: $current-theme;
          }
       }
 

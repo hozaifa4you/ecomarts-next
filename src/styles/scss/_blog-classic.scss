@@ -11,7 +11,7 @@
          }
 
          &__post-date {
-            background-color: $theme-color-3;
+            background-color: $current-theme;
             position: absolute;
             top: 45px;
             left: 30px;
@@ -58,7 +58,7 @@
             }
 
             li {
-               color: $theme-color-3;
+               color: $current-theme;
                font-family: $title-font;
                font-size: 14px;
                font-style: normal;
@@ -66,13 +66,13 @@
                line-height: 22px;
 
                i {
-                  color: $theme-color;
+                  color: $current-theme;
                   margin-right: 5px;
                }
             }
          }
          &--title {
-            color: $theme-color-3;
+            color: $current-theme;
             font-family: $title-font;
             font-size: 36px;
             font-style: normal;
@@ -82,7 +82,7 @@
             margin-top: 8px;
             a {
                &:hover {
-                  color: $theme-color-3;
+                  color: $current-theme;
                }
             }
          }
@@ -120,7 +120,7 @@
             @include imgw;
          }
          &--post-date {
-            background-color: $theme-color-3;
+            background-color: $current-theme;
             position: absolute;
             top: 45px;
             left: 30px;
@@ -142,7 +142,7 @@
                }
 
                li {
-                  color: $theme-color-3;
+                  color: $current-theme;
                   font-family: $title-font;
                   font-size: 14px;
                   font-style: normal;
@@ -150,7 +150,7 @@
                   line-height: 22px;
 
                   i {
-                     color: $theme-color;
+                     color: $current-theme;
                      margin-right: 5px;
                   }
                }

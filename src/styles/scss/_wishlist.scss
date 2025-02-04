@@ -127,7 +127,7 @@
    }
 
    .remove {
-      color: $theme-color;
+      color: $current-theme;
       font-size: 18px;
    }
 
@@ -148,7 +148,7 @@
       border-radius: 4px;
 
       &:hover {
-         background-color: $theme-color;
+         background-color: $current-theme;
          color: $white;
          border-color: $theme-color !important;
       }
@@ -161,7 +161,7 @@
       height: 30px;
       font-size: 14px;
       text-align: center;
-      color: $theme-color;
+      color: $current-theme;
       font-weight: 700;
       margin: 0 10px;
       border-radius: 4px;

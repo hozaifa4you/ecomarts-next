@@ -54,7 +54,7 @@
                font-weight: 600;
 
                &:hover {
-                  color: $theme-color-3;
+                  color: $current-theme;
                }
             }
 
@@ -63,7 +63,7 @@
                font-weight: 600;
 
                &:hover {
-                  color: $theme-color-3;
+                  color: $current-theme;
                }
             }
          }
@@ -112,7 +112,7 @@
          }
 
          span {
-            color: $theme-color-3;
+            color: $current-theme;
          }
       }
    }
@@ -159,7 +159,7 @@
             padding: 0;
          }
          span {
-            color: $theme-color-3;
+            color: $current-theme;
          }
       }
 

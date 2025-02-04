@@ -303,7 +303,7 @@
                position: relative;
                background-color: $white;
                border-radius: 50%;
-               color: $theme-color;
+               color: $current-theme;
                box-shadow: (0px 4px 25px rgba(0, 0, 0, 0.06));
                position: relative;
 
@@ -448,14 +448,14 @@
       .header__hamburger {
          &.style4 {
             display: block;
-            color: $theme-color-5;
+            color: $current-theme;
 
             .sidebar__toggle {
-               color: $theme-color-5;
+               color: $current-theme;
                margin-left: 30px;
 
                @include breakpoint(max-xxl) {
-                  color: $theme-color;
+                  color: $current-theme;
                }
             }
          }
@@ -466,7 +466,7 @@
          margin-left: 30px;
 
          @include breakpoint(max-xxl) {
-            color: $theme-color;
+            color: $current-theme;
          }
 
          @include breakpoint(max-md) {
@@ -509,7 +509,7 @@
 
       &:hover {
          > a {
-            color: $theme-color;
+            color: $current-theme;
          }
 
          .header__right__dropdown__wrapper {
@@ -539,7 +539,7 @@
             content: "3";
             text-align: center;
             border-radius: 100%;
-            background: $theme-color-3;
+            background: $current-theme;
             color: $white;
 
             @include breakpoint(max-lg) {
@@ -574,7 +574,7 @@
 
             a {
                :hover {
-                  color: $theme-color-2;
+                  color: $current-theme;
                }
             }
          }
@@ -623,7 +623,7 @@
                      color: $title-color;
 
                      &:hover {
-                        color: $theme-color-2;
+                        color: $current-theme;
                      }
                   }
 
@@ -632,7 +632,7 @@
                      font-size: 14px;
 
                      span {
-                        color: $theme-color;
+                        color: $current-theme;
                      }
                   }
                }
@@ -646,7 +646,7 @@
 
             span {
                float: right;
-               color: $theme-color;
+               color: $current-theme;
                font-weight: 700;
             }
          }
@@ -661,11 +661,11 @@
                padding: 10px 0px;
 
                &.white__color {
-                  border: 1px solid $theme-color-2;
+                  border: 1px solid $current-theme;
                   margin-bottom: 20px;
 
                   &:hover {
-                     background: $theme-color-2;
+                     background: $current-theme;
                      color: $white;
                   }
                }
@@ -675,7 +675,7 @@
                   color: $white;
 
                   &:hover {
-                     background: $theme-color-2;
+                     background: $current-theme;
                   }
                }
             }
@@ -992,7 +992,7 @@
             color: #5f5f5f;
 
             .color-text {
-               color: $theme-color-8;
+               color: $current-theme;
             }
          }
 
@@ -1105,7 +1105,7 @@
                      height: 18px;
                      line-height: 18px;
                      border-radius: 30px;
-                     background-color: $theme-color;
+                     background-color: $current-theme;
                      text-align: center;
                   }
                }
@@ -1156,7 +1156,7 @@
             line-height: 16px;
             height: 16px;
             border-radius: 16px;
-            background-color: $theme-color;
+            background-color: $current-theme;
             color: $white;
             font-size: 12px;
             text-align: center;
@@ -1207,7 +1207,7 @@
             line-height: 18px;
             height: 18px;
             border-radius: 18px;
-            background-color: $theme-color-8;
+            background-color: $current-theme;
             color: $white;
             font-size: 12px;
             text-align: center;
@@ -1241,7 +1241,7 @@
          position: absolute;
          top: 15px;
          left: 20px;
-         color: $theme-color-8;
+         color: $current-theme;
       }
 
       .category {
@@ -1337,7 +1337,7 @@
             height: 44px;
             line-height: 44px;
             text-align: center;
-            background-color: $theme-color-8;
+            background-color: $current-theme;
             text-align: center;
             color: $white;
             border-radius: 50%;
@@ -1352,7 +1352,7 @@
                width: 50px;
                height: 50px;
                border-radius: 50%;
-               border: 1px solid $theme-color-8;
+               border: 1px solid $current-theme;
                content: "";
                transform: translate(-50%, -50%);
             }
@@ -1794,7 +1794,7 @@
 //>>>>> Offcanvas Start <<<<<//
 .offcanvas__info {
    background: $title-color none repeat scroll 0 0;
-   border-left: 2px solid $theme-color-3;
+   border-left: 2px solid $current-theme;
    width: 400px;
    height: 100%;
    -webkit-transition: transform 0.45s ease-in-out, opacity 0.45s ease-in-out;
@@ -1835,7 +1835,7 @@
          line-height: 45px;
          text-align: center;
          border-radius: 50%;
-         background-color: $theme-color-3;
+         background-color: $current-theme;
          position: relative;
          z-index: 9;
          cursor: pointer;
@@ -1849,7 +1849,7 @@
          margin-top: 20px;
 
          h4 {
-            color: $theme-color-3;
+            color: $current-theme;
          }
 
          ul {
@@ -1872,7 +1872,7 @@
                   margin-right: 20px;
 
                   i {
-                     color: $theme-color-3;
+                     color: $current-theme;
                   }
                }
             }
@@ -1901,7 +1901,7 @@
                text-align: center;
                font-size: 16px;
                display: block;
-               background: $theme-color-3;
+               background: $current-theme;
                color: $white;
                border-radius: 50%;
                -webkit-transition: all 0.4s ease-in-out;
@@ -1910,7 +1910,7 @@
                border: 1px solid $border-color;
 
                &:hover {
-                  background-color: $theme-color-2;
+                  background-color: $current-theme;
                   color: $white !important;
                }
             }
@@ -1928,7 +1928,7 @@
       }
 
       .left-icon {
-         color: $theme-color;
+         color: $current-theme;
       }
 
       .header-cataegory {
@@ -2030,11 +2030,11 @@
 
             &:hover {
                > a {
-                  background: $theme-color;
+                  background: $current-theme;
                   color: $white !important;
 
                   &::after {
-                     color: $theme-color;
+                     color: $current-theme;
                   }
                }
                > .sub-cataegory {

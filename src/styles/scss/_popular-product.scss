@@ -50,7 +50,7 @@
 
       .subtitle {
          margin-top: 22px;
-         color: $theme-color-3;
+         color: $current-theme;
          font-family: $title-font;
          font-size: 14px;
          font-style: normal;
@@ -159,7 +159,7 @@
 
       .text {
          .color-text {
-            color: $theme-color-3;
+            color: $current-theme;
             text-align: center;
             font-family: $body-font;
             font-size: 14px;
@@ -213,7 +213,7 @@
 
          &:hover {
             background-color: #f5b4a6;
-            color: $theme-color-3;
+            color: $current-theme;
 
             svg {
                path {
@@ -236,7 +236,7 @@
          border-radius: 10px;
          background: #fff5f4;
          margin-bottom: 5px;
-         color: $theme-color-3;
+         color: $current-theme;
          text-align: center;
          font-family: $title-font;
          font-size: 22px;
@@ -309,7 +309,7 @@
    }
 
    .sec {
-      color: $theme-color-3;
+      color: $current-theme;
    }
 }
 
@@ -350,7 +350,7 @@
       }
 
       &:hover {
-         background-color: $theme-color-3;
+         background-color: $current-theme;
          color: $white;
 
          i {

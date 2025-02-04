@@ -46,7 +46,7 @@
                transition: all 0.3s linear;
 
                &:hover {
-                  background-color: $theme-color-3;
+                  background-color: $current-theme;
                }
                i {
                   color: $white;
@@ -81,7 +81,7 @@
          .team-section-1 {
             &-card {
                &__thumb {
-                  border-top: 5px solid $theme-color-3;
+                  border-top: 5px solid $current-theme;
                   &-social {
                      opacity: 1;
                      visibility: visible;

@@ -172,7 +172,7 @@ table {
       align-items: center;
       justify-content: center;
       width: 40px;
-      color: $theme-color-3;
+      color: $current-theme;
 
       @include breakpoint(max-xxl) {
          left: 42px;
@@ -237,7 +237,7 @@ table {
       }
 
       .cart_amount {
-         color: $theme-color-3;
+         color: $current-theme;
          font-family: $title-font;
          font-size: 20px;
          font-style: normal;

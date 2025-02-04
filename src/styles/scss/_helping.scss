@@ -603,7 +603,7 @@ br {
 }
 
 .border-theme {
-   border: 1px solid $theme-color;
+   border: 1px solid $current-theme;
 }
 
 .border-dark {
@@ -770,7 +770,7 @@ img {
             font-family: $fa;
             top: -10px;
             left: 1px;
-            color: $theme-color;
+            color: $current-theme;
             font-size: 13px;
          }
 

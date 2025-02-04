@@ -19,7 +19,7 @@
       margin-bottom: 5px;
       padding: 5px 10px;
       border-radius: 100px;
-      background: $theme-color-5;
+      background: $current-theme;
       color: $white;
       font-family: $body-font;
       font-size: 12px;
@@ -118,12 +118,12 @@
       border-radius: 50%;
 
       i {
-         color: $theme-color-5;
+         color: $current-theme;
          transition: all 0.3s;
       }
 
       &:hover {
-         background-color: $theme-color-5;
+         background-color: $current-theme;
          i {
             color: $white;
          }

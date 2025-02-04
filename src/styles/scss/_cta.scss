@@ -74,7 +74,7 @@
                left: 50%;
                transform: translateX(-50%);
                top: 20px;
-               background-color: $theme-color-3;
+               background-color: $current-theme;
                padding: 10px 12px;
                border-radius: 100px;
                font-size: 14px;
@@ -193,9 +193,9 @@
 //                 align-items: center;
 //                 justify-content: center;
 //                 background-color: $white;
-//                 color: $theme-color-3;
+//                 color: $current-theme;
 //                 border-radius: 10px;
-//                 color: $theme-color-3;
+//                 color: $current-theme;
 //                 text-align: center;
 //                 font-family: $title-font;
 //                 font-size: 22px;
@@ -359,7 +359,7 @@
          font-weight: 700;
 
          span {
-            color: $theme-color-8;
+            color: $current-theme;
          }
       }
    }
@@ -413,7 +413,7 @@
       }
 
       .theme-btn {
-         background-color: $theme-color-7;
+         background-color: $current-theme;
          position: absolute;
          bottom: 40px;
          left: 40px;
@@ -431,10 +431,10 @@
          border-radius: 50%;
          background-color: $white;
          @include transition;
-         color: $theme-color-7;
+         color: $current-theme;
 
          &:hover {
-            background-color: $theme-color-7;
+            background-color: $current-theme;
             color: $white;
          }
       }
@@ -568,7 +568,7 @@
                padding: 8px;
                line-height: 1;
                color: $white;
-               background-color: $theme-color-8;
+               background-color: $current-theme;
                font-weight: 500;
             }
          }
@@ -616,7 +616,7 @@
       border-radius: 100px;
       text-align: center;
       background-color: $white;
-      color: $theme-color-9;
+      color: $current-theme;
       position: absolute;
       top: 50%;
       left: 50%;
@@ -628,7 +628,7 @@
 .cta-wrapper-4 {
    @include flex;
    justify-content: space-between;
-   background-color: $theme-color-9;
+   background-color: $current-theme;
    border-radius: 30px;
    padding: 70px 100px;
 
@@ -689,19 +689,19 @@
       }
 
       .array-prev {
-         border: 1px solid $theme-color-9;
-         color: $theme-color-9;
+         border: 1px solid $current-theme;
+         color: $current-theme;
 
          &:hover {
-            background-color: $theme-color-9;
+            background-color: $current-theme;
             color: $white;
          }
       }
 
       .array-next {
-         border: 1px solid $theme-color-9;
+         border: 1px solid $current-theme;
          color: $white;
-         background-color: $theme-color-9;
+         background-color: $current-theme;
 
          &:hover {
             background-color: $title-color;
