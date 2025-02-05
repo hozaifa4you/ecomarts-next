@@ -36,7 +36,7 @@ const CountDownSection = () => {
                            {...titleEffect}
                            className="section-title style-6 text-center"
                         >
-                           <div className="subtitle">Best DealsS</div>
+                           <div className="subtitle">Best Deals</div>
                            <h2 className="title">
                               Our Special Products Deal of the Month
                            </h2>

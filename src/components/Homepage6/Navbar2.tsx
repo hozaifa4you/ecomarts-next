@@ -5,7 +5,7 @@ import { Ul } from "@/components/animation";
 
 const Navbar2 = () => {
    return (
-      <header id="header-sticky" className="header-6 d-none d-xl-block">
+      <header className="header-6 d-none d-xl-block">
          <div className="container-fluid">
             <div className="mega-menu-wrapper">
                <div className="header-main">

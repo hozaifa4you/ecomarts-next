@@ -86,7 +86,7 @@
    transition: all 0.3s;
    cursor: pointer;
    &:hover {
-      border-color: $theme-color-4;
+      border-color: $current-theme;
       box-shadow: $shadow;
    }
 
@@ -99,7 +99,7 @@
       justify-content: center;
       background-color: #eaefdd;
       border-radius: 50%;
-      border: 1px dashed $theme-color-4;
+      border: 1px dashed $current-theme;
       -webkit-border-radius: 50%;
       -moz-border-radius: 50%;
       -ms-border-radius: 50%;
@@ -141,7 +141,7 @@
             height: 56px;
             background-color: $white;
             border: 1px solid $current-theme;
-            color: $theme-color-4;
+            color: $current-theme;
             display: flex;
             align-items: center;
             justify-content: center;
